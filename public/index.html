@@ -31,10 +31,15 @@
         <a id="link-fb" href="https://facebook.com/coglnews" target="_blank" class="hover:text-blue-500 transition"><i data-lucide="facebook" class="w-4 h-4"></i></a>
         <a id="link-ig" href="https://instagram.com/coglnews" target="_blank" class="hover:text-pink-400 transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
         <a id="link-tg" href="https://t.me/coglnews" target="_blank" class="hover:text-sky-400 transition"><i data-lucide="send" class="w-4 h-4"></i></a>
-        <span class="text-slate-600">|</span>
-        <button onclick="openAdminModal()" class="bg-red-600 hover:bg-red-700 text-white font-semibold px-2.5 py-1 rounded text-xs flex items-center gap-1 shadow-sm transition">
-          <i data-lucide="shield" class="w-3.5 h-3.5"></i> Admin Access
-        </button>
+        <div id="adminControlsNav" class="hidden items-center space-x-2">
+          <span class="text-slate-600">|</span>
+          <button onclick="openAdminModal()" class="bg-red-600 hover:bg-red-700 text-white font-semibold px-2.5 py-1 rounded text-xs flex items-center gap-1 shadow-sm transition">
+            <i data-lucide="layout-dashboard" class="w-3.5 h-3.5"></i> Admin Suite
+          </button>
+          <button onclick="handleAdminLogout()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold px-2 py-1 rounded text-xs transition">
+            Sign Out
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -42,7 +47,7 @@
   <div class="bg-white border-b border-gray-200 py-4 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 bg-red-600 text-white flex items-center justify-center font-black rounded text-2xl tracking-tighter shadow-md">C</div>
+        <div id="coglLogoBtn" onclick="handleLogoClick()" class="w-10 h-10 bg-red-600 text-white flex items-center justify-center font-black rounded text-2xl tracking-tighter shadow-md cursor-pointer select-none" title="COGL News">C</div>
         <div>
           <h1 class="text-3xl font-black tracking-tight text-slate-900 leading-none">COGL <span class="text-red-600">NEWS</span></h1>
           <p class="text-xs text-slate-500 tracking-wide font-medium mt-0.5">TRUTH IN JOURNALISM • BACKED BY VERIFIED PROOF</p>
@@ -113,17 +118,13 @@
         <form onsubmit="handleAdminLogin(event)" class="space-y-4 max-w-md mx-auto">
           <div>
             <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Editor Email / ID</label>
-            <input type="text" id="adminEmailInput" value="admin@coglnews.com" required 
+            <input type="text" id="adminEmailInput" placeholder="Enter admin email..." required 
                    class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-red-600 outline-none">
           </div>
           <div>
             <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Secret Password</label>
-            <input type="password" id="adminPasswordInput" value="admin123(COGL)!" required 
+            <input type="password" id="adminPasswordInput" placeholder="Enter secret password..." required 
                    class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-red-600 outline-none">
-          </div>
-          <div class="p-3 bg-blue-50 border border-blue-200 text-blue-800 text-xs rounded-lg">
-            <strong>Default Demo Credentials:</strong><br>
-            ID: <code class="font-mono">admin@coglnews.com</code> | Pass: <code class="font-mono">admin123(COGL)!</code>
           </div>
           <button type="submit" class="w-full py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg text-sm transition shadow-md">
             Unlock Editorial Dashboard
@@ -322,7 +323,10 @@
       </div>
       <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
         <p>&copy; 2026 COGL News Media Network. All rights reserved.</p>
-        <p class="mt-2 sm:mt-0">Built with Next-Gen Speed & Journalistic Proof Systems</p>
+        <p class="mt-2 sm:mt-0 flex items-center gap-1.5">
+          <span>Built with Next-Gen Speed & Journalistic Proof Systems</span>
+          <span onclick="openAdminModal()" class="cursor-pointer opacity-10 hover:opacity-80 transition select-none" title="">•</span>
+        </p>
       </div>
     </div>
   </footer>
@@ -575,6 +579,16 @@
 
       renderCategoryNav();
       renderContent();
+
+      if (sessionStorage.getItem('cogl_admin_auth') === 'true' || localStorage.getItem('cogl_admin_auth') === 'true') {
+        isAdminLoggedIn = true;
+        updateAdminNavUI();
+      }
+
+      if (window.location.pathname.endsWith('/admin') || window.location.search.includes('admin') || window.location.hash === '#admin') {
+        openAdminModal();
+      }
+
       lucide.createIcons();
     }
 
@@ -847,6 +861,8 @@
 
       if (authenticated) {
         isAdminLoggedIn = true;
+        sessionStorage.setItem('cogl_admin_auth', 'true');
+        updateAdminNavUI();
         document.getElementById('adminLoginView').classList.add('hidden');
         document.getElementById('adminDashboardView').classList.remove('hidden');
         document.getElementById('setTicker').value = settings.breakingTicker;
@@ -857,15 +873,54 @@
         document.getElementById('setTg').value = settings.socials.telegram;
         lucide.createIcons();
       } else {
-        alert('Invalid credentials! Use demo login: admin@coglnews.com / admin123(COGL)!');
+        alert('Invalid credentials! Access denied.');
       }
     }
 
     function handleAdminLogout() {
       isAdminLoggedIn = false;
+      sessionStorage.removeItem('cogl_admin_auth');
+      localStorage.removeItem('cogl_admin_auth');
+      updateAdminNavUI();
+      closeAdminModal();
       document.getElementById('adminDashboardView').classList.add('hidden');
       document.getElementById('adminLoginView').classList.remove('hidden');
+      alert('Signed out of Admin CMS.');
     }
+
+    function updateAdminNavUI() {
+      const adminNav = document.getElementById('adminControlsNav');
+      if (adminNav) {
+        if (isAdminLoggedIn) {
+          adminNav.classList.remove('hidden');
+          adminNav.classList.add('flex');
+        } else {
+          adminNav.classList.add('hidden');
+          adminNav.classList.remove('flex');
+        }
+      }
+      lucide.createIcons();
+    }
+
+    let logoClickCount = 0;
+    let logoClickTimer = null;
+    function handleLogoClick() {
+      logoClickCount++;
+      clearTimeout(logoClickTimer);
+      if (logoClickCount >= 3) {
+        logoClickCount = 0;
+        openAdminModal();
+      } else {
+        logoClickTimer = setTimeout(() => { logoClickCount = 0; }, 1200);
+      }
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+        e.preventDefault();
+        openAdminModal();
+      }
+    });
 
     function switchAdminTab(tab) {
       const newTab = document.getElementById('adminNewArticleTab');
