@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COGL NEWS | Unbiased Journalism & Verified Facts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+    .animate-marquee { display: inline-block; white-space: nowrap; animation: marquee 35s linear infinite; }
+    .animate-marquee:hover { animation-play-state: paused; }
+    .badge-fact-checked { background: linear-gradient(135deg, #059669 0%, #10b981 100%); }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans min-h-screen flex flex-col">
+
+  <header class="bg-slate-900 text-slate-300 text-xs border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex flex-wrap justify-between items-center gap-3">
+      <div class="flex items-center space-x-3">
+        <span class="inline-flex items-center text-red-500 font-bold uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-red-500 mr-1.5 animate-ping"></span> Live Broadcast
+        </span>
+        <span class="text-slate-500">|</span>
+        <span id="live-datetime" class="font-medium text-slate-300">Loading date & time...</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <span class="text-slate-400 font-semibold hidden md:inline">Follow COGL:</span>
+        <a id="link-yt" href="https://youtube.com/@coglnews" target="_blank" class="hover:text-red-400 transition"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+        <a id="link-x" href="https://x.com/coglnews" target="_blank" class="hover:text-blue-400 transition"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+        <a id="link-fb" href="https://facebook.com/coglnews" target="_blank" class="hover:text-blue-500 transition"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+        <a id="link-ig" href="https://instagram.com/coglnews" target="_blank" class="hover:text-pink-400 transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+        <a id="link-tg" href="https://t.me/coglnews" target="_blank" class="hover:text-sky-400 transition"><i data-lucide="send" class="w-4 h-4"></i></a>
+        <span class="text-slate-600">|</span>
+        <button onclick="openAdminModal()" class="bg-red-600 hover:bg-red-700 text-white font-semibold px-2.5 py-1 rounded text-xs flex items-center gap-1 shadow-sm transition">
+          <i data-lucide="shield" class="w-3.5 h-3.5"></i> Admin Access
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="bg-white border-b border-gray-200 py-4 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-red-600 text-white flex items-center justify-center font-black rounded text-2xl tracking-tighter shadow-md">C</div>
+        <div>
+          <h1 class="text-3xl font-black tracking-tight text-slate-900 leading-none">COGL <span class="text-red-600">NEWS</span></h1>
+          <p class="text-xs text-slate-500 tracking-wide font-medium mt-0.5">TRUTH IN JOURNALISM • BACKED BY VERIFIED PROOF</p>
+        </div>
+      </div>
+      <div class="w-full md:w-80 relative">
+        <input type="text" id="searchInput" oninput="handleSearch()" placeholder="Search verified news, reports..." 
+               class="w-full pl-9 pr-4 py-2 text-sm bg-gray-50 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-600 focus:bg-white transition">
+        <i data-lucide="search" class="w-4 h-4 text-gray-400 absolute left-3 top-2.5"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-red-700 text-white text-xs font-semibold overflow-hidden flex items-center shadow-inner">
+    <div class="bg-red-900 px-4 py-2 uppercase font-black tracking-wider flex items-center gap-1.5 shrink-0 z-10 shadow-md">
+      <i data-lucide="zap" class="w-3.5 h-3.5 fill-current"></i> Breaking
+    </div>
+    <div class="overflow-hidden w-full py-1.5">
+      <div id="breaking-ticker-text" class="animate-marquee font-medium tracking-wide">
+        Loading latest flash headlines...
+      </div>
+    </div>
+  </div>
+
+  <nav class="bg-slate-900 sticky top-0 z-30 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center space-x-1 overflow-x-auto py-2 text-sm font-semibold text-slate-200" id="categoryNav"></div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-grow w-full">
+    <div class="flex justify-between items-center mb-6 border-b-2 border-red-600 pb-2">
+      <div class="flex items-center gap-2">
+        <h2 id="currentCategoryTitle" class="text-2xl font-black text-slate-900 uppercase tracking-tight">Top Headlines</h2>
+        <span id="articleCountBadge" class="bg-gray-200 text-gray-700 text-xs px-2.5 py-0.5 rounded-full font-bold">9 Stories</span>
+      </div>
+      <div class="text-xs text-gray-500 flex items-center gap-1 font-medium">
+        <i data-lucide="check-check" class="w-4 h-4 text-emerald-600"></i> All stories verified with primary proof
+      </div>
+    </div>
+
+    <div id="heroSection" class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10"></div>
+    <div id="articlesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </main>
+
+  <div id="articleModal" class="fixed inset-0 bg-black/75 z-50 hidden overflow-y-auto p-4 sm:p-6 lg:p-10 flex justify-center items-start">
+    <div class="bg-white rounded-xl max-w-4xl w-full my-6 overflow-hidden shadow-2xl relative">
+      <button onclick="closeArticleModal()" class="absolute top-4 right-4 z-20 bg-slate-900/80 hover:bg-slate-950 text-white rounded-full p-2 transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div id="articleModalContent"></div>
+    </div>
+  </div>
+
+  <div id="adminModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden overflow-y-auto p-4 sm:p-6 flex justify-center items-center">
+    <div class="bg-white rounded-2xl max-w-3xl w-full p-6 shadow-2xl border border-gray-200 relative my-8">
+      <button onclick="closeAdminModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <div id="adminLoginView">
+        <div class="text-center mb-6">
+          <div class="w-12 h-12 bg-red-600 text-white rounded-lg flex items-center justify-center mx-auto mb-2 font-black text-xl shadow">C</div>
+          <h3 class="text-2xl font-black text-gray-900">COGL Editorial CMS</h3>
+          <p class="text-sm text-gray-500">Sign in to publish, edit articles, or update social links</p>
+        </div>
+
+        <form onsubmit="handleAdminLogin(event)" class="space-y-4 max-w-md mx-auto">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Editor Email / ID</label>
+            <input type="text" id="adminEmailInput" value="admin@coglnews.com" required 
+                   class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-red-600 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Secret Password</label>
+            <input type="password" id="adminPasswordInput" value="admin123(COGL)!" required 
+                   class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-red-600 outline-none">
+          </div>
+          <div class="p-3 bg-blue-50 border border-blue-200 text-blue-800 text-xs rounded-lg">
+            <strong>Default Demo Credentials:</strong><br>
+            ID: <code class="font-mono">admin@coglnews.com</code> | Pass: <code class="font-mono">admin123(COGL)!</code>
+          </div>
+          <button type="submit" class="w-full py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg text-sm transition shadow-md">
+            Unlock Editorial Dashboard
+          </button>
+        </form>
+      </div>
+
+      <div id="adminDashboardView" class="hidden">
+        <div class="flex justify-between items-center border-b pb-3 mb-4">
+          <div>
+            <h3 class="text-xl font-black text-gray-900">COGL Content Management Suite</h3>
+            <span class="text-xs text-emerald-600 font-bold flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Authenticated as Chief Editor
+            </span>
+          </div>
+          <button onclick="handleAdminLogout()" class="text-xs bg-gray-200 hover:bg-gray-300 font-semibold px-3 py-1.5 rounded text-gray-700">
+            Sign Out
+          </button>
+        </div>
+
+        <div class="flex space-x-2 border-b mb-4">
+          <button onclick="switchAdminTab('newArticle')" id="tabBtnNew" class="py-2 px-3 text-xs font-bold border-b-2 border-red-600 text-red-600">
+            + Write Verified News Story
+          </button>
+          <button onclick="switchAdminTab('manageSettings')" id="tabBtnSettings" class="py-2 px-3 text-xs font-bold text-gray-500 hover:text-gray-800">
+            Social Media & Ticker Settings
+          </button>
+        </div>
+
+        <div id="adminNewArticleTab">
+          <form onsubmit="handleCreateArticle(event)" class="space-y-4 max-h-[60vh] overflow-y-auto pr-2">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Headline / Title *</label>
+                <input type="text" id="newTitle" required placeholder="Enter compelling factual headline" class="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-600">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Category *</label>
+                <select id="newCategory" class="w-full px-3 py-2 border rounded-lg text-sm bg-white outline-none focus:ring-2 focus:ring-red-600">
+                  <option value="News">News</option>
+                  <option value="Politics">Politics</option>
+                  <option value="Sport">Sport</option>
+                  <option value="Business">Business</option>
+                  <option value="Technology">Technology</option>
+                  <option value="Health">Health</option>
+                  <option value="Culture">Culture</option>
+                  <option value="Arts">Arts</option>
+                  <option value="Travel">Travel</option>
+                  <option value="Earth">Earth</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Executive Summary *</label>
+              <textarea id="newSummary" rows="2" required placeholder="Short 1-2 sentence lead summary..." class="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-600"></textarea>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Full Article Body *</label>
+              <textarea id="newContent" rows="4" required placeholder="Write the complete news report..." class="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-600"></textarea>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Featured Image URL *</label>
+                <input type="url" id="newImage" required value="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80" class="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-600">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Video Embed URL (YouTube/Direct)</label>
+                <input type="text" id="newVideo" placeholder="https://www.youtube.com/embed/..." class="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-600">
+              </div>
+            </div>
+
+            <div class="p-3 bg-emerald-50 rounded-lg border border-emerald-200">
+              <h4 class="text-xs font-bold text-emerald-900 uppercase flex items-center gap-1 mb-2">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-700"></i> Evidence & Verification Attachment (Proof)
+              </h4>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                <div>
+                  <label class="font-semibold text-gray-700">Proof Title</label>
+                  <input type="text" id="proofTitle" value="Verified Official Statement" class="w-full p-2 border rounded mt-1 bg-white">
+                </div>
+                <div>
+                  <label class="font-semibold text-gray-700">Proof Type</label>
+                  <select id="proofType" class="w-full p-2 border rounded mt-1 bg-white">
+                    <option value="Official Gazette / Decree">Official Gazette / Decree</option>
+                    <option value="Primary Document">Primary Document</option>
+                    <option value="Authentic Video Footage">Authentic Video Footage</option>
+                    <option value="Certified Audit Log">Certified Audit Log</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="font-semibold text-gray-700">Source Agency</label>
+                  <input type="text" id="proofSource" value="Official Press Bureau" class="w-full p-2 border rounded mt-1 bg-white">
+                </div>
+                <div>
+                  <label class="font-semibold text-gray-700">Source Evidence URL</label>
+                  <input type="url" id="proofUrl" value="https://gov.coglnews.com/records" class="w-full p-2 border rounded mt-1 bg-white">
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4 text-xs font-semibold">
+              <label class="flex items-center gap-1.5 cursor-pointer">
+                <input type="checkbox" id="newIsBreaking" class="accent-red-600"> Breaking Flash
+              </label>
+              <label class="flex items-center gap-1.5 cursor-pointer">
+                <input type="checkbox" id="newIsLead" class="accent-red-600"> Make Hero Lead Story
+              </label>
+            </div>
+
+            <button type="submit" class="w-full py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg text-sm transition shadow-md flex justify-center items-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i> Publish Live Fact-Checked Story
+            </button>
+          </form>
+        </div>
+
+        <div id="adminSettingsTab" class="hidden space-y-4">
+          <form onsubmit="handleSaveSettings(event)" class="space-y-3">
+            <div>
+              <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Breaking News Banner Ticker</label>
+              <input type="text" id="setTicker" class="w-full px-3 py-2 border rounded text-sm">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+              <div>
+                <label class="font-bold text-gray-700">YouTube Channel URL</label>
+                <input type="url" id="setYt" class="w-full p-2 border rounded mt-1">
+              </div>
+              <div>
+                <label class="font-bold text-gray-700">X (Twitter) URL</label>
+                <input type="url" id="setX" class="w-full p-2 border rounded mt-1">
+              </div>
+              <div>
+                <label class="font-bold text-gray-700">Facebook Page URL</label>
+                <input type="url" id="setFb" class="w-full p-2 border rounded mt-1">
+              </div>
+              <div>
+                <label class="font-bold text-gray-700">Instagram Handle URL</label>
+                <input type="url" id="setIg" class="w-full p-2 border rounded mt-1">
+              </div>
+              <div>
+                <label class="font-bold text-gray-700">Telegram Channel URL</label>
+                <input type="url" id="setTg" class="w-full p-2 border rounded mt-1">
+              </div>
+            </div>
+            <button type="submit" class="mt-4 px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded text-xs">
+              Save Social Links & Ticker
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-slate-950 text-slate-400 text-sm mt-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 bg-red-600 text-white font-black rounded flex items-center justify-center">C</div>
+            <span class="text-white text-xl font-black">COGL NEWS</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Committed to high-integrity independent investigative reporting. Every story published under the COGL banner includes attached primary evidence, records, and media proofs.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Sections</h4>
+          <ul class="text-xs space-y-1.5">
+            <li><a href="#" onclick="selectCategory('Politics')" class="hover:text-white transition">Politics</a></li>
+            <li><a href="#" onclick="selectCategory('Business')" class="hover:text-white transition">Business & Finance</a></li>
+            <li><a href="#" onclick="selectCategory('Technology')" class="hover:text-white transition">Technology & AI</a></li>
+            <li><a href="#" onclick="selectCategory('Health')" class="hover:text-white transition">Health & Medicine</a></li>
+            <li><a href="#" onclick="selectCategory('Earth')" class="hover:text-white transition">Earth & Climate</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Editorial Standards</h4>
+          <ul class="text-xs space-y-1.5">
+            <li><a href="#" class="hover:text-white transition">Fact-Checking Policy</a></li>
+            <li><a href="#" class="hover:text-white transition">Proof Verification Workflow</a></li>
+            <li><a href="#" class="hover:text-white transition">Corrections Archive</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Connect With Us</h4>
+          <div class="flex space-x-3 text-slate-300">
+            <a id="foot-yt" href="https://youtube.com/@coglnews" target="_blank" class="hover:text-red-500"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+            <a id="foot-x" href="https://x.com/coglnews" target="_blank" class="hover:text-blue-400"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+            <a id="foot-fb" href="https://facebook.com/coglnews" target="_blank" class="hover:text-blue-600"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+            <a id="foot-ig" href="https://instagram.com/coglnews" target="_blank" class="hover:text-pink-500"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+            <a id="foot-tg" href="https://t.me/coglnews" target="_blank" class="hover:text-sky-400"><i data-lucide="send" class="w-5 h-5"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-slate-900 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
+        <p>&copy; 2026 COGL News Media Network. All rights reserved.</p>
+        <p class="mt-2 sm:mt-0">Built with Next-Gen Speed & Journalistic Proof Systems</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const CATEGORIES = ["Home", "News", "Politics", "Sport", "Business", "Technology", "Health", "Culture", "Arts", "Travel", "Earth"];
+    let articles = [];
+    let settings = {};
+    let activeCategory = "Home";
+    let isAdminLoggedIn = false;
+
+    async function initApp() {
+      updateClock();
+      setInterval(updateClock, 1000);
+
+      let loadedSettings = false;
+      if (window.location.protocol.startsWith('http')) {
+        try {
+          const res = await fetch('/api/settings');
+          if (res.ok) {
+            const data = await res.json();
+            if (data.success && data.data && data.data.breakingTicker) {
+              settings = data.data;
+              localStorage.setItem('cogl_settings', JSON.stringify(settings));
+              loadedSettings = true;
+            }
+          }
+        } catch (err) {
+          console.warn('API settings unavailable, fallback to local', err);
+        }
+      }
+
+      if (!loadedSettings) {
+        const savedSettings = localStorage.getItem('cogl_settings');
+        if (savedSettings) {
+          settings = JSON.parse(savedSettings);
+        } else {
+          settings = {
+            breakingTicker: "BREAKING: Global Clean Energy Transition Accelerates with Battery Storage Breakthrough • High-Speed Rail Corridor Opens • Digital Trade Bill Passed",
+            socials: {
+              youtube: "https://youtube.com/@coglnews",
+              twitter: "https://x.com/coglnews",
+              facebook: "https://facebook.com/coglnews",
+              instagram: "https://instagram.com/coglnews",
+              telegram: "https://t.me/coglnews"
+            }
+          };
+        }
+      }
+      applySettings();
+
+      let loadedArticles = false;
+      if (window.location.protocol.startsWith('http')) {
+        try {
+          const res = await fetch('/api/articles');
+          if (res.ok) {
+            const data = await res.json();
+            if (data.success && Array.isArray(data.data) && data.data.length > 0) {
+              articles = data.data;
+              localStorage.setItem('cogl_articles', JSON.stringify(articles));
+              loadedArticles = true;
+            }
+          }
+        } catch (err) {
+          console.warn('API articles unavailable, fallback to local', err);
+        }
+      }
+
+      if (!loadedArticles) {
+        const savedArticles = localStorage.getItem('cogl_articles');
+        if (savedArticles) {
+          articles = JSON.parse(savedArticles);
+        } else {
+          articles = [
+          {
+            id: "cogl-1",
+            title: "Global Clean Energy Transition Accelerates with Solid-State Battery Breakthrough",
+            category: "Technology",
+            summary: "Laboratories achieve fourfold energy density in solid-state cells, enabling extended EV ranges and grid resilience.",
+            content: "In what is being hailed as a defining milestone for global infrastructure, scientists have verified a room-temperature solid-state electrolyte with over 3,000 thermal endurance cycles.",
+            featuredImage: "https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1200&q=80",
+            videoEmbedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            author: "Dr. Sarah Jenkins",
+            authorRole: "Science Editor",
+            isBreaking: true,
+            isLead: true,
+            isFactChecked: true,
+            readingTime: "4 min",
+            publishedAt: "Today, 08:30 AM",
+            proofs: [
+              { title: "Consortium Peer-Reviewed Preprint", type: "Primary Research Document", source: "International Energy Research Archive", url: "https://arxiv.org", notes: "Laboratory data verified by third-party physics audits." }
+            ]
+          },
+          {
+            id: "cogl-2",
+            title: "Parliamentary Committee Unveils Comprehensive Framework on Cross-Border Digital Trade",
+            category: "Politics",
+            summary: "Bipartisan agreement establishes frictionless customs clearance and data localization shields.",
+            content: "Lawmakers on Friday approved the digital commerce modernization bill following thorough stakeholder consultations.",
+            featuredImage: "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
+            videoEmbedUrl: "",
+            author: "Arun Verma",
+            authorRole: "Senior Political Desk",
+            isBreaking: false,
+            isLead: false,
+            isFactChecked: true,
+            readingTime: "5 min",
+            publishedAt: "Today, 07:15 AM",
+            proofs: [
+              { title: "Official Gazette Notification #412", type: "Official Gazette Decree", source: "Government Printing Directorate", url: "https://egazette.gov.in" }
+            ]
+          },
+          {
+            id: "cogl-3",
+            title: "Central Bank Keeps Baseline Repo Rates Stable Amid Cooling Inflation",
+            category: "Business",
+            summary: "Key economic indicators show domestic supply chain resilience, keeping borrowing rates stable.",
+            content: "Commercial borrowing rates are set to remain steady across quarters as the Monetary Committee retained the benchmark rate.",
+            featuredImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
+            videoEmbedUrl: "",
+            author: "Rohan Mehra",
+            authorRole: "Finance Desk",
+            isBreaking: false,
+            isLead: false,
+            isFactChecked: true,
+            readingTime: "3 min",
+            publishedAt: "Yesterday",
+            proofs: [
+              { title: "Central Bank Monetary Policy Directive", type: "Official Release", source: "Central Reserve Press Office", url: "https://rbi.org.in" }
+            ]
+          },
+          {
+            id: "cogl-4",
+            title: "National Athletics Championship: Underdog Relay Team Shatters Track Record",
+            category: "Sport",
+            summary: "A blistering 37.89-second 4x100m sprint clinches championship gold and world trials qualification.",
+            content: "In an electric finish at the National Stadium, the regional academy team pulled off an unprecedented comeback.",
+            featuredImage: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=80",
+            videoEmbedUrl: "",
+            author: "Pooja Sharma",
+            authorRole: "Sports Reporter",
+            isBreaking: false,
+            isLead: false,
+            isFactChecked: true,
+            readingTime: "3 min",
+            publishedAt: "Yesterday",
+            proofs: [
+              { title: "Federation Certified Timing Record", type: "Electronic Timing Certificate", source: "Athletics Timing Bureau", url: "https://athleticsfederation.org" }
+            ]
+          },
+          {
+            id: "cogl-5",
+            title: "Himalayan Glacial Basins Show Rebound in Natural Springs After Reforestation",
+            category: "Earth",
+            summary: "Satellite scans verify sustained groundwater recharge after five years of native sapling planting.",
+            content: "Discharges in perennial mountain springs have increased by 22% compared to five years ago.",
+            featuredImage: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+            videoEmbedUrl: "",
+            author: "Deepak Joshi",
+            authorRole: "Climate Desk",
+            isBreaking: false,
+            isLead: false,
+            isFactChecked: true,
+            readingTime: "4 min",
+            publishedAt: "2 days ago",
+            proofs: [
+              { title: "Remote Sensing Hydrological Report", type: "Satellite Survey", source: "National Remote Sensing Centre", url: "https://nrsc.gov.in" }
+            ]
+          },
+          {
+            id: "cogl-6",
+            title: "Clinical Trials Validate Non-Invasive Continuous Glucose Sensors",
+            category: "Health",
+            summary: "New bio-impedance wrist device offers needle-free blood glucose monitoring with 96% clinical accuracy.",
+            content: "Patients managing diabetes may soon avoid routine skin punctures with the authorization of this non-invasive bio-sensor.",
+            featuredImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+            videoEmbedUrl: "",
+            author: "Dr. Sarah Jenkins",
+            authorRole: "Health Editor",
+            isBreaking: false,
+            isLead: false,
+            isFactChecked: true,
+            readingTime: "4 min",
+            publishedAt: "2 days ago",
+            proofs: [
+              { title: "Phase-III Clinical Trial Protocol", type: "Medical Trial Record", source: "Clinical Trials Registry", url: "https://clinicaltrials.gov" }
+            ]
+          },
+          {
+            id: "cogl-7",
+            title: "Heritage Restorers Uncover 12th Century Murals in Rajasthan Fortress",
+            category: "Culture",
+            summary: "Pristine tempera frescoes illustrating ancient trade routes uncovered under protective limestone plaster.",
+            content: "Thermal imaging revealed concealed artwork depicting royal embassies and maritime trade.",
+            featuredImage: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80",
+            videoEmbedUrl: "",
+            author: "Meera Rathore",
+            authorRole: "Heritage Desk",
+            isBreaking: false,
+            isLead: false,
+            isFactChecked: true,
+            readingTime: "5 min",
+            publishedAt: "3 days ago",
+            proofs: [
+              { title: "Archaeological Survey Field Log", type: "State Survey Record", source: "Archaeology Dept", url: "https://archaeology.rajasthan.gov.in" }
+            ]
+          },
+          {
+            id: "cogl-8",
+            title: "High-Speed Rail Corridor Connects Mountain Towns to Coastal Ports",
+            category: "Travel",
+            summary: "Panoramic train cuts 14-hour alpine route to 3.5 hours, providing a massive lift to green regional tourism.",
+            content: "The scenic express made its maiden journey today crossing 18 newly bored tunnels and elevated green bridges.",
+            featuredImage: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1200&q=80",
+            videoEmbedUrl: "",
+            author: "Vikram Sen",
+            authorRole: "Infrastructure Writer",
+            isBreaking: false,
+            isLead: false,
+            isFactChecked: true,
+            readingTime: "4 min",
+            publishedAt: "3 days ago",
+            proofs: [
+              { title: "Rail Safety Commission Certificate", type: "Safety Certificate", source: "Railway Safety Directorate", url: "https://indianrailways.gov.in" }
+            ]
+          },
+          {
+            id: "cogl-9",
+            title: "Kinetic Wind-Powered Sculptures Transform Metropolitan Civic Center",
+            category: "Arts",
+            summary: "Ribbons of bronze and aero-grade metals react smoothly to barometric breeze, generating ambient harmonic chimes.",
+            content: "The newly installed artwork turns ordinary civic pedestrian plazas into kinetic acoustic experiences.",
+            featuredImage: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80",
+            videoEmbedUrl: "",
+            author: "Meera Rathore",
+            authorRole: "Arts Desk",
+            isBreaking: false,
+            isLead: false,
+            isFactChecked: true,
+            readingTime: "3 min",
+            publishedAt: "4 days ago",
+            proofs: [
+              { title: "Public Arts Commission Structural Approval", type: "Civic Approval", source: "City Cultural Affairs", url: "https://cityarts.org" }
+            ]
+          }
+        ];
+        localStorage.setItem('cogl_articles', JSON.stringify(articles));
+      }
+    }
+
+      renderCategoryNav();
+      renderContent();
+      lucide.createIcons();
+    }
+
+    function updateClock() {
+      const now = new Date();
+      const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      document.getElementById('live-datetime').textContent = now.toLocaleDateString('en-US', options);
+    }
+
+    function applySettings() {
+      document.getElementById('breaking-ticker-text').textContent = settings.breakingTicker;
+      const s = settings.socials;
+      document.getElementById('link-yt').href = s.youtube || '#';
+      document.getElementById('link-x').href = s.twitter || '#';
+      document.getElementById('link-fb').href = s.facebook || '#';
+      document.getElementById('link-ig').href = s.instagram || '#';
+      document.getElementById('link-tg').href = s.telegram || '#';
+
+      document.getElementById('foot-yt').href = s.youtube || '#';
+      document.getElementById('foot-x').href = s.twitter || '#';
+      document.getElementById('foot-fb').href = s.facebook || '#';
+      document.getElementById('foot-ig').href = s.instagram || '#';
+      document.getElementById('foot-tg').href = s.telegram || '#';
+    }
+
+    function renderCategoryNav() {
+      const nav = document.getElementById('categoryNav');
+      nav.innerHTML = CATEGORIES.map(cat => `
+        <button onclick="selectCategory('${cat}')" 
+          class="px-3.5 py-1.5 rounded text-xs tracking-wide uppercase transition ${activeCategory === cat ? 'bg-red-600 text-white' : 'hover:bg-slate-800 text-slate-300'}">
+          ${cat}
+        </button>
+      `).join('');
+    }
+
+    function selectCategory(cat) {
+      activeCategory = cat;
+      renderCategoryNav();
+      renderContent();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderContent(filterQuery = '') {
+      let filtered = [...articles];
+      if (activeCategory !== 'Home') {
+        filtered = filtered.filter(a => a.category.toLowerCase() === activeCategory.toLowerCase());
+      }
+      if (filterQuery.trim()) {
+        const q = filterQuery.toLowerCase();
+        filtered = filtered.filter(a => a.title.toLowerCase().includes(q) || a.summary.toLowerCase().includes(q) || a.category.toLowerCase().includes(q));
+      }
+
+      document.getElementById('currentCategoryTitle').textContent = activeCategory === 'Home' ? 'Top Fact-Checked Headlines' : `${activeCategory} Desk`;
+      document.getElementById('articleCountBadge').textContent = `${filtered.length} Stories`;
+
+      const heroSection = document.getElementById('heroSection');
+      const articlesGrid = document.getElementById('articlesGrid');
+
+      if (filtered.length === 0) {
+        heroSection.innerHTML = '';
+        articlesGrid.innerHTML = `
+          <div class="col-span-full py-16 text-center bg-white rounded-xl border border-gray-200">
+            <i data-lucide="newspaper" class="w-12 h-12 text-gray-400 mx-auto mb-2"></i>
+            <p class="text-base font-bold text-gray-700">No stories found under "${activeCategory}"</p>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      if (activeCategory === 'Home' && !filterQuery) {
+        const lead = filtered[0];
+        const secondary = filtered.slice(1, 3);
+        const remaining = filtered.slice(3);
+
+        heroSection.classList.remove('hidden');
+        heroSection.innerHTML = `
+          <div onclick="openArticleModal('${lead.id}')" class="lg:col-span-2 bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition cursor-pointer border border-gray-200 group flex flex-col justify-between">
+            <div class="relative overflow-hidden aspect-video">
+              <img src="${lead.featuredImage}" alt="${lead.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute top-3 left-3 flex gap-2">
+                <span class="bg-red-600 text-white font-black text-xs px-2.5 py-1 rounded shadow uppercase">${lead.category}</span>
+                ${lead.isBreaking ? '<span class="bg-amber-500 text-slate-950 font-black text-xs px-2 py-1 rounded shadow animate-pulse uppercase">Breaking</span>' : ''}
+              </div>
+              <div class="absolute bottom-3 left-3 badge-fact-checked text-white text-xs px-3 py-1 rounded-full font-bold shadow-md flex items-center gap-1.5">
+                <i data-lucide="shield-check" class="w-4 h-4"></i> Fact-Checked & Verified
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-black text-slate-900 group-hover:text-red-600 transition leading-tight mb-2">${lead.title}</h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-4">${lead.summary}</p>
+              <div class="flex items-center justify-between text-xs text-slate-500 border-t pt-3">
+                <span class="font-semibold text-slate-700 flex items-center gap-1.5"><i data-lucide="user" class="w-3.5 h-3.5"></i> ${lead.author}</span>
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> ${lead.readingTime} read</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-6 flex flex-col justify-between">
+            ${secondary.map(sec => `
+              <div onclick="openArticleModal('${sec.id}')" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition cursor-pointer border border-gray-200 group flex flex-col sm:flex-row lg:flex-col h-full">
+                <div class="relative sm:w-2/5 lg:w-full aspect-video overflow-hidden">
+                  <img src="${sec.featuredImage}" alt="${sec.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                  <span class="absolute top-2 left-2 bg-slate-900 text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">${sec.category}</span>
+                </div>
+                <div class="p-4 sm:w-3/5 lg:w-full flex flex-col justify-between">
+                  <h4 class="font-bold text-slate-900 group-hover:text-red-600 transition text-sm leading-snug mb-1.5">${sec.title}</h4>
+                  <p class="text-xs text-slate-500 line-clamp-2 mb-2">${sec.summary}</p>
+                  <div class="flex items-center justify-between text-[11px] text-slate-400">
+                    <span>${sec.author}</span>
+                    <span class="text-emerald-700 font-bold flex items-center gap-1"><i data-lucide="file-check" class="w-3 h-3"></i> Proof Attached</span>
+                  </div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+        articlesGrid.innerHTML = remaining.map(renderArticleCard).join('');
+      } else {
+        heroSection.classList.add('hidden');
+        articlesGrid.innerHTML = filtered.map(renderArticleCard).join('');
+      }
+      lucide.createIcons();
+    }
+
+    function renderArticleCard(art) {
+      return `
+        <div onclick="openArticleModal('${art.id}')" class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition cursor-pointer border border-gray-200 group flex flex-col">
+          <div class="relative aspect-video overflow-hidden">
+            <img src="${art.featuredImage}" alt="${art.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <span class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-2.5 py-0.5 rounded shadow uppercase">${art.category}</span>
+            ${art.videoEmbedUrl ? '<span class="absolute top-3 right-3 bg-black/75 text-white text-xs px-2 py-0.5 rounded font-bold flex items-center gap-1"><i data-lucide="play" class="w-3 h-3 fill-current"></i> Video</span>' : ''}
+          </div>
+          <div class="p-5 flex flex-col flex-grow justify-between">
+            <div>
+              <h3 class="font-bold text-slate-900 text-base leading-snug group-hover:text-red-600 transition mb-2">${art.title}</h3>
+              <p class="text-slate-600 text-xs leading-relaxed mb-4 line-clamp-3">${art.summary}</p>
+            </div>
+            <div>
+              <div class="flex items-center justify-between text-xs text-slate-500 border-t pt-3">
+                <span class="font-medium">${art.author}</span>
+                <span class="text-emerald-600 font-bold flex items-center gap-1"><i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Proof Verified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function handleSearch() {
+      const q = document.getElementById('searchInput').value;
+      renderContent(q);
+    }
+
+    function openArticleModal(id) {
+      const art = articles.find(a => a.id === id);
+      if (!art) return;
+
+      const modalContent = document.getElementById('articleModalContent');
+      modalContent.innerHTML = `
+        <div class="p-6 sm:p-8 max-h-[85vh] overflow-y-auto">
+          <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2">
+              <span class="bg-red-600 text-white text-xs font-extrabold uppercase px-2.5 py-1 rounded">${art.category}</span>
+              ${art.isBreaking ? '<span class="bg-amber-500 text-black text-xs font-bold uppercase px-2 py-0.5 rounded">Breaking</span>' : ''}
+            </div>
+            <div class="text-xs text-gray-500 flex items-center gap-1">
+              <i data-lucide="clock" class="w-3.5 h-3.5"></i> ${art.publishedAt || 'Published Recently'}
+            </div>
+          </div>
+
+          <h1 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight mb-4">${art.title}</h1>
+          
+          <div class="flex items-center gap-3 pb-4 mb-6 border-b border-gray-200">
+            <div class="w-10 h-10 rounded-full bg-slate-900 text-white font-bold flex items-center justify-center text-sm">
+              ${art.author.charAt(0)}
+            </div>
+            <div>
+              <p class="text-sm font-bold text-slate-900">${art.author}</p>
+              <p class="text-xs text-slate-500">${art.authorRole || 'COGL News Desk'}</p>
+            </div>
+          </div>
+
+          <div class="rounded-xl overflow-hidden mb-6 shadow-sm">
+            <img src="${art.featuredImage}" alt="${art.title}" class="w-full max-h-96 object-cover">
+          </div>
+
+          ${art.videoEmbedUrl ? `
+            <div class="mb-6 rounded-xl overflow-hidden bg-black aspect-video shadow-md">
+              <iframe src="${art.videoEmbedUrl}" class="w-full h-full" frameborder="0" allowfullscreen></iframe>
+            </div>
+          ` : ''}
+
+          <div class="text-slate-800 text-sm sm:text-base leading-relaxed space-y-4 mb-8">
+            ${art.content}
+          </div>
+
+          <div class="bg-slate-50 border-2 border-emerald-500/30 rounded-xl p-5 mb-4">
+            <div class="flex items-center justify-between mb-3">
+              <h3 class="text-sm font-black uppercase tracking-wider text-emerald-900 flex items-center gap-2">
+                <i data-lucide="shield-check" class="w-5 h-5 text-emerald-600"></i> Evidence & Verification Box (Proof)
+              </h3>
+              <span class="badge-fact-checked text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Primary Source Attached</span>
+            </div>
+            <div class="space-y-3">
+              ${(art.proofs || []).map(proof => `
+                <div class="bg-white p-3.5 rounded-lg border border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-xs">
+                  <div>
+                    <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded">${proof.type}</span>
+                    <h5 class="font-bold text-slate-900 text-sm mt-1">${proof.title}</h5>
+                    <p class="text-xs text-slate-500 font-medium">Source: <span class="text-slate-800">${proof.source}</span></p>
+                  </div>
+                  <a href="${proof.url}" target="_blank" class="shrink-0 inline-flex items-center gap-1.5 text-xs bg-slate-900 hover:bg-slate-800 text-white px-3.5 py-2 rounded-md font-semibold transition">
+                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Inspect Document
+                  </a>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+        </div>
+      `;
+      document.getElementById('articleModal').classList.remove('hidden');
+      lucide.createIcons();
+    }
+
+    function closeArticleModal() {
+      document.getElementById('articleModal').classList.add('hidden');
+    }
+
+    function openAdminModal() {
+      document.getElementById('adminModal').classList.remove('hidden');
+      if (isAdminLoggedIn) {
+        document.getElementById('adminLoginView').classList.add('hidden');
+        document.getElementById('adminDashboardView').classList.remove('hidden');
+      } else {
+        document.getElementById('adminLoginView').classList.remove('hidden');
+        document.getElementById('adminDashboardView').classList.add('hidden');
+      }
+      lucide.createIcons();
+    }
+
+    function closeAdminModal() {
+      document.getElementById('adminModal').classList.add('hidden');
+    }
+
+    async function handleAdminLogin(e) {
+      e.preventDefault();
+      const em = document.getElementById('adminEmailInput').value;
+      const pw = document.getElementById('adminPasswordInput').value;
+
+      let authenticated = false;
+      if (window.location.protocol.startsWith('http')) {
+        try {
+          const res = await fetch('/api/admin/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: em, password: pw })
+          });
+          const data = await res.json();
+          if (data.success) authenticated = true;
+        } catch (err) {
+          console.warn('Backend login check failed, falling back to local credentials', err);
+        }
+      }
+
+      if (!authenticated && em === 'admin@coglnews.com' && pw === 'admin123(COGL)!') {
+        authenticated = true;
+      }
+
+      if (authenticated) {
+        isAdminLoggedIn = true;
+        document.getElementById('adminLoginView').classList.add('hidden');
+        document.getElementById('adminDashboardView').classList.remove('hidden');
+        document.getElementById('setTicker').value = settings.breakingTicker;
+        document.getElementById('setYt').value = settings.socials.youtube;
+        document.getElementById('setX').value = settings.socials.twitter;
+        document.getElementById('setFb').value = settings.socials.facebook;
+        document.getElementById('setIg').value = settings.socials.instagram;
+        document.getElementById('setTg').value = settings.socials.telegram;
+        lucide.createIcons();
+      } else {
+        alert('Invalid credentials! Use demo login: admin@coglnews.com / admin123(COGL)!');
+      }
+    }
+
+    function handleAdminLogout() {
+      isAdminLoggedIn = false;
+      document.getElementById('adminDashboardView').classList.add('hidden');
+      document.getElementById('adminLoginView').classList.remove('hidden');
+    }
+
+    function switchAdminTab(tab) {
+      const newTab = document.getElementById('adminNewArticleTab');
+      const setTab = document.getElementById('adminSettingsTab');
+      const tabBtnNew = document.getElementById('tabBtnNew');
+      const tabBtnSettings = document.getElementById('tabBtnSettings');
+
+      if (tab === 'newArticle') {
+        newTab.classList.remove('hidden');
+        setTab.classList.add('hidden');
+        tabBtnNew.className = "py-2 px-3 text-xs font-bold border-b-2 border-red-600 text-red-600";
+        tabBtnSettings.className = "py-2 px-3 text-xs font-bold text-gray-500 hover:text-gray-800";
+      } else {
+        newTab.classList.add('hidden');
+        setTab.classList.remove('hidden');
+        tabBtnSettings.className = "py-2 px-3 text-xs font-bold border-b-2 border-red-600 text-red-600";
+        tabBtnNew.className = "py-2 px-3 text-xs font-bold text-gray-500 hover:text-gray-800";
+      }
+      lucide.createIcons();
+    }
+
+    async function handleCreateArticle(e) {
+      e.preventDefault();
+      const title = document.getElementById('newTitle').value;
+      const category = document.getElementById('newCategory').value;
+      const summary = document.getElementById('newSummary').value;
+      const content = document.getElementById('newContent').value;
+      const featuredImage = document.getElementById('newImage').value;
+      const videoEmbedUrl = document.getElementById('newVideo').value;
+      const isBreaking = document.getElementById('newIsBreaking').checked;
+      const isLead = document.getElementById('newIsLead').checked;
+
+      const pTitle = document.getElementById('proofTitle').value;
+      const pType = document.getElementById('proofType').value;
+      const pSource = document.getElementById('proofSource').value;
+      const pUrl = document.getElementById('proofUrl').value;
+
+      const newArticle = {
+        id: 'cogl-' + Date.now(),
+        title,
+        category,
+        summary,
+        content: `<p>${content.replace(/\n/g, '</p><p>')}</p>`,
+        featuredImage,
+        videoEmbedUrl,
+        author: "Editorial Board",
+        authorRole: "Senior Investigative Journalist",
+        isBreaking,
+        isLead,
+        isFactChecked: true,
+        readingTime: "3 min",
+        publishedAt: "Just now",
+        proofs: [
+          {
+            title: pTitle,
+            type: pType,
+            source: pSource,
+            url: pUrl
+          }
+        ]
+      };
+
+      if (window.location.protocol.startsWith('http')) {
+        try {
+          await fetch('/api/admin/articles', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(newArticle)
+          });
+        } catch (err) {
+          console.warn('Backend sync failed, saved locally:', err);
+        }
+      }
+
+      if (isLead) {
+        articles.unshift(newArticle);
+      } else {
+        articles.splice(1, 0, newArticle);
+      }
+
+      localStorage.setItem('cogl_articles', JSON.stringify(articles));
+      renderContent();
+      closeAdminModal();
+      alert(`Story successfully published under [${category}]!`);
+    }
+
+    async function handleSaveSettings(e) {
+      e.preventDefault();
+      settings.breakingTicker = document.getElementById('setTicker').value;
+      settings.socials.youtube = document.getElementById('setYt').value;
+      settings.socials.twitter = document.getElementById('setX').value;
+      settings.socials.facebook = document.getElementById('setFb').value;
+      settings.socials.instagram = document.getElementById('setIg').value;
+      settings.socials.telegram = document.getElementById('setTg').value;
+
+      if (window.location.protocol.startsWith('http')) {
+        try {
+          await fetch('/api/admin/settings', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(settings)
+          });
+        } catch (err) {
+          console.warn('Backend sync failed, saved locally:', err);
+        }
+      }
+
+      localStorage.setItem('cogl_settings', JSON.stringify(settings));
+      applySettings();
+      alert('Settings updated successfully!');
+      closeAdminModal();
+    }
+
+    window.addEventListener('DOMContentLoaded', initApp);
+  </script>
+</body>
+</html>

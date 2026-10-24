@@ -1,0 +1,16 @@
+{
+  "siteName": "COGL NEWS",
+  "tagline": "Uncompromising Journalism \u2022 Verified Truth \u2022 Multi-Format Proof",
+  "breakingTicker": "EXCLUSIVE: Global Clean Energy Transition Accelerates with Battery Storage Breakthrough \u2022 High-Speed Rail Corridor Begins Operations \u2022 Parliament Approves Digital Trade Bill",
+  "socials": {
+    "youtube": "https://youtube.com/@coglnews",
+    "twitter": "https://x.com/coglnews",
+    "facebook": "https://facebook.com/coglnews",
+    "instagram": "https://instagram.com/coglnews",
+    "telegram": "https://t.me/coglnews"
+  },
+  "adminCredentials": {
+    "username": "admin@coglnews.com",
+    "password": "admin123(COGL)!"
+  }
+}

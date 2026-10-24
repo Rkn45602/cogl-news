@@ -1,0 +1,229 @@
+[
+  {
+    "id": "cogl-art-1",
+    "title": "Global Clean Energy Transition Accelerates with New Battery Storage Breakthrough",
+    "slug": "global-clean-energy-battery-breakthrough",
+    "category": "Technology",
+    "summary": "Researchers achieve 4x density in solid-state cells, paving the way for 1000-km EV ranges and regional grid stability.",
+    "content": "<p>In what is being termed a milestone for sustainable energy infrastructure, an international consortium of battery engineers has verified a stable silicon-electrolyte interface operating under room temperature.</p>",
+    "featuredImage": "https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1200&q=80",
+    "videoEmbedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "author": "Dr. Sarah Jenkins",
+    "authorRole": "Senior Science Editor",
+    "isBreaking": true,
+    "isLead": true,
+    "isFactChecked": true,
+    "readingTime": "4 min",
+    "publishedAt": "2026-10-24T08:30:00Z",
+    "proofs": [
+      {
+        "title": "Consortium Peer-Reviewed Preprint",
+        "type": "Primary Research Document",
+        "source": "International Energy Research Archive",
+        "url": "https://arxiv.org",
+        "notes": "Verified laboratory data with peer sign-offs."
+      }
+    ]
+  },
+  {
+    "id": "cogl-art-2",
+    "title": "Parliamentary Committee Unveils Comprehensive Framework on Cross-Border Digital Trade",
+    "slug": "parliament-digital-trade-framework",
+    "category": "Politics",
+    "summary": "Bipartisan consensus establishes streamlined customs clearance and strict data localization guarantees.",
+    "content": "<p>Lawmakers on Friday approved the landmark digital commerce modernization bill following four rounds of consultations.</p>",
+    "featuredImage": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1200&q=80",
+    "videoEmbedUrl": "",
+    "author": "Arun Verma",
+    "authorRole": "Chief Political Correspondent",
+    "isBreaking": false,
+    "isLead": false,
+    "isFactChecked": true,
+    "readingTime": "5 min",
+    "publishedAt": "2026-10-24T07:15:00Z",
+    "proofs": [
+      {
+        "title": "Gazette Notification No. 412/2026",
+        "type": "Official Gazette Copy",
+        "source": "Government Printing Directorate",
+        "url": "https://egazette.gov.in",
+        "notes": "Clause 14-B explicitly covers digital tax exemptions."
+      }
+    ]
+  },
+  {
+    "id": "cogl-art-3",
+    "title": "Central Bank Keeps Baseline Repo Rates Stable Amid Cooling Inflation Indexes",
+    "slug": "central-bank-repo-rates-inflation",
+    "category": "Business",
+    "summary": "Core economic indicators show supply chain resilience, prompting the monetary board to favor credit stability.",
+    "content": "<p>Commercial lending rates are expected to remain steady through the winter quarter as the Monetary Policy Committee voted to retain benchmark rates.</p>",
+    "featuredImage": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
+    "videoEmbedUrl": "",
+    "author": "Rohan Mehra",
+    "authorRole": "Financial Analyst",
+    "isBreaking": false,
+    "isLead": false,
+    "isFactChecked": true,
+    "readingTime": "3 min",
+    "publishedAt": "2026-10-23T16:00:00Z",
+    "proofs": [
+      {
+        "title": "Central Bank Monetary Policy Press Release",
+        "type": "Official Press Statement",
+        "source": "Reserve Bank Press Office",
+        "url": "https://rbi.org.in"
+      }
+    ]
+  },
+  {
+    "id": "cogl-art-4",
+    "title": "National Athletics Championship: Relay Team Shatters Decade-Old Record",
+    "slug": "athletics-championship-relay-record",
+    "category": "Sport",
+    "summary": "A 37.89-second 4x100m sprint clinches gold and automatic qualification for the world trials.",
+    "content": "<p>In an electric finish at the National Stadium, the regional academy quartet pulled off an unexpected comeback.</p>",
+    "featuredImage": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=80",
+    "videoEmbedUrl": "",
+    "author": "Pooja Sharma",
+    "authorRole": "Sports Desk Lead",
+    "isBreaking": false,
+    "isLead": false,
+    "isFactChecked": true,
+    "readingTime": "3 min",
+    "publishedAt": "2026-10-23T14:45:00Z",
+    "proofs": [
+      {
+        "title": "Official Federation Timing Certificate",
+        "type": "Electronic Timing Log",
+        "source": "Athletics Federation Timing Committee",
+        "url": "https://athleticsfederation.org"
+      }
+    ]
+  },
+  {
+    "id": "cogl-art-5",
+    "title": "Himalayan Glacial Basins Show Rebound in Perennial Springs After Community Reforestation",
+    "slug": "himalayan-glacial-basins-reforestation",
+    "category": "Earth",
+    "summary": "Satellite scans verify groundwater recharge following five years of broadleaf tree planting.",
+    "content": "<p>A ten-valley survey confirms that perennial spring discharges have increased by 22%.</p>",
+    "featuredImage": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+    "videoEmbedUrl": "",
+    "author": "Deepak Joshi",
+    "authorRole": "Environmental Correspondent",
+    "isBreaking": false,
+    "isLead": false,
+    "isFactChecked": true,
+    "readingTime": "4 min",
+    "publishedAt": "2026-10-22T11:20:00Z",
+    "proofs": [
+      {
+        "title": "Satellite Groundwater Scan",
+        "type": "Remote Sensing Dataset",
+        "source": "National Remote Sensing Centre (NRSC)",
+        "url": "https://nrsc.gov.in"
+      }
+    ]
+  },
+  {
+    "id": "cogl-art-6",
+    "title": "Clinical Trials Validate Non-Invasive Continuous Glucose Sensors",
+    "slug": "non-invasive-continuous-glucose-sensors",
+    "category": "Health",
+    "summary": "New bio-impedance wrist device promises needle-free blood sugar tracking with 96% clinical accuracy.",
+    "content": "<p>Patients managing diabetes may soon have access to pain-free continuous monitoring without finger-pricks.</p>",
+    "featuredImage": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+    "videoEmbedUrl": "",
+    "author": "Dr. Sarah Jenkins",
+    "authorRole": "Senior Science Editor",
+    "isBreaking": false,
+    "isLead": false,
+    "isFactChecked": true,
+    "readingTime": "4 min",
+    "publishedAt": "2026-10-22T09:10:00Z",
+    "proofs": [
+      {
+        "title": "Clinical Registry Audit",
+        "type": "Clinical Registry Data",
+        "source": "Journal of Medical Diagnostics",
+        "url": "https://clinicaltrials.gov"
+      }
+    ]
+  },
+  {
+    "id": "cogl-art-7",
+    "title": "Heritage Restorers Uncover 12th Century Murals in Rajasthan Fortress",
+    "slug": "heritage-restorers-12th-century-frescoes-rajasthan",
+    "category": "Culture",
+    "summary": "Mineral-pigment murals illustrating ancient trade routes uncovered under protective limestone plaster.",
+    "content": "<p>Thermal imaging revealed concealed artwork depicting royal assemblies and ancient trade.</p>",
+    "featuredImage": "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80",
+    "videoEmbedUrl": "",
+    "author": "Meera Rathore",
+    "authorRole": "Arts & Heritage Writer",
+    "isBreaking": false,
+    "isLead": false,
+    "isFactChecked": true,
+    "readingTime": "5 min",
+    "publishedAt": "2026-10-21T14:30:00Z",
+    "proofs": [
+      {
+        "title": "Archaeological Survey Field Discovery Report",
+        "type": "Official Survey Log",
+        "source": "State Dept of Archaeology",
+        "url": "https://archaeology.rajasthan.gov.in"
+      }
+    ]
+  },
+  {
+    "id": "cogl-art-8",
+    "title": "High-Speed Rail Corridor Connects Remote Mountain Towns to Coastal Hubs",
+    "slug": "high-speed-rail-mountain-to-coast",
+    "category": "Travel",
+    "summary": "New panoramic trains cut travel journey from 14 hours down to 3.5 hours, boosting eco-tourism.",
+    "content": "<p>The inaugural journey departed this morning traversing 18 newly bored green-engineered tunnels.</p>",
+    "featuredImage": "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=1200&q=80",
+    "videoEmbedUrl": "",
+    "author": "Vikram Sen",
+    "authorRole": "Travel & Infrastructure Correspondent",
+    "isBreaking": false,
+    "isLead": false,
+    "isFactChecked": true,
+    "readingTime": "4 min",
+    "publishedAt": "2026-10-20T10:00:00Z",
+    "proofs": [
+      {
+        "title": "Railway Safety Clearance Certificate",
+        "type": "Safety Clearance Certificate",
+        "source": "Commission of Railway Safety",
+        "url": "https://indianrailways.gov.in"
+      }
+    ]
+  },
+  {
+    "id": "cogl-art-9",
+    "title": "Contemporary Sculptor Redefines Public Spaces with Kinetic Sculptures",
+    "slug": "kinetic-wind-powered-sculptures-public-art",
+    "category": "Arts",
+    "summary": "Towering bronze and steel ribbons dance with the breeze, turning city plazas into harmonic spectacles.",
+    "content": "<p>The outdoor installation titled 'Echoes of the Wind' reacts fluidly to varying barometric pressure.</p>",
+    "featuredImage": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80",
+    "videoEmbedUrl": "",
+    "author": "Meera Rathore",
+    "authorRole": "Arts & Heritage Writer",
+    "isBreaking": false,
+    "isLead": false,
+    "isFactChecked": true,
+    "readingTime": "3 min",
+    "publishedAt": "2026-10-19T13:15:00Z",
+    "proofs": [
+      {
+        "title": "City Arts Commission Public Installation Archive",
+        "type": "Municipal Architectural Record",
+        "source": "Civic Arts Board",
+        "url": "https://cityarts.org"
+      }
+    ]
+  }
+]
