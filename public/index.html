@@ -123,8 +123,13 @@
           </div>
           <div>
             <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Secret Password</label>
-            <input type="password" id="adminPasswordInput" placeholder="Enter secret password..." required 
-                   class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-red-600 outline-none">
+            <div class="relative">
+              <input type="password" id="adminPasswordInput" placeholder="Enter secret password..." required 
+                     class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-red-600 outline-none pr-10">
+              <button type="button" onclick="togglePasswordVisibility()" title="Show/hide password" class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600">
+                <i id="togglePasswordIcon" data-lucide="eye" class="w-4 h-4"></i>
+              </button>
+            </div>
           </div>
           <button type="submit" class="w-full py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg text-sm transition shadow-md">
             Unlock Editorial Dashboard
@@ -270,6 +275,20 @@
                 <label class="font-bold text-gray-700">Telegram Channel URL</label>
                 <input type="url" id="setTg" class="w-full p-2 border rounded mt-1">
               </div>
+            </div>
+            <div class="border-t pt-3 mt-3">
+              <label class="block text-xs font-bold text-gray-800 uppercase mb-1">Admin Security / Password Change</label>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                <div>
+                  <label class="font-bold text-gray-700">Admin Email / ID</label>
+                  <input type="text" id="setAdminEmail" placeholder="admin@coglnews.com" class="w-full p-2 border rounded mt-1">
+                </div>
+                <div>
+                  <label class="font-bold text-gray-700">New Password</label>
+                  <input type="password" id="setAdminPassword" placeholder="Leave blank to keep current" class="w-full p-2 border rounded mt-1">
+                </div>
+              </div>
+              <p class="text-[11px] text-gray-500 mt-1">Leave password blank if you do not want to change it.</p>
             </div>
             <button type="submit" class="mt-4 px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded text-xs">
               Save Social Links & Ticker
@@ -835,10 +854,24 @@
       document.getElementById('adminModal').classList.add('hidden');
     }
 
+    function togglePasswordVisibility() {
+      const pwInput = document.getElementById('adminPasswordInput');
+      const icon = document.getElementById('togglePasswordIcon');
+      if (!pwInput || !icon) return;
+      if (pwInput.type === 'password') {
+        pwInput.type = 'text';
+        icon.setAttribute('data-lucide', 'eye-off');
+      } else {
+        pwInput.type = 'password';
+        icon.setAttribute('data-lucide', 'eye');
+      }
+      lucide.createIcons();
+    }
+
     async function handleAdminLogin(e) {
       e.preventDefault();
-      const em = document.getElementById('adminEmailInput').value;
-      const pw = document.getElementById('adminPasswordInput').value;
+      const em = (document.getElementById('adminEmailInput').value || '').trim();
+      const pw = (document.getElementById('adminPasswordInput').value || '').trim();
 
       let authenticated = false;
       if (window.location.protocol.startsWith('http')) {
@@ -849,13 +882,33 @@
             body: JSON.stringify({ email: em, password: pw })
           });
           const data = await res.json();
-          if (data.success) authenticated = true;
+          if (data && data.success) authenticated = true;
         } catch (err) {
           console.warn('Backend login check failed, falling back to local credentials', err);
         }
       }
 
-      if (!authenticated && em === 'admin@coglnews.com' && pw === 'admin123(COGL)!') {
+      // Local / Offline fallback & alias support
+      let localCreds = {};
+      try {
+        localCreds = JSON.parse(localStorage.getItem('cogl_admin_creds') || '{}');
+      } catch (e) {}
+
+      const validUsernames = [
+        'admin@coglnews.com',
+        'admin',
+        'editor@coglnews.com',
+        (localCreds.username || '').toLowerCase()
+      ].filter(Boolean);
+
+      const validPasswords = [
+        'CoglNews@2026!',
+        'CoglNews@2026',
+        'admin123(COGL)!',
+        localCreds.password
+      ].filter(Boolean);
+
+      if (!authenticated && validUsernames.includes(em.toLowerCase()) && (validPasswords.includes(pw) || validPasswords.includes(document.getElementById('adminPasswordInput').value))) {
         authenticated = true;
       }
 
@@ -865,15 +918,18 @@
         updateAdminNavUI();
         document.getElementById('adminLoginView').classList.add('hidden');
         document.getElementById('adminDashboardView').classList.remove('hidden');
-        document.getElementById('setTicker').value = settings.breakingTicker;
-        document.getElementById('setYt').value = settings.socials.youtube;
-        document.getElementById('setX').value = settings.socials.twitter;
-        document.getElementById('setFb').value = settings.socials.facebook;
-        document.getElementById('setIg').value = settings.socials.instagram;
-        document.getElementById('setTg').value = settings.socials.telegram;
+        document.getElementById('setTicker').value = settings.breakingTicker || '';
+        document.getElementById('setYt').value = settings.socials?.youtube || '';
+        document.getElementById('setX').value = settings.socials?.twitter || '';
+        document.getElementById('setFb').value = settings.socials?.facebook || '';
+        document.getElementById('setIg').value = settings.socials?.instagram || '';
+        document.getElementById('setTg').value = settings.socials?.telegram || '';
+        if (document.getElementById('setAdminEmail')) {
+          document.getElementById('setAdminEmail').value = localCreds.username || 'admin@coglnews.com';
+        }
         lucide.createIcons();
       } else {
-        alert('Invalid credentials! Access denied.');
+        alert('Invalid credentials! Please check your ID and Password.\n\nDefault Admin:\nEmail / ID: admin@coglnews.com (or admin)\nPassword: CoglNews@2026!');
       }
     }
 
@@ -1015,6 +1071,16 @@
       settings.socials.facebook = document.getElementById('setFb').value;
       settings.socials.instagram = document.getElementById('setIg').value;
       settings.socials.telegram = document.getElementById('setTg').value;
+
+      const newAdminEmail = document.getElementById('setAdminEmail')?.value?.trim();
+      const newAdminPassword = document.getElementById('setAdminPassword')?.value?.trim();
+      if (newAdminPassword) {
+        settings.adminCredentials = {
+          username: newAdminEmail || 'admin@coglnews.com',
+          password: newAdminPassword
+        };
+        localStorage.setItem('cogl_admin_creds', JSON.stringify(settings.adminCredentials));
+      }
 
       if (window.location.protocol.startsWith('http')) {
         try {

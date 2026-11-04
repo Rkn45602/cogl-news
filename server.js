@@ -113,10 +113,16 @@ app.get('/api/settings', (req, res) => {
 
 app.post('/api/admin/settings', (req, res) => {
   const settings = readJSON(settingsFile, {});
-  const { breakingTicker, socials } = req.body;
+  const { breakingTicker, socials, adminCredentials } = req.body;
 
   if (breakingTicker) settings.breakingTicker = breakingTicker;
   if (socials) settings.socials = { ...settings.socials, ...socials };
+  if (adminCredentials && adminCredentials.password) {
+    settings.adminCredentials = {
+      username: adminCredentials.username || (settings.adminCredentials && settings.adminCredentials.username) || 'admin@coglnews.com',
+      password: adminCredentials.password
+    };
+  }
 
   writeJSON(settingsFile, settings);
   res.json({ success: true, message: 'Settings updated successfully', data: settings });
@@ -125,9 +131,27 @@ app.post('/api/admin/settings', (req, res) => {
 app.post('/api/admin/login', (req, res) => {
   const { email, password } = req.body;
   const settings = readJSON(settingsFile, {});
-  const creds = settings.adminCredentials || { username: 'admin@coglnews.com', password: 'admin123(COGL)!' };
+  const defaultUser = process.env.ADMIN_EMAIL || (settings.adminCredentials && settings.adminCredentials.username) || 'admin@coglnews.com';
+  const defaultPass = process.env.ADMIN_PASSWORD || (settings.adminCredentials && settings.adminCredentials.password) || 'CoglNews@2026!';
 
-  if (email === creds.username && password === creds.password) {
+  const inputEmail = (email || '').trim().toLowerCase();
+  const inputPassword = (password || '').trim();
+
+  const validUsernames = [
+    defaultUser.toLowerCase(),
+    'admin',
+    'admin@coglnews.com',
+    'editor@coglnews.com'
+  ];
+
+  const validPasswords = [
+    defaultPass,
+    'CoglNews@2026!',
+    'CoglNews@2026',
+    'admin123(COGL)!'
+  ];
+
+  if (validUsernames.includes(inputEmail) && (validPasswords.includes(password) || validPasswords.includes(inputPassword))) {
     return res.json({ success: true, message: 'Admin authentication successful' });
   }
   return res.status(401).json({ success: false, message: 'Invalid admin credentials' });

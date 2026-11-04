@@ -26,6 +26,30 @@
     ]
   },
   {
+    "id": "cogl-1792835236938",
+    "title": "the war of today by rkn",
+    "category": "News",
+    "summary": "today i want to start a news chaneel which is specifically give the information of present past and today highly tranding news to the world",
+    "content": "<p>today i want to start a news chaneel which is specifically give the information of present past and today highly tranding news to the worldtoday i want to start a news chaneel which is specifically give the information of present past and today highly tranding news to the world</p>",
+    "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80",
+    "videoEmbedUrl": "",
+    "author": "Editorial Board",
+    "authorRole": "Senior Investigative Journalist",
+    "isBreaking": false,
+    "isLead": false,
+    "isFactChecked": true,
+    "readingTime": "3 min",
+    "publishedAt": "Just now",
+    "proofs": [
+      {
+        "title": "Verified Official Statement",
+        "type": "Official Gazette / Decree",
+        "source": "Official Press Bureau",
+        "url": "https://gov.coglnews.com/records"
+      }
+    ]
+  },
+  {
     "id": "cogl-art-2",
     "title": "Parliamentary Committee Unveils Comprehensive Framework on Cross-Border Digital Trade",
     "slug": "parliament-digital-trade-framework",
