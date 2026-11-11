@@ -55,5 +55,5 @@ To deploy the backend API with persistent JSON/database storage:
 
 ### How to Access the Admin CMS
 - The Admin Panel button and red logo triple-click triggers have been removed from the website for maximum discretion and security.
-- To reveal the Admin CMS login prompt, press `Ctrl + Shift + A + D` anywhere on the website.
+- To reveal the Admin CMS login prompt, press `Ctrl + Shift + A + E` anywhere on the website.
 - The Admin Panel cannot be accessed without valid Editor Email/ID and Password.

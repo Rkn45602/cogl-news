@@ -1258,7 +1258,7 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Admin Panel Login can appear ONLY by pressing Ctrl+Shift+A+D
+    // Admin Panel Login can appear ONLY by pressing Ctrl+Shift+A+E
     const activeComboKeys = new Set();
     let comboSequence = [];
     let comboTimestamp = 0;
@@ -1272,7 +1272,7 @@
 
       if (isCtrlOrMeta && isShift) {
         const now = Date.now();
-        if (key === 'A' || key === 'D') {
+        if (key === 'A' || key === 'E') {
           if (now - comboTimestamp > 2500) {
             comboSequence = [];
           }
@@ -1280,8 +1280,8 @@
           comboTimestamp = now;
         }
 
-        const bothHeld = activeComboKeys.has('A') && activeComboKeys.has('D');
-        const sequenceMatched = comboSequence.includes('A') && comboSequence.includes('D');
+        const bothHeld = activeComboKeys.has('A') && activeComboKeys.has('E');
+        const sequenceMatched = comboSequence.includes('A') && comboSequence.includes('E');
 
         if (bothHeld || sequenceMatched) {
           e.preventDefault();
