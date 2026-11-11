@@ -102,23 +102,25 @@
     </div>
   </div>
 
-  <div id="adminModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden overflow-y-auto p-4 sm:p-6 flex justify-center items-center">
-    <div class="bg-white rounded-2xl max-w-3xl w-full p-6 shadow-2xl border border-gray-200 relative my-8">
-      <button onclick="closeAdminModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700">
+  <!-- Admin CMS Suite Modal -->
+  <div id="adminModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden overflow-y-auto p-3 sm:p-6 flex justify-center items-center">
+    <div id="adminModalBox" class="bg-white rounded-2xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-gray-200 relative my-6 transition-all duration-200">
+      <button onclick="closeAdminModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 z-10">
         <i data-lucide="x" class="w-6 h-6"></i>
       </button>
 
+      <!-- Admin Login View (Default Locked Screen) -->
       <div id="adminLoginView">
         <div class="text-center mb-6">
           <div class="w-12 h-12 bg-red-600 text-white rounded-lg flex items-center justify-center mx-auto mb-2 font-black text-xl shadow">C</div>
           <h3 class="text-2xl font-black text-gray-900">COGL Editorial CMS</h3>
-          <p class="text-sm text-gray-500">Sign in to publish, edit articles, or update social links</p>
+          <p class="text-xs text-gray-500 mt-1">Sign in with Chief Editor ID & Password to access editorial control</p>
         </div>
 
         <form onsubmit="handleAdminLogin(event)" class="space-y-4 max-w-md mx-auto">
           <div>
             <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Editor Email / ID</label>
-            <input type="text" id="adminEmailInput" placeholder="Enter admin email..." required 
+            <input type="text" id="adminEmailInput" placeholder="admin@coglnews.com" required 
                    class="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-red-600 outline-none">
           </div>
           <div>
@@ -131,376 +133,232 @@
               </button>
             </div>
           </div>
-          <button type="submit" class="w-full py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg text-sm transition shadow-md">
+          <button type="submit" class="w-full py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg text-sm transition shadow-md cursor-pointer">
             Unlock Editorial Dashboard
           </button>
+          <p class="text-[11px] text-gray-400 text-center">Protected Editorial Portal • Unauthorized access prohibited</p>
         </form>
       </div>
 
+      <!-- Admin Dashboard View (Unlocked After Login) -->
       <div id="adminDashboardView" class="hidden">
-        <div class="flex justify-between items-center border-b pb-3 mb-4">
+        <!-- Top Toolbar -->
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b pb-3 mb-4">
           <div>
-            <h3 class="text-xl font-black text-gray-900">COGL Content Management Suite</h3>
-            <span class="text-xs text-emerald-600 font-bold flex items-center gap-1">
-              <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Authenticated as Chief Editor
-            </span>
-          </div>
-          <button onclick="handleAdminLogout()" class="text-xs bg-gray-200 hover:bg-gray-300 font-semibold px-3 py-1.5 rounded text-gray-700">
-            Sign Out
-          </button>
-        </div>
-
-        <div class="flex flex-wrap gap-2 border-b mb-4 pb-1">
-          <button onclick="switchAdminTab('newArticle')" id="tabBtnNew" class="py-2 px-3 text-xs font-bold border-b-2 border-red-600 text-red-600">
-            + Write Story
-          </button>
-          <button onclick="switchAdminTab('manageArticles')" id="tabBtnManage" class="py-2 px-3 text-xs font-bold text-gray-500 hover:text-gray-800">
-            📑 Stories & Corrections (Edit/Delete)
-          </button>
-          <button onclick="switchAdminTab('manageBot')" id="tabBtnBot" class="py-2 px-3 text-xs font-bold text-gray-500 hover:text-gray-800 flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 🤖 Autonomous News Bot (4 PM – 6 PM)
-          </button>
-          <button onclick="switchAdminTab('manageSettings')" id="tabBtnSettings" class="py-2 px-3 text-xs font-bold text-gray-500 hover:text-gray-800">
-            ⚙️ Social Media & Ticker
-          </button>
-        </div>
-
-        <div id="adminNewArticleTab">
-          <form onsubmit="handleCreateArticle(event)" class="space-y-4 max-h-[60vh] overflow-y-auto pr-2">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Headline / Title *</label>
-                <input type="text" id="newTitle" required placeholder="Enter compelling factual headline" class="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-600">
-              </div>
-              <div>
-                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Category *</label>
-                <select id="newCategory" class="w-full px-3 py-2 border rounded-lg text-sm bg-white outline-none focus:ring-2 focus:ring-red-600">
-                  <option value="News">News</option>
-                  <option value="Politics">Politics</option>
-                  <option value="Sport">Sport</option>
-                  <option value="Business">Business</option>
-                  <option value="Technology">Technology</option>
-                  <option value="Health">Health</option>
-                  <option value="Culture">Culture</option>
-                  <option value="Arts">Arts</option>
-                  <option value="Travel">Travel</option>
-                  <option value="Earth">Earth</option>
-                </select>
-              </div>
-            </div>
-
-            <div>
-              <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Executive Summary *</label>
-              <textarea id="newSummary" rows="2" required placeholder="Short 1-2 sentence lead summary..." class="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-600"></textarea>
-            </div>
-
-            <div>
-              <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Full Article Body *</label>
-              <textarea id="newContent" rows="4" required placeholder="Write the complete news report..." class="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-600"></textarea>
-            </div>
-
-            <div>
-              <label class="block text-xs font-bold text-gray-700 uppercase mb-1">SEO Hashtags (Comma or space separated for viral reach)</label>
-              <input type="text" id="newHashtags" placeholder="#WorldNews, #Breaking, #Politics, #GlobalAffairs" class="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-600">
-              <p class="text-[11px] text-gray-500 mt-0.5">Used by SEO to attract traffic and rank high on search engines.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Featured Image URL *</label>
-                <input type="url" id="newImage" required value="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80" class="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-600">
-              </div>
-              <div>
-                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Video Embed URL (YouTube/Direct)</label>
-                <input type="text" id="newVideo" placeholder="https://www.youtube.com/embed/..." class="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-600">
-              </div>
-            </div>
-
-            <div class="p-3 bg-emerald-50 rounded-lg border border-emerald-200">
-              <h4 class="text-xs font-bold text-emerald-900 uppercase flex items-center gap-1 mb-2">
-                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-700"></i> Evidence & Verification Attachment (Proof)
-              </h4>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-                <div>
-                  <label class="font-semibold text-gray-700">Proof Title</label>
-                  <input type="text" id="proofTitle" value="Verified Official Statement" class="w-full p-2 border rounded mt-1 bg-white">
-                </div>
-                <div>
-                  <label class="font-semibold text-gray-700">Proof Type</label>
-                  <select id="proofType" class="w-full p-2 border rounded mt-1 bg-white">
-                    <option value="Verified Wire Dispatch">Verified Wire Dispatch</option>
-                    <option value="Official Gazette / Decree">Official Gazette / Decree</option>
-                    <option value="Primary Document">Primary Document</option>
-                    <option value="Authentic Video Footage">Authentic Video Footage</option>
-                    <option value="Certified Audit Log">Certified Audit Log</option>
-                  </select>
-                </div>
-                <div>
-                  <label class="font-semibold text-gray-700">Source Agency</label>
-                  <input type="text" id="proofSource" value="Official Press Bureau" class="w-full p-2 border rounded mt-1 bg-white">
-                </div>
-                <div>
-                  <label class="font-semibold text-gray-700">Source Evidence URL</label>
-                  <input type="url" id="proofUrl" value="https://gov.coglnews.com/records" class="w-full p-2 border rounded mt-1 bg-white">
-                </div>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-4 text-xs font-semibold">
-              <label class="flex items-center gap-1.5 cursor-pointer">
-                <input type="checkbox" id="newIsBreaking" class="accent-red-600"> Breaking Flash
-              </label>
-              <label class="flex items-center gap-1.5 cursor-pointer">
-                <input type="checkbox" id="newIsLead" class="accent-red-600"> Make Hero Lead Story
-              </label>
-            </div>
-
-            <button type="submit" class="w-full py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg text-sm transition shadow-md flex justify-center items-center gap-2">
-              <i data-lucide="send" class="w-4 h-4"></i> Publish Live Fact-Checked Story
-            </button>
-          </form>
-        </div>
-
-        <!-- Manage Articles Tab (Edit, Delete, Hashtags) -->
-        <div id="adminManageArticlesTab" class="hidden space-y-4">
-          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 bg-gray-50 p-3 rounded-lg border border-gray-200">
             <div class="flex items-center gap-2">
-              <span id="manageCountBadge" class="bg-red-600 text-white text-xs font-black px-2.5 py-1 rounded">Stories</span>
-              <p class="text-xs text-gray-600">Edit facts/proof, update SEO hashtags, or delete incorrect news.</p>
+              <div class="w-7 h-7 bg-red-600 text-white rounded flex items-center justify-center font-black text-sm">C</div>
+              <h3 class="text-lg font-black text-gray-900">COGL Editorial CMS</h3>
+              <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Chief Editor
+              </span>
             </div>
-            <div class="w-full sm:w-64">
-              <input type="text" id="manageSearchInput" oninput="filterAdminStories(this.value)" placeholder="Search stories to edit/delete..." class="w-full px-3 py-1.5 border rounded-md text-xs outline-none focus:ring-1 focus:ring-red-600">
-            </div>
+            <p class="text-xs text-gray-500 mt-0.5">Full authority: Edit, modify, delete blogs, or publish verified news dispatches.</p>
           </div>
-
-          <div id="adminStoriesList" class="space-y-3 max-h-[60vh] overflow-y-auto pr-1">
-            <!-- Dynamically populated -->
-          </div>
-        </div>
-
-        <!-- Autonomous Bot Tab -->
-        <div id="adminBotTab" class="hidden space-y-4">
-          <div class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white p-5 rounded-xl border border-slate-700 shadow-md">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-              <div>
-                <div class="flex items-center gap-2 mb-1">
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  <h4 class="text-base font-black tracking-wide text-white">Autonomous Global News Research Agent</h4>
-                </div>
-                <p class="text-xs text-slate-300 max-w-xl">
-                  Researches the Top 10 World News dispatches from premier wire bureaus (Reuters, BBC World, AP Wire), extracts verified proof evidence & relevant photos, formats multi-paragraph journalistic reports, generates high-traffic SEO hashtags, and auto-publishes without manual intervention.
-                </p>
-              </div>
-              <button onclick="triggerBotRunManual()" id="btnTriggerBot" class="bg-red-600 hover:bg-red-700 text-white font-black text-xs px-4 py-2.5 rounded-lg shadow-lg flex items-center gap-2 transition shrink-0 cursor-pointer">
-                <i data-lucide="zap" class="w-4 h-4"></i> Run Bot Now (Top 10 News)
-              </button>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4 pt-4 border-t border-slate-700/80 text-xs">
-              <div>
-                <span class="text-slate-400 block text-[10px] uppercase font-bold">Daily Window</span>
-                <strong class="text-emerald-400">4:00 PM – 6:00 PM Daily</strong>
-              </div>
-              <div>
-                <span class="text-slate-400 block text-[10px] uppercase font-bold">Research Scope</span>
-                <strong class="text-white">Top 10 World News</strong>
-              </div>
-              <div>
-                <span class="text-slate-400 block text-[10px] uppercase font-bold">Today's Run Status</span>
-                <span id="botTodayStatusBadge" class="font-bold text-amber-300">Checking...</span>
-              </div>
-              <div>
-                <span class="text-slate-400 block text-[10px] uppercase font-bold">Last Execution</span>
-                <span id="botLastRunLabel" class="text-slate-200 truncate block">Checking...</span>
-              </div>
-            </div>
-          </div>
-
-          <div id="botProgressBox" class="hidden p-4 bg-emerald-50 border border-emerald-200 rounded-lg text-xs">
-            <div class="flex items-center gap-2 text-emerald-800 font-bold mb-2">
-              <div class="w-4 h-4 border-2 border-emerald-600 border-t-transparent rounded-full animate-spin"></div>
-              <span id="botProgressMsg">Autonomous News Bot is researching top 10 world dispatches & proofs...</span>
-            </div>
-            <div class="w-full bg-emerald-200 rounded-full h-1.5 overflow-hidden">
-              <div class="bg-emerald-600 h-1.5 rounded-full animate-pulse w-3/4"></div>
-            </div>
-          </div>
-
-          <div class="border rounded-xl p-4 bg-white">
-            <div class="flex justify-between items-center mb-3">
-              <h5 class="text-xs font-black text-slate-800 uppercase tracking-wide">Recent Agent Research & Publishing Activity</h5>
-              <button onclick="fetchBotStatus()" class="text-[11px] text-gray-500 hover:text-gray-800 flex items-center gap-1 font-semibold">
-                <i data-lucide="refresh-cw" class="w-3 h-3"></i> Refresh Log
-              </button>
-            </div>
-            <div id="botLogsContainer" class="space-y-2 max-h-56 overflow-y-auto text-xs text-slate-600">
-              <p class="text-gray-400 py-4 text-center">Loading autonomous agent logs...</p>
-            </div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <button type="button" onclick="toggleAdminSubTab('bot')" class="text-xs bg-slate-900 hover:bg-slate-800 text-white font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition shadow-xs cursor-pointer">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 🤖 News Bot
+            </button>
+            <button type="button" onclick="toggleAdminSubTab('settings')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition border border-gray-200 cursor-pointer">
+              ⚙️ Socials & Ticker
+            </button>
+            <button type="button" onclick="handleAdminLogout()" class="text-xs bg-red-50 hover:bg-red-100 text-red-700 font-bold px-3 py-1.5 rounded-lg transition border border-red-200 cursor-pointer">
+              Sign Out
+            </button>
           </div>
         </div>
 
-        <div id="adminSettingsTab" class="hidden space-y-4">
+        <!-- Collapsible Bot Drawer -->
+        <div id="adminBotTab" class="hidden mb-5 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white p-4 sm:p-5 rounded-xl border border-slate-700 shadow-md">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-3">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <h4 class="text-sm font-black tracking-wide text-white">Autonomous Global News Research Agent</h4>
+              </div>
+              <p class="text-xs text-slate-300">Researches verified world news, extracts proof documents, generates high-traffic SEO hashtags, and publishes autonomously.</p>
+            </div>
+            <button onclick="triggerBotRunManual()" id="btnTriggerBot" class="bg-red-600 hover:bg-red-700 text-white font-black text-xs px-3.5 py-2 rounded-lg shadow-lg flex items-center gap-1.5 transition shrink-0 cursor-pointer">
+              <i data-lucide="zap" class="w-4 h-4"></i> Run Bot Now (3 Verified Stories)
+            </button>
+          </div>
+          <div id="botProgressBox" class="hidden p-3 bg-emerald-950/60 border border-emerald-500/40 rounded-lg text-xs mb-3">
+            <div class="flex items-center gap-2 text-emerald-300 font-bold">
+              <div class="w-3.5 h-3.5 border-2 border-emerald-400 border-t-transparent rounded-full animate-spin"></div>
+              <span>Autonomous Bot is actively researching facts and verifying primary dispatches...</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px] border-t border-slate-700/80 pt-3">
+            <div><span class="text-slate-400">Schedule:</span> <strong class="text-emerald-400 block">4:00 PM – 6:00 PM Daily</strong></div>
+            <div><span class="text-slate-400">Today's Run:</span> <span id="botTodayStatusBadge" class="font-bold text-amber-300 block">Checking...</span></div>
+            <div class="sm:col-span-2"><span class="text-slate-400">Last Execution:</span> <span id="botLastRunLabel" class="text-slate-200 truncate block">Checking...</span></div>
+          </div>
+        </div>
+
+        <!-- Collapsible Settings Drawer -->
+        <div id="adminSettingsTab" class="hidden mb-5 bg-white p-4 sm:p-5 rounded-xl border border-gray-200 shadow-md">
           <form onsubmit="handleSaveSettings(event)" class="space-y-3">
             <div>
               <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Breaking News Banner Ticker</label>
-              <input type="text" id="setTicker" class="w-full px-3 py-2 border rounded text-sm">
+              <input type="text" id="setTicker" class="w-full px-3 py-1.5 border rounded-lg text-xs outline-none focus:ring-1 focus:ring-red-600">
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-              <div>
-                <label class="font-bold text-gray-700">YouTube Channel URL</label>
-                <input type="url" id="setYt" class="w-full p-2 border rounded mt-1">
-              </div>
-              <div>
-                <label class="font-bold text-gray-700">X (Twitter) URL</label>
-                <input type="url" id="setX" class="w-full p-2 border rounded mt-1">
-              </div>
-              <div>
-                <label class="font-bold text-gray-700">Facebook Page URL</label>
-                <input type="url" id="setFb" class="w-full p-2 border rounded mt-1">
-              </div>
-              <div>
-                <label class="font-bold text-gray-700">Instagram Handle URL</label>
-                <input type="url" id="setIg" class="w-full p-2 border rounded mt-1">
-              </div>
-              <div>
-                <label class="font-bold text-gray-700">Telegram Channel URL</label>
-                <input type="url" id="setTg" class="w-full p-2 border rounded mt-1">
-              </div>
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs">
+              <div><label class="font-bold text-gray-700 text-[10px]">YouTube</label><input type="url" id="setYt" class="w-full p-1.5 border rounded text-xs"></div>
+              <div><label class="font-bold text-gray-700 text-[10px]">Twitter / X</label><input type="url" id="setX" class="w-full p-1.5 border rounded text-xs"></div>
+              <div><label class="font-bold text-gray-700 text-[10px]">Facebook</label><input type="url" id="setFb" class="w-full p-1.5 border rounded text-xs"></div>
+              <div><label class="font-bold text-gray-700 text-[10px]">Instagram</label><input type="url" id="setIg" class="w-full p-1.5 border rounded text-xs"></div>
+              <div><label class="font-bold text-gray-700 text-[10px]">Telegram</label><input type="url" id="setTg" class="w-full p-1.5 border rounded text-xs"></div>
             </div>
-            <div class="border-t pt-3 mt-3">
-              <label class="block text-xs font-bold text-gray-800 uppercase mb-1">Admin Security / Password Change</label>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-                <div>
-                  <label class="font-bold text-gray-700">Admin Email / ID</label>
-                  <input type="text" id="setAdminEmail" placeholder="admin@coglnews.com" class="w-full p-2 border rounded mt-1">
-                </div>
-                <div>
-                  <label class="font-bold text-gray-700">New Password</label>
-                  <input type="password" id="setAdminPassword" placeholder="Leave blank to keep current" class="w-full p-2 border rounded mt-1">
-                </div>
-              </div>
-              <p class="text-[11px] text-gray-500 mt-1">Leave password blank if you do not want to change it.</p>
+            <div class="border-t pt-2.5 flex justify-between items-center">
+              <span class="text-[11px] text-gray-500">Updates live social links and marquee ticker instantly.</span>
+              <button type="submit" class="px-3 py-1.5 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg text-xs">Save Settings</button>
             </div>
-            <button type="submit" class="mt-4 px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded text-xs">
-              Save Social Links & Ticker
-            </button>
           </form>
         </div>
+
+        <!-- MAIN SPLIT WORKSPACE: Story Writer on Left | All Existing News on Right -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+          
+          <!-- LEFT SIDE (7 Cols): Form to Write / Edit Story -->
+          <div id="adminEditorFormContainer" class="lg:col-span-7 bg-white p-4 sm:p-5 rounded-xl border border-gray-200 shadow-xs">
+            <div class="flex justify-between items-center border-b pb-2.5 mb-3">
+              <div class="flex items-center gap-2">
+                <span id="editorModeBadge" class="bg-red-600 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded">NEW STORY</span>
+                <h4 id="editorFormHeading" class="text-xs sm:text-sm font-black text-slate-900 uppercase tracking-wide">Write & Publish Story</h4>
+              </div>
+              <button id="btnCancelEdit" type="button" onclick="cancelEditorMode()" class="hidden text-xs text-red-600 hover:text-red-800 font-bold flex items-center gap-1 cursor-pointer">
+                <i data-lucide="x-circle" class="w-3.5 h-3.5"></i> Cancel Edit (Write New)
+              </button>
+            </div>
+
+            <div id="editingBanner" class="hidden mb-3 p-2.5 bg-amber-50 border border-amber-300 rounded-lg text-xs text-amber-900 flex justify-between items-center">
+              <div class="flex items-center gap-1.5 truncate">
+                <i data-lucide="edit-3" class="w-4 h-4 text-amber-700 shrink-0"></i>
+                <span id="editingBannerTitle" class="truncate font-semibold">Editing selected blog story.</span>
+              </div>
+              <button type="button" onclick="cancelEditorMode()" class="text-[11px] font-bold text-amber-900 hover:underline shrink-0 ml-2">Cancel Edit</button>
+            </div>
+
+            <form onsubmit="handleEditorFormSubmit(event)" class="space-y-3">
+              <input type="hidden" id="adminEditingId" value="">
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div class="sm:col-span-2">
+                  <label class="block text-[11px] font-bold text-gray-700 uppercase mb-1">Headline / Title *</label>
+                  <input type="text" id="newTitle" required placeholder="Enter compelling factual headline..." class="w-full px-3 py-1.5 border rounded-lg text-xs outline-none focus:ring-1 focus:ring-red-600">
+                </div>
+                <div>
+                  <label class="block text-[11px] font-bold text-gray-700 uppercase mb-1">Category *</label>
+                  <select id="newCategory" class="w-full px-2.5 py-1.5 border rounded-lg text-xs bg-white outline-none focus:ring-1 focus:ring-red-600">
+                    <option value="News">News</option>
+                    <option value="Politics">Politics</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Business">Business</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Health">Health</option>
+                    <option value="Culture">Culture</option>
+                    <option value="Arts">Arts</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Earth">Earth</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-bold text-gray-700 uppercase mb-1">Executive Summary *</label>
+                <textarea id="newSummary" rows="2" required placeholder="Short 1-2 sentence lead summary..." class="w-full px-3 py-1.5 border rounded-lg text-xs outline-none focus:ring-1 focus:ring-red-600"></textarea>
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-bold text-gray-700 uppercase mb-1">Full Article Body *</label>
+                <textarea id="newContent" rows="5" required placeholder="Write the complete news report..." class="w-full px-3 py-1.5 border rounded-lg text-xs outline-none focus:ring-1 focus:ring-red-600 font-sans"></textarea>
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-bold text-gray-700 uppercase mb-1">SEO Hashtags (Comma / Space separated)</label>
+                <input type="text" id="newHashtags" placeholder="#WorldNews, #Breaking, #Politics, #COGLNews" class="w-full px-3 py-1.5 border rounded-lg text-xs outline-none focus:ring-1 focus:ring-red-600">
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                <div>
+                  <label class="block font-bold text-gray-700 uppercase mb-1 text-[11px]">Featured Image URL *</label>
+                  <input type="url" id="newImage" required value="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80" class="w-full px-2.5 py-1.5 border rounded-lg text-xs outline-none focus:ring-1 focus:ring-red-600">
+                </div>
+                <div>
+                  <label class="block font-bold text-gray-700 uppercase mb-1 text-[11px]">Video Embed URL (Optional)</label>
+                  <input type="text" id="newVideo" placeholder="https://www.youtube.com/embed/..." class="w-full px-2.5 py-1.5 border rounded-lg text-xs outline-none focus:ring-1 focus:ring-red-600">
+                </div>
+              </div>
+
+              <!-- Proof verification box -->
+              <div class="p-2.5 bg-emerald-50 rounded-lg border border-emerald-200">
+                <h4 class="text-[11px] font-bold text-emerald-900 uppercase flex items-center gap-1 mb-1.5">
+                  <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-700"></i> Evidence & Verification Attachment (Proof)
+                </h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  <div>
+                    <label class="font-semibold text-gray-700 text-[10px]">Proof Title</label>
+                    <input type="text" id="proofTitle" value="Verified Official Statement" class="w-full p-1.5 border rounded mt-0.5 bg-white text-xs">
+                  </div>
+                  <div>
+                    <label class="font-semibold text-gray-700 text-[10px]">Proof Type</label>
+                    <select id="proofType" class="w-full p-1.5 border rounded mt-0.5 bg-white text-xs">
+                      <option value="Verified Wire Dispatch">Verified Wire Dispatch</option>
+                      <option value="Official Gazette / Decree">Official Gazette / Decree</option>
+                      <option value="Primary Document">Primary Document</option>
+                      <option value="Authentic Video Footage">Authentic Video Footage</option>
+                      <option value="Certified Audit Log">Certified Audit Log</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="font-semibold text-gray-700 text-[10px]">Source Agency</label>
+                    <input type="text" id="proofSource" value="Official Press Bureau" class="w-full p-1.5 border rounded mt-0.5 bg-white text-xs">
+                  </div>
+                  <div>
+                    <label class="font-semibold text-gray-700 text-[10px]">Source Evidence URL</label>
+                    <input type="url" id="proofUrl" value="https://gov.coglnews.com/records" class="w-full p-1.5 border rounded mt-0.5 bg-white text-xs">
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4 text-xs font-semibold">
+                <label class="flex items-center gap-1.5 cursor-pointer">
+                  <input type="checkbox" id="newIsBreaking" class="accent-red-600"> Breaking Flash
+                </label>
+                <label class="flex items-center gap-1.5 cursor-pointer">
+                  <input type="checkbox" id="newIsLead" class="accent-red-600"> Hero Lead Story
+                </label>
+              </div>
+
+              <button type="submit" id="btnSubmitStory" class="w-full py-2.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg text-xs sm:text-sm transition shadow flex justify-center items-center gap-2 cursor-pointer">
+                <i data-lucide="send" class="w-4 h-4"></i> <span id="btnSubmitText">Publish Live Fact-Checked Story</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- RIGHT SIDE (5 Cols): All Existing News & Blogs with Edit and Delete Authority -->
+          <div class="lg:col-span-5 bg-slate-50 p-4 rounded-xl border border-gray-200 flex flex-col h-full max-h-[78vh]">
+            <div class="flex justify-between items-center border-b pb-2 mb-2.5">
+              <div>
+                <div class="flex items-center gap-2">
+                  <h4 class="text-xs sm:text-sm font-black text-slate-900 uppercase tracking-wide">All Existing News & Blogs</h4>
+                  <span id="manageCountBadge" class="bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full">Stories</span>
+                </div>
+                <p class="text-[11px] text-gray-500 mt-0.5">Click <strong>Edit & Change</strong> to modify, or <strong>Delete</strong> to remove.</p>
+              </div>
+            </div>
+
+            <div class="relative mb-2.5">
+              <input type="text" id="manageSearchInput" oninput="filterAdminStories(this.value)" placeholder="Search existing blogs to edit/delete..." class="w-full pl-8 pr-3 py-1.5 border rounded-lg text-xs bg-white outline-none focus:ring-1 focus:ring-red-600">
+              <i data-lucide="search" class="w-3.5 h-3.5 text-gray-400 absolute left-2.5 top-2.5"></i>
+            </div>
+
+            <div id="adminStoriesList" class="space-y-2.5 overflow-y-auto pr-1 flex-grow">
+              <!-- Dynamically populated with Edit & Delete on each item -->
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div>
-  </div>
-
-  <!-- Edit Article & Proof Correction Modal -->
-  <div id="editArticleModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden overflow-y-auto p-4 sm:p-6 flex justify-center items-center">
-    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 sm:p-8 relative shadow-2xl border border-gray-100 max-h-[90vh] overflow-y-auto">
-      <button onclick="closeEditArticleModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700">
-        <i data-lucide="x" class="w-6 h-6"></i>
-      </button>
-
-      <div class="border-b pb-3 mb-4">
-        <span class="text-xs font-black text-red-600 uppercase tracking-widest">Correction & Revision Suite</span>
-        <h3 class="text-xl font-black text-gray-900">Edit Verified News Story</h3>
-        <p class="text-xs text-gray-500">Correct facts, update attached proof sources, or revise SEO hashtags for this story.</p>
-      </div>
-
-      <form onsubmit="handleUpdateArticle(event)" class="space-y-4">
-        <input type="hidden" id="editArticleId">
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Headline / Title *</label>
-            <input type="text" id="editTitle" required class="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-600">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Category *</label>
-            <select id="editCategory" class="w-full px-3 py-2 border rounded-lg text-sm bg-white outline-none focus:ring-2 focus:ring-red-600">
-              <option value="News">News</option>
-              <option value="Politics">Politics</option>
-              <option value="Sport">Sport</option>
-              <option value="Business">Business</option>
-              <option value="Technology">Technology</option>
-              <option value="Health">Health</option>
-              <option value="Culture">Culture</option>
-              <option value="Arts">Arts</option>
-              <option value="Travel">Travel</option>
-              <option value="Earth">Earth</option>
-            </select>
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Executive Summary *</label>
-          <textarea id="editSummary" rows="2" required class="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-600"></textarea>
-        </div>
-
-        <div>
-          <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Full Article Body *</label>
-          <textarea id="editContent" rows="5" required class="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-600"></textarea>
-        </div>
-
-        <div>
-          <label class="block text-xs font-bold text-gray-700 uppercase mb-1">SEO Hashtags (Comma or space separated for viral reach)</label>
-          <input type="text" id="editHashtags" placeholder="#WorldNews, #Breaking, #Politics, #GlobalAffairs" class="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-600">
-          <p class="text-[11px] text-gray-500 mt-1">SEO hashtags attract search and social traffic to this article.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Featured Image URL *</label>
-            <input type="url" id="editImage" required class="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-600">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Video Embed URL</label>
-            <input type="text" id="editVideo" class="w-full px-3 py-2 border rounded-lg text-sm outline-none focus:ring-2 focus:ring-red-600">
-          </div>
-        </div>
-
-        <div class="p-3 bg-emerald-50 rounded-lg border border-emerald-200">
-          <h4 class="text-xs font-bold text-emerald-900 uppercase flex items-center gap-1 mb-2">
-            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-700"></i> Evidence & Verification Attachment (Proof)
-          </h4>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-            <div>
-              <label class="font-semibold text-gray-700">Proof Title</label>
-              <input type="text" id="editProofTitle" class="w-full p-2 border rounded mt-1 bg-white">
-            </div>
-            <div>
-              <label class="font-semibold text-gray-700">Proof Type</label>
-              <select id="editProofType" class="w-full p-2 border rounded mt-1 bg-white">
-                <option value="Verified Wire Dispatch">Verified Wire Dispatch</option>
-                <option value="Official Gazette / Decree">Official Gazette / Decree</option>
-                <option value="Primary Document">Primary Document</option>
-                <option value="Authentic Video Footage">Authentic Video Footage</option>
-                <option value="Certified Audit Log">Certified Audit Log</option>
-              </select>
-            </div>
-            <div>
-              <label class="font-semibold text-gray-700">Source Agency</label>
-              <input type="text" id="editProofSource" class="w-full p-2 border rounded mt-1 bg-white">
-            </div>
-            <div>
-              <label class="font-semibold text-gray-700">Source Evidence URL</label>
-              <input type="url" id="editProofUrl" class="w-full p-2 border rounded mt-1 bg-white">
-            </div>
-          </div>
-        </div>
-
-        <div class="flex items-center gap-4 text-xs font-semibold">
-          <label class="flex items-center gap-1.5 cursor-pointer">
-            <input type="checkbox" id="editIsBreaking" class="accent-red-600"> Breaking Flash
-          </label>
-          <label class="flex items-center gap-1.5 cursor-pointer">
-            <input type="checkbox" id="editIsLead" class="accent-red-600"> Make Hero Lead Story
-          </label>
-        </div>
-
-        <div class="flex justify-end gap-3 pt-2 border-t">
-          <button type="button" onclick="closeEditArticleModal()" class="px-4 py-2 border rounded-lg text-xs font-semibold text-gray-600 hover:bg-gray-100">Cancel</button>
-          <button type="submit" class="px-5 py-2 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg text-xs flex items-center gap-1.5 shadow">
-            <i data-lucide="check" class="w-4 h-4"></i> Save Story & Hashtag Changes
-          </button>
-        </div>
-      </form>
     </div>
   </div>
 
@@ -1118,17 +976,22 @@
 
     function openAdminModal() {
       const modal = document.getElementById('adminModal');
+      const modalBox = document.getElementById('adminModalBox');
       modal.classList.remove('hidden');
 
       const token = sessionStorage.getItem('cogl_admin_token');
       if (isAdminLoggedIn && token) {
-        // Authenticated editor: display CMS suite
+        if (modalBox) {
+          modalBox.className = "bg-white rounded-2xl max-w-7xl w-full p-4 sm:p-6 lg:p-7 shadow-2xl border border-gray-200 relative my-4 max-h-[94vh] overflow-y-auto";
+        }
         document.getElementById('adminLoginView').classList.add('hidden');
         document.getElementById('adminDashboardView').classList.remove('hidden');
         renderAdminArticlesList();
         fetchBotStatus();
       } else {
-        // Strictly protect dashboard: show only ID & password login form
+        if (modalBox) {
+          modalBox.className = "bg-white rounded-2xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-gray-200 relative my-8";
+        }
         isAdminLoggedIn = false;
         document.getElementById('adminDashboardView').classList.add('hidden');
         document.getElementById('adminLoginView').classList.remove('hidden');
@@ -1192,6 +1055,10 @@
             sessionStorage.setItem('cogl_admin_token', data.token);
             sessionStorage.setItem('cogl_admin_user', JSON.stringify(data.user || { username: em }));
             updateAdminNavUI();
+            const modalBox = document.getElementById('adminModalBox');
+            if (modalBox) {
+              modalBox.className = "bg-white rounded-2xl max-w-7xl w-full p-4 sm:p-6 lg:p-7 shadow-2xl border border-gray-200 relative my-4 max-h-[94vh] overflow-y-auto";
+            }
             document.getElementById('adminLoginView').classList.add('hidden');
             document.getElementById('adminDashboardView').classList.remove('hidden');
             document.getElementById('setTicker').value = settings.breakingTicker || '';
@@ -1233,6 +1100,10 @@
       localStorage.removeItem('cogl_admin_auth');
       updateAdminNavUI();
       closeAdminModal();
+      const modalBox = document.getElementById('adminModalBox');
+      if (modalBox) {
+        modalBox.className = "bg-white rounded-2xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-gray-200 relative my-8";
+      }
       document.getElementById('adminDashboardView').classList.add('hidden');
       document.getElementById('adminLoginView').classList.remove('hidden');
       alert('Signed out of Admin CMS. Admin panel is now locked.');
@@ -1258,83 +1129,29 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Admin Panel Login can appear ONLY by pressing Ctrl+Shift+A+E
-    const activeComboKeys = new Set();
-    let comboSequence = [];
-    let comboTimestamp = 0;
-
+    // Admin Panel Login can appear ONLY by pressing Ctrl+Shift+A
     window.addEventListener('keydown', (e) => {
-      const key = (e.key || '').toUpperCase();
-      activeComboKeys.add(key);
-
       const isCtrlOrMeta = e.ctrlKey || e.metaKey;
       const isShift = e.shiftKey;
+      const key = (e.key || '').toUpperCase();
 
-      if (isCtrlOrMeta && isShift) {
-        const now = Date.now();
-        if (key === 'A' || key === 'E') {
-          if (now - comboTimestamp > 2500) {
-            comboSequence = [];
-          }
-          comboSequence.push(key);
-          comboTimestamp = now;
-        }
-
-        const bothHeld = activeComboKeys.has('A') && activeComboKeys.has('E');
-        const sequenceMatched = comboSequence.includes('A') && comboSequence.includes('E');
-
-        if (bothHeld || sequenceMatched) {
-          e.preventDefault();
-          comboSequence = [];
-          activeComboKeys.clear();
-          openAdminModal();
-        }
+      if (isCtrlOrMeta && isShift && (key === 'A' || e.code === 'KeyA')) {
+        e.preventDefault();
+        e.stopPropagation();
+        openAdminModal();
       }
     });
 
-    window.addEventListener('keyup', (e) => {
-      const key = (e.key || '').toUpperCase();
-      activeComboKeys.delete(key);
-    });
-
-    function switchAdminTab(tab) {
-      const newTab = document.getElementById('adminNewArticleTab');
-      const manageTab = document.getElementById('adminManageArticlesTab');
+    function toggleAdminSubTab(tab) {
       const botTab = document.getElementById('adminBotTab');
       const setTab = document.getElementById('adminSettingsTab');
-
-      const tabBtnNew = document.getElementById('tabBtnNew');
-      const tabBtnManage = document.getElementById('tabBtnManage');
-      const tabBtnBot = document.getElementById('tabBtnBot');
-      const tabBtnSettings = document.getElementById('tabBtnSettings');
-
-      const activeClass = "py-2 px-3 text-xs font-bold border-b-2 border-red-600 text-red-600";
-      const inactiveClass = "py-2 px-3 text-xs font-bold text-gray-500 hover:text-gray-800";
-
-      newTab.classList.add('hidden');
-      manageTab.classList.add('hidden');
-      botTab.classList.add('hidden');
-      setTab.classList.add('hidden');
-
-      tabBtnNew.className = inactiveClass;
-      tabBtnManage.className = inactiveClass;
-      tabBtnBot.className = inactiveClass;
-      tabBtnSettings.className = inactiveClass;
-
-      if (tab === 'newArticle') {
-        newTab.classList.remove('hidden');
-        tabBtnNew.className = activeClass;
-      } else if (tab === 'manageArticles') {
-        manageTab.classList.remove('hidden');
-        tabBtnManage.className = activeClass;
-        renderAdminArticlesList();
-      } else if (tab === 'manageBot') {
-        botTab.classList.remove('hidden');
-        tabBtnBot.className = activeClass;
-        fetchBotStatus();
-      } else if (tab === 'manageSettings') {
-        setTab.classList.remove('hidden');
-        tabBtnSettings.className = activeClass;
+      if (tab === 'bot') {
+        setTab.classList.add('hidden');
+        botTab.classList.toggle('hidden');
+        if (!botTab.classList.contains('hidden')) fetchBotStatus();
+      } else if (tab === 'settings') {
+        botTab.classList.add('hidden');
+        setTab.classList.toggle('hidden');
       }
       lucide.createIcons();
     }
@@ -1344,7 +1161,7 @@
       if (!container) return;
 
       let list = [...articles];
-      if (filterText.trim()) {
+      if (filterText && filterText.trim()) {
         const q = filterText.toLowerCase();
         list = list.filter(a => 
           (a.title && a.title.toLowerCase().includes(q)) || 
@@ -1354,13 +1171,14 @@
         );
       }
 
-      document.getElementById('manageCountBadge').textContent = `${list.length} Stories`;
+      const badge = document.getElementById('manageCountBadge');
+      if (badge) badge.textContent = `${list.length} Stories`;
 
       if (list.length === 0) {
         container.innerHTML = `
-          <div class="p-8 text-center text-gray-500 border rounded-lg bg-gray-50">
-            <i data-lucide="inbox" class="w-8 h-8 mx-auto mb-2 text-gray-400"></i>
-            <p class="font-bold">No stories match your search</p>
+          <div class="p-6 text-center text-gray-500 border rounded-lg bg-white">
+            <i data-lucide="inbox" class="w-7 h-7 mx-auto mb-1.5 text-gray-400"></i>
+            <p class="font-bold text-xs">No matching news stories found</p>
           </div>
         `;
         lucide.createIcons();
@@ -1368,33 +1186,32 @@
       }
 
       container.innerHTML = list.map(art => `
-        <div class="bg-white p-3 sm:p-4 rounded-xl border border-gray-200 hover:border-gray-300 transition shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div class="bg-white p-3 rounded-xl border border-gray-200 hover:border-gray-300 transition shadow-xs flex flex-col gap-2">
           <div class="flex items-start gap-3">
-            <img src="${art.featuredImage}" alt="" class="w-16 h-12 rounded-lg object-cover shrink-0 border">
-            <div>
-              <div class="flex items-center gap-1.5 mb-1">
-                <span class="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-red-100 text-red-700">${art.category}</span>
+            <img src="${art.featuredImage}" alt="" class="w-16 h-14 rounded-lg object-cover shrink-0 border">
+            <div class="min-w-0 flex-1">
+              <div class="flex items-center gap-1.5 mb-1 flex-wrap">
+                <span class="text-[9px] font-black uppercase px-2 py-0.5 rounded bg-red-100 text-red-700">${art.category}</span>
                 ${art.isBreaking ? '<span class="text-[9px] font-bold uppercase px-1.5 py-0.5 bg-amber-400 text-slate-950 rounded">Breaking</span>' : ''}
-                ${art.isLead ? '<span class="text-[9px] font-bold uppercase px-1.5 py-0.5 bg-slate-900 text-white rounded">Hero Lead</span>' : ''}
+                ${art.isLead ? '<span class="text-[9px] font-bold uppercase px-1.5 py-0.5 bg-slate-900 text-white rounded">Hero</span>' : ''}
                 <span class="text-[10px] text-gray-400">${art.publishedAt ? new Date(art.publishedAt).toLocaleDateString() : 'Recent'}</span>
               </div>
-              <h4 class="font-bold text-slate-900 text-xs sm:text-sm line-clamp-1">${art.title}</h4>
+              <h4 class="font-bold text-slate-900 text-xs sm:text-sm line-clamp-1 leading-snug">${art.title}</h4>
               <p class="text-[11px] text-gray-500 line-clamp-1 mt-0.5">${art.summary}</p>
-              <div class="flex flex-wrap items-center gap-1 mt-1.5">
-                <span class="text-[10px] text-emerald-700 font-semibold flex items-center gap-0.5">
-                  <i data-lucide="shield-check" class="w-3 h-3"></i> ${art.proofs?.[0]?.source || 'Verified Source'}
-                </span>
-                ${(art.hashtags || []).map(t => `<span class="text-[10px] text-slate-500 bg-slate-100 px-1.5 py-0.2 rounded font-medium">${t}</span>`).join('')}
-              </div>
             </div>
           </div>
-          <div class="flex items-center gap-2 self-end sm:self-center shrink-0">
-            <button onclick="openEditModalForArticle('${art.id}')" class="px-3 py-1.5 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-lg text-xs flex items-center gap-1 transition">
-              <i data-lucide="edit-3" class="w-3 h-3"></i> Edit
-            </button>
-            <button onclick="handleDeleteArticle('${art.id}')" class="px-3 py-1.5 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg text-xs flex items-center gap-1 transition">
-              <i data-lucide="trash-2" class="w-3 h-3"></i> Delete
-            </button>
+          <div class="flex items-center justify-between pt-2 border-t border-gray-100 gap-2">
+            <span class="text-[10px] text-emerald-700 font-semibold flex items-center gap-1 truncate max-w-[45%]">
+              <i data-lucide="shield-check" class="w-3 h-3 shrink-0"></i> ${(art.proofs && art.proofs[0]) ? art.proofs[0].source : 'Verified'}
+            </span>
+            <div class="flex items-center gap-1.5 shrink-0">
+              <button type="button" onclick="loadArticleIntoEditor('${art.id}')" class="px-2.5 py-1 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded text-xs flex items-center gap-1 transition cursor-pointer">
+                <i data-lucide="edit-3" class="w-3 h-3"></i> Edit & Change
+              </button>
+              <button type="button" onclick="handleDeleteArticle('${art.id}')" class="px-2.5 py-1 bg-red-600 hover:bg-red-700 text-white font-bold rounded text-xs flex items-center gap-1 transition cursor-pointer">
+                <i data-lucide="trash-2" class="w-3 h-3"></i> Delete
+              </button>
+            </div>
           </div>
         </div>
       `).join('');
@@ -1406,128 +1223,199 @@
       renderAdminArticlesList(q);
     }
 
-    function openEditModalForArticle(id) {
+    function loadArticleIntoEditor(id) {
       const art = articles.find(a => a.id === id);
       if (!art) {
         alert('Article not found.');
         return;
       }
 
-      document.getElementById('editArticleId').value = art.id;
-      document.getElementById('editTitle').value = art.title || '';
-      document.getElementById('editCategory').value = art.category || 'News';
-      document.getElementById('editSummary').value = art.summary || '';
+      document.getElementById('adminEditingId').value = art.id;
+      document.getElementById('newTitle').value = art.title || '';
+      document.getElementById('newCategory').value = art.category || 'News';
+      document.getElementById('newSummary').value = art.summary || '';
       
-      const cleanContent = (art.content || '').replace(/<\/p><p>/g, '\n\n').replace(/<\/?p>/g, '');
-      document.getElementById('editContent').value = cleanContent;
+      const cleanContent = (art.content || '').replace(/<\/p><p>/g, '\n\n').replace(/<\/?p>/g, '').trim();
+      document.getElementById('newContent').value = cleanContent;
       
-      document.getElementById('editHashtags').value = Array.isArray(art.hashtags) ? art.hashtags.join(', ') : '';
-      document.getElementById('editImage').value = art.featuredImage || '';
-      document.getElementById('editVideo').value = art.videoEmbedUrl || '';
+      document.getElementById('newHashtags').value = Array.isArray(art.hashtags) ? art.hashtags.join(', ') : '';
+      document.getElementById('newImage').value = art.featuredImage || '';
+      document.getElementById('newVideo').value = art.videoEmbedUrl || '';
+
+      document.getElementById('newIsBreaking').checked = Boolean(art.isBreaking);
+      document.getElementById('newIsLead').checked = Boolean(art.isLead);
 
       const proof = (art.proofs && art.proofs[0]) || {};
-      document.getElementById('editProofTitle').value = proof.title || 'Verified Official Statement';
-      document.getElementById('editProofType').value = proof.type || 'Verified Wire Dispatch';
-      document.getElementById('editProofSource').value = proof.source || 'Official Press Bureau';
-      document.getElementById('editProofUrl').value = proof.url || 'https://gov.coglnews.com/records';
+      document.getElementById('proofTitle').value = proof.title || 'Verified Official Statement';
+      document.getElementById('proofType').value = proof.type || 'Verified Wire Dispatch';
+      document.getElementById('proofSource').value = proof.source || 'Official Press Bureau';
+      document.getElementById('proofUrl').value = proof.url || 'https://gov.coglnews.com/records';
 
-      document.getElementById('editIsBreaking').checked = Boolean(art.isBreaking);
-      document.getElementById('editIsLead').checked = Boolean(art.isLead);
+      // Update UI mode
+      document.getElementById('editorModeBadge').textContent = 'EDITING MODE';
+      document.getElementById('editorModeBadge').className = 'bg-amber-500 text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded';
+      document.getElementById('editorFormHeading').textContent = 'Modify & Update Story';
+      document.getElementById('btnSubmitText').textContent = 'Save Changes (Update Story)';
+      document.getElementById('btnCancelEdit').classList.remove('hidden');
 
-      document.getElementById('editArticleModal').classList.remove('hidden');
+      const banner = document.getElementById('editingBanner');
+      banner.classList.remove('hidden');
+      document.getElementById('editingBannerTitle').textContent = `Editing: "${art.title}"`;
+
+      const formBox = document.getElementById('adminEditorFormContainer');
+      if (formBox) formBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.getElementById('newTitle').focus();
       lucide.createIcons();
     }
 
-    function closeEditArticleModal() {
-      document.getElementById('editArticleModal').classList.add('hidden');
+    function cancelEditorMode() {
+      document.getElementById('adminEditingId').value = '';
+      document.getElementById('newTitle').value = '';
+      document.getElementById('newCategory').value = 'News';
+      document.getElementById('newSummary').value = '';
+      document.getElementById('newContent').value = '';
+      document.getElementById('newHashtags').value = '';
+      document.getElementById('newImage').value = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80';
+      document.getElementById('newVideo').value = '';
+      document.getElementById('newIsBreaking').checked = false;
+      document.getElementById('newIsLead').checked = false;
+
+      document.getElementById('proofTitle').value = 'Verified Official Statement';
+      document.getElementById('proofType').value = 'Verified Wire Dispatch';
+      document.getElementById('proofSource').value = 'Official Press Bureau';
+      document.getElementById('proofUrl').value = 'https://gov.coglnews.com/records';
+
+      document.getElementById('editorModeBadge').textContent = 'NEW STORY';
+      document.getElementById('editorModeBadge').className = 'bg-red-600 text-white text-[10px] font-black uppercase px-2 py-0.5 rounded';
+      document.getElementById('editorFormHeading').textContent = 'Write & Publish Story';
+      document.getElementById('btnSubmitText').textContent = 'Publish Live Fact-Checked Story';
+      document.getElementById('btnCancelEdit').classList.add('hidden');
+      document.getElementById('editingBanner').classList.add('hidden');
+      lucide.createIcons();
     }
 
-    async function handleUpdateArticle(e) {
+    async function handleEditorFormSubmit(e) {
       e.preventDefault();
-      const id = document.getElementById('editArticleId').value;
-      const title = document.getElementById('editTitle').value;
-      const category = document.getElementById('editCategory').value;
-      const summary = document.getElementById('editSummary').value;
-      const rawContent = document.getElementById('editContent').value;
-      const hashtagsRaw = document.getElementById('editHashtags').value;
-      const featuredImage = document.getElementById('editImage').value;
-      const videoEmbedUrl = document.getElementById('editVideo').value;
-      const isBreaking = document.getElementById('editIsBreaking').checked;
-      const isLead = document.getElementById('editIsLead').checked;
+      const editingId = document.getElementById('adminEditingId').value;
+      const title = document.getElementById('newTitle').value.trim();
+      const category = document.getElementById('newCategory').value;
+      const summary = document.getElementById('newSummary').value.trim();
+      const rawContent = document.getElementById('newContent').value.trim();
+      const rawHashtags = document.getElementById('newHashtags').value;
+      const featuredImage = document.getElementById('newImage').value.trim();
+      const videoEmbedUrl = document.getElementById('newVideo').value.trim();
+      const isBreaking = document.getElementById('newIsBreaking').checked;
+      const isLead = document.getElementById('newIsLead').checked;
 
-      const pTitle = document.getElementById('editProofTitle').value;
-      const pType = document.getElementById('editProofType').value;
-      const pSource = document.getElementById('editProofSource').value;
-      const pUrl = document.getElementById('editProofUrl').value;
+      const pTitle = document.getElementById('proofTitle').value.trim();
+      const pType = document.getElementById('proofType').value;
+      const pSource = document.getElementById('proofSource').value.trim();
+      const pUrl = document.getElementById('proofUrl').value.trim();
 
       const formattedContent = rawContent.startsWith('<p>') ? rawContent : `<p>${rawContent.replace(/\n\n/g, '</p><p>').replace(/\n/g, '<br>')}</p>`;
-      const parsedHashtags = hashtagsRaw
+      const parsedHashtags = rawHashtags
         .split(/[,\s]+/)
         .map(t => t.trim())
         .filter(Boolean)
         .map(t => t.startsWith('#') ? t : '#' + t);
 
-      const updatedPayload = {
+      const payload = {
         title,
         category,
         summary,
         content: formattedContent,
-        hashtags: parsedHashtags,
-        featuredImage,
+        featuredImage: featuredImage || 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80',
         videoEmbedUrl,
         isBreaking,
         isLead,
+        hashtags: parsedHashtags.length > 0 ? parsedHashtags : ['#WorldNews', '#BreakingNews', '#COGLNews'],
         proofs: [
           {
-            title: pTitle,
+            title: pTitle || 'Verified Official Statement',
             type: pType,
-            source: pSource,
-            url: pUrl,
+            source: pSource || 'Official Press Bureau',
+            url: pUrl || 'https://gov.coglnews.com/records',
             notes: 'Verified and updated by COGL Editorial Desk.'
           }
         ]
       };
 
-      if (window.location.protocol.startsWith('http')) {
-        try {
-          const res = await fetch(`/api/admin/articles/${id}`, {
-            method: 'PUT',
-            headers: getAdminHeaders(),
-            body: JSON.stringify(updatedPayload)
-          });
-          if (res.status === 401) {
-            alert('Admin Authentication Required: Please sign in with valid credentials.');
-            handleAdminLogout();
-            return;
-          }
-          if (res.ok) {
-            const data = await res.json();
-            if (data.data) {
-              const idx = articles.findIndex(a => a.id === id);
-              if (idx !== -1) articles[idx] = data.data;
+      if (editingId) {
+        // UPDATE EXISTING STORY
+        if (window.location.protocol.startsWith('http')) {
+          try {
+            const res = await fetch(`/api/admin/articles/${editingId}`, {
+              method: 'PUT',
+              headers: getAdminHeaders(),
+              body: JSON.stringify(payload)
+            });
+            if (res.status === 401) {
+              alert('Admin Authentication Required: Please sign in with valid credentials.');
+              handleAdminLogout();
+              return;
             }
+            if (res.ok) {
+              const data = await res.json();
+              if (data.data) {
+                const idx = articles.findIndex(a => a.id === editingId);
+                if (idx !== -1) articles[idx] = data.data;
+              }
+            }
+          } catch (err) {
+            console.warn('Backend sync failed, saved locally:', err);
           }
-        } catch (err) {
-          console.warn('Backend sync failed, saved locally:', err);
         }
+
+        const idx = articles.findIndex(a => a.id === editingId);
+        if (idx !== -1) {
+          articles[idx] = { ...articles[idx], ...payload };
+        }
+        localStorage.setItem('cogl_articles', JSON.stringify(articles));
+        renderContent();
+        renderAdminArticlesList();
+        cancelEditorMode();
+        alert(`Success: Story "${title}" updated successfully!`);
+      } else {
+        // CREATE NEW STORY
+        const newArticle = {
+          id: 'cogl-' + Date.now(),
+          ...payload,
+          author: "Chief Editor",
+          authorRole: "Editorial Board",
+          isFactChecked: true,
+          readingTime: "3 min",
+          publishedAt: new Date().toISOString()
+        };
+
+        if (window.location.protocol.startsWith('http')) {
+          try {
+            const res = await fetch('/api/admin/articles', {
+              method: 'POST',
+              headers: getAdminHeaders(),
+              body: JSON.stringify(newArticle)
+            });
+            if (res.status === 401) {
+              alert('Admin Authentication Required: Please sign in with valid credentials.');
+              handleAdminLogout();
+              return;
+            }
+          } catch (err) {
+            console.warn('Backend sync failed, saved locally:', err);
+          }
+        }
+
+        if (isLead) {
+          articles.unshift(newArticle);
+        } else {
+          articles.splice(1, 0, newArticle);
+        }
+
+        localStorage.setItem('cogl_articles', JSON.stringify(articles));
+        renderContent();
+        renderAdminArticlesList();
+        cancelEditorMode();
+        alert(`Success: Story "${title}" published live with verified proof!`);
       }
-
-      const idx = articles.findIndex(a => a.id === id);
-      if (idx !== -1) {
-        articles[idx] = { ...articles[idx], ...updatedPayload };
-      }
-
-      localStorage.setItem('cogl_articles', JSON.stringify(articles));
-      renderContent();
-      renderAdminArticlesList();
-      closeEditArticleModal();
-
-      const modal = document.getElementById('articleModal');
-      if (!modal.classList.contains('hidden')) {
-        openArticleModal(id);
-      }
-
-      alert('Story and SEO hashtags updated successfully!');
     }
 
     async function handleDeleteArticle(id) {
@@ -1556,10 +1444,21 @@
 
       articles = articles.filter(a => a.id !== id);
       localStorage.setItem('cogl_articles', JSON.stringify(articles));
+
+      if (document.getElementById('adminEditingId')?.value === id) {
+        cancelEditorMode();
+      }
+
       renderContent();
       renderAdminArticlesList();
 
       const modal = document.getElementById('articleModal');
+      if (modal && !modal.classList.contains('hidden')) {
+        closeArticleModal();
+      }
+
+      alert('Story permanently deleted.');
+    }
       if (!modal.classList.contains('hidden')) {
         closeArticleModal();
       }
