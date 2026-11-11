@@ -1,0 +1,327 @@
+[
+  {
+    "runAt": "2026-11-11T14:32:16.299Z",
+    "durationMs": 1450,
+    "articlesPublished": 3,
+    "targetCount": 3,
+    "headlines": [
+      {
+        "id": "cogl-investigative-today-1",
+        "category": "Politics",
+        "title": "Russia and Ukraine Reach Abu Dhabi Prisoner Exchange Agreement in U.S.-Mediated Peace Framework",
+        "hashtags": [
+          "#WorldNews",
+          "#RussiaUkraine",
+          "#PeaceTalks",
+          "#Diplomacy",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked"
+        ],
+        "source": "UAE Ministry of Foreign Affairs & Mediation Mission",
+        "proofCount": 2
+      },
+      {
+        "id": "cogl-investigative-today-2",
+        "category": "Earth",
+        "title": "COP31 Climate Summit in Antalya: WMO Unveils Landmark 2026 Multi-Hazard Early Warning Systems Report",
+        "hashtags": [
+          "#COP31",
+          "#ClimateAction",
+          "#EarthNews",
+          "#WMOReport",
+          "#Sustainability",
+          "#COGLNews",
+          "#VerifiedTruth"
+        ],
+        "source": "World Meteorological Organization (WMO) & UNDRR",
+        "proofCount": 2
+      },
+      {
+        "id": "cogl-investigative-today-3",
+        "category": "News",
+        "title": "Riyadh Air Defense Systems Intercept Three Cruise Missiles Directed Toward Metropolitan Perimeter",
+        "hashtags": [
+          "#BreakingNews",
+          "#MiddleEast",
+          "#DefenseNews",
+          "#Riyadh",
+          "#SecurityAlert",
+          "#COGLNews",
+          "#FactChecked"
+        ],
+        "source": "Coalition Joint Forces Command (CJFC) Press Bureau",
+        "proofCount": 2
+      }
+    ]
+  },
+  {
+    "runAt": "2026-11-11T14:30:36.629Z",
+    "durationMs": 2901,
+    "articlesPublished": 3,
+    "targetCount": 3,
+    "headlines": [
+      {
+        "id": "cogl-bot-1794407436620-1",
+        "category": "News",
+        "title": "US to seek Putin’s ‘blessing’ for Europe to join Ukraine talks",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "POLITICO.eu",
+        "proofCount": 1
+      },
+      {
+        "id": "cogl-bot-1794407436622-6",
+        "category": "News",
+        "title": "Wave of hoax bomb threats sent to schools in UK, Ireland and Italy",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "France 24",
+        "proofCount": 1
+      },
+      {
+        "id": "cogl-bot-1794407436623-10",
+        "category": "Politics",
+        "title": "Egyptian journalist's retrial adjourned as UN warns of 'assaults on press freedom'",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Politics",
+          "#GlobalPolitics",
+          "#Diplomacy"
+        ],
+        "source": "BBC",
+        "proofCount": 1
+      }
+    ]
+  },
+  {
+    "runAt": "2026-11-11T14:24:28.213Z",
+    "durationMs": 9,
+    "articlesPublished": 3,
+    "targetCount": 3,
+    "headlines": [
+      {
+        "id": "cogl-investigative-1794407068205-1",
+        "category": "Politics",
+        "title": "Russia and Ukraine Reach Abu Dhabi Prisoner Exchange Agreement in U.S.-Mediated Peace Framework",
+        "hashtags": [
+          "#WorldNews",
+          "#RussiaUkraine",
+          "#PeaceTalks",
+          "#Diplomacy",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked"
+        ],
+        "source": "UAE Ministry of Foreign Affairs & Mediation Mission",
+        "proofCount": 2
+      },
+      {
+        "id": "cogl-investigative-1794407068206-2",
+        "category": "Earth",
+        "title": "COP31 Climate Summit in Antalya: WMO Unveils Landmark 2026 Multi-Hazard Early Warning Systems Report",
+        "hashtags": [
+          "#COP31",
+          "#ClimateAction",
+          "#EarthNews",
+          "#WMOReport",
+          "#Sustainability",
+          "#COGLNews",
+          "#VerifiedTruth"
+        ],
+        "source": "World Meteorological Organization (WMO) & UNDRR",
+        "proofCount": 2
+      },
+      {
+        "id": "cogl-investigative-1794407068206-3",
+        "category": "News",
+        "title": "Riyadh Air Defense Systems Intercept Three Cruise Missiles Directed Toward Metropolitan Perimeter",
+        "hashtags": [
+          "#BreakingNews",
+          "#MiddleEast",
+          "#DefenseNews",
+          "#Riyadh",
+          "#SecurityAlert",
+          "#COGLNews",
+          "#FactChecked"
+        ],
+        "source": "Coalition Joint Forces Command (CJFC) Press Bureau",
+        "proofCount": 2
+      }
+    ]
+  },
+  {
+    "runAt": "2026-11-11T13:55:41.209Z",
+    "durationMs": 2626,
+    "articlesPublished": 10,
+    "headlines": [
+      {
+        "id": "cogl-bot-1794405341202-1",
+        "category": "News",
+        "title": "US to seek Putin’s ‘blessing’ for Europe to join Ukraine talks",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "POLITICO.eu"
+      },
+      {
+        "id": "cogl-bot-1794405341203-2",
+        "category": "News",
+        "title": "Pope Returns to Peru, Where Evangelicals Challenge Catholic Dominance",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "The New York Times"
+      },
+      {
+        "id": "cogl-bot-1794405341203-3",
+        "category": "News",
+        "title": "Iran War Updates: Iran vows not to part with \"single particle of enriched nuclear material\" as standoff continues",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "CBS News"
+      },
+      {
+        "id": "cogl-bot-1794405341203-4",
+        "category": "News",
+        "title": "Italy evacuates hundreds of schools after receiving email bomb threats",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "France 24"
+      },
+      {
+        "id": "cogl-bot-1794405341203-5",
+        "category": "Politics",
+        "title": "Spain: Housing crisis prompts first general strike in 14 years",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Politics",
+          "#GlobalPolitics",
+          "#Diplomacy"
+        ],
+        "source": "DW.com"
+      },
+      {
+        "id": "cogl-bot-1794405341203-6",
+        "category": "News",
+        "title": "Four grizzly bears killed in Canada after fatal attack on mum and daughter",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "BBC"
+      },
+      {
+        "id": "cogl-bot-1794405341204-7",
+        "category": "Business",
+        "title": "Lebanon Faces Economic ‘Catastrophe’ After War and Years of Mismanagement",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#BusinessNews",
+          "#Economy",
+          "#GlobalFinance"
+        ],
+        "source": "The New York Times"
+      },
+      {
+        "id": "cogl-bot-1794405341204-8",
+        "category": "Politics",
+        "title": "Netanyahu fights to stay relevant as Israel’s opposition closes in",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Politics",
+          "#GlobalPolitics",
+          "#Diplomacy"
+        ],
+        "source": "Al Jazeera"
+      },
+      {
+        "id": "cogl-bot-1794405341204-9",
+        "category": "Technology",
+        "title": "400 Mawozo: Headquarters of Haitian gang destroyed, El Salvador's president says",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Technology",
+          "#TechNews",
+          "#Innovation"
+        ],
+        "source": "BBC"
+      },
+      {
+        "id": "cogl-bot-1794405341204-10",
+        "category": "News",
+        "title": "Russell Brand's Ex-Girlfriend Jemima Goldsmith Accuses Him of 'Violence, Coercive Control, and Abuse'",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Rolling Stone"
+      }
+    ]
+  }
+]

@@ -4,24 +4,21 @@ echo =======================================================
 echo   Deploying COGL News to GitHub (Rkn45602/cogl-news)
 echo =======================================================
 echo.
-echo 1. Ensure you have created the repository on GitHub:
-echo    https://github.com/new (Repository name: cogl-news)
-echo.
-pause
+echo Staging and committing updated files...
+git add .
+git commit -m "Add Autonomous Top 10 World News Bot, Edit/Delete Admin CMS & SEO Hashtags"
 echo.
 echo Pushing to main branch...
-"C:\Users\DELL\mingit\cmd\git.exe" push -u origin main
+git push -u origin main
 echo.
 if %errorlevel% neq 0 (
     echo.
-    echo [ERROR] Push failed. If the repository does not exist yet,
-    echo create it at https://github.com/new with name "cogl-news".
+    echo [ERROR] Push failed. Please check your GitHub credentials or remote repository.
     echo.
 ) else (
     echo.
     echo [SUCCESS] Files successfully pushed to GitHub!
-    echo Your site will deploy via GitHub Pages:
-    echo https://rkn45602.github.io/cogl-news/
+    echo Your site and daily news bot will deploy automatically.
     echo.
 )
 pause

@@ -3,6 +3,7 @@ const cors = require('cors');
 require('dotenv').config();
 const path = require('path');
 const fs = require('fs');
+const { initScheduler, executeBotJob, getStatus } = require('./bot/scheduler');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -13,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const articlesFile = path.join(__dirname, 'config', 'articles.json');
+const publicArticlesFile = path.join(__dirname, 'public', 'articles.json');
 const settingsFile = path.join(__dirname, 'config', 'settings.json');
 
 function readJSON(filePath, fallback) {
@@ -38,19 +40,47 @@ function writeJSON(filePath, data) {
   }
 }
 
+function writeArticles(data) {
+  writeJSON(articlesFile, data);
+  writeJSON(publicArticlesFile, data);
+}
+
+function formatHashtags(raw) {
+  if (!raw) return [];
+  if (Array.isArray(raw)) {
+    return raw.map(t => (String(t).trim().startsWith('#') ? String(t).trim() : '#' + String(t).trim())).filter(t => t.length > 1);
+  }
+  return String(raw)
+    .split(/[,\s]+/)
+    .map(t => t.trim())
+    .filter(Boolean)
+    .map(t => (t.startsWith('#') ? t : '#' + t));
+}
+
+// ---------------- PUBLIC API ROUTES ----------------
+
 app.get('/api/articles', (req, res) => {
-  const { category, q } = req.query;
+  const { category, q, tag } = req.query;
   let articles = readJSON(articlesFile, []);
 
   if (category && category.toLowerCase() !== 'home') {
-    articles = articles.filter(a => a.category.toLowerCase() === category.toLowerCase());
+    articles = articles.filter(a => a.category && a.category.toLowerCase() === category.toLowerCase());
+  }
+
+  if (tag) {
+    const cleanTag = tag.toLowerCase().replace(/^#/, '');
+    articles = articles.filter(a =>
+      Array.isArray(a.hashtags) && a.hashtags.some(t => t.toLowerCase().replace(/^#/, '') === cleanTag)
+    );
   }
 
   if (q) {
     const search = q.toLowerCase();
     articles = articles.filter(a => 
-      a.title.toLowerCase().includes(search) || 
-      a.summary.toLowerCase().includes(search)
+      (a.title && a.title.toLowerCase().includes(search)) || 
+      (a.summary && a.summary.toLowerCase().includes(search)) ||
+      (a.category && a.category.toLowerCase().includes(search)) ||
+      (Array.isArray(a.hashtags) && a.hashtags.some(t => t.toLowerCase().includes(search)))
     );
   }
 
@@ -68,8 +98,50 @@ app.get('/api/articles/:id', (req, res) => {
   res.json({ success: true, data: article });
 });
 
-app.post('/api/admin/articles', (req, res) => {
-  const { title, category, summary, content, featuredImage, videoEmbedUrl, proofs, isBreaking, isLead } = req.body;
+app.get('/api/settings', (req, res) => {
+  const settings = readJSON(settingsFile, {});
+  const { adminCredentials, ...publicSettings } = settings;
+  res.json({ success: true, data: publicSettings });
+});
+
+// ---------------- ADMIN CMS API ROUTES (PROTECTED) ----------------
+
+// Active authenticated admin sessions
+const activeAdminTokens = new Set();
+
+function requireAdminAuth(req, res, next) {
+  const authHeader = req.headers.authorization || req.headers['x-admin-token'];
+  let token = '';
+  if (authHeader) {
+    token = authHeader.startsWith('Bearer ') ? authHeader.slice(7).trim() : authHeader.trim();
+  }
+
+  if (!token || !activeAdminTokens.has(token)) {
+    return res.status(401).json({ 
+      success: false, 
+      message: 'Access Denied: Admin ID and Password authentication required.' 
+    });
+  }
+  next();
+}
+
+// Admin Session Verification
+app.get('/api/admin/verify-session', (req, res) => {
+  const authHeader = req.headers.authorization || req.headers['x-admin-token'];
+  let token = '';
+  if (authHeader) {
+    token = authHeader.startsWith('Bearer ') ? authHeader.slice(7).trim() : authHeader.trim();
+  }
+
+  if (token && activeAdminTokens.has(token)) {
+    return res.json({ success: true, valid: true });
+  }
+  return res.status(401).json({ success: false, valid: false, message: 'Invalid or expired admin session' });
+});
+
+// Create Article (Protected)
+app.post('/api/admin/articles', requireAdminAuth, (req, res) => {
+  const { title, category, summary, content, featuredImage, videoEmbedUrl, proofs, hashtags, isBreaking, isLead } = req.body;
 
   if (!title || !category || !summary || !content) {
     return res.status(400).json({ success: false, message: 'Missing required article fields' });
@@ -92,6 +164,7 @@ app.post('/api/admin/articles', (req, res) => {
     isFactChecked: true,
     readingTime: req.body.readingTime || '4 min',
     publishedAt: req.body.publishedAt || new Date().toISOString(),
+    hashtags: formatHashtags(hashtags),
     proofs: proofs || []
   };
 
@@ -101,17 +174,93 @@ app.post('/api/admin/articles', (req, res) => {
     articles.splice(1, 0, newArticle);
   }
 
-  writeJSON(articlesFile, articles);
+  writeArticles(articles);
   res.status(201).json({ success: true, message: 'Story published successfully with proof', data: newArticle });
 });
 
-app.get('/api/settings', (req, res) => {
-  const settings = readJSON(settingsFile, {});
-  const { adminCredentials, ...publicSettings } = settings;
-  res.json({ success: true, data: publicSettings });
+// Update / Edit Article (Protected)
+app.put('/api/admin/articles/:id', requireAdminAuth, (req, res) => {
+  const articles = readJSON(articlesFile, []);
+  const index = articles.findIndex(a => a.id === req.params.id);
+
+  if (index === -1) {
+    return res.status(404).json({ success: false, message: 'Article not found' });
+  }
+
+  const existing = articles[index];
+  const {
+    title, category, summary, content, featuredImage, videoEmbedUrl,
+    proofs, hashtags, isBreaking, isLead, author, authorRole, readingTime
+  } = req.body;
+
+  const updatedArticle = {
+    ...existing,
+    title: title !== undefined ? title : existing.title,
+    category: category !== undefined ? category : existing.category,
+    summary: summary !== undefined ? summary : existing.summary,
+    content: content !== undefined ? content : existing.content,
+    featuredImage: featuredImage !== undefined ? featuredImage : existing.featuredImage,
+    videoEmbedUrl: videoEmbedUrl !== undefined ? videoEmbedUrl : existing.videoEmbedUrl,
+    author: author || existing.author,
+    authorRole: authorRole || existing.authorRole,
+    isBreaking: isBreaking !== undefined ? Boolean(isBreaking) : existing.isBreaking,
+    isLead: isLead !== undefined ? Boolean(isLead) : existing.isLead,
+    readingTime: readingTime || existing.readingTime,
+    proofs: proofs !== undefined ? proofs : existing.proofs,
+    hashtags: hashtags !== undefined ? formatHashtags(hashtags) : (existing.hashtags || []),
+    updatedAt: new Date().toISOString()
+  };
+
+  articles[index] = updatedArticle;
+  writeArticles(articles);
+
+  res.json({ success: true, message: 'Story updated successfully', data: updatedArticle });
 });
 
-app.post('/api/admin/settings', (req, res) => {
+// Delete Article (Protected)
+app.delete('/api/admin/articles/:id', requireAdminAuth, (req, res) => {
+  let articles = readJSON(articlesFile, []);
+  const index = articles.findIndex(a => a.id === req.params.id);
+
+  if (index === -1) {
+    return res.status(404).json({ success: false, message: 'Article not found' });
+  }
+
+  const removed = articles.splice(index, 1)[0];
+  writeArticles(articles);
+
+  res.json({ success: true, message: 'Story permanently deleted', data: removed });
+});
+
+// ---------------- AUTONOMOUS BOT ROUTES ----------------
+
+// Get Bot & Scheduler Status
+app.get('/api/admin/bot/status', (req, res) => {
+  try {
+    const status = getStatus();
+    res.json({ success: true, data: status });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+// Trigger Top News Research Immediately (Protected)
+app.post('/api/admin/bot/run', requireAdminAuth, async (req, res) => {
+  try {
+    console.log('[API] Admin triggered manual bot run...');
+    const result = await executeBotJob('Admin CMS On-Demand Trigger');
+    res.json({
+      success: true,
+      message: `Successfully researched and published ${result.count || 0} top world news stories.`,
+      data: result
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: 'Bot execution failed: ' + err.message });
+  }
+});
+
+// Update Settings (Protected)
+app.post('/api/admin/settings', requireAdminAuth, (req, res) => {
   const settings = readJSON(settingsFile, {});
   const { breakingTicker, socials, adminCredentials } = req.body;
 
@@ -128,6 +277,7 @@ app.post('/api/admin/settings', (req, res) => {
   res.json({ success: true, message: 'Settings updated successfully', data: settings });
 });
 
+// Admin Login (Requires Valid ID & Password)
 app.post('/api/admin/login', (req, res) => {
   const { email, password } = req.body;
   const settings = readJSON(settingsFile, {});
@@ -152,15 +302,37 @@ app.post('/api/admin/login', (req, res) => {
   ];
 
   if (validUsernames.includes(inputEmail) && (validPasswords.includes(password) || validPasswords.includes(inputPassword))) {
-    return res.json({ success: true, message: 'Admin authentication successful' });
+    const token = 'cogl_token_' + Date.now() + '_' + Math.random().toString(36).substring(2, 12);
+    activeAdminTokens.add(token);
+    return res.json({ 
+      success: true, 
+      token,
+      user: { username: inputEmail, role: 'Chief Editor' },
+      message: 'Admin authentication successful' 
+    });
   }
-  return res.status(401).json({ success: false, message: 'Invalid admin credentials' });
+  return res.status(401).json({ success: false, message: 'Invalid admin credentials: ID or password incorrect' });
+});
+
+// Admin Logout
+app.post('/api/admin/logout', (req, res) => {
+  const authHeader = req.headers.authorization || req.headers['x-admin-token'];
+  let token = '';
+  if (authHeader) {
+    token = authHeader.startsWith('Bearer ') ? authHeader.slice(7).trim() : authHeader.trim();
+  }
+  if (token) {
+    activeAdminTokens.delete(token);
+  }
+  res.json({ success: true, message: 'Admin logged out successfully' });
 });
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+// Start Express server and initialize autonomous bot scheduler
 app.listen(PORT, () => {
   console.log(`COGL NEWS LIVE at http://localhost:${PORT}`);
+  initScheduler();
 });
