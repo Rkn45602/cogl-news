@@ -13,6 +13,8 @@
 const fs = require('fs');
 const path = require('path');
 const Parser = require('rss-parser');
+const { assignUniqueTopicImage, auditAndDeduplicateAllArticles } = require('./imageManager');
+const { reviewContentSafety, generateVerifiedProofs } = require('./editorialPolicy');
 
 const articlesFile = path.join(__dirname, '..', 'config', 'articles.json');
 const publicArticlesFile = path.join(__dirname, '..', 'public', 'articles.json');
@@ -225,11 +227,10 @@ function parseHeadline(rawTitle) {
 }
 
 /**
- * Assigns high-resolution editorial photograph
+ * Assigns high-resolution editorial photograph guaranteed to be 100% unique and topic-specific
  */
-function pickFeaturedImage(category, index) {
-  const images = TOPIC_IMAGES[category] || TOPIC_IMAGES.News;
-  return images[index % images.length];
+function pickFeaturedImage(category, index, topicText = '', articleId = '') {
+  return assignUniqueTopicImage(topicText, category, articleId);
 }
 
 /**
@@ -488,17 +489,23 @@ async function researchTop10WorldNews(targetCount = 3) {
     }
 
     const category = detectCategory(cleanTitle, item.contentSnippet || '');
-    const hashtags = generateSEOtags(cleanTitle, category, publisher);
-    const featuredImage = pickFeaturedImage(category, idx);
-    const summary = (item.contentSnippet || cleanTitle).replace(/\s+/g, ' ').slice(0, 160).trim() + '...';
-    const content = generateArticleContent(cleanTitle, category, publisher, item.contentSnippet);
-    
+    const safety = reviewContentSafety(cleanTitle, item.contentSnippet || '');
+    if (!safety.safe) {
+      console.log(`[COGL Bot] Skipped controversial story: ${safety.reason}`);
+      return;
+    }
+    const finalTitle = safety.sanitizedTitle || cleanTitle;
     const articleId = `cogl-bot-${Date.now()}-${idx + 1}`;
-    const slug = cleanTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 60);
+    const hashtags = generateSEOtags(finalTitle, category, publisher);
+    const featuredImage = pickFeaturedImage(category, idx, finalTitle + ' ' + (item.contentSnippet || ''), articleId);
+    const summary = (item.contentSnippet || finalTitle).replace(/\s+/g, ' ').slice(0, 160).trim() + '...';
+    const content = generateArticleContent(finalTitle, category, publisher, item.contentSnippet);
+    
+    const slug = finalTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 60);
 
     const article = {
       id: articleId,
-      title: cleanTitle,
+      title: finalTitle,
       slug: slug,
       category: category,
       summary: summary,
@@ -637,6 +644,13 @@ async function runAutonomousNewsResearch(options = { count: 3 }) {
     console.log(`[COGL Bot] Breaking Ticker updated: "${settings.breakingTicker.slice(0, 80)}..."`);
     console.log(`[COGL Bot] Total execution duration: ${Date.now() - startTime}ms\n`);
 
+    // Enforce 100% unique, non-repeating topic imagery across entire catalog
+    try {
+      auditAndDeduplicateAllArticles();
+    } catch (e) {
+      console.warn('[COGL Bot] Image audit notice:', e.message);
+    }
+
     return {
       success: true,
       count: newArticles.length,
@@ -665,5 +679,7 @@ module.exports = {
   researchTop10WorldNews,
   runAutonomousNewsResearch,
   generateSEOtags,
-  detectCategory
+  detectCategory,
+  assignUniqueTopicImage,
+  auditAndDeduplicateAllArticles
 };

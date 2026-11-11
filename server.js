@@ -4,6 +4,9 @@ require('dotenv').config();
 const path = require('path');
 const fs = require('fs');
 const { initScheduler, executeBotJob, getStatus } = require('./bot/scheduler');
+const { assignUniqueTopicImage, getAllUsedImageURLs, auditAndDeduplicateAllArticles } = require('./bot/imageManager');
+const { reviewContentSafety } = require('./bot/editorialPolicy');
+const { processAdminChat, getSiteAnalytics } = require('./bot/chatEngine');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -147,15 +150,31 @@ app.post('/api/admin/articles', requireAdminAuth, (req, res) => {
     return res.status(400).json({ success: false, message: 'Missing required article fields' });
   }
 
+  // Safety & Non-Controversial Review
+  const safety = reviewContentSafety(title, summary, content);
+  if (!safety.safe) {
+    return res.status(400).json({ success: false, message: safety.reason });
+  }
+  const cleanTitle = safety.sanitizedTitle || title;
+
+  const articleId = req.body.id || ('cogl-' + Date.now());
+  const usedImages = getAllUsedImageURLs();
+
+  // Strict Rule: Never use the same image in different blogs. Assign topic-specific unique photo.
+  let finalImage = featuredImage;
+  if (!finalImage || usedImages.has(finalImage)) {
+    finalImage = assignUniqueTopicImage(cleanTitle + ' ' + summary, category, articleId);
+  }
+
   const articles = readJSON(articlesFile, []);
 
   const newArticle = {
-    id: req.body.id || ('cogl-' + Date.now()),
-    title,
+    id: articleId,
+    title: cleanTitle,
     category,
     summary,
     content,
-    featuredImage: featuredImage || 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80',
+    featuredImage: finalImage,
     videoEmbedUrl: videoEmbedUrl || '',
     author: req.body.author || 'COGL Investigative Desk',
     authorRole: req.body.authorRole || 'Editorial Board',
@@ -175,7 +194,9 @@ app.post('/api/admin/articles', requireAdminAuth, (req, res) => {
   }
 
   writeArticles(articles);
-  res.status(201).json({ success: true, message: 'Story published successfully with proof', data: newArticle });
+  auditAndDeduplicateAllArticles();
+
+  res.status(201).json({ success: true, message: 'Story published successfully with verified proof & unique image', data: newArticle });
 });
 
 // Update / Edit Article (Protected)
@@ -256,6 +277,42 @@ app.post('/api/admin/bot/run', requireAdminAuth, async (req, res) => {
     });
   } catch (err) {
     res.status(500).json({ success: false, message: 'Bot execution failed: ' + err.message });
+  }
+});
+
+// Admin-Bot Interactive Newsroom Chat (Protected)
+app.post('/api/admin/bot/chat', requireAdminAuth, async (req, res) => {
+  try {
+    const { message, user } = req.body;
+    if (!message || !message.trim()) {
+      return res.status(400).json({ success: false, message: 'Message cannot be empty' });
+    }
+
+    const response = await processAdminChat(message, user || 'Chief Editor');
+    res.json({ success: true, ...response });
+  } catch (err) {
+    console.error('[API] Bot chat error:', err);
+    res.status(500).json({ success: false, message: 'Bot chat failed: ' + err.message });
+  }
+});
+
+// Real-Time Editorial & SEO Analytics (Protected)
+app.get('/api/admin/analytics', requireAdminAuth, (req, res) => {
+  try {
+    const analytics = getSiteAnalytics();
+    res.json({ success: true, data: analytics });
+  } catch (err) {
+    res.status(500).json({ success: false, message: 'Failed to retrieve analytics: ' + err.message });
+  }
+});
+
+// Image Deduplication Audit Trigger (Protected)
+app.post('/api/admin/images/deduplicate', requireAdminAuth, (req, res) => {
+  try {
+    const auditRes = auditAndDeduplicateAllArticles();
+    res.json({ success: true, message: 'Image catalog deduplicated successfully', data: auditRes });
+  } catch (err) {
+    res.status(500).json({ success: false, message: 'Deduplication failed: ' + err.message });
   }
 });
 
