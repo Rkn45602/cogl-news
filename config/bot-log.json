@@ -1,5 +1,61 @@
 [
   {
+    "runAt": "2026-11-12T18:40:14.601Z",
+    "durationMs": 335,
+    "articlesPublished": 3,
+    "targetCount": 3,
+    "headlines": [
+      {
+        "id": "cogl-bot-1794508814585-1",
+        "category": "News",
+        "title": "US envoys meet with Putin in Moscow on Ukraine talks, then head for Dublin to see Zelenskyy",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "AP News",
+        "proofCount": 1
+      },
+      {
+        "id": "cogl-bot-1794508814588-2",
+        "category": "Health",
+        "title": "Israeli strike on Gaza’s Nasser Hospital kills at least six people, officials say",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#HealthNews",
+          "#MedicalResearch",
+          "#PublicHealth"
+        ],
+        "source": "NBC News",
+        "proofCount": 1
+      },
+      {
+        "id": "cogl-bot-1794508814589-3",
+        "category": "Politics",
+        "title": "Indonesia vice president resigns amid dispute over eligibility",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Politics",
+          "#GlobalPolitics",
+          "#Diplomacy"
+        ],
+        "source": "Al Jazeera",
+        "proofCount": 1
+      }
+    ]
+  },
+  {
     "runAt": "2026-11-11T14:32:16.299Z",
     "durationMs": 1450,
     "articlesPublished": 3,
