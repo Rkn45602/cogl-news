@@ -1,5 +1,61 @@
 [
   {
+    "runAt": "2026-11-13T18:21:31.621Z",
+    "durationMs": 496,
+    "articlesPublished": 3,
+    "targetCount": 3,
+    "headlines": [
+      {
+        "id": "cogl-bot-1794594091596-1",
+        "category": "Business",
+        "title": "Pope Leo makes emotional return to his ‘beloved diocese of Chiclayo’",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#BusinessNews",
+          "#Economy",
+          "#GlobalFinance"
+        ],
+        "source": "NBC News",
+        "proofCount": 1
+      },
+      {
+        "id": "cogl-bot-1794594091600-2",
+        "category": "Politics",
+        "title": "The U.S.-Israel Relationship Is Broken. Here’s How Eisenkot Could Fix It.",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Politics",
+          "#GlobalPolitics",
+          "#Diplomacy"
+        ],
+        "source": "The New York Times",
+        "proofCount": 1
+      },
+      {
+        "id": "cogl-bot-1794594091602-3",
+        "category": "Politics",
+        "title": "China stages unannounced Pacific drills in 'silent intimidation' of Taiwan, officials say",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Politics",
+          "#GlobalPolitics",
+          "#Diplomacy"
+        ],
+        "source": "Reuters",
+        "proofCount": 1
+      }
+    ]
+  },
+  {
     "runAt": "2026-11-12T18:40:14.601Z",
     "durationMs": 335,
     "articlesPublished": 3,
