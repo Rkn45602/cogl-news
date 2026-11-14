@@ -1,5 +1,61 @@
 [
   {
+    "runAt": "2026-11-14T16:49:46.865Z",
+    "durationMs": 235,
+    "articlesPublished": 3,
+    "targetCount": 3,
+    "headlines": [
+      {
+        "id": "cogl-bot-1794674986847-1",
+        "category": "Politics",
+        "title": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Politics",
+          "#GlobalPolitics",
+          "#Diplomacy"
+        ],
+        "source": "BBC",
+        "proofCount": 1
+      },
+      {
+        "id": "cogl-bot-1794674986850-2",
+        "category": "Politics",
+        "title": "Trump-Xi-Putin trilateral meeting at APEC: What to expect",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Politics",
+          "#GlobalPolitics",
+          "#Diplomacy"
+        ],
+        "source": "Al Jazeera",
+        "proofCount": 1
+      },
+      {
+        "id": "cogl-bot-1794674986851-3",
+        "category": "Business",
+        "title": "Pope’s visit to hub of Afro-Peruvian community casts spotlight on African slave trade to Peru",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#BusinessNews",
+          "#Economy",
+          "#GlobalFinance"
+        ],
+        "source": "AP News",
+        "proofCount": 1
+      }
+    ]
+  },
+  {
     "runAt": "2026-11-13T18:21:31.621Z",
     "durationMs": 496,
     "articlesPublished": 3,
