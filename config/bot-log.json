@@ -1,5 +1,61 @@
 [
   {
+    "runAt": "2026-11-15T17:31:29.156Z",
+    "durationMs": 749,
+    "articlesPublished": 3,
+    "targetCount": 3,
+    "headlines": [
+      {
+        "id": "cogl-bot-1794763888652-1",
+        "category": "Politics",
+        "title": "U.S. floated exchanging Ukrainian territory for NATO membership, Zelenskyy says",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Politics",
+          "#GlobalPolitics",
+          "#Diplomacy"
+        ],
+        "source": "CBS News",
+        "proofCount": 1
+      },
+      {
+        "id": "cogl-bot-1794763888680-2",
+        "category": "Technology",
+        "title": "Pope crosses Peru in finale of trip home to visit flock high in Andes and deep in Amazon",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Technology",
+          "#TechNews",
+          "#Innovation"
+        ],
+        "source": "Politico",
+        "proofCount": 1
+      },
+      {
+        "id": "cogl-bot-1794763888721-3",
+        "category": "Politics",
+        "title": "‘It is not unusual to go 48 hours with little sleep’: what it’s like to cover a Cop climate summit",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Politics",
+          "#GlobalPolitics",
+          "#Diplomacy"
+        ],
+        "source": "The Guardian",
+        "proofCount": 1
+      }
+    ]
+  },
+  {
     "runAt": "2026-11-14T16:49:46.865Z",
     "durationMs": 235,
     "articlesPublished": 3,
