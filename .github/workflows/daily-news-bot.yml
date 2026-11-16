@@ -1,9 +1,9 @@
-name: Daily Autonomous Trending Wire Bot (20 Stories: 10 Global + 10 India)
+name: Daily Autonomous Trending Wire Bot (12 PM - 2 PM Daily)
 
 on:
   schedule:
-    # Runs daily at 11:00 UTC (4:30 PM IST, within 4:00 PM - 6:00 PM window)
-    - cron: '0 11 * * *'
+    # Runs daily at 06:45 UTC (12:15 PM IST, within 12:00 PM - 2:00 PM window)
+    - cron: '45 6 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI anytime
 
 permissions:

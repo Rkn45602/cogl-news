@@ -3,19 +3,20 @@
 Complete web platform for COGL News with news categories (Home, News, Politics, Sport, Business, Technology, Health, Culture, Arts, Travel, Earth), proof & verification drawers, video embeds, social links, breaking news ticker, full Admin CMS, and an **Autonomous World News Research & Publishing Bot**.
 
 ## Autonomous News Bot Features
-- **Researches Top 10 World News Daily**: Scrapes premier global news agencies (Reuters, BBC World, AP Wire, Google News World) for the latest top 10 verified headlines.
+- **Researches 20 Trending Stories Daily**: Researches 1 story in each of the 10 categories for Global audience and 1 story in each category for Indian audience (Total 20 stories daily across News, Politics, Sport, Business, Technology, Health, Culture, Arts, Travel, Earth).
+- **Traffic & Trending Intelligence**: Targeted at high-traffic trending search topics to maximize visitor engagement and organic search reach.
 - **Proof & Evidence Verification**: Every news article is automatically cross-referenced with primary wire dispatches, source bureau citations, and direct evidence links.
-- **Topical Photo Evidence**: High-resolution, context-matched journalistic photos assigned automatically to every story.
-- **SEO Hashtags Engine**: Auto-generates 5–7 high-traffic trending hashtags per story (e.g. `#WorldNews`, `#BreakingNews`, `#GlobalAffairs`, `#Geopolitics`) to attract organic traffic and boost search ranking.
-- **Autonomous Daily Schedule**: Configured to run automatically every day between **4:00 PM and 6:00 PM** without human intervention.
-- **Cloud Automation via GitHub Actions**: Automated cron workflow in `.github/workflows/daily-news-bot.yml` runs daily at 4:30 PM IST, commits verified news, and auto-deploys to production even if your computer is off.
+- **Topical Photo Evidence**: High-resolution, context-matched journalistic photos assigned automatically with guaranteed 100% uniqueness (zero duplicate images across the site).
+- **SEO Hashtags Engine**: Auto-generates 5–7 high-traffic trending hashtags per story tailored to each category and audience (e.g. `#IndiaNews`, `#IndiaTrending`, `#WorldNews`, `#BreakingNews`, `#COGLNews`).
+- **Autonomous Daily Schedule**: Configured to run automatically every day between **12:00 PM and 2:00 PM** without human intervention.
+- **Cloud Automation via GitHub Actions**: Automated cron workflow in `.github/workflows/daily-news-bot.yml` runs daily at 12:15 PM IST (06:45 UTC), commits verified news, and auto-deploys to production even if your computer is off.
 
 ## Admin CMS Features (Edit, Delete & Hashtags for Corrections)
 - **Edit News Story**: Correct any fact, update headline, revise summaries, body content, or attached proof sources.
 - **SEO Hashtags Management**: Add, edit, or remove hashtags on any story to fix SEO or target specific keywords.
 - **Delete News Story**: Permanently remove inaccurate or outdated stories with 1 click.
 - **Quick-Correction Toolbar**: Chief Editors viewing any article can edit or delete it directly from the story reader view.
-- **Autonomous Bot Control Panel**: View bot armed status, daily 4pm–6pm schedule, recent execution logs, and click **"⚡ Run Bot Now"** to instantly generate & publish 10 fresh world stories on demand.
+- **Autonomous Bot Control Panel**: View bot armed status, daily 12pm–2pm schedule, recent execution logs, and click **"⚡ Run Wire Bot (20 Stories: 10 Global + 10 India)"** to instantly generate & publish 20 fresh trending stories on demand.
 
 ## Quick Start
 1. Double click `public/index.html` to run in any browser immediately with local storage.

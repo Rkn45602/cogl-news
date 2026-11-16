@@ -194,7 +194,7 @@
             </div>
           </div>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px] border-t border-slate-700/80 pt-3">
-            <div><span class="text-slate-400">Schedule:</span> <strong class="text-emerald-400 block">4:00 PM – 6:00 PM Daily</strong></div>
+            <div><span class="text-slate-400">Schedule:</span> <strong class="text-emerald-400 block">12:00 PM – 2:00 PM Daily</strong></div>
             <div><span class="text-slate-400">Daily Target:</span> <strong class="text-amber-300 block">20 Stories (10 Global + 10 India)</strong></div>
             <div><span class="text-slate-400">Today's Run:</span> <span id="botTodayStatusBadge" class="font-bold text-emerald-400 block">Checking...</span></div>
             <div><span class="text-slate-400">Last Execution:</span> <span id="botLastRunLabel" class="text-slate-200 truncate block">Checking...</span></div>
@@ -1877,7 +1877,7 @@
       if (!window.location.protocol.startsWith('http')) {
         document.getElementById('botTodayStatusBadge').textContent = 'Active (Local Mode)';
         document.getElementById('botLastRunLabel').textContent = 'Server Online';
-        document.getElementById('botLogsContainer').innerHTML = '<p class="text-xs text-gray-400 py-2">Bot is scheduled to run daily between 4:00 PM and 6:00 PM.</p>';
+        document.getElementById('botLogsContainer').innerHTML = '<p class="text-xs text-gray-400 py-2">Bot is scheduled to run daily between 12:00 PM and 2:00 PM.</p>';
         return;
       }
 

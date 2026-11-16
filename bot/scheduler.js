@@ -1,7 +1,7 @@
 /**
  * COGL NEWS - Autonomous Daily Bot Scheduler
  * 
- * Manages daily execution of the autonomous news agent between 4:00 PM and 6:00 PM daily.
+ * Manages daily execution of the autonomous news agent between 12:00 PM and 2:00 PM daily.
  * Handles cron scheduling, interval catch-ups, and on-demand triggers.
  */
 
@@ -41,18 +41,18 @@ function hasRunToday() {
 }
 
 /**
- * Checks if current local time is within the 4:00 PM to 6:00 PM daily window (16:00 - 18:00)
+ * Checks if current local time is within the 12:00 PM to 2:00 PM daily window (12:00 - 14:00)
  */
 function isWithinScheduleWindow() {
   const now = new Date();
   const currentHour = now.getHours(); // 0 - 23
-  return currentHour >= 16 && currentHour < 18;
+  return currentHour >= 12 && currentHour < 14;
 }
 
 /**
  * Executes the autonomous bot safely with status tracking
  */
-async function executeBotJob(reason = 'Daily Schedule (4:00 PM - 6:00 PM)', options = { count: 20 }) {
+async function executeBotJob(reason = 'Daily Schedule (12:00 PM - 2:00 PM)', options = { count: 20 }) {
   if (isRunning) {
     console.log('[COGL Scheduler] Bot is already running a research cycle. Skipping duplicate trigger.');
     return { success: false, message: 'Research cycle already in progress.' };
@@ -78,7 +78,7 @@ async function executeBotJob(reason = 'Daily Schedule (4:00 PM - 6:00 PM)', opti
  * Starts the automated daily scheduler
  */
 function initScheduler() {
-  console.log('[COGL Scheduler] Initializing Daily News Bot (Schedule: 4:00 PM - 6:00 PM Daily)...');
+  console.log('[COGL Scheduler] Initializing Daily News Bot (Schedule: 12:00 PM - 2:00 PM Daily)...');
 
   // Load last execution from log
   const logs = readJSON(botLogFile, []);
@@ -86,30 +86,30 @@ function initScheduler() {
     lastExecutionTime = logs[0].runAt;
   }
 
-  // 1. Cron Job: Runs at 4:15 PM (16:15) daily
-  cronJob = cron.schedule('15 16 * * *', async () => {
-    console.log('[COGL Scheduler] 16:15 Cron Alarm triggered.');
+  // 1. Cron Job: Runs at 12:15 PM (12:15) daily
+  cronJob = cron.schedule('15 12 * * *', async () => {
+    console.log('[COGL Scheduler] 12:15 Cron Alarm triggered.');
     if (!hasRunToday()) {
-      await executeBotJob('Cron 16:15');
+      await executeBotJob('Cron 12:15');
     }
   });
 
   // 2. Interval Catch-up Monitor: Checks every 15 minutes.
-  // If current time is between 16:00 and 18:00 (4pm - 6pm) and bot hasn't run today yet, it runs!
+  // If current time is between 12:00 and 14:00 (12pm - 2pm) and bot hasn't run today yet, it runs!
   intervalCheck = setInterval(async () => {
     if (isWithinScheduleWindow() && !hasRunToday() && !isRunning) {
-      console.log('[COGL Scheduler] Time window 16:00 - 18:00 active and no run today. Auto-initiating...');
+      console.log('[COGL Scheduler] Time window 12:00 - 14:00 active and no run today. Auto-initiating...');
       try {
-        await executeBotJob('Window Catch-Up (16:00 - 18:00)');
+        await executeBotJob('Window Catch-Up (12:00 - 14:00)');
       } catch (err) {
         console.error('[COGL Scheduler] Window catch-up error:', err.message);
       }
     }
   }, 15 * 60 * 1000);
 
-  // Check immediately upon server boot: if server booted between 4pm-6pm and hasn't run today, run now!
+  // Check immediately upon server boot: if server booted between 12pm-2pm and hasn't run today, run now!
   if (isWithinScheduleWindow() && !hasRunToday()) {
-    console.log('[COGL Scheduler] Boot detected within 4pm-6pm window. Starting news research in 10 seconds...');
+    console.log('[COGL Scheduler] Boot detected within 12pm-2pm window. Starting news research in 10 seconds...');
     setTimeout(async () => {
       try {
         await executeBotJob('Server Startup Window Trigger');
@@ -119,7 +119,7 @@ function initScheduler() {
     }, 10000);
   }
 
-  console.log('[COGL Scheduler] Autonomous Agent is ACTIVE & ARMED for 4:00 PM – 6:00 PM daily.');
+  console.log('[COGL Scheduler] Autonomous Agent is ACTIVE & ARMED for 12:00 PM – 2:00 PM daily.');
 }
 
 /**
@@ -133,7 +133,7 @@ function getStatus() {
   // Calculate next run
   const now = new Date();
   const nextRun = new Date();
-  nextRun.setHours(16, 0, 0, 0);
+  nextRun.setHours(12, 0, 0, 0);
   if (now.getTime() > nextRun.getTime()) {
     nextRun.setDate(nextRun.getDate() + 1);
   }
@@ -141,8 +141,8 @@ function getStatus() {
   return {
     schedulerActive: Boolean(cronJob || intervalCheck),
     isExecutingNow: isRunning,
-    scheduleWindow: '4:00 PM – 6:00 PM Daily',
-    targetHour: '16:00 - 18:00 (Local Time)',
+    scheduleWindow: '12:00 PM – 2:00 PM Daily',
+    targetHour: '12:00 - 14:00 (Local Time)',
     dailyTarget: '20 Trending Stories Daily (10 Global + 10 India across 10 Categories)',
     categories: ['News', 'Politics', 'Sport', 'Business', 'Technology', 'Health', 'Culture', 'Arts', 'Travel', 'Earth'],
     hasRunToday: todayRun,
