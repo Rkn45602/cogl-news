@@ -4,6 +4,7 @@ require('dotenv').config();
 const path = require('path');
 const fs = require('fs');
 const { initScheduler, executeBotJob, getStatus } = require('./bot/scheduler');
+const { performFullDayNewsResearchSweep, getResearcherStatus } = require('./bot/researcherBot');
 const { assignUniqueTopicImage, getAllUsedImageURLs, auditAndDeduplicateAllArticles } = require('./bot/imageManager');
 const { reviewContentSafety } = require('./bot/editorialPolicy');
 const { processAdminChat, getSiteAnalytics } = require('./bot/chatEngine');
@@ -277,6 +278,31 @@ app.post('/api/admin/bot/run', requireAdminAuth, async (req, res) => {
     });
   } catch (err) {
     res.status(500).json({ success: false, message: 'Bot execution failed: ' + err.message });
+  }
+});
+
+// Researcher Bot Status
+app.get('/api/admin/researcher/status', (req, res) => {
+  try {
+    const status = getResearcherStatus();
+    res.json({ success: true, data: status });
+  } catch (err) {
+    res.status(500).json({ success: false, message: err.message });
+  }
+});
+
+// Researcher Bot Trigger Manual Sweep (Protected)
+app.post('/api/admin/researcher/sweep', requireAdminAuth, async (req, res) => {
+  try {
+    console.log('[API] Admin triggered Researcher Bot sweep...');
+    const result = await performFullDayNewsResearchSweep();
+    res.json({
+      success: true,
+      message: `Researcher Bot analyzed news across ${result.channelsScanned || 8} top channels and synthesized ${result.uniquePrioritizedIncidents || 0} top news incidents.`,
+      data: result
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, message: 'Researcher Bot sweep failed: ' + err.message });
   }
 });
 

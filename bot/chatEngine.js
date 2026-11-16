@@ -14,6 +14,7 @@ const path = require('path');
 const { assignUniqueTopicImage, auditAndDeduplicateAllArticles, getAllUsedImageURLs } = require('./imageManager');
 const { reviewContentSafety, generateVerifiedProofs, composeJournalisticStory, generateSEOtags } = require('./editorialPolicy');
 const { runAutonomousNewsResearch } = require('./newsAgent');
+const { performFullDayNewsResearchSweep, getResearcherStatus } = require('./researcherBot');
 
 const articlesFile = path.join(__dirname, '..', 'config', 'articles.json');
 const publicArticlesFile = path.join(__dirname, '..', 'public', 'articles.json');
@@ -266,6 +267,24 @@ async function processAdminChat(message, user = 'Chief Editor') {
       return {
         reply: `⚠️ **Bot Execution Notice**: ${err.message}`,
         action: 'bot_failed'
+      };
+    }
+  }
+
+  // 9. RESEARCHER BOT SWEEP & STATUS
+  if (/researcher|research news|scan wire|incident analysis|channel sweep/i.test(lower)) {
+    try {
+      const res = await performFullDayNewsResearchSweep();
+      const status = getResearcherStatus();
+      return {
+        reply: `🔍 **Full-Day News Research & Multi-Channel Sweep Complete!**\n\n- **Monitored Internet Channels**: ${status.channelList.join(', ')}\n- **Top Incidents Synthesized**: ${res.uniquePrioritizedIncidents || 0} high-impact world & Indian incidents\n- **Smart Proof Policy**: ${res.proofStats?.requiresProof || 0} incidents require official proof documents; ${res.proofStats?.noProofNecessary || 0} incidents (sports, arts, culture, travel) cleared without proof attachments.\n- **Wire Bot Integration**: The analyzed incidents are staged in the research matrix and ready for automatic publishing.\n\nThe Wire Bot can now draw directly from this analyzed intelligence!`,
+        action: 'research_sweep_complete',
+        data: res
+      };
+    } catch (err) {
+      return {
+        reply: `⚠️ **Researcher Sweep Notice**: ${err.message}`,
+        action: 'research_sweep_failed'
       };
     }
   }

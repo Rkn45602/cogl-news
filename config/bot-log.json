@@ -1,5 +1,369 @@
 [
   {
+    "runAt": "2026-11-16T03:52:19.105Z",
+    "durationMs": 42291,
+    "articlesPublished": 20,
+    "targetCount": 20,
+    "categoriesCovered": [
+      "News",
+      "Politics",
+      "Sport",
+      "Business",
+      "Technology",
+      "Health",
+      "Culture",
+      "Arts",
+      "Travel",
+      "Earth"
+    ],
+    "audiences": [
+      "Global (10 stories)",
+      "India (10 stories)"
+    ],
+    "stories": [
+      {
+        "id": "cogl-bot-global-news-1794801096822",
+        "category": "News",
+        "audience": "Global",
+        "title": "Yemeni forces' retreat leaves Houthis in control of key Red Sea waterway",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1527482797697-8795b05a13fe?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "cogl-bot-global-politics-1794801096833",
+        "category": "Politics",
+        "audience": "Global",
+        "title": "F.D.A. Rejects Closely Watched Lung Cancer Drug From China",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Politics",
+          "#GlobalAffairs",
+          "#Diplomacy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "cogl-bot-global-sport-1794801096858",
+        "category": "Sport",
+        "audience": "Global",
+        "title": "Steelers vs. Bengals live updates, inactives, where to watch: Joe Burrow, Cincinnati host Aaron Rodgers, AFC North rival Pittsburgh on 'Sunday Night Football'",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#SportsNews",
+          "#WorldSports",
+          "#Athletics"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1531415074868-036b1c57e3b0?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "cogl-bot-global-business-1794801096883",
+        "category": "Business",
+        "audience": "Global",
+        "title": "Japan's economy unexpectedly contracts in third-quarter as elevated energy costs bite",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#BusinessNews",
+          "#Economy",
+          "#Markets"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "cogl-bot-global-technology-1794801097056",
+        "category": "Technology",
+        "audience": "Global",
+        "title": "Vulcan rocket fails during launch, dealing major blow to SpaceX competitors",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechNews",
+          "#AI",
+          "#Innovation"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "cogl-bot-global-health-1794801097141",
+        "category": "Health",
+        "audience": "Global",
+        "title": "Australian MP 'full of gratitude' upon leaving hospital after alleged car attack",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthNews",
+          "#MedicalScience",
+          "#PublicHealth"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "cogl-bot-global-culture-1794801103235",
+        "category": "Culture",
+        "audience": "Global",
+        "title": "Olamide Defends Yoruba Culture: African Traditions Should Not Be Demonised",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Culture",
+          "#Heritage",
+          "#GlobalTraditions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1561361066-6b21f37e40b3?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "cogl-bot-global-arts-1794801109312",
+        "category": "Arts",
+        "audience": "Global",
+        "title": "International Venice Biennale Unveils Monumental Architectural Pavilions Celebrating Living Earth & Sustainable Design",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ArtsAndCulture",
+          "#CreativeArts",
+          "#Exhibitions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "cogl-bot-global-travel-1794801112439",
+        "category": "Travel",
+        "audience": "Global",
+        "title": "Fodor’s puts Sedona on ‘No List’ of global tourist destinations to skip in 2027",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TravelUpdate",
+          "#GlobalTravel",
+          "#Infrastructure"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "cogl-bot-global-earth-1794801112447",
+        "category": "Earth",
+        "audience": "Global",
+        "title": "Kirk Cousins emotional after win in Vikings return, reflects on 'tough 3 years' — Verified Wire Dispatch",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ClimateAction",
+          "#Sustainability",
+          "#EarthNews"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "cogl-bot-india-news-1794801113378",
+        "category": "News",
+        "audience": "India",
+        "title": "Romance, money and sabotage: Police uncover ISI plot behind Rajasthan railway track blast — National Intelligence Briefing",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndiaHeadlines",
+          "#NationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "cogl-bot-india-politics-1794801113388",
+        "category": "Politics",
+        "audience": "India",
+        "title": "Parliament Winter session likely in Dec, crucial delimitation bill in focus: Sources",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianPolitics",
+          "#Governance",
+          "#Policy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "cogl-bot-india-sport-1794801113430",
+        "category": "Sport",
+        "audience": "India",
+        "title": "Lakshya Sen wins Japan Masters 2026 final — Lakshya beats Watanabi in comeback victory; Full highlights",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TeamIndia",
+          "#IndianSports",
+          "#Cricket"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "cogl-bot-india-business-1794801118230",
+        "category": "Business",
+        "audience": "India",
+        "title": "Jensen Huang Eyes Comeback As Nvidia CEO, Allies Form 'War Room': Report",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianEconomy",
+          "#Sensex",
+          "#Nifty"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1590496793929-36417d3117de?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "cogl-bot-india-technology-1794801118236",
+        "category": "Technology",
+        "audience": "India",
+        "title": "Apple launches an AI health tool as part of a research study - ABC News",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechIndia",
+          "#ISRO",
+          "#DigitalIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "cogl-bot-india-health-1794801122963",
+        "category": "Health",
+        "audience": "India",
+        "title": "As diabetes spikes in Kashmir, the health lens turns to the fabled wazwan — National Intelligence Briefing",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthIndia",
+          "#AyushmanBharat",
+          "#MedicalScience"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80"
+      },
+      {
+        "id": "cogl-bot-india-culture-1794801122969",
+        "category": "Culture",
+        "audience": "India",
+        "title": "5 errors in Sonia Gandhi’s memoir & public anger over Shivakumar’s VIP temple darshan",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IncredibleIndia",
+          "#IndianHeritage",
+          "#Culture"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=culture-mwiq8xpy-b12w"
+      },
+      {
+        "id": "cogl-bot-india-arts-1794801129003",
+        "category": "Arts",
+        "audience": "India",
+        "title": "Indian Cinema Scores Major Global Box Office Triumph as National Art Gallery Inaugurates Master Retrospective",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianCinema",
+          "#Bollywood",
+          "#CreativeArts"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=arts-mwiq92cw-kbbh"
+      },
+      {
+        "id": "cogl-bot-india-travel-1794801135022",
+        "category": "Travel",
+        "audience": "India",
+        "title": "Incredible India 2026: Eco-Tourism Circuit Along Kerala Backwaters & High-Altitude Ladakh Passes Captures Global Travelers",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#ExploreIndia",
+          "#TravelIndia",
+          "#Tourism"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=travel-mwiq9703-5eui"
+      },
+      {
+        "id": "cogl-bot-india-earth-1794801139086",
+        "category": "Earth",
+        "audience": "India",
+        "title": "From snow leopards to coral reefs: India’s biosphere reserves connect conservation with livelihoods",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#EarthIndia",
+          "#CleanEnergy",
+          "#WildlifeIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=earth-mwiq9a4z-il37"
+      }
+    ]
+  },
+  {
     "runAt": "2026-11-16T03:01:54.033Z",
     "articlesPublished": 20,
     "targetCount": 20,

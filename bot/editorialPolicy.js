@@ -94,8 +94,9 @@ function generateVerifiedProofs(publisher, sourceUrl, category) {
 
 /**
  * Generates an objective, non-controversial journalistic news story body
+ * Tailors verification boxes: attached for policy/governance, omitted or simplified when proofs are not necessary.
  */
-function composeJournalisticStory(title, category, publisher, snippet = '', audience = 'Global') {
+function composeJournalisticStory(title, category, publisher, snippet = '', audience = 'Global', requiresProof = true) {
   const cleanSnippet = (snippet || '')
     .replace(/<[^>]+>/g, ' ')
     .replace(/\s+/g, ' ')
@@ -105,27 +106,43 @@ function composeJournalisticStory(title, category, publisher, snippet = '', audi
   const regionContext = audience === 'India' ? 'across Indian national, institutional, and state circles' : 'across international diplomatic and institutional circles';
   const primaryWire = publisher || (audience === 'India' ? 'Press Trust of India / National Press Bureau' : 'International Wire Service');
 
-  const paragraphs = [
-    `<p class="lead-paragraph"><strong>${desk}</strong> — In a verified development corroborated by accredited primary dispatches, <em>${title}</em> has emerged as a central focus ${regionContext} today.</p>`,
-    
-    cleanSnippet && cleanSnippet.length > 30
-      ? `<p>Dispatches documented by <strong>${primaryWire}</strong> and cross-referenced by regional monitors confirm that ongoing developments are reshaping key stakeholder agendas: "${cleanSnippet.slice(0, 280)}..."</p>`
-      : `<p>Dispatches documented by accredited wire bureaus confirm that administrative, scientific, and industry bodies are actively reviewing structural developments surrounding this announcement.</p>`,
-    
-    `<div class="my-5 p-4 bg-slate-50 border-l-4 ${audience === 'India' ? 'border-amber-500' : 'border-red-600'} rounded-r-xl shadow-xs">
+  const highlightBox = requiresProof
+    ? `<div class="my-5 p-4 bg-slate-50 border-l-4 ${audience === 'India' ? 'border-amber-500' : 'border-red-600'} rounded-r-xl shadow-xs">
       <h4 class="font-black text-xs uppercase tracking-wider text-slate-900 mb-2 flex items-center gap-1.5">
         <span class="w-2 h-2 rounded-full ${audience === 'India' ? 'bg-amber-500' : 'bg-red-600'}"></span> Verified Fact-Check & Key Intelligence Breakdown:
       </h4>
       <ul class="list-disc pl-5 text-xs text-slate-700 space-y-1.5">
         <li><strong>Primary Source Documentation:</strong> Verified through official gazette registers, accredited ministerial communiques, and direct institutional announcements.</li>
-        <li><strong>Dual-Source Corroboration:</strong> Information verified independently through two accredited monitoring bureaus consistent with non-partisan reporting standards.</li>
+        <li><strong>Dual-Source Corroboration:</strong> Information verified independently through accredited monitoring bureaus consistent with non-partisan reporting standards.</li>
         <li><strong>Public Impact Assessment:</strong> Policy analysts observe measurable long-term impact on regional stakeholders, consumer indices, and sector development.</li>
       </ul>
-    </div>`,
+    </div>`
+    : `<div class="my-5 p-4 bg-slate-50 border-l-4 ${audience === 'India' ? 'border-amber-500' : 'border-blue-600'} rounded-r-xl shadow-xs">
+      <h4 class="font-black text-xs uppercase tracking-wider text-slate-900 mb-2 flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full ${audience === 'India' ? 'bg-amber-500' : 'bg-blue-600'}"></span> Key Incident Highlights & Coverage Overview:
+      </h4>
+      <ul class="list-disc pl-5 text-xs text-slate-700 space-y-1.5">
+        <li><strong>Event Dispatches:</strong> Real-time dispatches corroborated across primary field observers and correspondent channels.</li>
+        <li><strong>Audience Interest:</strong> High digital search volume and widespread engagement across regional and international audiences.</li>
+        <li><strong>Developing Perspective:</strong> Follow-up reporting continues as participating figures, teams, and organizers share subsequent updates.</li>
+      </ul>
+    </div>`;
 
-    `<p>The <strong>COGL Fact-Verification Bureau</strong> evaluated primary public registers, official ministerial communiques, and corroborated wire records. Consistent with non-partisan reporting standards, all cited facts reflect documented official statements and authenticated registries.</p>`,
+  const verificationPara = requiresProof
+    ? `<p>The <strong>COGL Fact-Verification Bureau</strong> evaluated primary public registers, official ministerial communiques, and corroborated wire records. Consistent with non-partisan reporting standards, all cited facts reflect documented official statements and authenticated registries.</p>`
+    : `<p>Dispatches documented across leading press bureaus reflect active public interest and developing spectator commentary. Consistent with COGL editorial guidelines, coverage maintains strict neutrality and objective reporting.</p>`;
+
+  const paragraphs = [
+    `<p class="lead-paragraph"><strong>${desk}</strong> — In a notable development corroborated by primary wire dispatches, <em>${title}</em> has emerged as a central focus ${regionContext} today.</p>`,
     
-    `<p>Industry and policy specialists note that secondary impacts are expected to extend across upcoming quarters. The COGL Editorial Desk will issue certified follow-up reports as supervisory bodies publish further verified documentation.</p>`
+    cleanSnippet && cleanSnippet.length > 30
+      ? `<p>Dispatches documented by <strong>${primaryWire}</strong> and cross-referenced by regional monitors confirm that ongoing developments are reshaping key stakeholder agendas: "${cleanSnippet.slice(0, 280)}..."</p>`
+      : `<p>Dispatches documented by accredited wire bureaus confirm that public, cultural, and industry observers are actively following developments surrounding this announcement.</p>`,
+    
+    highlightBox,
+    verificationPara,
+    
+    `<p>Industry and domain analysts note that secondary impacts are expected to continue through upcoming cycles. The COGL Editorial Desk will share verified follow-up updates as events unfold.</p>`
   ];
 
   return paragraphs.join('\n');

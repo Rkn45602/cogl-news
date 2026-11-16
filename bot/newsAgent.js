@@ -18,6 +18,7 @@ const path = require('path');
 const Parser = require('rss-parser');
 const { assignUniqueTopicImage, auditAndDeduplicateAllArticles } = require('./imageManager');
 const { reviewContentSafety, generateVerifiedProofs, composeJournalisticStory, generateSEOtags } = require('./editorialPolicy');
+const { getResearchedIncidentForWireBot, checkProofNecessity, performFullDayNewsResearchSweep } = require('./researcherBot');
 
 const articlesFile = path.join(__dirname, '..', 'config', 'articles.json');
 const publicArticlesFile = path.join(__dirname, '..', 'public', 'articles.json');
@@ -299,8 +300,31 @@ function getCuratedTrendingStories() {
 
 /**
  * Researches live trending wire stories for a specific category and audience
+ * Integrates with Researcher Bot cache to pull analyzed full-day incident intelligence
  */
 async function fetchTrendingStoryForCategory(category, audience = 'Global') {
+  // 1. Query Researcher Bot's analyzed full-day incident stream
+  try {
+    const researched = await getResearchedIncidentForWireBot(category, audience);
+    if (researched && researched.title) {
+      const safety = reviewContentSafety(researched.title, researched.snippet || '');
+      if (safety.safe) {
+        console.log(`[COGL Wire Bot] Loaded incident from Researcher Bot: [${category}] (${audience}) - "${researched.title.slice(0, 45)}..." (Proof: ${researched.requiresProof ? 'Yes' : 'No'})`);
+        return {
+          title: safety.sanitizedTitle || researched.title,
+          publisher: researched.publisher || (audience === 'India' ? 'Press Trust of India' : 'International Wire Desk'),
+          sourceUrl: researched.sourceUrl || (audience === 'India' ? 'https://pib.gov.in' : 'https://www.reuters.com'),
+          snippet: researched.snippet || '',
+          keywords: `${researched.title} ${category} ${audience}`.toLowerCase(),
+          requiresProof: researched.requiresProof
+        };
+      }
+    }
+  } catch (err) {
+    console.warn(`[COGL Wire Bot] Researcher Bot cache notice for [${category}]: ${err.message}`);
+  }
+
+  // 2. Query targeted live trending wire feeds
   const feedUrl = audience === 'India' ? INDIA_TRENDING_FEEDS[category] : GLOBAL_TRENDING_FEEDS[category];
   
   if (feedUrl) {
@@ -381,12 +405,15 @@ async function runAutonomousNewsResearch(options = {}) {
       const slug = titleToUse.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 65);
       const featuredImage = assignUniqueTopicImage(data.keywords || (titleToUse + ' ' + cat), cat, articleId);
       const hashtags = generateSEOtags(titleToUse, cat, data.publisher, 'Global');
-      const content = composeJournalisticStory(titleToUse, cat, data.publisher, data.snippet, 'Global');
+
+      // Smart Proof Evaluation: Attach documents only when necessary (policy, treaties, audits). Omit for sports, arts, travel.
+      const proofEval = checkProofNecessity(cat, titleToUse, data.snippet || '');
+      const proofs = proofEval.requiresProof ? generateVerifiedProofs(data.publisher, data.sourceUrl, cat) : [];
+      const content = composeJournalisticStory(titleToUse, cat, data.publisher, data.snippet, 'Global', proofEval.requiresProof);
+
       const summary = data.snippet && data.snippet.length > 40
         ? data.snippet.slice(0, 180) + '...'
         : `Verified international dispatches detail major developments surrounding ${titleToUse}, cross-referenced under COGL journalistic standards.`;
-
-      const proofs = generateVerifiedProofs(data.publisher, data.sourceUrl, cat);
 
       const article = {
         id: articleId,
@@ -403,7 +430,7 @@ async function runAutonomousNewsResearch(options = {}) {
         authorRole: 'Autonomous Investigative Agent',
         isBreaking: cat === 'News',
         isLead: cat === 'News',
-        isFactChecked: true,
+        isFactChecked: proofEval.requiresProof,
         readingTime: '4 min',
         publishedAt: timestamp.toISOString(),
         hashtags: hashtags,
@@ -412,7 +439,7 @@ async function runAutonomousNewsResearch(options = {}) {
 
       newArticles.push(article);
       existingSlugs.add(simplified);
-      console.log(`  ✓ [Global] [${cat}] Published: "${titleToUse.slice(0, 48)}..."`);
+      console.log(`  ✓ [Global] [${cat}] Published: "${titleToUse.slice(0, 48)}..." (Proof: ${proofEval.requiresProof ? 'Attached' : 'Omitted - Not Needed'})`);
     } catch (err) {
       console.error(`  ✗ [Global] [${cat}] Error:`, err.message);
     }
@@ -433,12 +460,15 @@ async function runAutonomousNewsResearch(options = {}) {
       const slug = titleToUse.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 65);
       const featuredImage = assignUniqueTopicImage(data.keywords || (titleToUse + ' ' + cat + ' India'), cat, articleId);
       const hashtags = generateSEOtags(titleToUse, cat, data.publisher, 'India');
-      const content = composeJournalisticStory(titleToUse, cat, data.publisher, data.snippet, 'India');
+
+      // Smart Proof Evaluation for Indian Audience
+      const proofEval = checkProofNecessity(cat, titleToUse, data.snippet || '');
+      const proofs = proofEval.requiresProof ? generateVerifiedProofs(data.publisher, data.sourceUrl, cat) : [];
+      const content = composeJournalisticStory(titleToUse, cat, data.publisher, data.snippet, 'India', proofEval.requiresProof);
+
       const summary = data.snippet && data.snippet.length > 40
         ? data.snippet.slice(0, 180) + '...'
         : `National press monitors and regulatory communiques confirm verified developments regarding ${titleToUse}, certified under COGL standards.`;
-
-      const proofs = generateVerifiedProofs(data.publisher, data.sourceUrl, cat);
 
       const article = {
         id: articleId,
@@ -455,7 +485,7 @@ async function runAutonomousNewsResearch(options = {}) {
         authorRole: 'Senior National Desk Agent',
         isBreaking: cat === 'Politics',
         isLead: false,
-        isFactChecked: true,
+        isFactChecked: proofEval.requiresProof,
         readingTime: '4 min',
         publishedAt: new Date(timestamp.getTime() - 1000 * 60).toISOString(),
         hashtags: hashtags,
@@ -464,7 +494,7 @@ async function runAutonomousNewsResearch(options = {}) {
 
       newArticles.push(article);
       existingSlugs.add(simplified);
-      console.log(`  ✓ [India]  [${cat}] Published: "${titleToUse.slice(0, 48)}..."`);
+      console.log(`  ✓ [India]  [${cat}] Published: "${titleToUse.slice(0, 48)}..." (Proof: ${proofEval.requiresProof ? 'Attached' : 'Omitted - Not Needed'})`);
     } catch (err) {
       console.error(`  ✗ [India]  [${cat}] Error:`, err.message);
     }

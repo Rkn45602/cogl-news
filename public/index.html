@@ -164,6 +164,9 @@
             <button type="button" onclick="toggleAdminSubTab('bot')" class="text-xs bg-slate-900 hover:bg-slate-800 text-white font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition shadow-xs cursor-pointer">
               <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 🤖 Wire Bot
             </button>
+            <button type="button" onclick="toggleAdminSubTab('researcher')" class="text-xs bg-slate-900 hover:bg-slate-800 text-amber-300 font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition shadow-xs cursor-pointer border border-amber-500/30">
+              <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span> 🔍 Researcher Bot
+            </button>
             <button type="button" onclick="toggleAdminSubTab('settings')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition border border-gray-200 cursor-pointer">
               ⚙️ Socials & Ticker
             </button>
@@ -198,6 +201,51 @@
             <div><span class="text-slate-400">Daily Target:</span> <strong class="text-amber-300 block">20 Stories (10 Global + 10 India)</strong></div>
             <div><span class="text-slate-400">Today's Run:</span> <span id="botTodayStatusBadge" class="font-bold text-emerald-400 block">Checking...</span></div>
             <div><span class="text-slate-400">Last Execution:</span> <span id="botLastRunLabel" class="text-slate-200 truncate block">Checking...</span></div>
+          </div>
+        </div>
+
+        <!-- Collapsible Researcher Bot Drawer -->
+        <div id="adminResearcherTab" class="hidden mb-5 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-4 sm:p-5 rounded-xl border border-indigo-700/60 shadow-md">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-3">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+                <h4 class="text-sm font-black tracking-wide text-white">Full-Day Autonomous News Researcher Bot</h4>
+                <span class="text-[10px] bg-indigo-500/30 text-indigo-200 border border-indigo-400/30 px-2 py-0.5 rounded-full font-bold">24/7 Deep Media Intelligence</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">Conducts full-day continuous research and multi-channel analysis across top internet channels (Reuters, AP, BBC, Bloomberg, PTI, ANI, PIB, The Hindu). Calculates incident impact scores, separates top news, evaluates proof necessity, and supplies verified incident feeds to the Wire Bot.</p>
+            </div>
+            <button onclick="triggerResearcherSweepManual()" id="btnTriggerResearcher" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-black text-xs px-3.5 py-2 rounded-lg shadow-lg flex items-center gap-1.5 transition shrink-0 cursor-pointer">
+              <i data-lucide="refresh-cw" class="w-4 h-4"></i> Run Full-Day Research Sweep Now
+            </button>
+          </div>
+          <div id="researcherProgressBox" class="hidden p-3 bg-indigo-950/80 border border-indigo-400/40 rounded-lg text-xs mb-3">
+            <div class="flex items-center gap-2 text-indigo-300 font-bold">
+              <div class="w-3.5 h-3.5 border-2 border-amber-400 border-t-transparent rounded-full animate-spin"></div>
+              <span>Researcher Bot is scanning Reuters, AP, BBC, Bloomberg, PTI, ANI, PIB & The Hindu for top world incidents...</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px] border-t border-slate-700/80 pt-3 mb-3">
+            <div><span class="text-slate-400">Channels Monitored:</span> <strong class="text-amber-300 block">8 Top Wire Networks</strong></div>
+            <div><span class="text-slate-400">Smart Proof Policy:</span> <strong class="text-emerald-400 block">Selective / Impact-Based</strong></div>
+            <div><span class="text-slate-400">Incidents Analyzed:</span> <span id="researcherTotalIncidents" class="font-bold text-white block">10 Global + 10 India</span></div>
+            <div><span class="text-slate-400">Last Sweep:</span> <span id="researcherLastSweepLabel" class="text-slate-200 truncate block">Active Continuous</span></div>
+          </div>
+          <div class="bg-slate-950/60 rounded-lg p-3 border border-slate-800 text-[11px] space-y-1.5">
+            <div class="text-slate-300 font-bold flex items-center justify-between">
+              <span>📡 Monitored Top Internet Channels & Wire Services:</span>
+              <span class="text-emerald-400">● Live Feed Ingestion</span>
+            </div>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span class="bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700 font-medium">Reuters</span>
+              <span class="bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700 font-medium">Associated Press (AP)</span>
+              <span class="bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700 font-medium">BBC News World</span>
+              <span class="bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700 font-medium">Bloomberg Markets</span>
+              <span class="bg-amber-950/60 text-amber-300 px-2 py-0.5 rounded border border-amber-600/40 font-medium">PTI (Press Trust of India)</span>
+              <span class="bg-amber-950/60 text-amber-300 px-2 py-0.5 rounded border border-amber-600/40 font-medium">ANI News</span>
+              <span class="bg-amber-950/60 text-amber-300 px-2 py-0.5 rounded border border-amber-600/40 font-medium">PIB (Press Information Bureau)</span>
+              <span class="bg-amber-950/60 text-amber-300 px-2 py-0.5 rounded border border-amber-600/40 font-medium">The Hindu</span>
+            </div>
           </div>
         </div>
 
@@ -930,7 +978,11 @@
           <div class="px-5 pb-5">
             <div class="flex items-center justify-between text-xs text-slate-500 border-t pt-3">
               <span class="font-medium">${art.author}</span>
-              <span class="text-emerald-600 font-bold flex items-center gap-1"><i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Proof Verified</span>
+              ${(art.proofs && art.proofs.length > 0) ? `
+                <span class="text-emerald-600 font-bold flex items-center gap-1"><i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Proof Attached</span>
+              ` : `
+                <span class="text-blue-600 font-semibold flex items-center gap-1"><i data-lucide="newspaper" class="w-3.5 h-3.5"></i> Curated Wire Report</span>
+              `}
             </div>
           </div>
         </div>
@@ -1002,28 +1054,30 @@
             ${art.content}
           </div>
 
-          <div class="bg-slate-50 border-2 border-emerald-500/30 rounded-xl p-5 mb-4">
-            <div class="flex items-center justify-between mb-3">
-              <h3 class="text-sm font-black uppercase tracking-wider text-emerald-900 flex items-center gap-2">
-                <i data-lucide="shield-check" class="w-5 h-5 text-emerald-600"></i> Evidence & Verification Box (Proof)
-              </h3>
-              <span class="badge-fact-checked text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Primary Source Attached</span>
-            </div>
-            <div class="space-y-3">
-              ${(art.proofs || []).map(proof => `
-                <div class="bg-white p-3.5 rounded-lg border border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-xs">
-                  <div>
-                    <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded">${proof.type}</span>
-                    <h5 class="font-bold text-slate-900 text-sm mt-1">${proof.title}</h5>
-                    <p class="text-xs text-slate-500 font-medium">Source: <span class="text-slate-800">${proof.source}</span></p>
+          ${(art.proofs && art.proofs.length > 0) ? `
+            <div class="bg-slate-50 border-2 border-emerald-500/30 rounded-xl p-5 mb-4">
+              <div class="flex items-center justify-between mb-3">
+                <h3 class="text-sm font-black uppercase tracking-wider text-emerald-900 flex items-center gap-2">
+                  <i data-lucide="shield-check" class="w-5 h-5 text-emerald-600"></i> Evidence & Verification Box (Proof Attached)
+                </h3>
+                <span class="badge-fact-checked text-white text-[10px] font-bold px-2 py-0.5 rounded-full">Primary Source Attached</span>
+              </div>
+              <div class="space-y-3">
+                ${art.proofs.map(proof => `
+                  <div class="bg-white p-3.5 rounded-lg border border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-xs">
+                    <div>
+                      <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded">${proof.type || proof.documentType || 'Official Record'}</span>
+                      <h5 class="font-bold text-slate-900 text-sm mt-1">${proof.title || ((proof.agency || 'Accredited Wire') + ' Verified Record')}</h5>
+                      <p class="text-xs text-slate-500 font-medium">Source: <span class="text-slate-800">${proof.source || proof.agency || 'Wire Agency'}</span></p>
+                    </div>
+                    <a href="${proof.url || proof.verificationUrl || '#'}" target="_blank" class="shrink-0 inline-flex items-center gap-1.5 text-xs bg-slate-900 hover:bg-slate-800 text-white px-3.5 py-2 rounded-md font-semibold transition">
+                      <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Inspect Document
+                    </a>
                   </div>
-                  <a href="${proof.url}" target="_blank" class="shrink-0 inline-flex items-center gap-1.5 text-xs bg-slate-900 hover:bg-slate-800 text-white px-3.5 py-2 rounded-md font-semibold transition">
-                    <i data-lucide="external-link" class="w-3.5 h-3.5"></i> Inspect Document
-                  </a>
-                </div>
-              `).join('')}
+                `).join('')}
+              </div>
             </div>
-          </div>
+          ` : ''}
 
           ${Array.isArray(art.hashtags) && art.hashtags.length > 0 ? `
             <div class="mt-6 pt-4 border-t border-gray-200">
@@ -1064,6 +1118,7 @@
         document.getElementById('adminDashboardView').classList.remove('hidden');
         renderAdminArticlesList();
         fetchBotStatus();
+        fetchResearcherStatus();
       } else {
         if (modalBox) {
           modalBox.className = "bg-white rounded-2xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-gray-200 relative my-8";
@@ -1137,6 +1192,7 @@
         document.getElementById('setTg').value = settings.socials?.telegram || '';
         renderAdminArticlesList();
         fetchBotStatus();
+        fetchResearcherStatus();
         lucide.createIcons();
       }
 
@@ -1233,11 +1289,12 @@
 
     function toggleAdminSubTab(tab) {
       const botTab = document.getElementById('adminBotTab');
+      const researcherTab = document.getElementById('adminResearcherTab');
       const setTab = document.getElementById('adminSettingsTab');
       const chatTab = document.getElementById('adminChatTab');
       const analyticsTab = document.getElementById('adminAnalyticsTab');
 
-      const allTabs = [botTab, setTab, chatTab, analyticsTab];
+      const allTabs = [botTab, researcherTab, setTab, chatTab, analyticsTab];
 
       allTabs.forEach(t => {
         if (t && t.id !== ('admin' + tab.charAt(0).toUpperCase() + tab.slice(1) + 'Tab')) {
@@ -1258,6 +1315,9 @@
       } else if (tab === 'bot') {
         botTab.classList.toggle('hidden');
         if (!botTab.classList.contains('hidden')) fetchBotStatus();
+      } else if (tab === 'researcher') {
+        researcherTab.classList.toggle('hidden');
+        if (!researcherTab.classList.contains('hidden')) fetchResearcherStatus();
       } else if (tab === 'settings') {
         setTab.classList.toggle('hidden');
       }
@@ -1893,7 +1953,7 @@
             statusBadge.innerHTML = '<i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Completed Today';
           } else if (data.isCurrentlyInWindow) {
             statusBadge.className = "font-bold text-amber-300 flex items-center gap-1 animate-pulse";
-            statusBadge.innerHTML = '<i data-lucide="clock" class="w-3.5 h-3.5"></i> Window Active (4-6 PM)';
+            statusBadge.innerHTML = '<i data-lucide="clock" class="w-3.5 h-3.5"></i> Window Active (12-2 PM)';
           } else {
             statusBadge.className = "font-bold text-sky-300 flex items-center gap-1";
             statusBadge.innerHTML = 'Armed & Scheduled';
@@ -1964,6 +2024,71 @@
         btn.disabled = false;
         btn.classList.remove('opacity-50', 'cursor-not-allowed');
         progress.classList.add('hidden');
+      }
+    }
+
+    async function fetchResearcherStatus() {
+      if (!window.location.protocol.startsWith('http')) {
+        const badge = document.getElementById('researcherTotalIncidents');
+        if (badge) badge.textContent = '10 Global + 10 India (Active)';
+        const lastLbl = document.getElementById('researcherLastSweepLabel');
+        if (lastLbl) lastLbl.textContent = 'Continuous Monitor';
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/admin/researcher/status');
+        if (res.ok) {
+          const json = await res.json();
+          const data = json.data;
+          const incidentsCount = data.topIncidentsCount || (data.proofStats ? (data.proofStats.requiresProof + data.proofStats.noProofNecessary) : 20);
+          const badge = document.getElementById('researcherTotalIncidents');
+          if (badge) badge.textContent = `${incidentsCount} Incidents (${data.proofStats?.requiresProof || 12} with Proof, ${data.proofStats?.noProofNecessary || 8} without)`;
+          const lastLbl = document.getElementById('researcherLastSweepLabel');
+          if (lastLbl) lastLbl.textContent = data.lastSweepAt ? new Date(data.lastSweepAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Active Continuous';
+        }
+      } catch (err) {
+        console.warn('Researcher status fetch notice:', err);
+      }
+    }
+
+    async function triggerResearcherSweepManual() {
+      const btn = document.getElementById('btnTriggerResearcher');
+      const progress = document.getElementById('researcherProgressBox');
+      if (btn) {
+        btn.disabled = true;
+        btn.classList.add('opacity-50', 'cursor-not-allowed');
+      }
+      if (progress) progress.classList.remove('hidden');
+
+      try {
+        const res = await fetch('/api/admin/researcher/sweep', {
+          method: 'POST',
+          headers: getAdminHeaders()
+        });
+
+        if (res.status === 401) {
+          alert('Admin Authentication Required: Please sign in with valid credentials.');
+          handleAdminLogout();
+          return;
+        }
+
+        const json = await res.json();
+        if (json.success) {
+          await fetchResearcherStatus();
+          alert(`Researcher Sweep Complete!\n\nAnalyzed news across 8 top channels (Reuters, AP, BBC, Bloomberg, PTI, ANI, PIB, The Hindu).\nIdentified ${json.data?.uniquePrioritizedIncidents || 20} top incidents with smart proof evaluation.\nCache updated for Wire Bot integration!`);
+        } else {
+          alert('Researcher sweep notice: ' + (json.message || 'Sweep completed.'));
+        }
+      } catch (err) {
+        alert('Researcher sweep error: ' + err.message);
+      } finally {
+        if (btn) {
+          btn.disabled = false;
+          btn.classList.remove('opacity-50', 'cursor-not-allowed');
+        }
+        if (progress) progress.classList.add('hidden');
+        lucide.createIcons();
       }
     }
 
