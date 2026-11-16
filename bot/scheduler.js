@@ -52,17 +52,17 @@ function isWithinScheduleWindow() {
 /**
  * Executes the autonomous bot safely with status tracking
  */
-async function executeBotJob(reason = 'Daily Schedule (4:00 PM - 6:00 PM)', options = { count: 3 }) {
+async function executeBotJob(reason = 'Daily Schedule (4:00 PM - 6:00 PM)', options = { count: 20 }) {
   if (isRunning) {
     console.log('[COGL Scheduler] Bot is already running a research cycle. Skipping duplicate trigger.');
     return { success: false, message: 'Research cycle already in progress.' };
   }
 
   isRunning = true;
-  console.log(`[COGL Scheduler] Triggering autonomous news research (${reason})...`);
+  console.log(`[COGL Scheduler] Triggering autonomous news research (${reason})... Target: 20 trending stories (10 Global + 10 India)`);
 
   try {
-    const opts = typeof options === 'number' ? { count: options } : (options || { count: 3 });
+    const opts = typeof options === 'number' ? { count: options } : (options || { count: 20 });
     const result = await runAutonomousNewsResearch(opts);
     lastExecutionTime = new Date().toISOString();
     isRunning = false;
@@ -143,6 +143,8 @@ function getStatus() {
     isExecutingNow: isRunning,
     scheduleWindow: '4:00 PM – 6:00 PM Daily',
     targetHour: '16:00 - 18:00 (Local Time)',
+    dailyTarget: '20 Trending Stories Daily (10 Global + 10 India across 10 Categories)',
+    categories: ['News', 'Politics', 'Sport', 'Business', 'Technology', 'Health', 'Culture', 'Arts', 'Travel', 'Earth'],
     hasRunToday: todayRun,
     isCurrentlyInWindow: inWindow,
     lastExecution: lastExecutionTime || (logs[0]?.runAt) || 'None recorded yet',

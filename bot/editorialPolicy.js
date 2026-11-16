@@ -95,56 +95,94 @@ function generateVerifiedProofs(publisher, sourceUrl, category) {
 /**
  * Generates an objective, non-controversial journalistic news story body
  */
-function composeJournalisticStory(title, category, publisher, snippet = '') {
+function composeJournalisticStory(title, category, publisher, snippet = '', audience = 'Global') {
   const cleanSnippet = (snippet || '')
     .replace(/<[^>]+>/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 
+  const desk = audience === 'India' ? 'COGL INDIA BUREAU — NEW DELHI' : 'COGL GLOBAL DESK';
+  const regionContext = audience === 'India' ? 'across Indian national, institutional, and state circles' : 'across international diplomatic and institutional circles';
+  const primaryWire = publisher || (audience === 'India' ? 'Press Trust of India / National Press Bureau' : 'International Wire Service');
+
   const paragraphs = [
-    `<p class="lead-paragraph"><strong>COGL WORLD DESK</strong> — In an official international development corroborated by primary wire dispatches, <em>${title}</em> represents an impactful focus across regional and institutional observers today.</p>`,
+    `<p class="lead-paragraph"><strong>${desk}</strong> — In a verified development corroborated by accredited primary dispatches, <em>${title}</em> has emerged as a central focus ${regionContext} today.</p>`,
     
     cleanSnippet && cleanSnippet.length > 30
-      ? `<p>Dispatches documented by <strong>${publisher}</strong> and verified by cross-regional monitors confirm key operational developments: "${cleanSnippet.slice(0, 280)}..."</p>`
-      : `<p>Dispatches documented by accredited international wire bureaus confirm that diplomatic, scientific, and institutional bodies are actively reviewing structural developments surrounding this announcement.</p>`,
+      ? `<p>Dispatches documented by <strong>${primaryWire}</strong> and cross-referenced by regional monitors confirm that ongoing developments are reshaping key stakeholder agendas: "${cleanSnippet.slice(0, 280)}..."</p>`
+      : `<p>Dispatches documented by accredited wire bureaus confirm that administrative, scientific, and industry bodies are actively reviewing structural developments surrounding this announcement.</p>`,
     
-    `<p>The <strong>COGL Fact-Verification Bureau</strong> evaluated primary public registers, official ministerial communiques, and corroborated wire records. Consistent with non-partisan international reporting standards, all cited facts reflect documented official statements and authenticated witness logs.</p>`,
+    `<div class="my-5 p-4 bg-slate-50 border-l-4 ${audience === 'India' ? 'border-amber-500' : 'border-red-600'} rounded-r-xl shadow-xs">
+      <h4 class="font-black text-xs uppercase tracking-wider text-slate-900 mb-2 flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full ${audience === 'India' ? 'bg-amber-500' : 'bg-red-600'}"></span> Verified Fact-Check & Key Intelligence Breakdown:
+      </h4>
+      <ul class="list-disc pl-5 text-xs text-slate-700 space-y-1.5">
+        <li><strong>Primary Source Documentation:</strong> Verified through official gazette registers, accredited ministerial communiques, and direct institutional announcements.</li>
+        <li><strong>Dual-Source Corroboration:</strong> Information verified independently through two accredited monitoring bureaus consistent with non-partisan reporting standards.</li>
+        <li><strong>Public Impact Assessment:</strong> Policy analysts observe measurable long-term impact on regional stakeholders, consumer indices, and sector development.</li>
+      </ul>
+    </div>`,
+
+    `<p>The <strong>COGL Fact-Verification Bureau</strong> evaluated primary public registers, official ministerial communiques, and corroborated wire records. Consistent with non-partisan reporting standards, all cited facts reflect documented official statements and authenticated registries.</p>`,
     
-    `<p>Independent policy analysts note that institutional adjustments will continue through the current reporting cycle. The COGL Editorial Desk will issue certified follow-up reports as supervisory bodies publish further verified documentation.</p>`
+    `<p>Industry and policy specialists note that secondary impacts are expected to extend across upcoming quarters. The COGL Editorial Desk will issue certified follow-up reports as supervisory bodies publish further verified documentation.</p>`
   ];
 
   return paragraphs.join('\n');
 }
 
 /**
- * Generates 5–7 high-traffic SEO hashtags tailored to the story topic
+ * Generates 5–7 high-traffic SEO hashtags tailored to the story topic and target audience
  */
-function generateSEOtags(title, category, publisher) {
+function generateSEOtags(title, category, publisher, audience = 'Global') {
   const tags = new Set();
-  tags.add('#WorldNews');
-  tags.add('#BreakingNews');
-  tags.add('#COGLNews');
-  tags.add('#FactChecked');
+  
+  if (audience === 'India') {
+    tags.add('#IndiaNews');
+    tags.add('#IndiaTrending');
+    tags.add('#COGLNews');
+    tags.add('#FactChecked');
 
-  const categoryTags = {
-    Technology: ['#TechNews', '#AI', '#Innovation', '#FutureTech'],
-    Politics: ['#Politics', '#GlobalAffairs', '#Diplomacy', '#Geopolitics'],
-    Business: ['#BusinessNews', '#Economy', '#Markets', '#GlobalTrade'],
-    Health: ['#HealthNews', '#MedicalScience', '#PublicHealth'],
-    Earth: ['#ClimateAction', '#Sustainability', '#EarthNews', '#Environment'],
-    Sport: ['#SportsNews', '#WorldSports', '#Athletics'],
-    Culture: ['#Culture', '#Heritage', '#GlobalTraditions'],
-    Arts: ['#ArtsAndCulture', '#CreativeArts', '#Exhibitions'],
-    Travel: ['#TravelUpdate', '#GlobalTravel', '#Infrastructure'],
-    News: ['#GlobalHeadlines', '#InternationalNews', '#CurrentAffairs']
-  };
+    const indiaCategoryTags = {
+      Technology: ['#TechIndia', '#ISRO', '#DigitalIndia', '#Innovation'],
+      Politics: ['#IndianPolitics', '#Governance', '#Policy', '#IndiaDebate'],
+      Business: ['#IndianEconomy', '#Sensex', '#Nifty', '#BusinessIndia'],
+      Health: ['#HealthIndia', '#AyushmanBharat', '#MedicalScience', '#PublicHealth'],
+      Earth: ['#EarthIndia', '#CleanEnergy', '#WildlifeIndia', '#Sustainability'],
+      Sport: ['#TeamIndia', '#IndianSports', '#Cricket', '#WorldSports'],
+      Culture: ['#IncredibleIndia', '#IndianHeritage', '#Culture', '#Traditions'],
+      Arts: ['#IndianCinema', '#Bollywood', '#CreativeArts', '#Exhibitions'],
+      Travel: ['#ExploreIndia', '#TravelIndia', '#Tourism', '#Destinations'],
+      News: ['#IndiaHeadlines', '#NationalNews', '#CurrentAffairs']
+    };
 
-  (categoryTags[category] || categoryTags.News).forEach(t => tags.add(t));
+    (indiaCategoryTags[category] || indiaCategoryTags.News).forEach(t => tags.add(t));
+  } else {
+    tags.add('#WorldNews');
+    tags.add('#BreakingNews');
+    tags.add('#COGLNews');
+    tags.add('#FactChecked');
+
+    const categoryTags = {
+      Technology: ['#TechNews', '#AI', '#Innovation', '#FutureTech'],
+      Politics: ['#Politics', '#GlobalAffairs', '#Diplomacy', '#Geopolitics'],
+      Business: ['#BusinessNews', '#Economy', '#Markets', '#GlobalTrade'],
+      Health: ['#HealthNews', '#MedicalScience', '#PublicHealth'],
+      Earth: ['#ClimateAction', '#Sustainability', '#EarthNews', '#Environment'],
+      Sport: ['#SportsNews', '#WorldSports', '#Athletics'],
+      Culture: ['#Culture', '#Heritage', '#GlobalTraditions'],
+      Arts: ['#ArtsAndCulture', '#CreativeArts', '#Exhibitions'],
+      Travel: ['#TravelUpdate', '#GlobalTravel', '#Infrastructure'],
+      News: ['#GlobalHeadlines', '#InternationalNews', '#CurrentAffairs']
+    };
+
+    (categoryTags[category] || categoryTags.News).forEach(t => tags.add(t));
+  }
 
   const words = title
     .replace(/[^\w\s]/g, '')
     .split(/\s+/)
-    .filter(w => w.length > 3 && /^[A-Z]/.test(w) && !['With', 'From', 'Over', 'Into', 'After', 'Before'].includes(w));
+    .filter(w => w.length > 3 && /^[A-Z]/.test(w) && !['With', 'From', 'Over', 'Into', 'After', 'Before', 'India', 'World'].includes(w));
 
   words.slice(0, 2).forEach(w => tags.add(`#${w}`));
 

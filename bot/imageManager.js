@@ -376,6 +376,195 @@ const PHOTO_CATALOG = [
     keywords: ['satellite', 'antenna', 'telecommunications', 'dish', 'broadcast network'],
     url: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
     title: 'Satellite communications dish broadcasting verified wire news'
+  },
+
+  // INDIA SPECIALIZED EDITORIAL PHOTO CATALOG (All 10 Categories)
+  // Politics
+  {
+    id: 'pol-in-parliament',
+    category: 'Politics',
+    keywords: ['india', 'parliament', 'lok sabha', 'rajya sabha', 'delhi', 'modi', 'lawmakers', 'legislation'],
+    url: 'https://images.unsplash.com/photo-1597047084993-bf337e09ede0?auto=format&fit=crop&w=1200&q=80',
+    title: 'Parliament of India complex in New Delhi'
+  },
+  {
+    id: 'pol-in-tricolor',
+    category: 'Politics',
+    keywords: ['india flag', 'tricolor', 'republic', 'democracy', 'election commission', 'governance'],
+    url: 'https://images.unsplash.com/photo-1532375810709-75b1da00537c?auto=format&fit=crop&w=1200&q=80',
+    title: 'Indian national tricolor and official state ceremonial assembly'
+  },
+
+  // Technology
+  {
+    id: 'tech-in-isro',
+    category: 'Technology',
+    keywords: ['isro', 'space', 'chandrayaan', 'gaganyaan', 'rocket', 'satellite', 'sriharikota', 'orbit'],
+    url: 'https://images.unsplash.com/photo-1517976487502-5f6902466e39?auto=format&fit=crop&w=1200&q=80',
+    title: 'ISRO heavy lift space launch vehicle liftoff'
+  },
+  {
+    id: 'tech-in-bengaluru',
+    category: 'Technology',
+    keywords: ['bengaluru', 'bangalore', 'it corridor', 'software', 'silicon valley of india', 'tech park'],
+    url: 'https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1200&q=80',
+    title: 'Bengaluru technology corridor and high-tech software engineering hub'
+  },
+  {
+    id: 'tech-in-upi',
+    category: 'Technology',
+    keywords: ['upi', 'digital payment', 'fintech', 'smartphone', 'digital public infrastructure', 'npci'],
+    url: 'https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=1200&q=80',
+    title: 'Digital payments and UPI transactions technology'
+  },
+
+  // Sport
+  {
+    id: 'sport-in-cricket',
+    category: 'Sport',
+    keywords: ['cricket', 'bcci', 'ipl', 'team india', 'test match', 'wankhede', 'stadium', 'odi', 't20'],
+    url: 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1200&q=80',
+    title: 'Indian cricket stadium match in play with floodlights'
+  },
+  {
+    id: 'sport-in-stadium',
+    category: 'Sport',
+    keywords: ['cricket ground', 'match', 'bat', 'ball', 'wicket', 'championship', 'world cup'],
+    url: 'https://images.unsplash.com/photo-1531415074868-036b1c57e3b0?auto=format&fit=crop&w=1200&q=80',
+    title: 'Cricket match action on turf wicket'
+  },
+  {
+    id: 'sport-in-badminton',
+    category: 'Sport',
+    keywords: ['badminton', 'athletics', 'olympic', 'games', 'medalist', 'sports complex', 'tournament'],
+    url: 'https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1200&q=80',
+    title: 'Badminton international tournament court'
+  },
+
+  // Business
+  {
+    id: 'biz-in-sensex',
+    category: 'Business',
+    keywords: ['sensex', 'nifty', 'bse', 'nse', 'mumbai', 'dalal street', 'stock market', 'indian economy'],
+    url: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80',
+    title: 'Mumbai financial capital and Dalal Street market corridor'
+  },
+  {
+    id: 'biz-in-rbi',
+    category: 'Business',
+    keywords: ['rbi', 'reserve bank', 'rupee', 'monetary policy', 'inflation', 'gdp', 'banking'],
+    url: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=1200&q=80',
+    title: 'Indian economy monetary reserves and financial growth'
+  },
+  {
+    id: 'biz-in-infra',
+    category: 'Business',
+    keywords: ['expressway', 'freight', 'ports', 'manufacturing', 'make in india', 'infrastructure'],
+    url: 'https://images.unsplash.com/photo-1590496793929-36417d3117de?auto=format&fit=crop&w=1200&q=80',
+    title: 'Modern industrial infrastructure and national highway transit'
+  },
+
+  // Health
+  {
+    id: 'health-in-aiims',
+    category: 'Health',
+    keywords: ['aiims', 'healthcare', 'doctors', 'hospital', 'ayushman bharat', 'medical', 'clinical'],
+    url: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1200&q=80',
+    title: 'National healthcare research center and medical clinic'
+  },
+  {
+    id: 'health-in-pharma',
+    category: 'Health',
+    keywords: ['pharma', 'vaccine', 'drug', 'medicine', 'serum', 'pharmaceutical', 'biotech'],
+    url: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80',
+    title: 'Pharmaceutical formulation and biopharma manufacturing facility'
+  },
+
+  // Culture
+  {
+    id: 'culture-in-ghats',
+    category: 'Culture',
+    keywords: ['varanasi', 'ghats', 'heritage', 'tradition', 'spiritual', 'ganges', 'sacred', 'ancient'],
+    url: 'https://images.unsplash.com/photo-1561361066-6b21f37e40b3?auto=format&fit=crop&w=1200&q=80',
+    title: 'Historic heritage ghats of Varanasi on the sacred river'
+  },
+  {
+    id: 'culture-in-dance',
+    category: 'Culture',
+    keywords: ['dance', 'kathakali', 'bharatanatyam', 'classical art', 'folklore', 'indian culture'],
+    url: 'https://images.unsplash.com/photo-1609137144813-7d9921338f24?auto=format&fit=crop&w=1200&q=80',
+    title: 'Classical Indian dance performance and traditional mudras'
+  },
+  {
+    id: 'culture-in-temple',
+    category: 'Culture',
+    keywords: ['temple', 'architecture', 'sculpture', 'unesco', 'monument', 'archaeological'],
+    url: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80',
+    title: 'Ancient carved temple tower architectural monument'
+  },
+
+  // Arts
+  {
+    id: 'arts-in-cinema',
+    category: 'Arts',
+    keywords: ['bollywood', 'cinema', 'film', 'movies', 'director', 'camera', 'theatre', 'screen'],
+    url: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80',
+    title: 'Cinematic arts film production and motion picture studio'
+  },
+  {
+    id: 'arts-in-fineart',
+    category: 'Arts',
+    keywords: ['gallery', 'exhibition', 'sculpture', 'painting', 'contemporary art', 'handicrafts'],
+    url: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80',
+    title: 'National art gallery exhibition hall and modern installations'
+  },
+
+  // Travel
+  {
+    id: 'travel-in-taj',
+    category: 'Travel',
+    keywords: ['taj mahal', 'agra', 'tourism', 'incredible india', 'monument', 'wonder of the world'],
+    url: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80',
+    title: 'The Taj Mahal reflecting on water marble architecture'
+  },
+  {
+    id: 'travel-in-kerala',
+    category: 'Travel',
+    keywords: ['kerala', 'backwaters', 'houseboat', 'alleppey', 'destination', 'eco tourism'],
+    url: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1200&q=80',
+    title: 'Tranquil Kerala backwaters houseboat voyage'
+  },
+  {
+    id: 'travel-in-himalayas',
+    category: 'Travel',
+    keywords: ['ladakh', 'himalayas', 'mountains', 'pangong', 'high altitude', 'travel', 'trekking'],
+    url: 'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80',
+    title: 'Himalayan mountain passes and pristine alpine valleys'
+  },
+
+  // Earth
+  {
+    id: 'earth-in-tiger',
+    category: 'Earth',
+    keywords: ['tiger', 'wildlife', 'conservation', 'sanctuary', 'project tiger', 'national park', 'biodiversity'],
+    url: 'https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1200&q=80',
+    title: 'Royal Bengal Tiger in protected wildlife sanctuary'
+  },
+  {
+    id: 'earth-in-solar',
+    category: 'Earth',
+    keywords: ['solar park', 'renewable energy', 'clean power', 'green hydrogen', 'grid', 'climate'],
+    url: 'https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1200&q=80',
+    title: 'Mega photovoltaic solar energy park clean grid expansion'
+  },
+
+  // News
+  {
+    id: 'news-in-delhi',
+    category: 'News',
+    keywords: ['delhi', 'india gate', 'national news', 'bureau', 'capital', 'headlines'],
+    url: 'https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80',
+    title: 'New Delhi national capital corridor and central vista'
   }
 ];
 

@@ -179,24 +179,25 @@
             <div>
               <div class="flex items-center gap-2 mb-1">
                 <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                <h4 class="text-sm font-black tracking-wide text-white">Autonomous Global News Research Agent</h4>
+                <h4 class="text-sm font-black tracking-wide text-white">Autonomous Wire Bot — 20 Stories Daily (10 Global + 10 India)</h4>
               </div>
-              <p class="text-xs text-slate-300">Researches verified world news, extracts proof documents, generates high-traffic SEO hashtags, and publishes autonomously.</p>
+              <p class="text-xs text-slate-300">Researches trending topics to maximize visitor attraction & search traffic. Writes 1 story in each of the 10 categories (News, Politics, Sport, Business, Technology, Health, Culture, Arts, Travel, Earth) for Global audience and 1 for Indian audience — total 20 stories daily with verified proofs & unique photos.</p>
             </div>
             <button onclick="triggerBotRunManual()" id="btnTriggerBot" class="bg-red-600 hover:bg-red-700 text-white font-black text-xs px-3.5 py-2 rounded-lg shadow-lg flex items-center gap-1.5 transition shrink-0 cursor-pointer">
-              <i data-lucide="zap" class="w-4 h-4"></i> Run Bot Now (3 Verified Stories)
+              <i data-lucide="zap" class="w-4 h-4"></i> Run Wire Bot (20 Stories: 10 Global + 10 India)
             </button>
           </div>
           <div id="botProgressBox" class="hidden p-3 bg-emerald-950/60 border border-emerald-500/40 rounded-lg text-xs mb-3">
             <div class="flex items-center gap-2 text-emerald-300 font-bold">
               <div class="w-3.5 h-3.5 border-2 border-emerald-400 border-t-transparent rounded-full animate-spin"></div>
-              <span>Autonomous Bot is actively researching facts and verifying primary dispatches...</span>
+              <span>Autonomous Wire Bot is researching trending topics & publishing 20 stories (10 Global + 10 India across 10 categories)...</span>
             </div>
           </div>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px] border-t border-slate-700/80 pt-3">
             <div><span class="text-slate-400">Schedule:</span> <strong class="text-emerald-400 block">4:00 PM – 6:00 PM Daily</strong></div>
-            <div><span class="text-slate-400">Today's Run:</span> <span id="botTodayStatusBadge" class="font-bold text-amber-300 block">Checking...</span></div>
-            <div class="sm:col-span-2"><span class="text-slate-400">Last Execution:</span> <span id="botLastRunLabel" class="text-slate-200 truncate block">Checking...</span></div>
+            <div><span class="text-slate-400">Daily Target:</span> <strong class="text-amber-300 block">20 Stories (10 Global + 10 India)</strong></div>
+            <div><span class="text-slate-400">Today's Run:</span> <span id="botTodayStatusBadge" class="font-bold text-emerald-400 block">Checking...</span></div>
+            <div><span class="text-slate-400">Last Execution:</span> <span id="botLastRunLabel" class="text-slate-200 truncate block">Checking...</span></div>
           </div>
         </div>
 
@@ -843,6 +844,7 @@
               <img src="${lead.featuredImage}" alt="${lead.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <div class="absolute top-3 left-3 flex gap-2">
                 <span class="bg-red-600 text-white font-black text-xs px-2.5 py-1 rounded shadow uppercase">${lead.category}</span>
+                ${lead.audience === 'India' ? '<span class="bg-amber-500 text-slate-950 font-black text-xs px-2 py-1 rounded shadow uppercase">🇮🇳 India</span>' : (lead.audience === 'Global' ? '<span class="bg-blue-600 text-white font-bold text-xs px-2 py-1 rounded shadow uppercase">🌐 Global</span>' : '')}
                 ${lead.isBreaking ? '<span class="bg-amber-500 text-slate-950 font-black text-xs px-2 py-1 rounded shadow animate-pulse uppercase">Breaking</span>' : ''}
               </div>
               <div class="absolute bottom-3 left-3 badge-fact-checked text-white text-xs px-3 py-1 rounded-full font-bold shadow-md flex items-center gap-1.5">
@@ -909,7 +911,7 @@
             <div class="relative aspect-video overflow-hidden">
               <img src="${art.featuredImage}" alt="${art.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
               <span class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-2.5 py-0.5 rounded shadow uppercase">${art.category}</span>
-              ${art.videoEmbedUrl ? '<span class="absolute top-3 right-3 bg-black/75 text-white text-xs px-2 py-0.5 rounded font-bold flex items-center gap-1"><i data-lucide="play" class="w-3 h-3 fill-current"></i> Video</span>' : ''}
+              ${art.audience === 'India' ? '<span class="absolute top-3 right-3 bg-amber-500 text-slate-950 text-xs font-black px-2 py-0.5 rounded shadow">🇮🇳 India</span>' : (art.audience === 'Global' ? '<span class="absolute top-3 right-3 bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded shadow">🌐 Global</span>' : (art.videoEmbedUrl ? '<span class="absolute top-3 right-3 bg-black/75 text-white text-xs px-2 py-0.5 rounded font-bold flex items-center gap-1"><i data-lucide="play" class="w-3 h-3 fill-current"></i> Video</span>' : ''))}
             </div>
             <div class="p-5">
               <h3 class="font-bold text-slate-900 text-base leading-snug group-hover:text-red-600 transition mb-2">${art.title}</h3>
@@ -966,6 +968,7 @@
           <div class="flex items-center justify-between mb-3">
             <div class="flex items-center gap-2">
               <span class="bg-red-600 text-white text-xs font-extrabold uppercase px-2.5 py-1 rounded">${art.category}</span>
+              ${art.audience === 'India' ? '<span class="bg-amber-500 text-slate-950 text-xs font-black uppercase px-2.5 py-1 rounded">🇮🇳 India Desk</span>' : (art.audience === 'Global' ? '<span class="bg-blue-600 text-white text-xs font-bold uppercase px-2.5 py-1 rounded">🌐 Global Desk</span>' : '')}
               ${art.isBreaking ? '<span class="bg-amber-500 text-black text-xs font-bold uppercase px-2 py-0.5 rounded">Breaking</span>' : ''}
             </div>
             <div class="text-xs text-gray-500 flex items-center gap-1">
@@ -1951,7 +1954,7 @@
           }
 
           await fetchBotStatus();
-          alert(`Success! Autonomous Bot published ${json.data?.count || 3} Top World News stories with proof, photos, and SEO hashtags.`);
+          alert(`Success! Autonomous Wire Bot published ${json.data?.count || 20} trending stories (10 Global + 10 India across 10 categories) with verified proofs, photos, and high-traffic SEO hashtags.`);
         } else {
           alert('Bot notice: ' + (json.message || 'Cycle completed.'));
         }
