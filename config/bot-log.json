@@ -1,9 +1,9 @@
 [
   {
-    "runAt": "2026-11-16T02:44:57.144Z",
-    "durationMs": 49520,
+    "runAt": "2026-11-16T03:01:54.033Z",
     "articlesPublished": 20,
     "targetCount": 20,
+    "scheduleWindow": "12:00 PM – 2:00 PM Daily",
     "categoriesCovered": [
       "News",
       "Politics",
@@ -19,347 +19,229 @@
     "audiences": [
       "Global (10 stories)",
       "India (10 stories)"
-    ],
-    "stories": [
+    ]
+  },
+  {
+    "runAt": "2026-11-15T17:31:29.156Z",
+    "durationMs": 749,
+    "articlesPublished": 3,
+    "targetCount": 3,
+    "headlines": [
       {
-        "id": "cogl-bot-global-news-1794797053920",
-        "category": "News",
-        "audience": "Global",
-        "title": "United Nations General Assembly Adopts Multilateral Framework on Global Critical Infrastructure Defense",
+        "id": "cogl-bot-1794763888652-1",
+        "category": "Politics",
+        "title": "U.S. floated exchanging Ukrainian territory for NATO membership, Zelenskyy says",
         "hashtags": [
           "#WorldNews",
           "#BreakingNews",
           "#COGLNews",
-          "#FactChecked",
+          "#VerifiedTruth",
+          "#Politics",
+          "#GlobalPolitics",
+          "#Diplomacy"
+        ],
+        "source": "CBS News",
+        "proofCount": 1
+      },
+      {
+        "id": "cogl-bot-1794763888680-2",
+        "category": "Technology",
+        "title": "Pope crosses Peru in finale of trip home to visit flock high in Andes and deep in Amazon",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Technology",
+          "#TechNews",
+          "#Innovation"
+        ],
+        "source": "Politico",
+        "proofCount": 1
+      },
+      {
+        "id": "cogl-bot-1794763888721-3",
+        "category": "Politics",
+        "title": "‘It is not unusual to go 48 hours with little sleep’: what it’s like to cover a Cop climate summit",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Politics",
+          "#GlobalPolitics",
+          "#Diplomacy"
+        ],
+        "source": "The Guardian",
+        "proofCount": 1
+      }
+    ]
+  },
+  {
+    "runAt": "2026-11-14T16:49:46.865Z",
+    "durationMs": 235,
+    "articlesPublished": 3,
+    "targetCount": 3,
+    "headlines": [
+      {
+        "id": "cogl-bot-1794674986847-1",
+        "category": "Politics",
+        "title": "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Politics",
+          "#GlobalPolitics",
+          "#Diplomacy"
+        ],
+        "source": "BBC",
+        "proofCount": 1
+      },
+      {
+        "id": "cogl-bot-1794674986850-2",
+        "category": "Politics",
+        "title": "Trump-Xi-Putin trilateral meeting at APEC: What to expect",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Politics",
+          "#GlobalPolitics",
+          "#Diplomacy"
+        ],
+        "source": "Al Jazeera",
+        "proofCount": 1
+      },
+      {
+        "id": "cogl-bot-1794674986851-3",
+        "category": "Business",
+        "title": "Pope’s visit to hub of Afro-Peruvian community casts spotlight on African slave trade to Peru",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#BusinessNews",
+          "#Economy",
+          "#GlobalFinance"
+        ],
+        "source": "AP News",
+        "proofCount": 1
+      }
+    ]
+  },
+  {
+    "runAt": "2026-11-13T18:21:31.621Z",
+    "durationMs": 496,
+    "articlesPublished": 3,
+    "targetCount": 3,
+    "headlines": [
+      {
+        "id": "cogl-bot-1794594091596-1",
+        "category": "Business",
+        "title": "Pope Leo makes emotional return to his ‘beloved diocese of Chiclayo’",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#BusinessNews",
+          "#Economy",
+          "#GlobalFinance"
+        ],
+        "source": "NBC News",
+        "proofCount": 1
+      },
+      {
+        "id": "cogl-bot-1794594091600-2",
+        "category": "Politics",
+        "title": "The U.S.-Israel Relationship Is Broken. Here’s How Eisenkot Could Fix It.",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Politics",
+          "#GlobalPolitics",
+          "#Diplomacy"
+        ],
+        "source": "The New York Times",
+        "proofCount": 1
+      },
+      {
+        "id": "cogl-bot-1794594091602-3",
+        "category": "Politics",
+        "title": "China stages unannounced Pacific drills in 'silent intimidation' of Taiwan, officials say",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
+          "#Politics",
+          "#GlobalPolitics",
+          "#Diplomacy"
+        ],
+        "source": "Reuters",
+        "proofCount": 1
+      }
+    ]
+  },
+  {
+    "runAt": "2026-11-12T18:40:14.601Z",
+    "durationMs": 335,
+    "articlesPublished": 3,
+    "targetCount": 3,
+    "headlines": [
+      {
+        "id": "cogl-bot-1794508814585-1",
+        "category": "News",
+        "title": "US envoys meet with Putin in Moscow on Ukraine talks, then head for Dublin to see Zelenskyy",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#VerifiedTruth",
           "#GlobalHeadlines",
           "#InternationalNews",
           "#CurrentAffairs"
         ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=1200&q=80"
+        "source": "AP News",
+        "proofCount": 1
       },
       {
-        "id": "cogl-bot-global-politics-1794797054649",
-        "category": "Politics",
-        "audience": "Global",
-        "title": "How 2 major summits this week point to balance & bargain strategy in big-power diplomacy",
-        "hashtags": [
-          "#WorldNews",
-          "#BreakingNews",
-          "#COGLNews",
-          "#FactChecked",
-          "#Politics",
-          "#GlobalAffairs",
-          "#Diplomacy"
-        ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1597047084993-bf337e09ede0?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "id": "cogl-bot-global-sport-1794797055700",
-        "category": "Sport",
-        "audience": "Global",
-        "title": "Kirk Cousins emotional after win in Vikings return, reflects on 'tough 3 years'",
-        "hashtags": [
-          "#WorldNews",
-          "#BreakingNews",
-          "#COGLNews",
-          "#FactChecked",
-          "#SportsNews",
-          "#WorldSports",
-          "#Athletics"
-        ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "id": "cogl-bot-global-business-1794797056274",
-        "category": "Business",
-        "audience": "Global",
-        "title": "Thousands of US flights cancelled or delayed two days after grounding of planes nationwide",
-        "hashtags": [
-          "#WorldNews",
-          "#BreakingNews",
-          "#COGLNews",
-          "#FactChecked",
-          "#BusinessNews",
-          "#Economy",
-          "#Markets"
-        ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "id": "cogl-bot-global-technology-1794797057371",
-        "category": "Technology",
-        "audience": "Global",
-        "title": "'The Ultimate Gaming Machine' - Xbox Reveals Tons Of New Project Helix Information",
-        "hashtags": [
-          "#WorldNews",
-          "#BreakingNews",
-          "#COGLNews",
-          "#FactChecked",
-          "#TechNews",
-          "#AI",
-          "#Innovation"
-        ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "id": "cogl-bot-global-health-1794797061028",
+        "id": "cogl-bot-1794508814588-2",
         "category": "Health",
-        "audience": "Global",
-        "title": "After 26 years, the US has lost its measles elimination status",
+        "title": "Israeli strike on Gaza’s Nasser Hospital kills at least six people, officials say",
         "hashtags": [
           "#WorldNews",
           "#BreakingNews",
           "#COGLNews",
-          "#FactChecked",
+          "#VerifiedTruth",
           "#HealthNews",
-          "#MedicalScience",
+          "#MedicalResearch",
           "#PublicHealth"
         ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+        "source": "NBC News",
+        "proofCount": 1
       },
       {
-        "id": "cogl-bot-global-culture-1794797061852",
-        "category": "Culture",
-        "audience": "Global",
-        "title": "Semnan handicrafts exhibition showcases Iran’s tribal arts and traditions",
-        "hashtags": [
-          "#WorldNews",
-          "#BreakingNews",
-          "#COGLNews",
-          "#FactChecked",
-          "#Culture",
-          "#Heritage",
-          "#GlobalTraditions"
-        ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "id": "cogl-bot-global-arts-1794797063756",
-        "category": "Arts",
-        "audience": "Global",
-        "title": "Billy Evans Reacts to Amanda Seyfried’s Portrayal of Elizabeth Holmes in ‘You Can See Everything’",
-        "hashtags": [
-          "#WorldNews",
-          "#BreakingNews",
-          "#COGLNews",
-          "#FactChecked",
-          "#ArtsAndCulture",
-          "#CreativeArts",
-          "#Exhibitions"
-        ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "id": "cogl-bot-global-travel-1794797064696",
-        "category": "Travel",
-        "audience": "Global",
-        "title": "Think you know this country? Meet 2027's top destination",
-        "hashtags": [
-          "#WorldNews",
-          "#BreakingNews",
-          "#COGLNews",
-          "#FactChecked",
-          "#TravelUpdate",
-          "#GlobalTravel",
-          "#Infrastructure"
-        ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "id": "cogl-bot-global-earth-1794797070711",
-        "category": "Earth",
-        "audience": "Global",
-        "title": "WMO Global Telemetry Network Confirms Historic Expansion of Renewable Clean Power Displacing Coal in Global Grids",
-        "hashtags": [
-          "#WorldNews",
-          "#BreakingNews",
-          "#COGLNews",
-          "#FactChecked",
-          "#ClimateAction",
-          "#Sustainability",
-          "#EarthNews"
-        ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "id": "cogl-bot-india-news-1794797075436",
-        "category": "News",
-        "audience": "India",
-        "title": "Romance, money and sabotage: Police uncover ISI plot behind Rajasthan railway track blast",
-        "hashtags": [
-          "#IndiaNews",
-          "#IndiaTrending",
-          "#COGLNews",
-          "#FactChecked",
-          "#IndiaHeadlines",
-          "#NationalNews",
-          "#CurrentAffairs"
-        ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "id": "cogl-bot-india-politics-1794797075826",
+        "id": "cogl-bot-1794508814589-3",
         "category": "Politics",
-        "audience": "India",
-        "title": "The Micro, Small and Medium Enterprises Development (Amendment) Bill, 2026",
+        "title": "Indonesia vice president resigns amid dispute over eligibility",
         "hashtags": [
-          "#IndiaNews",
-          "#IndiaTrending",
+          "#WorldNews",
+          "#BreakingNews",
           "#COGLNews",
-          "#FactChecked",
-          "#IndianPolitics",
-          "#Governance",
-          "#Policy"
+          "#VerifiedTruth",
+          "#Politics",
+          "#GlobalPolitics",
+          "#Diplomacy"
         ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1532375810709-75b1da00537c?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "id": "cogl-bot-india-sport-1794797076770",
-        "category": "Sport",
-        "audience": "India",
-        "title": "Yash Thakur joins Sachin Tendulkar, MS Dhoni in unwanted list after ODI debut against New Zealand",
-        "hashtags": [
-          "#IndiaNews",
-          "#IndiaTrending",
-          "#COGLNews",
-          "#FactChecked",
-          "#TeamIndia",
-          "#IndianSports",
-          "#Cricket"
-        ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "id": "cogl-bot-india-business-1794797077832",
-        "category": "Business",
-        "audience": "India",
-        "title": "‘I hope you die…’: What ex-Nvidia CEO Jensen Huang told senior exec Jay Puri | A look at his temper tantrums",
-        "hashtags": [
-          "#IndiaNews",
-          "#IndiaTrending",
-          "#COGLNews",
-          "#FactChecked",
-          "#IndianEconomy",
-          "#Sensex",
-          "#Nifty"
-        ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "id": "cogl-bot-india-technology-1794797083838",
-        "category": "Technology",
-        "audience": "India",
-        "title": "ISRO Previews Next-Generation Heavy Orbital Vehicle as India AI Mission Deploys Sovereign Compute Infrastructure",
-        "hashtags": [
-          "#IndiaNews",
-          "#IndiaTrending",
-          "#COGLNews",
-          "#FactChecked",
-          "#TechIndia",
-          "#ISRO",
-          "#DigitalIndia"
-        ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1517976487502-5f6902466e39?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "id": "cogl-bot-india-health-1794797089238",
-        "category": "Health",
-        "audience": "India",
-        "title": "As diabetes spikes in Kashmir, the health lens turns to the fabled wazwan",
-        "hashtags": [
-          "#IndiaNews",
-          "#IndiaTrending",
-          "#COGLNews",
-          "#FactChecked",
-          "#HealthIndia",
-          "#AyushmanBharat",
-          "#MedicalScience"
-        ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "id": "cogl-bot-india-culture-1794797090512",
-        "category": "Culture",
-        "audience": "India",
-        "title": "Union Minister Gajendra Singh Shekhawat addresses conclave on India’ s creative economy in New Delhi",
-        "hashtags": [
-          "#IndiaNews",
-          "#IndiaTrending",
-          "#COGLNews",
-          "#FactChecked",
-          "#IncredibleIndia",
-          "#IndianHeritage",
-          "#Culture"
-        ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "id": "cogl-bot-india-arts-1794797094390",
-        "category": "Arts",
-        "audience": "India",
-        "title": "Ramayana Part 1 box office collection Day 10 Live Updates: Ranbir Kapoor’s film crosses Rs 1,228 cr globally; reaches Rs 75 cr mark in India on Sunday",
-        "hashtags": [
-          "#IndiaNews",
-          "#IndiaTrending",
-          "#COGLNews",
-          "#FactChecked",
-          "#IndianCinema",
-          "#Bollywood",
-          "#CreativeArts"
-        ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "id": "cogl-bot-india-travel-1794797095517",
-        "category": "Travel",
-        "audience": "India",
-        "title": "A Season in the Mountains: Discovering India’s Best Winter Escapes",
-        "hashtags": [
-          "#IndiaNews",
-          "#IndiaTrending",
-          "#COGLNews",
-          "#FactChecked",
-          "#ExploreIndia",
-          "#TravelIndia",
-          "#Tourism"
-        ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?auto=format&fit=crop&w=1200&q=80"
-      },
-      {
-        "id": "cogl-bot-india-earth-1794797097096",
-        "category": "Earth",
-        "audience": "India",
-        "title": "Nod to coal mining in Jharkhand to kill 6 lakh trees, elephant habitat",
-        "hashtags": [
-          "#IndiaNews",
-          "#IndiaTrending",
-          "#COGLNews",
-          "#FactChecked",
-          "#EarthIndia",
-          "#CleanEnergy",
-          "#WildlifeIndia"
-        ],
-        "source": "Accredited Bureau",
-        "featuredImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+        "source": "Al Jazeera",
+        "proofCount": 1
       }
     ]
   },
