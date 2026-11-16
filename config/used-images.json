@@ -425,5 +425,362 @@
     "articleId": "cogl-bot-1794508814588-2",
     "topic": "israeli strike on gaza’s nasser hospital kills at least six people, officials say israeli strike on ",
     "usedAt": "2026-11-16T03:52:19.437Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=news-mwjh7o2l-e1va",
+    "catalogId": "dynamic-news",
+    "articleId": "cogl-bot-global-news-1794846413467",
+    "topic": "pope endures grueling travel in south america weeks after surgery news global news",
+    "usedAt": "2026-11-16T16:26:53.469Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=politics-mwjh7o2p-mnhl",
+    "catalogId": "dynamic-politics",
+    "articleId": "cogl-bot-global-politics-1794846413471",
+    "topic": "trump heads to asia to meet with xi and putin amid nvidia fallout politics global politics",
+    "usedAt": "2026-11-16T16:26:53.473Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=sport-mwjh7o2r-tdvm",
+    "catalogId": "dynamic-sport",
+    "articleId": "cogl-bot-global-sport-1794846413473",
+    "topic": "bengals' blowout win over steelers makes nfl history with 1,100th 'scorigami' sport global sport",
+    "usedAt": "2026-11-16T16:26:53.475Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=business-mwjh7o2s-v9qo",
+    "catalogId": "dynamic-business",
+    "articleId": "cogl-bot-global-business-1794846413475",
+    "topic": "short of time at the asean business global business",
+    "usedAt": "2026-11-16T16:26:53.476Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=technology-mwjh7o2u-egwt",
+    "catalogId": "dynamic-technology",
+    "articleId": "cogl-bot-global-technology-1794846413477",
+    "topic": "nasa's interstellar voyager 1 probe is about to reach 1 light-day from earth after nearly 50 years i",
+    "usedAt": "2026-11-16T16:26:53.478Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=health-mwjh7ofl-feh8",
+    "catalogId": "dynamic-health",
+    "articleId": "cogl-bot-global-health-1794846413936",
+    "topic": "what to know about measles outbreaks as the us faces losing its elimination status health global hea",
+    "usedAt": "2026-11-16T16:26:53.937Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=culture-mwjh7oli-s4ew",
+    "catalogId": "dynamic-culture",
+    "articleId": "cogl-bot-global-culture-1794846414149",
+    "topic": "hoa vang to host a country market – experience local culture and celebrate cultural identity culture",
+    "usedAt": "2026-11-16T16:26:54.150Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=arts-mwjh7olk-d2az",
+    "catalogId": "dynamic-arts",
+    "articleId": "cogl-bot-global-arts-1794846414151",
+    "topic": "gérard depardieu drops appeal against sexual assault conviction arts global arts",
+    "usedAt": "2026-11-16T16:26:54.152Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=travel-mwjh7olm-ijg4",
+    "catalogId": "dynamic-travel",
+    "articleId": "cogl-bot-global-travel-1794846414153",
+    "topic": "see the leonid meteors this week — ‘the shower that started it all’ travel global travel",
+    "usedAt": "2026-11-16T16:26:54.154Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=earth-mwjh7olo-3bxz",
+    "catalogId": "dynamic-earth",
+    "articleId": "cogl-bot-global-earth-1794846414155",
+    "topic": "re-ranking 138 college football teams after week 11: carnage in the back half of the top 25 earth gl",
+    "usedAt": "2026-11-16T16:26:54.156Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=news-mwjh7olq-ur80",
+    "catalogId": "dynamic-news",
+    "articleId": "cogl-bot-india-news-1794846414157",
+    "topic": "‘i was in awe of indira gandhi; she was formidable,’ says sonia gandhi at launch of her memoir belon",
+    "usedAt": "2026-11-16T16:26:54.158Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=politics-mwjh7olr-jlyi",
+    "catalogId": "dynamic-politics",
+    "articleId": "cogl-bot-india-politics-1794846414158",
+    "topic": "jay shah re-elected unopposed as icc chair after board clears way for bigger ipl politics india poli",
+    "usedAt": "2026-11-16T16:26:54.159Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=sport-mwjh7olt-xgjv",
+    "catalogId": "dynamic-sport",
+    "articleId": "cogl-bot-india-sport-1794846414160",
+    "topic": "‘bowlers win you series!’: gautam gambhir’s proud message after india’s historic triumph in new zeal",
+    "usedAt": "2026-11-16T16:26:54.161Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=business-mwjh7olv-y7tr",
+    "catalogId": "dynamic-business",
+    "articleId": "cogl-bot-india-business-1794846414162",
+    "topic": "lsg set to trade shami to rr for sam curran business india business",
+    "usedAt": "2026-11-16T16:26:54.163Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=technology-mwjh7olx-muop",
+    "catalogId": "dynamic-technology",
+    "articleId": "cogl-bot-india-technology-1794846414164",
+    "topic": "apple launches app to study how people use ai for health queries: details technology india technolog",
+    "usedAt": "2026-11-16T16:26:54.165Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=health-mwjh7olz-mwo8",
+    "catalogId": "dynamic-health",
+    "articleId": "cogl-bot-india-health-1794846414166",
+    "topic": "amitabh bachchan, abhishek bachchan receive death threats from gangster goldy dhillon health india h",
+    "usedAt": "2026-11-16T16:26:54.167Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=culture-mwjh7om1-kbzw",
+    "catalogId": "dynamic-culture",
+    "articleId": "cogl-bot-india-culture-1794846414168",
+    "topic": "5 errors in sonia gandhi’s memoir & public anger over shivakumar’s vip temple darshan culture india ",
+    "usedAt": "2026-11-16T16:26:54.169Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=arts-mwjh7om5-u9xy",
+    "catalogId": "dynamic-arts",
+    "articleId": "cogl-bot-india-arts-1794846414172",
+    "topic": "robert pattinson chosen as the next james bond arts india arts",
+    "usedAt": "2026-11-16T16:26:54.173Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=travel-mwjh7om8-wr7j",
+    "catalogId": "dynamic-travel",
+    "articleId": "cogl-bot-india-travel-1794846414175",
+    "topic": "new leak shows galaxy s27 pro and ultra camera design with three lenses travel india travel",
+    "usedAt": "2026-11-16T16:26:54.177Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=earth-mwjh7orz-b7c5",
+    "catalogId": "dynamic-earth",
+    "articleId": "cogl-bot-india-earth-1794846414382",
+    "topic": "in culmination of 10 years of dedicated efforts, union environment minister and cm (rajasthan) initi",
+    "usedAt": "2026-11-16T16:26:54.383Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=politics-mwjh7os7-3z6p",
+    "catalogId": "dynamic-politics",
+    "articleId": "cogl-bot-global-politics-1794846413471",
+    "topic": "trump heads to asia to meet with xi and putin amid nvidia fallout trump heads to asia to meet with x",
+    "usedAt": "2026-11-16T16:26:54.391Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=sport-mwjh7osb-748q",
+    "catalogId": "dynamic-sport",
+    "articleId": "cogl-bot-global-sport-1794846413473",
+    "topic": "bengals' blowout win over steelers makes nfl history with 1,100th 'scorigami' bengals' blowout win o",
+    "usedAt": "2026-11-16T16:26:54.395Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=business-mwjh7osd-dhj1",
+    "catalogId": "dynamic-business",
+    "articleId": "cogl-bot-global-business-1794846413475",
+    "topic": "short of time at the asean short of time at the asean the economist in the philippines, trump checks",
+    "usedAt": "2026-11-16T16:26:54.397Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=technology-mwjh7ose-7xj3",
+    "catalogId": "dynamic-technology",
+    "articleId": "cogl-bot-global-technology-1794846413477",
+    "topic": "nasa's interstellar voyager 1 probe is about to reach 1 light-day from earth after nearly 50 years i",
+    "usedAt": "2026-11-16T16:26:54.399Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=health-mwjh7osg-eb3c",
+    "catalogId": "dynamic-health",
+    "articleId": "cogl-bot-global-health-1794846413936",
+    "topic": "what to know about measles outbreaks as the us faces losing its elimination status what to know abou",
+    "usedAt": "2026-11-16T16:26:54.400Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=culture-mwjh7osi-hud6",
+    "catalogId": "dynamic-culture",
+    "articleId": "cogl-bot-global-culture-1794846414149",
+    "topic": "hoa vang to host a country market – experience local culture and celebrate cultural identity hoa van",
+    "usedAt": "2026-11-16T16:26:54.402Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=arts-mwjh7osj-m2kq",
+    "catalogId": "dynamic-arts",
+    "articleId": "cogl-bot-global-arts-1794846414151",
+    "topic": "gérard depardieu drops appeal against sexual assault conviction the french film star was due to star",
+    "usedAt": "2026-11-16T16:26:54.404Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=travel-mwjh7ot1-nbu2",
+    "catalogId": "dynamic-travel",
+    "articleId": "cogl-bot-global-travel-1794846414153",
+    "topic": "see the leonid meteors this week — ‘the shower that started it all’ see the leonid meteors this week",
+    "usedAt": "2026-11-16T16:26:54.421Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=earth-mwjh7ot2-3kc8",
+    "catalogId": "dynamic-earth",
+    "articleId": "cogl-bot-global-earth-1794846414155",
+    "topic": "re-ranking 138 college football teams after week 11: carnage in the back half of the top 25 re-ranki",
+    "usedAt": "2026-11-16T16:26:54.423Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=news-mwjh7ot4-4ns2",
+    "catalogId": "dynamic-news",
+    "articleId": "cogl-bot-india-news-1794846414157",
+    "topic": "‘i was in awe of indira gandhi; she was formidable,’ says sonia gandhi at launch of her memoir belon",
+    "usedAt": "2026-11-16T16:26:54.424Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=politics-mwjh7ot6-sz4z",
+    "catalogId": "dynamic-politics",
+    "articleId": "cogl-bot-india-politics-1794846414158",
+    "topic": "jay shah re-elected unopposed as icc chair after board clears way for bigger ipl jay shah re-elected",
+    "usedAt": "2026-11-16T16:26:54.426Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=sport-mwjh7ot8-ts22",
+    "catalogId": "dynamic-sport",
+    "articleId": "cogl-bot-india-sport-1794846414160",
+    "topic": "‘bowlers win you series!’: gautam gambhir’s proud message after india’s historic triumph in new zeal",
+    "usedAt": "2026-11-16T16:26:54.428Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=business-mwjh7ota-8lom",
+    "catalogId": "dynamic-business",
+    "articleId": "cogl-bot-india-business-1794846414162",
+    "topic": "lsg set to trade shami to rr for sam curran lsg set to trade shami to rr for sam curran cricinfo sha",
+    "usedAt": "2026-11-16T16:26:54.430Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=technology-mwjh7otb-v2fl",
+    "catalogId": "dynamic-technology",
+    "articleId": "cogl-bot-india-technology-1794846414164",
+    "topic": "apple launches app to study how people use ai for health queries: details apple launches app to stud",
+    "usedAt": "2026-11-16T16:26:54.432Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=health-mwjh7ote-dmmd",
+    "catalogId": "dynamic-health",
+    "articleId": "cogl-bot-india-health-1794846414166",
+    "topic": "amitabh bachchan, abhishek bachchan receive death threats from gangster goldy dhillon amitabh bachch",
+    "usedAt": "2026-11-16T16:26:54.434Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=culture-mwjh7otg-i67z",
+    "catalogId": "dynamic-culture",
+    "articleId": "cogl-bot-india-culture-1794846414168",
+    "topic": "5 errors in sonia gandhi’s memoir & public anger over shivakumar’s vip temple darshan — national int",
+    "usedAt": "2026-11-16T16:26:54.436Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=arts-mwjh7oth-5q8k",
+    "catalogId": "dynamic-arts",
+    "articleId": "cogl-bot-india-arts-1794846414172",
+    "topic": "robert pattinson chosen as the next james bond robert pattinson chosen as the next james bond cnn ro",
+    "usedAt": "2026-11-16T16:26:54.437Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=travel-mwjh7otj-w7m0",
+    "catalogId": "dynamic-travel",
+    "articleId": "cogl-bot-india-travel-1794846414175",
+    "topic": "new leak shows galaxy s27 pro and ultra camera design with three lenses new leak shows galaxy s27 pr",
+    "usedAt": "2026-11-16T16:26:54.439Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=earth-mwjh7otk-nw7o",
+    "catalogId": "dynamic-earth",
+    "articleId": "cogl-bot-india-earth-1794846414382",
+    "topic": "in culmination of 10 years of dedicated efforts, union environment minister and cm (rajasthan) initi",
+    "usedAt": "2026-11-16T16:26:54.440Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=culture-mwjh7otm-kdhq",
+    "catalogId": "dynamic-culture",
+    "articleId": "cogl-bot-india-culture-1794801122969",
+    "topic": "5 errors in sonia gandhi’s memoir & public anger over shivakumar’s vip temple darshan 5 errors in so",
+    "usedAt": "2026-11-16T16:26:54.442Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=arts-mwjh7otn-kq0p",
+    "catalogId": "dynamic-arts",
+    "articleId": "cogl-bot-india-arts-1794801129003",
+    "topic": "indian cinema scores major global box office triumph as national art gallery inaugurates master retr",
+    "usedAt": "2026-11-16T16:26:54.443Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=travel-mwjh7otp-kc93",
+    "catalogId": "dynamic-travel",
+    "articleId": "cogl-bot-india-travel-1794801135022",
+    "topic": "incredible india 2026: eco-tourism circuit along kerala backwaters & high-altitude ladakh passes cap",
+    "usedAt": "2026-11-16T16:26:54.445Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=earth-mwjh7otq-9q6p",
+    "catalogId": "dynamic-earth",
+    "articleId": "cogl-bot-india-earth-1794801139086",
+    "topic": "from snow leopards to coral reefs: india’s biosphere reserves connect conservation with livelihoods ",
+    "usedAt": "2026-11-16T16:26:54.446Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=news-mwjh7ots-fz2m",
+    "catalogId": "dynamic-news",
+    "articleId": "cogl-bot-1794407436620-1",
+    "topic": "us to seek putin’s ‘blessing’ for europe to join ukraine talks us to seek putin’s ‘blessing’ for eur",
+    "usedAt": "2026-11-16T16:26:54.448Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=politics-mwjh7ott-pjp0",
+    "catalogId": "dynamic-politics",
+    "articleId": "cogl-bot-1794763888652-1",
+    "topic": "u.s. floated exchanging ukrainian territory for nato membership, zelenskyy says u.s. floated exchang",
+    "usedAt": "2026-11-16T16:26:54.449Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=politics-mwjh7otv-65he",
+    "catalogId": "dynamic-politics",
+    "articleId": "cogl-bot-1794763888721-3",
+    "topic": "‘it is not unusual to go 48 hours with little sleep’: what it’s like to cover a cop climate summit ‘",
+    "usedAt": "2026-11-16T16:26:54.451Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=business-mwjh7otw-oj1u",
+    "catalogId": "dynamic-business",
+    "articleId": "cogl-bot-1794674986851-3",
+    "topic": "pope’s visit to hub of afro-peruvian community casts spotlight on african slave trade to peru pope’s",
+    "usedAt": "2026-11-16T16:26:54.452Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=politics-mwjh7oty-eil5",
+    "catalogId": "dynamic-politics",
+    "articleId": "cogl-bot-1794594091600-2",
+    "topic": "the u.s.-israel relationship is broken. here’s how eisenkot could fix it. the u.s.-israel relationsh",
+    "usedAt": "2026-11-16T16:26:54.454Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=politics-mwjh7otz-9q46",
+    "catalogId": "dynamic-politics",
+    "articleId": "cogl-bot-1794594091602-3",
+    "topic": "china stages unannounced pacific drills in 'silent intimidation' of taiwan, officials say china stag",
+    "usedAt": "2026-11-16T16:26:54.456Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=news-mwjh7ou1-6o07",
+    "catalogId": "dynamic-news",
+    "articleId": "cogl-bot-1794508814585-1",
+    "topic": "us envoys meet with putin in moscow on ukraine talks, then head for dublin to see zelenskyy us envoy",
+    "usedAt": "2026-11-16T16:26:54.458Z"
+  },
+  {
+    "url": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=health-mwjh7ou3-6fvi",
+    "catalogId": "dynamic-health",
+    "articleId": "cogl-bot-1794508814588-2",
+    "topic": "israeli strike on gaza’s nasser hospital kills at least six people, officials say israeli strike on ",
+    "usedAt": "2026-11-16T16:26:54.459Z"
   }
 ]

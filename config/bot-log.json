@@ -1,5 +1,369 @@
 [
   {
+    "runAt": "2026-11-16T16:26:54.387Z",
+    "durationMs": 6110,
+    "articlesPublished": 20,
+    "targetCount": 20,
+    "categoriesCovered": [
+      "News",
+      "Politics",
+      "Sport",
+      "Business",
+      "Technology",
+      "Health",
+      "Culture",
+      "Arts",
+      "Travel",
+      "Earth"
+    ],
+    "audiences": [
+      "Global (10 stories)",
+      "India (10 stories)"
+    ],
+    "stories": [
+      {
+        "id": "cogl-bot-global-news-1794846413467",
+        "category": "News",
+        "audience": "Global",
+        "title": "Pope Endures Grueling Travel in South America Weeks After Surgery",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=news-mwjh7o2l-e1va"
+      },
+      {
+        "id": "cogl-bot-global-politics-1794846413471",
+        "category": "Politics",
+        "audience": "Global",
+        "title": "Trump heads to Asia to meet with Xi and Putin amid Nvidia fallout",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Politics",
+          "#GlobalAffairs",
+          "#Diplomacy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=politics-mwjh7o2p-mnhl"
+      },
+      {
+        "id": "cogl-bot-global-sport-1794846413473",
+        "category": "Sport",
+        "audience": "Global",
+        "title": "Bengals' blowout win over Steelers makes NFL history with 1,100th 'scorigami'",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#SportsNews",
+          "#WorldSports",
+          "#Athletics"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=sport-mwjh7o2r-tdvm"
+      },
+      {
+        "id": "cogl-bot-global-business-1794846413475",
+        "category": "Business",
+        "audience": "Global",
+        "title": "Short of time at the ASEAN",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#BusinessNews",
+          "#Economy",
+          "#Markets"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=business-mwjh7o2s-v9qo"
+      },
+      {
+        "id": "cogl-bot-global-technology-1794846413477",
+        "category": "Technology",
+        "audience": "Global",
+        "title": "NASA's interstellar Voyager 1 probe is about to reach 1 light-day from Earth after nearly 50 years in space",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechNews",
+          "#AI",
+          "#Innovation"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=technology-mwjh7o2u-egwt"
+      },
+      {
+        "id": "cogl-bot-global-health-1794846413936",
+        "category": "Health",
+        "audience": "Global",
+        "title": "What to know about measles outbreaks as the US faces losing its elimination status",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthNews",
+          "#MedicalScience",
+          "#PublicHealth"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=health-mwjh7ofl-feh8"
+      },
+      {
+        "id": "cogl-bot-global-culture-1794846414149",
+        "category": "Culture",
+        "audience": "Global",
+        "title": "Hoa Vang to host a country market – experience local culture and celebrate cultural identity",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Culture",
+          "#Heritage",
+          "#GlobalTraditions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=culture-mwjh7oli-s4ew"
+      },
+      {
+        "id": "cogl-bot-global-arts-1794846414151",
+        "category": "Arts",
+        "audience": "Global",
+        "title": "Gérard Depardieu drops appeal against sexual assault conviction",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ArtsAndCulture",
+          "#CreativeArts",
+          "#Exhibitions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=arts-mwjh7olk-d2az"
+      },
+      {
+        "id": "cogl-bot-global-travel-1794846414153",
+        "category": "Travel",
+        "audience": "Global",
+        "title": "See the Leonid meteors this week — ‘the shower that started it all’",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TravelUpdate",
+          "#GlobalTravel",
+          "#Infrastructure"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=travel-mwjh7olm-ijg4"
+      },
+      {
+        "id": "cogl-bot-global-earth-1794846414155",
+        "category": "Earth",
+        "audience": "Global",
+        "title": "Re-ranking 138 college football teams after Week 11: Carnage in the back half of the top 25",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ClimateAction",
+          "#Sustainability",
+          "#EarthNews"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=earth-mwjh7olo-3bxz"
+      },
+      {
+        "id": "cogl-bot-india-news-1794846414157",
+        "category": "News",
+        "audience": "India",
+        "title": "‘I was in awe of Indira Gandhi; she was formidable,’ says Sonia Gandhi at launch of her memoir Belonging",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndiaHeadlines",
+          "#NationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=news-mwjh7olq-ur80"
+      },
+      {
+        "id": "cogl-bot-india-politics-1794846414158",
+        "category": "Politics",
+        "audience": "India",
+        "title": "Jay Shah re-elected unopposed as ICC chair after board clears way for bigger IPL",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianPolitics",
+          "#Governance",
+          "#Policy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=politics-mwjh7olr-jlyi"
+      },
+      {
+        "id": "cogl-bot-india-sport-1794846414160",
+        "category": "Sport",
+        "audience": "India",
+        "title": "‘Bowlers win you series!’: Gautam Gambhir’s proud message after India’s historic triumph in New Zealand",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TeamIndia",
+          "#IndianSports",
+          "#Cricket"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=sport-mwjh7olt-xgjv"
+      },
+      {
+        "id": "cogl-bot-india-business-1794846414162",
+        "category": "Business",
+        "audience": "India",
+        "title": "LSG set to trade Shami to RR for Sam Curran",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianEconomy",
+          "#Sensex",
+          "#Nifty"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=business-mwjh7olv-y7tr"
+      },
+      {
+        "id": "cogl-bot-india-technology-1794846414164",
+        "category": "Technology",
+        "audience": "India",
+        "title": "Apple launches app to study how people use AI for health queries: Details",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechIndia",
+          "#ISRO",
+          "#DigitalIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=technology-mwjh7olx-muop"
+      },
+      {
+        "id": "cogl-bot-india-health-1794846414166",
+        "category": "Health",
+        "audience": "India",
+        "title": "Amitabh Bachchan, Abhishek Bachchan Receive Death Threats From Gangster Goldy Dhillon",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthIndia",
+          "#AyushmanBharat",
+          "#MedicalScience"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=health-mwjh7olz-mwo8"
+      },
+      {
+        "id": "cogl-bot-india-culture-1794846414168",
+        "category": "Culture",
+        "audience": "India",
+        "title": "5 errors in Sonia Gandhi’s memoir & public anger over Shivakumar’s VIP temple darshan — National Intelligence Briefing",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IncredibleIndia",
+          "#IndianHeritage",
+          "#Culture"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=culture-mwjh7om1-kbzw"
+      },
+      {
+        "id": "cogl-bot-india-arts-1794846414172",
+        "category": "Arts",
+        "audience": "India",
+        "title": "Robert Pattinson chosen as the next James Bond",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianCinema",
+          "#Bollywood",
+          "#CreativeArts"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=arts-mwjh7om5-u9xy"
+      },
+      {
+        "id": "cogl-bot-india-travel-1794846414175",
+        "category": "Travel",
+        "audience": "India",
+        "title": "New leak shows Galaxy S27 Pro and Ultra camera design with three lenses",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#ExploreIndia",
+          "#TravelIndia",
+          "#Tourism"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=travel-mwjh7om8-wr7j"
+      },
+      {
+        "id": "cogl-bot-india-earth-1794846414382",
+        "category": "Earth",
+        "audience": "India",
+        "title": "In culmination of 10 years of dedicated efforts, Union Environment Minister and CM (Rajasthan) initiate the process for release of captive-bred Great Indian Bustards into the Wild at Desert National Park, Jaislamer",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#EarthIndia",
+          "#CleanEnergy",
+          "#WildlifeIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=earth-mwjh7orz-b7c5"
+      }
+    ]
+  },
+  {
     "runAt": "2026-11-16T03:52:19.105Z",
     "durationMs": 42291,
     "articlesPublished": 20,
