@@ -1,5 +1,369 @@
 [
   {
+    "runAt": "2026-11-17T16:29:40.858Z",
+    "durationMs": 3854,
+    "articlesPublished": 20,
+    "targetCount": 20,
+    "categoriesCovered": [
+      "News",
+      "Politics",
+      "Sport",
+      "Business",
+      "Technology",
+      "Health",
+      "Culture",
+      "Arts",
+      "Travel",
+      "Earth"
+    ],
+    "audiences": [
+      "Global (10 stories)",
+      "India (10 stories)"
+    ],
+    "stories": [
+      {
+        "id": "cogl-bot-global-news-1794932979192",
+        "category": "News",
+        "audience": "Global",
+        "title": "How the attack on Crimean Bridge unfolded",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/82dd/live/f7995500-e29d-11f1-99a1-253766e7ad8b.jpg"
+      },
+      {
+        "id": "cogl-bot-global-politics-1794932979212",
+        "category": "Politics",
+        "audience": "Global",
+        "title": "Trump arrives just as Southeast Asian summit is ending, but still looms over talks",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Politics",
+          "#GlobalAffairs",
+          "#Diplomacy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20trump%20arrives%20just%20as%20southeast%20asian%20summit%20is%20ending%20but%20still%20looms%20over%20talks%20politics%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=869748&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-sport-1794932979276",
+        "category": "Sport",
+        "audience": "Global",
+        "title": "Seven things Solak thinks for NFL Week 11: Takes on four QBs, Lions, Rams, more",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#SportsNews",
+          "#WorldSports",
+          "#Athletics"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20seven%20things%20solak%20thinks%20for%20nfl%20week%2011%20takes%20on%20four%20qbs%20lions%20rams%20more%20sport%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=803534&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-business-1794932979312",
+        "category": "Business",
+        "audience": "Global",
+        "title": "China and Canada expand tariff relief while Ottawa-Washington relations are strained",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#BusinessNews",
+          "#Economy",
+          "#Markets"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20china%20and%20canada%20expand%20tariff%20relief%20while%20ottawa-washington%20relations%20are%20strained%20business%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=947950&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-technology-1794932979392",
+        "category": "Technology",
+        "audience": "Global",
+        "title": "U.S. allies on edge as Trump heads to summit with Xi and Putin",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechNews",
+          "#AI",
+          "#Innovation"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20u%20s%20allies%20on%20edge%20as%20trump%20heads%20to%20summit%20with%20xi%20and%20putin%20technology%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=695977&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-health-1794932979459",
+        "category": "Health",
+        "audience": "Global",
+        "title": "We couldn't afford a house alone, so we bought one with strangers",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthNews",
+          "#MedicalScience",
+          "#PublicHealth"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/da1d/live/2cfb5880-e265-11f1-900c-895604014268.jpg"
+      },
+      {
+        "id": "cogl-bot-global-culture-1794932979782",
+        "category": "Culture",
+        "audience": "Global",
+        "title": "Sangai Festival: Showcasing Manipur’s indigenous cultural heritage",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Culture",
+          "#Heritage",
+          "#GlobalTraditions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20sangai%20festival%20showcasing%20manipur%20s%20indigenous%20cultural%20heritage%20culture%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=917859&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-arts-1794932979921",
+        "category": "Arts",
+        "audience": "Global",
+        "title": "Batman to James Bond: The clues about what to expect from Robert Pattinson's 007",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ArtsAndCulture",
+          "#CreativeArts",
+          "#Exhibitions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20batman%20to%20james%20bond%20the%20clues%20about%20what%20to%20expect%20from%20robert%20pattinson%20s%20007%20arts%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=728017&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-travel-1794932980251",
+        "category": "Travel",
+        "audience": "Global",
+        "title": "The “Invisible” Footprint of Global Travel: How Destinations are Connected and Why It Matters",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TravelUpdate",
+          "#GlobalTravel",
+          "#Infrastructure"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20the%20invisible%20footprint%20of%20global%20travel%20how%20destinations%20are%20connected%20and%20why%20it%20matters%20travel%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=413094&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-earth-1794932980254",
+        "category": "Earth",
+        "audience": "Global",
+        "title": "Northern Lights Alert: 12 States May See Aurora On Monday Night",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ClimateAction",
+          "#Sustainability",
+          "#EarthNews"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20northern%20lights%20alert%2012%20states%20may%20see%20aurora%20on%20monday%20night%20earth%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=127816&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-news-1794932980256",
+        "category": "News",
+        "audience": "India",
+        "title": "Ukrainian 'Scamster' Being Extradited From Romania In Major Breakthrough",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndiaHeadlines",
+          "#NationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://c.ndtvimg.com/2026-11/45dh2jo8_oleksandr-zapichenko_625x300_17_November_26.jpg?im=FeatureCrop,algorithm=dnn,width=1280,height=720"
+      },
+      {
+        "id": "cogl-bot-india-politics-1794932980259",
+        "category": "Politics",
+        "audience": "India",
+        "title": "PM Modi calls for 'cooperation, not competition' at ASEAN-India Summit; pitches nine initiatives to deepen ties",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianPolitics",
+          "#Governance",
+          "#Policy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20pm%20modi%20calls%20for%20cooperation%20not%20competition%20at%20asean-india%20summit%20pitches%20nine%20initiatives%20to%20deepen%20ties%20politics%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=455330&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-sport-1794932980261",
+        "category": "Sport",
+        "audience": "India",
+        "title": "Hard grind a preparation for the World title match: Vaishali",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TeamIndia",
+          "#IndianSports",
+          "#Cricket"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/ta3pdo/article71713061.ece/alternates/LANDSCAPE_1200/TH18-VYSAHLI.jpg"
+      },
+      {
+        "id": "cogl-bot-india-business-1794932980264",
+        "category": "Business",
+        "audience": "India",
+        "title": "Rising prices reflect government’s economic mismanagement: Congress",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianEconomy",
+          "#Sensex",
+          "#Nifty"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/p0kaak/article71712956.ece/alternates/LANDSCAPE_1200/20261005426L.jpg"
+      },
+      {
+        "id": "cogl-bot-india-technology-1794932980266",
+        "category": "Technology",
+        "audience": "India",
+        "title": "ASEAN Summit LIVE updates: Quad announces new maritime exercise, unveils major initiatives on AI, cyber security",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechIndia",
+          "#ISRO",
+          "#DigitalIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20asean%20summit%20live%20updates%20quad%20announces%20new%20maritime%20exercise%20unveils%20major%20initiatives%20on%20ai%20cyber%20security%20technology%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=479382&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-health-1794932980269",
+        "category": "Health",
+        "audience": "India",
+        "title": "Fresh unrest in Bangladesh as garment workers protest, block highways for higher wages",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthIndia",
+          "#AyushmanBharat",
+          "#MedicalScience"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/6apgn8/article71711712.ece/alternates/LANDSCAPE_1200/20261117186L.jpg"
+      },
+      {
+        "id": "cogl-bot-india-culture-1794932980532",
+        "category": "Culture",
+        "audience": "India",
+        "title": "Sangai Festival: Showcasing Manipur’s indigenous cultural heritage — National Intelligence Briefing",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IncredibleIndia",
+          "#IndianHeritage",
+          "#Culture"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20sangai%20festival%20showcasing%20manipur%20s%20indigenous%20cultural%20heritage%20culture%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=945945&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-arts-1794932980535",
+        "category": "Arts",
+        "audience": "India",
+        "title": "What a Guns N’ Roses concert feels like in 2026",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianCinema",
+          "#Bollywood",
+          "#CreativeArts"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/owm7az/article71712210.ece/alternates/LANDSCAPE_1200/Guns%20N%E2%80%99%20Roses%20took%20to%20the%20Bengaluru%20stage%20with%20an%20electrifying%20set%20of%20their%20iconic%20hits%20in%20a%20concert%20produced%20and%20promoted%20by%20BookMyShow%20Live.jpg"
+      },
+      {
+        "id": "cogl-bot-india-travel-1794932980850",
+        "category": "Travel",
+        "audience": "India",
+        "title": "Travel Stocks in India 2026",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#ExploreIndia",
+          "#TravelIndia",
+          "#Tourism"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20travel%20stocks%20in%20india%202026%20travel%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=649032&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-earth-1794932980853",
+        "category": "Earth",
+        "audience": "India",
+        "title": "Tiger ‘Explorer’ spotted in fields near Lingapalem in Andhra’s Eluru district; villages on alert",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#EarthIndia",
+          "#CleanEnergy",
+          "#WildlifeIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/k3xjvk/article71310183.ece/alternates/LANDSCAPE_1200/IMG_tiger_10237_24_4_202_2_1_MCGBEQUV.jpg"
+      }
+    ]
+  },
+  {
     "runAt": "2026-11-16T16:26:54.387Z",
     "durationMs": 6110,
     "articlesPublished": 20,

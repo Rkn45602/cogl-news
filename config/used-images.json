@@ -509,5 +509,145 @@
     "articleId": "cogl-bot-1794508814588-2",
     "topic": "israeli strike on gaza’s nasser hospital kills at least six people, officials say israeli strike on ",
     "usedAt": "2026-11-17T05:22:01.536Z"
+  },
+  {
+    "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/82dd/live/f7995500-e29d-11f1-99a1-253766e7ad8b.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-global-news-1794932979192",
+    "topic": "how the attack on crimean bridge unfolded news global news",
+    "usedAt": "2026-11-17T16:29:39.194Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20trump%20arrives%20just%20as%20southeast%20asian%20summit%20is%20ending%20but%20still%20looms%20over%20talks%20politics%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=869748&model=flux",
+    "catalogId": "ai-editorial-politics",
+    "articleId": "cogl-bot-global-politics-1794932979212",
+    "topic": "trump arrives just as southeast asian summit is ending, but still looms over talks politics global p",
+    "usedAt": "2026-11-17T16:29:39.214Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20seven%20things%20solak%20thinks%20for%20nfl%20week%2011%20takes%20on%20four%20qbs%20lions%20rams%20more%20sport%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=803534&model=flux",
+    "catalogId": "ai-editorial-sport",
+    "articleId": "cogl-bot-global-sport-1794932979276",
+    "topic": "seven things solak thinks for nfl week 11: takes on four qbs, lions, rams, more sport global sport",
+    "usedAt": "2026-11-17T16:29:39.278Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20china%20and%20canada%20expand%20tariff%20relief%20while%20ottawa-washington%20relations%20are%20strained%20business%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=947950&model=flux",
+    "catalogId": "ai-editorial-business",
+    "articleId": "cogl-bot-global-business-1794932979312",
+    "topic": "china and canada expand tariff relief while ottawa-washington relations are strained business global",
+    "usedAt": "2026-11-17T16:29:39.314Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20u%20s%20allies%20on%20edge%20as%20trump%20heads%20to%20summit%20with%20xi%20and%20putin%20technology%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=695977&model=flux",
+    "catalogId": "ai-editorial-technology",
+    "articleId": "cogl-bot-global-technology-1794932979392",
+    "topic": "u.s. allies on edge as trump heads to summit with xi and putin technology global technology",
+    "usedAt": "2026-11-17T16:29:39.393Z"
+  },
+  {
+    "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/da1d/live/2cfb5880-e265-11f1-900c-895604014268.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-global-health-1794932979459",
+    "topic": "we couldn't afford a house alone, so we bought one with strangers health global health",
+    "usedAt": "2026-11-17T16:29:39.461Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20sangai%20festival%20showcasing%20manipur%20s%20indigenous%20cultural%20heritage%20culture%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=917859&model=flux",
+    "catalogId": "ai-editorial-culture",
+    "articleId": "cogl-bot-global-culture-1794932979782",
+    "topic": "sangai festival: showcasing manipur’s indigenous cultural heritage culture global culture",
+    "usedAt": "2026-11-17T16:29:39.784Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20batman%20to%20james%20bond%20the%20clues%20about%20what%20to%20expect%20from%20robert%20pattinson%20s%20007%20arts%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=728017&model=flux",
+    "catalogId": "ai-editorial-arts",
+    "articleId": "cogl-bot-global-arts-1794932979921",
+    "topic": "batman to james bond: the clues about what to expect from robert pattinson's 007 arts global arts",
+    "usedAt": "2026-11-17T16:29:39.923Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20the%20invisible%20footprint%20of%20global%20travel%20how%20destinations%20are%20connected%20and%20why%20it%20matters%20travel%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=413094&model=flux",
+    "catalogId": "ai-editorial-travel",
+    "articleId": "cogl-bot-global-travel-1794932980251",
+    "topic": "the “invisible” footprint of global travel: how destinations are connected and why it matters travel",
+    "usedAt": "2026-11-17T16:29:40.253Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20northern%20lights%20alert%2012%20states%20may%20see%20aurora%20on%20monday%20night%20earth%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=127816&model=flux",
+    "catalogId": "ai-editorial-earth",
+    "articleId": "cogl-bot-global-earth-1794932980254",
+    "topic": "northern lights alert: 12 states may see aurora on monday night earth global earth",
+    "usedAt": "2026-11-17T16:29:40.255Z"
+  },
+  {
+    "url": "https://c.ndtvimg.com/2026-11/45dh2jo8_oleksandr-zapichenko_625x300_17_November_26.jpg?im=FeatureCrop,algorithm=dnn,width=1280,height=720",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-news-1794932980256",
+    "topic": "ukrainian 'scamster' being extradited from romania in major breakthrough news india news",
+    "usedAt": "2026-11-17T16:29:40.258Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20pm%20modi%20calls%20for%20cooperation%20not%20competition%20at%20asean-india%20summit%20pitches%20nine%20initiatives%20to%20deepen%20ties%20politics%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=455330&model=flux",
+    "catalogId": "ai-editorial-politics",
+    "articleId": "cogl-bot-india-politics-1794932980259",
+    "topic": "pm modi calls for 'cooperation, not competition' at asean-india summit; pitches nine initiatives to ",
+    "usedAt": "2026-11-17T16:29:40.260Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/incoming/ta3pdo/article71713061.ece/alternates/LANDSCAPE_1200/TH18-VYSAHLI.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-sport-1794932980261",
+    "topic": "hard grind a preparation for the world title match: vaishali sport india sport",
+    "usedAt": "2026-11-17T16:29:40.263Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/incoming/p0kaak/article71712956.ece/alternates/LANDSCAPE_1200/20261005426L.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-business-1794932980264",
+    "topic": "rising prices reflect government’s economic mismanagement: congress business india business",
+    "usedAt": "2026-11-17T16:29:40.265Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20asean%20summit%20live%20updates%20quad%20announces%20new%20maritime%20exercise%20unveils%20major%20initiatives%20on%20ai%20cyber%20security%20technology%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=479382&model=flux",
+    "catalogId": "ai-editorial-technology",
+    "articleId": "cogl-bot-india-technology-1794932980266",
+    "topic": "asean summit live updates: quad announces new maritime exercise, unveils major initiatives on ai, cy",
+    "usedAt": "2026-11-17T16:29:40.268Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/incoming/6apgn8/article71711712.ece/alternates/LANDSCAPE_1200/20261117186L.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-health-1794932980269",
+    "topic": "fresh unrest in bangladesh as garment workers protest, block highways for higher wages health india ",
+    "usedAt": "2026-11-17T16:29:40.271Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20sangai%20festival%20showcasing%20manipur%20s%20indigenous%20cultural%20heritage%20culture%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=945945&model=flux",
+    "catalogId": "ai-editorial-culture",
+    "articleId": "cogl-bot-india-culture-1794932980532",
+    "topic": "sangai festival: showcasing manipur’s indigenous cultural heritage culture india culture",
+    "usedAt": "2026-11-17T16:29:40.534Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/incoming/owm7az/article71712210.ece/alternates/LANDSCAPE_1200/Guns%20N%E2%80%99%20Roses%20took%20to%20the%20Bengaluru%20stage%20with%20an%20electrifying%20set%20of%20their%20iconic%20hits%20in%20a%20concert%20produced%20and%20promoted%20by%20BookMyShow%20Live.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-arts-1794932980535",
+    "topic": "what a guns n’ roses concert feels like in 2026 arts india arts",
+    "usedAt": "2026-11-17T16:29:40.537Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20travel%20stocks%20in%20india%202026%20travel%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=649032&model=flux",
+    "catalogId": "ai-editorial-travel",
+    "articleId": "cogl-bot-india-travel-1794932980850",
+    "topic": "travel stocks in india 2026 travel india travel",
+    "usedAt": "2026-11-17T16:29:40.852Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/incoming/k3xjvk/article71310183.ece/alternates/LANDSCAPE_1200/IMG_tiger_10237_24_4_202_2_1_MCGBEQUV.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-earth-1794932980853",
+    "topic": "tiger ‘explorer’ spotted in fields near lingapalem in andhra’s eluru district; villages on alert ear",
+    "usedAt": "2026-11-17T16:29:40.854Z"
   }
 ]
