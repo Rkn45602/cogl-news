@@ -402,8 +402,13 @@
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                 <div>
-                  <label class="block font-bold text-gray-700 uppercase mb-1 text-[11px]">Featured Image URL *</label>
-                  <input type="url" id="newImage" required value="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80" class="w-full px-2.5 py-1.5 border rounded-lg text-xs outline-none focus:ring-1 focus:ring-red-600">
+                  <div class="flex items-center justify-between mb-1">
+                    <label class="block font-bold text-gray-700 uppercase text-[11px]">Featured Image URL *</label>
+                    <button type="button" onclick="quickGenerateImage()" class="text-[10px] font-bold text-red-600 hover:text-red-700 flex items-center gap-1 cursor-pointer">
+                      <span>✨ Generate AI Image</span>
+                    </button>
+                  </div>
+                  <input type="url" id="newImage" required placeholder="https://image.pollinations.ai/... or internet photo URL" class="w-full px-2.5 py-1.5 border rounded-lg text-xs outline-none focus:ring-1 focus:ring-red-600">
                 </div>
                 <div>
                   <label class="block font-bold text-gray-700 uppercase mb-1 text-[11px]">Video Embed URL (Optional)</label>
@@ -1405,6 +1410,29 @@
       inp.focus();
     }
 
+    function generateAIEditorialImage(title = '', category = 'News') {
+      const clean = (title || category)
+        .replace(/https?:\/\/\S+/g, '')
+        .replace(/[^\w\s-]/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim()
+        .slice(0, 140);
+      const prompt = `editorial news photojournalism of ${clean || category}, accredited wire press photograph, 4k resolution, authentic journalistic scene, realistic lighting`;
+      const seed = Math.floor(Math.random() * 900000 + 100000);
+      return `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=1200&height=675&nologo=true&seed=${seed}&model=flux`;
+    }
+
+    function quickGenerateImage() {
+      const title = document.getElementById('newTitle').value.trim();
+      const category = document.getElementById('newCategory').value;
+      if (!title) {
+        alert('Please enter a headline first so the bot can generate a relatable editorial image.');
+        return;
+      }
+      const img = generateAIEditorialImage(title, category);
+      document.getElementById('newImage').value = img;
+    }
+
     async function handleSendAdminChat(e) {
       e.preventDefault();
       const inp = document.getElementById('adminChatInput');
@@ -1518,7 +1546,7 @@
           category: 'News',
           summary: `Verified international dispatches corroborate notable progress in ${topic}, certified under COGL journalistic accuracy standards.`,
           content: `<p class="lead-paragraph"><strong>COGL WIRE SERVICE</strong> — International monitors have confirmed verified developments regarding <em>${topic}</em>.</p><p>Dispatches corroborate that official accredited sources have published documentation endorsing this initiative.</p>`,
-          featuredImage: 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=' + Date.now(),
+          featuredImage: generateAIEditorialImage(topic, 'News'),
           author: 'COGL Investigative Desk',
           authorRole: 'Editorial Board',
           isBreaking: true,
@@ -1748,7 +1776,7 @@
       document.getElementById('newSummary').value = '';
       document.getElementById('newContent').value = '';
       document.getElementById('newHashtags').value = '';
-      document.getElementById('newImage').value = 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80';
+      document.getElementById('newImage').value = '';
       document.getElementById('newVideo').value = '';
       document.getElementById('newIsBreaking').checked = false;
       document.getElementById('newIsLead').checked = false;
@@ -1797,7 +1825,7 @@
         category,
         summary,
         content: formattedContent,
-        featuredImage: featuredImage || 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80',
+        featuredImage: (featuredImage && !featuredImage.includes('photo-1585829365295-ab7cd400c167')) ? featuredImage : generateAIEditorialImage(title, category),
         videoEmbedUrl,
         isBreaking,
         isLead,

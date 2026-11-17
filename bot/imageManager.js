@@ -367,7 +367,7 @@ const PHOTO_CATALOG = [
     id: 'news-camera-3',
     category: 'News',
     keywords: ['camera', 'press conference', 'photojournalist', 'reporter', 'media scrum'],
-    url: 'https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80',
+    url: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80',
     title: 'Photojournalists with telephoto lenses at international summit'
   },
   {
@@ -629,51 +629,139 @@ function normalizeImageURL(rawUrl) {
 }
 
 /**
+ * Builds a high-quality, photorealistic AI editorial news image URL
+ * Generates relatable, context-specific press photography for the exact news story.
+ */
+function buildPollinationsAIImageUrl(topicText = '', category = 'News') {
+  const cleanTopic = (topicText || category)
+    .replace(/https?:\/\/\S+/g, '')
+    .replace(/[^\w\s-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 140);
+  const prompt = `editorial news photojournalism of ${cleanTopic || category}, accredited wire press photograph, 4k resolution, authentic journalistic scene, realistic lighting, highly detailed, photorealistic`;
+  const seed = Math.floor(Math.random() * 900000 + 100000);
+  return `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=1200&height=675&nologo=true&seed=${seed}&model=flux`;
+}
+
+/**
+ * Searches Wikimedia Commons for authentic, high-resolution encyclopedic/news photographs
+ * Excellent for prominent figures, spacecraft, institutions, landmarks, and events.
+ */
+async function searchWikimediaImage(query = '') {
+  if (!query || query.length < 3) return null;
+  try {
+    const clean = query
+      .replace(/https?:\/\/\S+/g, '')
+      .replace(/[^\w\s]/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .slice(0, 80);
+    const url = `https://en.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=${encodeURIComponent(clean)}&prop=pageimages&pithumbsize=1200&format=json`;
+    const res = await fetch(url, {
+      headers: { 'User-Agent': 'CoglMediaBot/1.0 (https://coglmedia.com; editor@coglmedia.com)' },
+      signal: AbortSignal.timeout(3000)
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const pages = Object.values(data?.query?.pages || {});
+    for (const p of pages) {
+      const src = p?.thumbnail?.source;
+      if (src && !src.endsWith('.svg.png') && !src.includes('Disambig') && !src.includes('Question_book')) {
+        return src;
+      }
+    }
+  } catch (e) {
+    // Graceful fallback to AI generation
+  }
+  return null;
+}
+
+/**
  * Generates an absolutely unique, high-resolution topic-specific image for an article.
- * Guarantees NO duplicates across any post on the website.
+ * Guarantees NO generic printers and NO duplicates across any post on the website.
+ * 
+ * Priority:
+ * 1. Existing verified news image from researcher bot (BBC, Reuters, The Hindu, NDTV, etc.)
+ * 2. High-scoring context-matched curated journalistic catalog
+ * 3. AI-generated photorealistic editorial photo (Pollinations AI with FLUX)
  * 
  * @param {string} topicText - Headline or summary text to match keywords against
  * @param {string} category - Article category (Technology, Politics, Business, Earth, etc.)
  * @param {string} articleId - Target article ID
- * @returns {string} Fully unique image URL
+ * @param {string} existingImageUrl - Optional news image found by the researcher bot
+ * @returns {string} Fully unique, relatable image URL
  */
-function assignUniqueTopicImage(topicText = '', category = 'News', articleId = '') {
+function assignUniqueTopicImage(topicText = '', category = 'News', articleId = '', existingImageUrl = '') {
   const text = (topicText + ' ' + category).toLowerCase();
   const usedUrls = getAllUsedImageURLs();
   const normalizedUsed = new Set();
   usedUrls.forEach(u => normalizedUsed.add(normalizeImageURL(u)));
 
-  // Score candidate photos from catalog based on category and matching keywords
-  const candidates = PHOTO_CATALOG.map(photo => {
-    let score = 0;
-    if (photo.category.toLowerCase() === category.toLowerCase()) score += 10;
-    photo.keywords.forEach(kw => {
-      if (text.includes(kw.toLowerCase())) score += 5;
-    });
-    return { ...photo, score };
-  });
-
-  // Sort by highest relevance score
-  candidates.sort((a, b) => b.score - a.score);
-
-  // Find the top relevant candidate that has NEVER been used
-  for (const candidate of candidates) {
-    const norm = normalizeImageURL(candidate.url);
-    if (!normalizedUsed.has(norm)) {
-      // Record this image as used
-      recordImageUsage(candidate.url, candidate.id, articleId, text);
-      return candidate.url;
+  // 1. If an authentic news image was captured from internet wire feeds by researcher bot, prioritize it!
+  if (existingImageUrl && typeof existingImageUrl === 'string' && existingImageUrl.startsWith('http')) {
+    const isPrinter = existingImageUrl.includes('photo-1585829365295-ab7cd400c167');
+    if (!isPrinter) {
+      recordImageUsage(existingImageUrl, 'researcher-internet-photo', articleId, text);
+      return existingImageUrl;
     }
   }
 
-  // Fallback: If catalog entries are exhausted, create a topic-seeded high-res Unsplash editorial dispatch
-  // using unique cryptographic timestamp / seed so it never clashes
-  const seed = Date.now().toString(36) + '-' + Math.random().toString(36).substring(2, 6);
-  const cleanCat = category.replace(/[^\w]/g, '').toLowerCase() || 'news';
-  const uniqueDynamicUrl = `https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80&sig=${cleanCat}-${seed}`;
+  // 2. Score candidate photos from catalog based on category and matching keywords
+  const candidates = PHOTO_CATALOG
+    .filter(photo => !photo.url.includes('photo-1585829365295-ab7cd400c167'))
+    .map(photo => {
+      let score = 0;
+      if (photo.category.toLowerCase() === category.toLowerCase()) score += 10;
+      photo.keywords.forEach(kw => {
+        if (text.includes(kw.toLowerCase())) score += 5;
+      });
+      return { ...photo, score };
+    });
 
-  recordImageUsage(uniqueDynamicUrl, `dynamic-${cleanCat}`, articleId, text);
-  return uniqueDynamicUrl;
+  candidates.sort((a, b) => b.score - a.score);
+
+  // Use catalog candidate only if high topical relevance (score >= 15) and unused
+  for (const candidate of candidates) {
+    if (candidate.score >= 15) {
+      const norm = normalizeImageURL(candidate.url);
+      if (!normalizedUsed.has(norm)) {
+        recordImageUsage(candidate.url, candidate.id, articleId, text);
+        return candidate.url;
+      }
+    }
+  }
+
+  // 3. AI-Generated Contextual Editorial News Photo (Replaces the generic printer completely!)
+  // Generates 100% unique, highly relatable press photography for this exact headline
+  const aiGeneratedUrl = buildPollinationsAIImageUrl(topicText, category);
+  recordImageUsage(aiGeneratedUrl, `ai-editorial-${category.toLowerCase()}`, articleId, text);
+  return aiGeneratedUrl;
+}
+
+/**
+ * Async resolver for relatable story image:
+ * Checks Researcher Bot image -> Wikimedia Commons Editorial -> AI Generation
+ */
+async function getRelatableStoryImage(topicText = '', category = 'News', articleId = '', existingImageUrl = '') {
+  // 1. Prioritize authentic wire photo from researcher bot
+  if (existingImageUrl && typeof existingImageUrl === 'string' && existingImageUrl.startsWith('http')) {
+    if (!existingImageUrl.includes('photo-1585829365295-ab7cd400c167')) {
+      return assignUniqueTopicImage(topicText, category, articleId, existingImageUrl);
+    }
+  }
+
+  // 2. Query Wikimedia Commons for real-world entities/events
+  try {
+    const wikiPhoto = await searchWikimediaImage(topicText);
+    if (wikiPhoto) {
+      recordImageUsage(wikiPhoto, 'wikimedia-commons', articleId, topicText);
+      return wikiPhoto;
+    }
+  } catch (e) {}
+
+  // 3. Synchronous relatable AI or catalog assignment
+  return assignUniqueTopicImage(topicText, category, articleId);
 }
 
 /**
@@ -692,8 +780,8 @@ function recordImageUsage(url, catalogId, articleId, topic) {
 }
 
 /**
- * Audits all articles in articles.json and ensures every single article has a 100% unique image.
- * Replaces any duplicate images with a distinct topic-related photo.
+ * Audits all articles in articles.json and ensures every single article has a 100% unique, relatable image.
+ * Replaces any generic printer photos ('photo-1585829365295-ab7cd400c167') and duplicates with custom AI / topic imagery.
  */
 function auditAndDeduplicateAllArticles() {
   const articles = readJSON(articlesFile, []);
@@ -703,11 +791,13 @@ function auditAndDeduplicateAllArticles() {
   let fixCount = 0;
 
   articles.forEach((art, idx) => {
+    const isPrinter = Boolean(art.featuredImage && art.featuredImage.includes('photo-1585829365295-ab7cd400c167'));
     const norm = normalizeImageURL(art.featuredImage);
-    if (!art.featuredImage || seenNorms.has(norm)) {
-      // Duplicate detected! Assign a new unique topic image
+
+    if (!art.featuredImage || seenNorms.has(norm) || isPrinter) {
+      // Duplicate or generic printer detected! Assign a new unique, relatable topic image
       const newImg = assignUniqueTopicImage(art.title + ' ' + (art.summary || ''), art.category || 'News', art.id);
-      console.log(`[ImageAudit] Duplicate detected on "${art.title.slice(0, 40)}...". Assigned fresh unique photo.`);
+      console.log(`[ImageAudit] Fixed image on "${art.title.slice(0, 40)}..." (Reason: ${isPrinter ? 'Printer Replaced' : 'Duplicate Replaced'}).`);
       art.featuredImage = newImg;
       seenNorms.add(normalizeImageURL(newImg));
       fixCount++;
@@ -720,7 +810,7 @@ function auditAndDeduplicateAllArticles() {
     writeJSON(articlesFile, articles);
     const publicPath = path.join(__dirname, '..', 'public', 'articles.json');
     writeJSON(publicPath, articles);
-    console.log(`[ImageAudit] Successfully deduplicated ${fixCount} articles. All ${articles.length} articles now have unique images.`);
+    console.log(`[ImageAudit] Successfully updated ${fixCount} articles with relatable images. All ${articles.length} articles verified clean.`);
   }
 
   return { fixed: fixCount, total: articles.length };
@@ -729,6 +819,9 @@ function auditAndDeduplicateAllArticles() {
 module.exports = {
   PHOTO_CATALOG,
   assignUniqueTopicImage,
+  getRelatableStoryImage,
+  buildPollinationsAIImageUrl,
+  searchWikimediaImage,
   auditAndDeduplicateAllArticles,
   getAllUsedImageURLs,
   recordImageUsage

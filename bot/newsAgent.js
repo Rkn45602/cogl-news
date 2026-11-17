@@ -314,6 +314,7 @@ async function fetchTrendingStoryForCategory(category, audience = 'Global') {
           title: safety.sanitizedTitle || researched.title,
           publisher: researched.publisher || (audience === 'India' ? 'Press Trust of India' : 'International Wire Desk'),
           sourceUrl: researched.sourceUrl || (audience === 'India' ? 'https://pib.gov.in' : 'https://www.reuters.com'),
+          imageUrl: researched.imageUrl || null,
           snippet: researched.snippet || '',
           keywords: `${researched.title} ${category} ${audience}`.toLowerCase(),
           requiresProof: researched.requiresProof
@@ -403,7 +404,7 @@ async function runAutonomousNewsResearch(options = {}) {
 
       const articleId = `cogl-bot-global-${cat.toLowerCase()}-${Date.now()}`;
       const slug = titleToUse.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 65);
-      const featuredImage = assignUniqueTopicImage(data.keywords || (titleToUse + ' ' + cat), cat, articleId);
+      const featuredImage = assignUniqueTopicImage(data.keywords || (titleToUse + ' ' + cat), cat, articleId, data.imageUrl);
       const hashtags = generateSEOtags(titleToUse, cat, data.publisher, 'Global');
 
       // Smart Proof Evaluation: Attach documents only when necessary (policy, treaties, audits). Omit for sports, arts, travel.
@@ -458,7 +459,7 @@ async function runAutonomousNewsResearch(options = {}) {
 
       const articleId = `cogl-bot-india-${cat.toLowerCase()}-${Date.now()}`;
       const slug = titleToUse.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 65);
-      const featuredImage = assignUniqueTopicImage(data.keywords || (titleToUse + ' ' + cat + ' India'), cat, articleId);
+      const featuredImage = assignUniqueTopicImage(data.keywords || (titleToUse + ' ' + cat + ' India'), cat, articleId, data.imageUrl);
       const hashtags = generateSEOtags(titleToUse, cat, data.publisher, 'India');
 
       // Smart Proof Evaluation for Indian Audience

@@ -1,5 +1,13 @@
 [
   {
+    "sweepAt": "2026-11-17T05:23:30.627Z",
+    "incidentsDiscovered": 128,
+    "topSelected": 120,
+    "withProofs": 49,
+    "withoutProofs": 71,
+    "channelsScanned": 19
+  },
+  {
     "sweepAt": "2026-11-16T03:47:28.965Z",
     "incidentsDiscovered": 56,
     "topSelected": 56,

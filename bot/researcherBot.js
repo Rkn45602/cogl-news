@@ -21,21 +21,72 @@ const researcherLogFile = path.join(__dirname, '..', 'config', 'researcher-log.j
 
 const parser = new Parser({
   headers: {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) COGLNewsResearcher/3.5 (Full-Day Wire Monitor)'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) COGLNewsResearcher/4.0 (Full-Day Wire Monitor)'
   },
-  timeout: 6000
+  timeout: 5000,
+  customFields: {
+    item: [
+      ['media:content', 'mediaContent', { keepArray: true }],
+      ['media:thumbnail', 'mediaThumbnail', { keepArray: true }],
+      ['enclosure', 'enclosure'],
+      ['content:encoded', 'contentEncoded']
+    ]
+  }
 });
 
-// Premier Global & Indian News Channels & Wire Endpoints
+/**
+ * Extracts high-resolution news editorial photograph from RSS item
+ */
+function extractImageFromFeedItem(it) {
+  if (!it) return null;
+
+  // 1. Check media:content (used by Reuters, The Hindu, NDTV, Bloomberg)
+  if (Array.isArray(it.mediaContent)) {
+    for (const m of it.mediaContent) {
+      const u = m?.$?.url || m?.url;
+      if (u && (m?.$?.medium === 'image' || m?.$?.type?.startsWith('image/') || /\.(jpg|jpeg|png|webp|avif)/i.test(u))) {
+        return u;
+      }
+    }
+  }
+
+  // 2. Check media:thumbnail (used by BBC, Yahoo, etc.)
+  if (Array.isArray(it.mediaThumbnail)) {
+    for (const m of it.mediaThumbnail) {
+      let u = m?.$?.url || m?.url;
+      if (u) {
+        // Upgrade BBC / standard thumbnail dimensions for crisp 1024px+ display
+        if (u.includes('ichef.bbci.co.uk')) {
+          u = u.replace(/\/standard\/\d+\//, '/standard/1024/');
+        }
+        return u;
+      }
+    }
+  }
+
+  // 3. Check enclosure
+  if (it.enclosure && it.enclosure.url) {
+    if (!it.enclosure.type || it.enclosure.type.startsWith('image/')) {
+      return it.enclosure.url;
+    }
+  }
+
+  // 4. Regex extraction from HTML snippet/content
+  const html = it['content:encoded'] || it.content || it.summary || '';
+  const match = html.match(/<img[^>]+src=["'](https?:\/\/[^"']+)["']/i);
+  if (match && match[1]) {
+    const src = match[1];
+    if (!src.includes('1x1') && !src.includes('pixel') && !src.includes('feedburner')) {
+      return src;
+    }
+  }
+
+  return null;
+}
+
+// Premier Global & Indian News Channels & Wire Endpoints with Photo Support
 const RESEARCH_WIRE_SOURCES = [
-  // Global Wire & Broadcast Desks
-  {
-    name: 'Google News World Wire',
-    channel: 'Google News / Associated Press',
-    url: 'https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en',
-    region: 'Global',
-    defaultCategory: 'News'
-  },
+  // Global Wire & Broadcast Desks (with high-res editorial imagery)
   {
     name: 'BBC World Service Wire',
     channel: 'BBC World News',
@@ -44,11 +95,39 @@ const RESEARCH_WIRE_SOURCES = [
     defaultCategory: 'News'
   },
   {
+    name: 'Google News World Wire',
+    channel: 'Google News / Associated Press',
+    url: 'https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en',
+    region: 'Global',
+    defaultCategory: 'News'
+  },
+  {
+    name: 'NDTV World Wire',
+    channel: 'NDTV / Reuters International',
+    url: 'https://feeds.feedburner.com/ndtvnews-world-news',
+    region: 'Global',
+    defaultCategory: 'News'
+  },
+  {
+    name: 'BBC Technology Wire',
+    channel: 'BBC Tech Desk',
+    url: 'https://feeds.bbci.co.uk/news/technology/rss.xml',
+    region: 'Global',
+    defaultCategory: 'Technology'
+  },
+  {
     name: 'Global Technology Wire',
     channel: 'Reuters / Tech Wire',
     url: 'https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=en-US&gl=US&ceid=US:en',
     region: 'Global',
     defaultCategory: 'Technology'
+  },
+  {
+    name: 'BBC Business & Markets Wire',
+    channel: 'BBC Business Desk',
+    url: 'https://feeds.bbci.co.uk/news/business/rss.xml',
+    region: 'Global',
+    defaultCategory: 'Business'
   },
   {
     name: 'Global Markets & Economy Wire',
@@ -65,6 +144,13 @@ const RESEARCH_WIRE_SOURCES = [
     defaultCategory: 'Sport'
   },
   {
+    name: 'BBC Science & Climate Wire',
+    channel: 'BBC Science / Nature Desk',
+    url: 'https://feeds.bbci.co.uk/news/science_and_environment/rss.xml',
+    region: 'Global',
+    defaultCategory: 'Earth'
+  },
+  {
     name: 'Global Science & Climate Wire',
     channel: 'WMO / Nature / Earth Desk',
     url: 'https://news.google.com/rss/headlines/section/topic/SCIENCE?hl=en-US&gl=US&ceid=US:en',
@@ -72,13 +158,34 @@ const RESEARCH_WIRE_SOURCES = [
     defaultCategory: 'Earth'
   },
 
-  // Indian Premier Channels & Wire Desks
+  // Indian Premier Channels & Wire Desks (with high-res editorial imagery)
+  {
+    name: 'The Hindu National Wire',
+    channel: 'The Hindu / National Bureau',
+    url: 'https://www.thehindu.com/news/national/feeder/default.rss',
+    region: 'India',
+    defaultCategory: 'News'
+  },
   {
     name: 'National Press Wire India',
     channel: 'Press Trust of India / National Bureau',
     url: 'https://news.google.com/rss/headlines/section/topic/NATION?hl=en-IN&gl=IN&ceid=IN:en',
     region: 'India',
     defaultCategory: 'News'
+  },
+  {
+    name: 'NDTV India Top Wire',
+    channel: 'NDTV / Press Trust of India',
+    url: 'https://feeds.feedburner.com/ndtvnews-india-news',
+    region: 'India',
+    defaultCategory: 'News'
+  },
+  {
+    name: 'The Hindu International Wire',
+    channel: 'The Hindu Diplomatic Desk',
+    url: 'https://www.thehindu.com/news/international/feeder/default.rss',
+    region: 'India',
+    defaultCategory: 'Politics'
   },
   {
     name: 'India Politics & Governance Wire',
@@ -88,30 +195,30 @@ const RESEARCH_WIRE_SOURCES = [
     defaultCategory: 'Politics'
   },
   {
-    name: 'Indian Economy & Dalal Street Wire',
-    channel: 'BSE / NSE / Economic Press',
-    url: 'https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=en-IN&gl=IN&ceid=IN:en',
+    name: 'The Hindu Business & Economy Wire',
+    channel: 'The Hindu Business Line / BSE',
+    url: 'https://www.thehindu.com/business/feeder/default.rss',
     region: 'India',
     defaultCategory: 'Business'
   },
   {
-    name: 'Indian Cricket & Sports Wire',
-    channel: 'BCCI / Team India Sports Bureau',
-    url: 'https://news.google.com/rss/headlines/section/topic/SPORTS?hl=en-IN&gl=IN&ceid=IN:en',
+    name: 'The Hindu Cricket & Sports Wire',
+    channel: 'The Hindu / Sportstar Bureau',
+    url: 'https://www.thehindu.com/sport/feeder/default.rss',
     region: 'India',
     defaultCategory: 'Sport'
   },
   {
-    name: 'India Tech & Space Wire',
-    channel: 'ISRO / Bengaluru IT Bureau',
-    url: 'https://news.google.com/rss/headlines/section/topic/TECHNOLOGY?hl=en-IN&gl=IN&ceid=IN:en',
+    name: 'The Hindu Sci-Tech & Space Wire',
+    channel: 'The Hindu Science Desk / ISRO',
+    url: 'https://www.thehindu.com/sci-tech/feeder/default.rss',
     region: 'India',
     defaultCategory: 'Technology'
   },
   {
-    name: 'Indian Entertainment & Arts Wire',
-    channel: 'Indian Cinema / Creative Arts Bureau',
-    url: 'https://news.google.com/rss/headlines/section/topic/ENTERTAINMENT?hl=en-IN&gl=IN&ceid=IN:en',
+    name: 'The Hindu Entertainment & Arts Wire',
+    channel: 'The Hindu Cinema / Arts Bureau',
+    url: 'https://www.thehindu.com/entertainment/feeder/default.rss',
     region: 'India',
     defaultCategory: 'Arts'
   }
@@ -271,6 +378,7 @@ async function performFullDayNewsResearchSweep() {
           const cat = classifyCategory(cleanTitle, it.contentSnippet || '', src.defaultCategory);
           const proofEval = checkProofNecessity(cat, cleanTitle, it.contentSnippet || '');
           const impactScore = scoreIncidentImpact(it, cat, src.region);
+          const feedImage = extractImageFromFeedItem(it);
 
           rawIncidents.push({
             id: `inc-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`,
@@ -281,6 +389,7 @@ async function performFullDayNewsResearchSweep() {
             channel: src.channel,
             publisher: publisher,
             sourceUrl: it.link || src.url,
+            imageUrl: feedImage,
             snippet: (it.contentSnippet || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim(),
             requiresProof: proofEval.requiresProof,
             proofReason: proofEval.reason,
