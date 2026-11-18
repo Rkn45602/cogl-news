@@ -649,5 +649,145 @@
     "articleId": "cogl-bot-india-earth-1794932980853",
     "topic": "tiger ‘explorer’ spotted in fields near lingapalem in andhra’s eluru district; villages on alert ear",
     "usedAt": "2026-11-17T16:29:40.854Z"
+  },
+  {
+    "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/377e/live/9eb7bde0-e31b-11f1-81d5-99b8785f3e51.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-global-news-1795017515398",
+    "topic": "ghana's new $60m presidential jet sparks public outrage news global news",
+    "usedAt": "2026-11-18T15:58:35.401Z"
+  },
+  {
+    "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/a9fb/live/b2707bf0-e349-11f1-99aa-0f40b013ad11.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-global-politics-1795017515402",
+    "topic": "trump shakes hands with putin and xi ahead of historic talks in china politics global politics",
+    "usedAt": "2026-11-18T15:58:35.403Z"
+  },
+  {
+    "url": "https://c.ndtvimg.com/2026-11/48vh3578_epstein_625x300_17_November_26.jpg?im=FeatureCrop,algorithm=dnn,width=1280,height=720",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-global-sport-1795017515404",
+    "topic": "epstein was strangled, injuries don't match suicide, new forensic report claims sport global sport",
+    "usedAt": "2026-11-18T15:58:35.405Z"
+  },
+  {
+    "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/4a59/live/128bd8c0-e35b-11f1-99b6-a35a62fa4264.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-global-business-1795017515406",
+    "topic": "typical energy bill forecast to go up by £443 a year from january as inflation rate rises again busi",
+    "usedAt": "2026-11-18T15:58:35.407Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20xi%20says%20asia-pacific%20needs%20open%20trade%20and%20putin%20condemns%20sanctions%20as%20trump%20arrives%20in%20china%20technology%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=238165&model=flux",
+    "catalogId": "ai-editorial-technology",
+    "articleId": "cogl-bot-global-technology-1795017515408",
+    "topic": "xi says asia-pacific needs open trade and putin condemns sanctions as trump arrives in china technol",
+    "usedAt": "2026-11-18T15:58:35.410Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20hims%20hers%20launches%20new%20peptide%20treatments%20while%20admitting%20there%20s%20more%20to%20learn%20about%20efficacy%20health%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=505259&model=flux",
+    "catalogId": "ai-editorial-health",
+    "articleId": "cogl-bot-global-health-1795017515411",
+    "topic": "hims & hers launches new peptide treatments — while admitting there's more to learn about efficacy h",
+    "usedAt": "2026-11-18T15:58:35.412Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20native%20american%20heritage%20month%20honors%20culture%20history%20and%20enduring%20traditions%20culture%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=765399&model=flux",
+    "catalogId": "ai-editorial-culture",
+    "articleId": "cogl-bot-global-culture-1795017515753",
+    "topic": "native american heritage month honors culture, history and enduring traditions culture global cultur",
+    "usedAt": "2026-11-18T15:58:35.755Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20jeff%20bezos%20says%20he%20was%20heavily%20involved%20in%20picking%20the%20new%20james%20bond%20robert%20pattinson%20arts%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=418042&model=flux",
+    "catalogId": "ai-editorial-arts",
+    "articleId": "cogl-bot-global-arts-1795017516104",
+    "topic": "jeff bezos says he was ‘heavily involved’ in picking the new james bond, robert pattinson arts globa",
+    "usedAt": "2026-11-18T15:58:36.107Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20russia%20asks%20if%20netherlands%20is%20joining%20ukraine%20war%20after%20dutch%20company%20s%20missiles%20used%20in%20bridge%20attack%20travel%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=138834&model=flux",
+    "catalogId": "ai-editorial-travel",
+    "articleId": "cogl-bot-global-travel-1795017516107",
+    "topic": "russia asks if netherlands is joining ukraine war after dutch company's missiles used in bridge atta",
+    "usedAt": "2026-11-18T15:58:36.109Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20northern%20lights%20forecast%2012%20states%20may%20see%20aurora%20this%20tuesday%20night%20earth%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=213108&model=flux",
+    "catalogId": "ai-editorial-earth",
+    "articleId": "cogl-bot-global-earth-1795017516110",
+    "topic": "northern lights forecast: 12 states may see aurora this tuesday night earth global earth",
+    "usedAt": "2026-11-18T15:58:36.111Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/incoming/hs548h/article71717091.ece/alternates/LANDSCAPE_1200/WhatsApp%20Image%202026-11-18%20at%2017.39.05%201.JPEG",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-news-1795017516112",
+    "topic": "purandeshwari calls for political consensus on women’s reservation news india news",
+    "usedAt": "2026-11-18T15:58:36.113Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20supreme%20court%20to%20hear%20plea%20seeking%20removal%20of%20videos%20of%20italian%20politician%20questioning%20indian%20elections%20politics%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=290669&model=flux",
+    "catalogId": "ai-editorial-politics",
+    "articleId": "cogl-bot-india-politics-1795017516114",
+    "topic": "supreme court to hear plea seeking removal of videos of italian politician questioning indian electi",
+    "usedAt": "2026-11-18T15:58:36.115Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/incoming/6x91nb/article71717071.ece/alternates/LANDSCAPE_1200/SMAT%20MUM%20vs%20GOA%2021.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-sport-1795017516116",
+    "topic": "syed mushtaq ali trophy: sairaj’s heroics highlights mumbai’s win sport india sport",
+    "usedAt": "2026-11-18T15:58:36.117Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20latvia%20s%20parliament%20backs%20new%20government%20focus%20on%20economy%20business%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=573875&model=flux",
+    "catalogId": "ai-editorial-business",
+    "articleId": "cogl-bot-india-business-1795017516118",
+    "topic": "latvia’s parliament backs new government, focus on economy business india business",
+    "usedAt": "2026-11-18T15:58:36.120Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/incoming/tygq8n/article71715546.ece/alternates/LANDSCAPE_1200/2026-11-14T110009Z_732948873_RC2EMOATM05A_RTRMADP_3_SPACE-VOYAGER.JPG",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-technology-1795017516120",
+    "topic": "nasa voyager 1 probe believed to have reached ‘light-day’ milestone technology india technology",
+    "usedAt": "2026-11-18T15:58:36.122Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20let%20s%20lateef%20bhat%20killed%20in%20kulgam%20encounter%20health%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=645845&model=flux",
+    "catalogId": "ai-editorial-health",
+    "articleId": "cogl-bot-india-health-1795017516122",
+    "topic": "let’s lateef bhat killed in kulgam encounter health india health",
+    "usedAt": "2026-11-18T15:58:36.124Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20world%20heritage%20week%20to%20be%20observed%20from%20today%20culture%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=307024&model=flux",
+    "catalogId": "ai-editorial-culture",
+    "articleId": "cogl-bot-india-culture-1795017516448",
+    "topic": "world heritage week to be observed from today culture india culture",
+    "usedAt": "2026-11-18T15:58:36.450Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/entertainment/movies/kbswe9/article71716285.ece/alternates/LANDSCAPE_1200/3%20Body%20Problem.jpeg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-arts-1795017516451",
+    "topic": "‘3 body problem season 2’ teaser: humans fight escalating alien threats arts india arts",
+    "usedAt": "2026-11-18T15:58:36.453Z"
+  },
+  {
+    "url": "https://c.ndtvimg.com/2022-07/lkd7tnl4_indigo-generic-pti_625x300_14_July_22.jpg?im=FitAndFill,algorithm=dnn,width=1280,height=720",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-travel-1795017516454",
+    "topic": "indigo extends saudi arabia flight cancellations till november 30 travel india travel",
+    "usedAt": "2026-11-18T15:58:36.456Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20cyclone%20akvan%20live%20updates%20akvan%20likely%20to%20cross%20between%20machilipatnam%20and%20puri%20says%20apsdma%20earth%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=667526&model=flux",
+    "catalogId": "ai-editorial-earth",
+    "articleId": "cogl-bot-india-earth-1795017516457",
+    "topic": "cyclone 'akvan' live updates: akvan likely to cross between machilipatnam and puri, says apsdma eart",
+    "usedAt": "2026-11-18T15:58:36.459Z"
   }
 ]

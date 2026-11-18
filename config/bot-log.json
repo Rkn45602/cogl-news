@@ -1,5 +1,369 @@
 [
   {
+    "runAt": "2026-11-18T15:58:36.462Z",
+    "durationMs": 4214,
+    "articlesPublished": 20,
+    "targetCount": 20,
+    "categoriesCovered": [
+      "News",
+      "Politics",
+      "Sport",
+      "Business",
+      "Technology",
+      "Health",
+      "Culture",
+      "Arts",
+      "Travel",
+      "Earth"
+    ],
+    "audiences": [
+      "Global (10 stories)",
+      "India (10 stories)"
+    ],
+    "stories": [
+      {
+        "id": "cogl-bot-global-news-1795017515398",
+        "category": "News",
+        "audience": "Global",
+        "title": "Ghana's new $60m presidential jet sparks public outrage",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/377e/live/9eb7bde0-e31b-11f1-81d5-99b8785f3e51.jpg"
+      },
+      {
+        "id": "cogl-bot-global-politics-1795017515402",
+        "category": "Politics",
+        "audience": "Global",
+        "title": "Trump shakes hands with Putin and Xi ahead of historic talks in China",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Politics",
+          "#GlobalAffairs",
+          "#Diplomacy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/a9fb/live/b2707bf0-e349-11f1-99aa-0f40b013ad11.jpg"
+      },
+      {
+        "id": "cogl-bot-global-sport-1795017515404",
+        "category": "Sport",
+        "audience": "Global",
+        "title": "Epstein Was Strangled, Injuries Don't Match Suicide, New Forensic Report Claims",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#SportsNews",
+          "#WorldSports",
+          "#Athletics"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://c.ndtvimg.com/2026-11/48vh3578_epstein_625x300_17_November_26.jpg?im=FeatureCrop,algorithm=dnn,width=1280,height=720"
+      },
+      {
+        "id": "cogl-bot-global-business-1795017515406",
+        "category": "Business",
+        "audience": "Global",
+        "title": "Typical energy bill forecast to go up by £443 a year from January as inflation rate rises again",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#BusinessNews",
+          "#Economy",
+          "#Markets"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/4a59/live/128bd8c0-e35b-11f1-99b6-a35a62fa4264.jpg"
+      },
+      {
+        "id": "cogl-bot-global-technology-1795017515408",
+        "category": "Technology",
+        "audience": "Global",
+        "title": "Xi says Asia-Pacific needs open trade and Putin condemns sanctions as Trump arrives in China",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechNews",
+          "#AI",
+          "#Innovation"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20xi%20says%20asia-pacific%20needs%20open%20trade%20and%20putin%20condemns%20sanctions%20as%20trump%20arrives%20in%20china%20technology%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=238165&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-health-1795017515411",
+        "category": "Health",
+        "audience": "Global",
+        "title": "Hims & Hers launches new peptide treatments — while admitting there's more to learn about efficacy",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthNews",
+          "#MedicalScience",
+          "#PublicHealth"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20hims%20hers%20launches%20new%20peptide%20treatments%20while%20admitting%20there%20s%20more%20to%20learn%20about%20efficacy%20health%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=505259&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-culture-1795017515753",
+        "category": "Culture",
+        "audience": "Global",
+        "title": "Native American Heritage Month honors culture, history and enduring traditions",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Culture",
+          "#Heritage",
+          "#GlobalTraditions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20native%20american%20heritage%20month%20honors%20culture%20history%20and%20enduring%20traditions%20culture%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=765399&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-arts-1795017516104",
+        "category": "Arts",
+        "audience": "Global",
+        "title": "Jeff Bezos says he was ‘heavily involved’ in picking the new James Bond, Robert Pattinson",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ArtsAndCulture",
+          "#CreativeArts",
+          "#Exhibitions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20jeff%20bezos%20says%20he%20was%20heavily%20involved%20in%20picking%20the%20new%20james%20bond%20robert%20pattinson%20arts%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=418042&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-travel-1795017516107",
+        "category": "Travel",
+        "audience": "Global",
+        "title": "Russia Asks if Netherlands Is Joining Ukraine War After Dutch Company's Missiles Used in Bridge Attack",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TravelUpdate",
+          "#GlobalTravel",
+          "#Infrastructure"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20russia%20asks%20if%20netherlands%20is%20joining%20ukraine%20war%20after%20dutch%20company%20s%20missiles%20used%20in%20bridge%20attack%20travel%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=138834&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-earth-1795017516110",
+        "category": "Earth",
+        "audience": "Global",
+        "title": "Northern Lights Forecast: 12 States May See Aurora This Tuesday Night",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ClimateAction",
+          "#Sustainability",
+          "#EarthNews"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20northern%20lights%20forecast%2012%20states%20may%20see%20aurora%20this%20tuesday%20night%20earth%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=213108&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-news-1795017516112",
+        "category": "News",
+        "audience": "India",
+        "title": "Purandeshwari calls for political consensus on women’s reservation",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndiaHeadlines",
+          "#NationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/hs548h/article71717091.ece/alternates/LANDSCAPE_1200/WhatsApp%20Image%202026-11-18%20at%2017.39.05%201.JPEG"
+      },
+      {
+        "id": "cogl-bot-india-politics-1795017516114",
+        "category": "Politics",
+        "audience": "India",
+        "title": "Supreme Court To Hear Plea Seeking Removal Of Videos Of Italian Politician Questioning Indian Elections...",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianPolitics",
+          "#Governance",
+          "#Policy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20supreme%20court%20to%20hear%20plea%20seeking%20removal%20of%20videos%20of%20italian%20politician%20questioning%20indian%20elections%20politics%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=290669&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-sport-1795017516116",
+        "category": "Sport",
+        "audience": "India",
+        "title": "Syed Mushtaq Ali Trophy: Sairaj’s heroics highlights Mumbai’s win",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TeamIndia",
+          "#IndianSports",
+          "#Cricket"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/6x91nb/article71717071.ece/alternates/LANDSCAPE_1200/SMAT%20MUM%20vs%20GOA%2021.jpg"
+      },
+      {
+        "id": "cogl-bot-india-business-1795017516118",
+        "category": "Business",
+        "audience": "India",
+        "title": "Latvia’s parliament backs new government, focus on economy",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianEconomy",
+          "#Sensex",
+          "#Nifty"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20latvia%20s%20parliament%20backs%20new%20government%20focus%20on%20economy%20business%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=573875&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-technology-1795017516120",
+        "category": "Technology",
+        "audience": "India",
+        "title": "NASA Voyager 1 probe believed to have reached ‘light-day’ milestone",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechIndia",
+          "#ISRO",
+          "#DigitalIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/tygq8n/article71715546.ece/alternates/LANDSCAPE_1200/2026-11-14T110009Z_732948873_RC2EMOATM05A_RTRMADP_3_SPACE-VOYAGER.JPG"
+      },
+      {
+        "id": "cogl-bot-india-health-1795017516122",
+        "category": "Health",
+        "audience": "India",
+        "title": "LeT’s Lateef Bhat killed in Kulgam encounter",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthIndia",
+          "#AyushmanBharat",
+          "#MedicalScience"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20let%20s%20lateef%20bhat%20killed%20in%20kulgam%20encounter%20health%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=645845&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-culture-1795017516448",
+        "category": "Culture",
+        "audience": "India",
+        "title": "World Heritage Week to be observed from today",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IncredibleIndia",
+          "#IndianHeritage",
+          "#Culture"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20world%20heritage%20week%20to%20be%20observed%20from%20today%20culture%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=307024&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-arts-1795017516451",
+        "category": "Arts",
+        "audience": "India",
+        "title": "‘3 Body Problem Season 2’ teaser: Humans fight escalating alien threats",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianCinema",
+          "#Bollywood",
+          "#CreativeArts"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/entertainment/movies/kbswe9/article71716285.ece/alternates/LANDSCAPE_1200/3%20Body%20Problem.jpeg"
+      },
+      {
+        "id": "cogl-bot-india-travel-1795017516454",
+        "category": "Travel",
+        "audience": "India",
+        "title": "IndiGo Extends Saudi Arabia Flight Cancellations Till November 30",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#ExploreIndia",
+          "#TravelIndia",
+          "#Tourism"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://c.ndtvimg.com/2022-07/lkd7tnl4_indigo-generic-pti_625x300_14_July_22.jpg?im=FitAndFill,algorithm=dnn,width=1280,height=720"
+      },
+      {
+        "id": "cogl-bot-india-earth-1795017516457",
+        "category": "Earth",
+        "audience": "India",
+        "title": "Cyclone 'Akvan' Live updates: Akvan likely to cross between Machilipatnam and Puri, says Apsdma",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#EarthIndia",
+          "#CleanEnergy",
+          "#WildlifeIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20cyclone%20akvan%20live%20updates%20akvan%20likely%20to%20cross%20between%20machilipatnam%20and%20puri%20says%20apsdma%20earth%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=667526&model=flux"
+      }
+    ]
+  },
+  {
     "runAt": "2026-11-17T16:29:40.858Z",
     "durationMs": 3854,
     "articlesPublished": 20,
