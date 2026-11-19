@@ -789,5 +789,152 @@
     "articleId": "cogl-bot-india-earth-1795017516457",
     "topic": "cyclone 'akvan' live updates: akvan likely to cross between machilipatnam and puri, says apsdma eart",
     "usedAt": "2026-11-18T15:58:36.459Z"
+  },
+  {
+    "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/1107/live/91612f50-e42e-11f1-99a1-253766e7ad8b.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-global-news-1795104277720",
+    "topic": "trump, putin and xi release 'peace declaration' after historic meeting news global news",
+    "usedAt": "2026-11-19T16:04:37.723Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20takaichi%20gets%20chilly%20reception%20in%20china%20on%20first%20japan%20leader%20visit%20since%202019%20politics%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=339467&model=flux",
+    "catalogId": "ai-editorial-politics",
+    "articleId": "cogl-bot-global-politics-1795104277724",
+    "topic": "takaichi gets chilly reception in china on first japan leader visit since 2019 politics global polit",
+    "usedAt": "2026-11-19T16:04:37.725Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20the%20vice%20city%20heat%20miami%20s%20nba%20team%20goes%20all%20in%20on%20grand%20theft%20auto%20vi%20collaboration%20sport%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=446763&model=flux",
+    "catalogId": "ai-editorial-sport",
+    "articleId": "cogl-bot-global-sport-1795104277726",
+    "topic": "the vice city heat: miami’s nba team goes all in on ‘grand theft auto vi’ collaboration sport global",
+    "usedAt": "2026-11-19T16:04:37.729Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20china%20s%20xi%20says%20us%20should%20do%20right%20thing%20on%20taiwan%20to%20avoid%20setbacks%20in%20relations%20business%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=639900&model=flux",
+    "catalogId": "ai-editorial-business",
+    "articleId": "cogl-bot-global-business-1795104277730",
+    "topic": "china's xi says us should do 'right thing' on taiwan to avoid setbacks in relations business global ",
+    "usedAt": "2026-11-19T16:04:37.732Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20trump%20xi%20and%20putin%20sit%20down%20for%20a%20rare%203-way%20meeting%20in%20china%20but%20appear%20to%20achieve%20little%20technology%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=176763&model=flux",
+    "catalogId": "ai-editorial-technology",
+    "articleId": "cogl-bot-global-technology-1795104277732",
+    "topic": "trump, xi and putin sit down for a rare 3-way meeting in china, but appear to achieve little technol",
+    "usedAt": "2026-11-19T16:04:37.734Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20europe%20argued%20over%20who%20would%20talk%20to%20russia%20agreeing%20what%20to%20say%20is%20even%20tougher%20health%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=740010&model=flux",
+    "catalogId": "ai-editorial-health",
+    "articleId": "cogl-bot-global-health-1795104277734",
+    "topic": "europe argued over who would talk to russia. agreeing what to say is even tougher. health global hea",
+    "usedAt": "2026-11-19T16:04:37.736Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20native%20american%20heritage%20month%20honors%20culture%20history%20and%20enduring%20traditions%20culture%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=705855&model=flux",
+    "catalogId": "ai-editorial-culture",
+    "articleId": "cogl-bot-global-culture-1795104278034",
+    "topic": "native american heritage month honors culture, history and enduring traditions culture global cultur",
+    "usedAt": "2026-11-19T16:04:38.036Z"
+  },
+  {
+    "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/a424/live/fe3f6bb0-e428-11f1-99b6-a35a62fa4264.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-global-arts-1795104278038",
+    "topic": "van gogh painting sells for record $190.4m after row over its nazi history arts global arts",
+    "usedAt": "2026-11-19T16:04:38.040Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20making%20waves%20at%20cop31%20tourism%20launches%20ocean%20catalyst%20group%20to%20safeguard%20coastlines%20travel%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=830400&model=flux",
+    "catalogId": "ai-editorial-travel",
+    "articleId": "cogl-bot-global-travel-1795104278386",
+    "topic": "making waves at cop31: tourism launches ocean catalyst group to safeguard coastlines travel global t",
+    "usedAt": "2026-11-19T16:04:38.387Z"
+  },
+  {
+    "url": "https://c.ndtvimg.com/2026-11/erm2e8rk_microsoft-ignite-conference-_625x300_19_November_26.jpeg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-global-earth-1795104278408",
+    "topic": "heavy rain causes ceiling leak at microsoft ignite conference in san francisco, meta's stall hit ear",
+    "usedAt": "2026-11-19T16:04:38.410Z"
+  },
+  {
+    "url": "https://c.ndtvimg.com/2026-11/uh783e1_pm-modi_625x300_19_November_26.jpg?im=FitAndFill,algorithm=dnn,width=1280,height=720",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-news-1795104278508",
+    "topic": "pm modi to inaugurate sco civilisational dialogue forum in delhi tomorrow news india news",
+    "usedAt": "2026-11-19T16:04:38.510Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/incoming/si7mam/article71720107.ece/alternates/LANDSCAPE_1200/China_APEC_25343.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-politics-1795104278539",
+    "topic": "u.s., china, russia hold historic summit in shenzhen politics india politics",
+    "usedAt": "2026-11-19T16:04:38.540Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/sport/ayvez6/article71720779.ece/alternates/LANDSCAPE_1200/TH20TETE.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-sport-1795104278579",
+    "topic": "women’s asian champions trophy: india women assert dominance after initial setback sport india sport",
+    "usedAt": "2026-11-19T16:04:38.581Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/incoming/tbbm1j/article71720860.ece/alternates/LANDSCAPE_1200/BR-Shetty-sues-GI8GLJD5K.4.jpg.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-business-1795104278598",
+    "topic": "bank of baroda launches ₹5-crore financing scheme for ev infrastructure business india business",
+    "usedAt": "2026-11-19T16:04:38.600Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/news/national/miaw7c/article71721227.ece/alternates/LANDSCAPE_1200/iStock-2183527075.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-technology-1795104278661",
+    "topic": "how u.s. controls flow of advanced tech, chip, and compute to china | explained technology india tec",
+    "usedAt": "2026-11-19T16:04:38.663Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/incoming/edu3w7/article71707266.ece/alternates/LANDSCAPE_1200/rohingya.jpeg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-health-1795104278680",
+    "topic": "top un court finds that myanmar committed genocide against rohingya: refugee crisis, timeline of the",
+    "usedAt": "2026-11-19T16:04:38.682Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/incoming/38kkl/article71718674.ece/alternates/LANDSCAPE_1200/Steel%20Falcon_2.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-culture-1795104278683",
+    "topic": "first runner-up at ticket to hornbill, rock band steel falcon will perform in bengaluru on november ",
+    "usedAt": "2026-11-19T16:04:38.685Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/news/national/kerala/w4pukb/article71720027.ece/alternates/LANDSCAPE_1200/bachelor%20party.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-arts-1795104278689",
+    "topic": "‘bachelor party d’eux’ movie review: amal neerad makes a sequel almost as forgettable as the origina",
+    "usedAt": "2026-11-19T16:04:38.691Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/incoming/79bju/article71720037.ece/alternates/LANDSCAPE_1200/517631550",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-travel-1795104278692",
+    "topic": "malaysia to end visa-free entry to indians from january 1, 2027 travel india travel",
+    "usedAt": "2026-11-19T16:04:38.693Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20bhupender%20yadav%20inaugurates%20centre%20of%20excellence%20on%20human-wildlife%20conflict%20in%20coimbatore%20launches%20national%20portal%20earth%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=264884&model=flux",
+    "catalogId": "ai-editorial-earth",
+    "articleId": "cogl-bot-india-earth-1795104278982",
+    "topic": "bhupender yadav inaugurates centre of excellence on human-wildlife conflict in coimbatore, launches ",
+    "usedAt": "2026-11-19T16:04:38.984Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20Native%20American%20Heritage%20Month%20honors%20culture%20history%20and%20enduring%20traditions%20Native%20American%20Heritage%20Month%20honors%20culture%20history%20and%20endu%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=970646&model=flux",
+    "catalogId": "ai-editorial-culture",
+    "articleId": "cogl-bot-global-culture-1795017515753",
+    "topic": "native american heritage month honors culture, history and enduring traditions native american herit",
+    "usedAt": "2026-11-19T16:04:38.992Z"
   }
 ]

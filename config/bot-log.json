@@ -1,5 +1,369 @@
 [
   {
+    "runAt": "2026-11-19T16:04:38.988Z",
+    "durationMs": 4482,
+    "articlesPublished": 20,
+    "targetCount": 20,
+    "categoriesCovered": [
+      "News",
+      "Politics",
+      "Sport",
+      "Business",
+      "Technology",
+      "Health",
+      "Culture",
+      "Arts",
+      "Travel",
+      "Earth"
+    ],
+    "audiences": [
+      "Global (10 stories)",
+      "India (10 stories)"
+    ],
+    "stories": [
+      {
+        "id": "cogl-bot-global-news-1795104277720",
+        "category": "News",
+        "audience": "Global",
+        "title": "Trump, Putin and Xi release 'peace declaration' after historic meeting",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/1107/live/91612f50-e42e-11f1-99a1-253766e7ad8b.jpg"
+      },
+      {
+        "id": "cogl-bot-global-politics-1795104277724",
+        "category": "Politics",
+        "audience": "Global",
+        "title": "Takaichi gets chilly reception in China on first Japan leader visit since 2019",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Politics",
+          "#GlobalAffairs",
+          "#Diplomacy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20takaichi%20gets%20chilly%20reception%20in%20china%20on%20first%20japan%20leader%20visit%20since%202019%20politics%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=339467&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-sport-1795104277726",
+        "category": "Sport",
+        "audience": "Global",
+        "title": "The Vice City Heat: Miami’s NBA team goes all in on ‘Grand Theft Auto VI’ collaboration",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#SportsNews",
+          "#WorldSports",
+          "#Athletics"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20the%20vice%20city%20heat%20miami%20s%20nba%20team%20goes%20all%20in%20on%20grand%20theft%20auto%20vi%20collaboration%20sport%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=446763&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-business-1795104277730",
+        "category": "Business",
+        "audience": "Global",
+        "title": "China's Xi says US should do 'right thing' on Taiwan to avoid setbacks in relations",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#BusinessNews",
+          "#Economy",
+          "#Markets"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20china%20s%20xi%20says%20us%20should%20do%20right%20thing%20on%20taiwan%20to%20avoid%20setbacks%20in%20relations%20business%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=639900&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-technology-1795104277732",
+        "category": "Technology",
+        "audience": "Global",
+        "title": "Trump, Xi and Putin sit down for a rare 3-way meeting in China, but appear to achieve little",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechNews",
+          "#AI",
+          "#Innovation"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20trump%20xi%20and%20putin%20sit%20down%20for%20a%20rare%203-way%20meeting%20in%20china%20but%20appear%20to%20achieve%20little%20technology%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=176763&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-health-1795104277734",
+        "category": "Health",
+        "audience": "Global",
+        "title": "Europe argued over who would talk to Russia. Agreeing what to say is even tougher.",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthNews",
+          "#MedicalScience",
+          "#PublicHealth"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20europe%20argued%20over%20who%20would%20talk%20to%20russia%20agreeing%20what%20to%20say%20is%20even%20tougher%20health%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=740010&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-culture-1795104278034",
+        "category": "Culture",
+        "audience": "Global",
+        "title": "Native American Heritage Month honors culture, history and enduring traditions — Verified Wire Dispatch",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Culture",
+          "#Heritage",
+          "#GlobalTraditions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20native%20american%20heritage%20month%20honors%20culture%20history%20and%20enduring%20traditions%20culture%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=705855&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-arts-1795104278038",
+        "category": "Arts",
+        "audience": "Global",
+        "title": "Van Gogh painting sells for record $190.4m after row over its Nazi history",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ArtsAndCulture",
+          "#CreativeArts",
+          "#Exhibitions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/a424/live/fe3f6bb0-e428-11f1-99b6-a35a62fa4264.jpg"
+      },
+      {
+        "id": "cogl-bot-global-travel-1795104278386",
+        "category": "Travel",
+        "audience": "Global",
+        "title": "Making Waves at COP31: Tourism Launches Ocean Catalyst Group to Safeguard Coastlines",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TravelUpdate",
+          "#GlobalTravel",
+          "#Infrastructure"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20making%20waves%20at%20cop31%20tourism%20launches%20ocean%20catalyst%20group%20to%20safeguard%20coastlines%20travel%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=830400&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-earth-1795104278408",
+        "category": "Earth",
+        "audience": "Global",
+        "title": "Heavy Rain Causes Ceiling Leak At Microsoft Ignite Conference In San Francisco, Meta's Stall Hit",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ClimateAction",
+          "#Sustainability",
+          "#EarthNews"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://c.ndtvimg.com/2026-11/erm2e8rk_microsoft-ignite-conference-_625x300_19_November_26.jpeg"
+      },
+      {
+        "id": "cogl-bot-india-news-1795104278508",
+        "category": "News",
+        "audience": "India",
+        "title": "PM Modi To Inaugurate SCO Civilisational Dialogue Forum In Delhi Tomorrow",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndiaHeadlines",
+          "#NationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://c.ndtvimg.com/2026-11/uh783e1_pm-modi_625x300_19_November_26.jpg?im=FitAndFill,algorithm=dnn,width=1280,height=720"
+      },
+      {
+        "id": "cogl-bot-india-politics-1795104278539",
+        "category": "Politics",
+        "audience": "India",
+        "title": "U.S., China, Russia hold historic summit in Shenzhen",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianPolitics",
+          "#Governance",
+          "#Policy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/si7mam/article71720107.ece/alternates/LANDSCAPE_1200/China_APEC_25343.jpg"
+      },
+      {
+        "id": "cogl-bot-india-sport-1795104278579",
+        "category": "Sport",
+        "audience": "India",
+        "title": "Women’s Asian Champions Trophy: India women assert dominance after initial setback",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TeamIndia",
+          "#IndianSports",
+          "#Cricket"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/sport/ayvez6/article71720779.ece/alternates/LANDSCAPE_1200/TH20TETE.jpg"
+      },
+      {
+        "id": "cogl-bot-india-business-1795104278598",
+        "category": "Business",
+        "audience": "India",
+        "title": "Bank of Baroda launches ₹5-crore financing scheme for EV infrastructure",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianEconomy",
+          "#Sensex",
+          "#Nifty"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/tbbm1j/article71720860.ece/alternates/LANDSCAPE_1200/BR-Shetty-sues-GI8GLJD5K.4.jpg.jpg"
+      },
+      {
+        "id": "cogl-bot-india-technology-1795104278661",
+        "category": "Technology",
+        "audience": "India",
+        "title": "How U.S. controls flow of advanced tech, chip, and compute to China | Explained",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechIndia",
+          "#ISRO",
+          "#DigitalIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/news/national/miaw7c/article71721227.ece/alternates/LANDSCAPE_1200/iStock-2183527075.jpg"
+      },
+      {
+        "id": "cogl-bot-india-health-1795104278680",
+        "category": "Health",
+        "audience": "India",
+        "title": "Top UN court finds that Myanmar committed genocide against Rohingya: Refugee crisis, timeline of the case, and more",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthIndia",
+          "#AyushmanBharat",
+          "#MedicalScience"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/edu3w7/article71707266.ece/alternates/LANDSCAPE_1200/rohingya.jpeg"
+      },
+      {
+        "id": "cogl-bot-india-culture-1795104278683",
+        "category": "Culture",
+        "audience": "India",
+        "title": "First runner-up at Ticket to Hornbill, rock band Steel Falcon will perform in Bengaluru on November 21",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IncredibleIndia",
+          "#IndianHeritage",
+          "#Culture"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/38kkl/article71718674.ece/alternates/LANDSCAPE_1200/Steel%20Falcon_2.jpg"
+      },
+      {
+        "id": "cogl-bot-india-arts-1795104278689",
+        "category": "Arts",
+        "audience": "India",
+        "title": "‘Bachelor Party D’eux’ movie review: Amal Neerad makes a sequel almost as forgettable as the original",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianCinema",
+          "#Bollywood",
+          "#CreativeArts"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/news/national/kerala/w4pukb/article71720027.ece/alternates/LANDSCAPE_1200/bachelor%20party.jpg"
+      },
+      {
+        "id": "cogl-bot-india-travel-1795104278692",
+        "category": "Travel",
+        "audience": "India",
+        "title": "Malaysia to end visa-free entry to Indians from January 1, 2027",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#ExploreIndia",
+          "#TravelIndia",
+          "#Tourism"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/79bju/article71720037.ece/alternates/LANDSCAPE_1200/517631550"
+      },
+      {
+        "id": "cogl-bot-india-earth-1795104278982",
+        "category": "Earth",
+        "audience": "India",
+        "title": "Bhupender Yadav inaugurates Centre of Excellence on Human-Wildlife Conflict in Coimbatore, launches national portal",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#EarthIndia",
+          "#CleanEnergy",
+          "#WildlifeIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20bhupender%20yadav%20inaugurates%20centre%20of%20excellence%20on%20human-wildlife%20conflict%20in%20coimbatore%20launches%20national%20portal%20earth%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=264884&model=flux"
+      }
+    ]
+  },
+  {
     "runAt": "2026-11-18T15:58:36.462Z",
     "durationMs": 4214,
     "articlesPublished": 20,
