@@ -1,5 +1,369 @@
 [
   {
+    "runAt": "2026-11-21T14:56:35.615Z",
+    "durationMs": 4351,
+    "articlesPublished": 20,
+    "targetCount": 20,
+    "categoriesCovered": [
+      "News",
+      "Politics",
+      "Sport",
+      "Business",
+      "Technology",
+      "Health",
+      "Culture",
+      "Arts",
+      "Travel",
+      "Earth"
+    ],
+    "audiences": [
+      "Global (10 stories)",
+      "India (10 stories)"
+    ],
+    "stories": [
+      {
+        "id": "cogl-bot-global-news-1795272994576",
+        "category": "News",
+        "audience": "Global",
+        "title": "FBI reportedly investigating apparent hack of its criminal database",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/3fd7/live/9009b220-e58d-11f1-99a1-253766e7ad8b.jpg"
+      },
+      {
+        "id": "cogl-bot-global-politics-1795272994581",
+        "category": "Politics",
+        "audience": "Global",
+        "title": "Trump touts Asia deals and meeting with Xi and Putin at White House press conference",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Politics",
+          "#GlobalAffairs",
+          "#Diplomacy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20trump%20touts%20asia%20deals%20and%20meeting%20with%20xi%20and%20putin%20at%20white%20house%20press%20conference%20politics%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=584194&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-sport-1795272994586",
+        "category": "Sport",
+        "audience": "Global",
+        "title": "New Daniel Jones Rumors Uncover Buzz Surrounding QB's Surprising Colts Release During NFL Season",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#SportsNews",
+          "#WorldSports",
+          "#Athletics"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20new%20daniel%20jones%20rumors%20uncover%20buzz%20surrounding%20qb%20s%20surprising%20colts%20release%20during%20nfl%20season%20sport%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=380753&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-business-1795272994590",
+        "category": "Business",
+        "audience": "Global",
+        "title": "U.K. and EU strike deals on trade and travel, pledging to rebuild ties after Brexit",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#BusinessNews",
+          "#Economy",
+          "#Markets"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20u%20k%20and%20eu%20strike%20deals%20on%20trade%20and%20travel%20pledging%20to%20rebuild%20ties%20after%20brexit%20business%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=185006&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-technology-1795272994595",
+        "category": "Technology",
+        "audience": "Global",
+        "title": "Grand Theft Auto VI shatters entertainment records with staggering $3.79B debut",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechNews",
+          "#AI",
+          "#Innovation"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20grand%20theft%20auto%20vi%20shatters%20entertainment%20records%20with%20staggering%203%2079b%20debut%20technology%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=905271&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-health-1795272994620",
+        "category": "Health",
+        "audience": "Global",
+        "title": "Judge Approves $7 Billion Settlement Over Claims That Roundup Caused Cancer",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthNews",
+          "#MedicalScience",
+          "#PublicHealth"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20judge%20approves%207%20billion%20settlement%20over%20claims%20that%20roundup%20caused%20cancer%20health%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=505237&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-culture-1795272994865",
+        "category": "Culture",
+        "audience": "Global",
+        "title": "Baguio mural traces Cordillera heritage, calls for cultural stewardship",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Culture",
+          "#Heritage",
+          "#GlobalTraditions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20baguio%20mural%20traces%20cordillera%20heritage%20calls%20for%20cultural%20stewardship%20culture%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=134000&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-arts-1795272994959",
+        "category": "Arts",
+        "audience": "Global",
+        "title": "GTA 6 sales hit $3.8bn in a single day",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ArtsAndCulture",
+          "#CreativeArts",
+          "#Exhibitions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/3096/live/f678f6e0-e4cc-11f1-99b6-a35a62fa4264.jpg"
+      },
+      {
+        "id": "cogl-bot-global-travel-1795272995261",
+        "category": "Travel",
+        "audience": "Global",
+        "title": "Mainland Chinese travelling more but keeping a tighter grip on spending",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TravelUpdate",
+          "#GlobalTravel",
+          "#Infrastructure"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20mainland%20chinese%20travelling%20more%20but%20keeping%20a%20tighter%20grip%20on%20spending%20travel%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=430951&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-earth-1795272995266",
+        "category": "Earth",
+        "audience": "Global",
+        "title": "Survivors of Uganda's deadly landslide seek justice at the UN — Verified Wire Dispatch",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ClimateAction",
+          "#Sustainability",
+          "#EarthNews"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/2f49/live/977f9e30-e3f2-11f1-a1b0-810734adec41.jpg"
+      },
+      {
+        "id": "cogl-bot-india-news-1795272995270",
+        "category": "News",
+        "audience": "India",
+        "title": "'Country's character remains the same': PM Modi praises people for heeding call to not buy gold",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndiaHeadlines",
+          "#NationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20country%20s%20character%20remains%20the%20same%20pm%20modi%20praises%20people%20for%20heeding%20call%20to%20not%20buy%20gold%20news%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=124288&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-politics-1795272995316",
+        "category": "Politics",
+        "audience": "India",
+        "title": "PM Modi inaugurates Nitish Setu in Bihar, recreates 'poll victory' moment with 'gamcha' wave",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianPolitics",
+          "#Governance",
+          "#Policy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20pm%20modi%20inaugurates%20nitish%20setu%20in%20bihar%20recreates%20poll%20victory%20moment%20with%20gamcha%20wave%20politics%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=648544&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-sport-1795272995320",
+        "category": "Sport",
+        "audience": "India",
+        "title": "Bangladesh Minister vows action against those behind arson, blames Awami League-linked groups, says reports",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TeamIndia",
+          "#IndianSports",
+          "#Cricket"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/ln2c9c/article71727874.ece/alternates/LANDSCAPE_1200/2026-11-18T110914Z_1349575502_RC24QOA9TJTI_RTRMADP_3_BANGLADESH-GARMENTS.JPG"
+      },
+      {
+        "id": "cogl-bot-india-business-1795272995324",
+        "category": "Business",
+        "audience": "India",
+        "title": "'China Backed Pakistan During Operation Sindoor To Curb India's Rise': US Panel",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianEconomy",
+          "#Sensex",
+          "#Nifty"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20china%20backed%20pakistan%20during%20operation%20sindoor%20to%20curb%20india%20s%20rise%20us%20panel%20business%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=340448&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-technology-1795272995330",
+        "category": "Technology",
+        "audience": "India",
+        "title": "Google launches Gemini 4 Neon taking on Claude Opus 5.5 and GPT-6.2 Sol",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechIndia",
+          "#ISRO",
+          "#DigitalIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/7xsg8e/article71727591.ece/alternates/LANDSCAPE_1200/2026-11-03T104322Z_1179742223_RC2JHMAFAXRS_RTRMADP_3_EU-GOOGLE-AI-COPYRIGHT.JPG"
+      },
+      {
+        "id": "cogl-bot-india-health-1795272995335",
+        "category": "Health",
+        "audience": "India",
+        "title": "In Keralam, the children beyond healthcare",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthIndia",
+          "#AyushmanBharat",
+          "#MedicalScience"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/tgh0ps/article71720662.ece/alternates/LANDSCAPE_1200/photo%2011.jpg"
+      },
+      {
+        "id": "cogl-bot-india-culture-1795272995345",
+        "category": "Culture",
+        "audience": "India",
+        "title": "Illegal hill-cutting threatens Bidar’s heritage, historic karez system and wildlife habitats",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IncredibleIndia",
+          "#IndianHeritage",
+          "#Culture"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/m0c5i4/article71728881.ece/alternates/LANDSCAPE_1200/10258_21_11_2026_18_51_37_1_BIDAR_HILL_CUTTING_1.JPEG"
+      },
+      {
+        "id": "cogl-bot-india-arts-1795272995349",
+        "category": "Arts",
+        "audience": "India",
+        "title": "IFFI 2026 | ‘Fatherland’ producer Ewa Puszczyńska: Films may not change the world overnight, but can open minds",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianCinema",
+          "#Bollywood",
+          "#CreativeArts"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/entertainment/movies/r83036/article71727933.ece/alternates/LANDSCAPE_1200/%E2%80%98Fatherland%E2%80%99%20producer%20Ewa%20Puszczy%C5%84ska%20speaking%20at%20a%20press%20conference%20at%20IFFI%202026"
+      },
+      {
+        "id": "cogl-bot-india-travel-1795272995355",
+        "category": "Travel",
+        "audience": "India",
+        "title": "Woman Assaulted In Front Of 2 Daughters By Railway Police",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#ExploreIndia",
+          "#TravelIndia",
+          "#Tourism"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://c.ndtvimg.com/2025-05/0tl9hk1o_train-generic_625x300_10_May_25.jpeg?im=FeatureCrop,algorithm=dnn,width=1280,height=720"
+      },
+      {
+        "id": "cogl-bot-india-earth-1795272995605",
+        "category": "Earth",
+        "audience": "India",
+        "title": "Himalayan marmot droppings could offer new clues to climate change and Alpine ecosystem shifts",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#EarthIndia",
+          "#CleanEnergy",
+          "#WildlifeIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20himalayan%20marmot%20droppings%20could%20offer%20new%20clues%20to%20climate%20change%20and%20alpine%20ecosystem%20shifts%20earth%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=938018&model=flux"
+      }
+    ]
+  },
+  {
     "runAt": "2026-11-20T15:46:45.271Z",
     "durationMs": 4112,
     "articlesPublished": 20,
