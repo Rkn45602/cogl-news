@@ -1,5 +1,369 @@
 [
   {
+    "runAt": "2026-11-24T18:20:45.233Z",
+    "durationMs": 5476,
+    "articlesPublished": 20,
+    "targetCount": 20,
+    "categoriesCovered": [
+      "News",
+      "Politics",
+      "Sport",
+      "Business",
+      "Technology",
+      "Health",
+      "Culture",
+      "Arts",
+      "Travel",
+      "Earth"
+    ],
+    "audiences": [
+      "Global (10 stories)",
+      "India (10 stories)"
+    ],
+    "stories": [
+      {
+        "id": "cogl-bot-global-news-1795544444646",
+        "category": "News",
+        "audience": "Global",
+        "title": "‘Menacing eyes’: Pope Francis’s diary details three encounters with the devil",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20menacing%20eyes%20pope%20francis%20s%20diary%20details%20three%20encounters%20with%20the%20devil%20news%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=205091&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-politics-1795544444654",
+        "category": "Politics",
+        "audience": "Global",
+        "title": "Five takeaways from the failed climate talks COP31 — Verified Wire Dispatch",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Politics",
+          "#GlobalAffairs",
+          "#Diplomacy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/55f7/live/e38ff1a0-e71f-11f1-99b6-a35a62fa4264.jpg"
+      },
+      {
+        "id": "cogl-bot-global-sport-1795544444661",
+        "category": "Sport",
+        "audience": "Global",
+        "title": "World Cup drove profits surge, says Marston's",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#SportsNews",
+          "#WorldSports",
+          "#Athletics"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/87ca/live/b659c4e0-e7fb-11f1-ab60-79086b6495b8.jpg"
+      },
+      {
+        "id": "cogl-bot-global-business-1795544444670",
+        "category": "Business",
+        "audience": "Global",
+        "title": "Nvidia shares slide as Trump's role in Jensen Huang's comeback questioned by US politicians",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#BusinessNews",
+          "#Economy",
+          "#Markets"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/982f/live/ca95f8e0-e82b-11f1-88dc-fb4bdfcec8cb.jpg"
+      },
+      {
+        "id": "cogl-bot-global-technology-1795544444676",
+        "category": "Technology",
+        "audience": "Global",
+        "title": "From Chinese Factory Town to the Nvidia Scandal: The Rise of Alice Huang",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechNews",
+          "#AI",
+          "#Innovation"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20from%20chinese%20factory%20town%20to%20the%20nvidia%20scandal%20the%20rise%20of%20alice%20huang%20technology%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=238885&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-health-1795544444682",
+        "category": "Health",
+        "audience": "Global",
+        "title": "Israeli air strike kills Hamas internal security chief in Gaza",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthNews",
+          "#MedicalScience",
+          "#PublicHealth"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/9451/live/7a525660-e7fb-11f1-99b6-a35a62fa4264.jpg"
+      },
+      {
+        "id": "cogl-bot-global-culture-1795544444689",
+        "category": "Culture",
+        "audience": "Global",
+        "title": "Behind Pakistan's Big Space Moment, A Chinese Rocket That Hasn't Failed In 27 Years",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Culture",
+          "#Heritage",
+          "#GlobalTraditions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://c.ndtvimg.com/2026-11/rkppb83s_shenzhou24-afp_625x300_24_November_26.jpg?im=FeatureCrop,algorithm=dnn,width=1280,height=720"
+      },
+      {
+        "id": "cogl-bot-global-arts-1795544444697",
+        "category": "Arts",
+        "audience": "Global",
+        "title": "What PFF grades say about 49ers' plan in blowout win over Vikings in Mexico City",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ArtsAndCulture",
+          "#CreativeArts",
+          "#Exhibitions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20what%20pff%20grades%20say%20about%2049ers%20plan%20in%20blowout%20win%20over%20vikings%20in%20mexico%20city%20arts%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=659258&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-travel-1795544445140",
+        "category": "Travel",
+        "audience": "Global",
+        "title": "Children's Flight Bookings Nearly Double in China as School Breaks Fuel Winter Travel",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TravelUpdate",
+          "#GlobalTravel",
+          "#Infrastructure"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20children%20s%20flight%20bookings%20nearly%20double%20in%20china%20as%20school%20breaks%20fuel%20winter%20travel%20travel%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=182975&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-earth-1795544445147",
+        "category": "Earth",
+        "audience": "Global",
+        "title": "Storms targeting both US coasts threaten to snarl Thanksgiving travel for millions",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ClimateAction",
+          "#Sustainability",
+          "#EarthNews"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/81f2/live/d95747e0-e811-11f1-99b6-a35a62fa4264.jpg"
+      },
+      {
+        "id": "cogl-bot-india-news-1795544445155",
+        "category": "News",
+        "audience": "India",
+        "title": "Saurav Das: Cockroach Janta Party leader says he was stopped from flying to UK for Oxford event",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndiaHeadlines",
+          "#NationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20saurav%20das%20cockroach%20janta%20party%20leader%20says%20he%20was%20stopped%20from%20flying%20to%20uk%20for%20oxford%20event%20news%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=290346&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-politics-1795544445161",
+        "category": "Politics",
+        "audience": "India",
+        "title": "Uttar Pradesh Assembly elections: 26 seats offered to Congress, says Samajwadi Party",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianPolitics",
+          "#Governance",
+          "#Policy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20uttar%20pradesh%20assembly%20elections%2026%20seats%20offered%20to%20congress%20says%20samajwadi%20party%20politics%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=768180&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-sport-1795544445168",
+        "category": "Sport",
+        "audience": "India",
+        "title": "Gukesh vs Sindarov LIVE: Game 1 ongoing as Gukesh reduces gap on clock",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TeamIndia",
+          "#IndianSports",
+          "#Cricket"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20gukesh%20vs%20sindarov%20live%20game%201%20ongoing%20as%20gukesh%20reduces%20gap%20on%20clock%20sport%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=981950&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-business-1795544445177",
+        "category": "Business",
+        "audience": "India",
+        "title": "PNGRB rewrites gas pipeline rules; proposes 14% returns to developers, shifts volume risk",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianEconomy",
+          "#Sensex",
+          "#Nifty"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/news/national/other-states/xy3c15/article36038276.ece/alternates/LANDSCAPE_1200/LNG-GAS-PIPELINE-PROJECT-KAMARAJAR-PORT-ENNORE-KOSASTHALAIYAR-RI"
+      },
+      {
+        "id": "cogl-bot-india-technology-1795544445184",
+        "category": "Technology",
+        "audience": "India",
+        "title": "U.S. President Donald Trump gains possibly millions from Nvidia shares after Jensen Huang's return, media report",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechIndia",
+          "#ISRO",
+          "#DigitalIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/p1wc4s/article71739919.ece/alternates/LANDSCAPE_1200/AP11_24_2026_000009A.jpg"
+      },
+      {
+        "id": "cogl-bot-india-health-1795544445191",
+        "category": "Health",
+        "audience": "India",
+        "title": "Elderly woman dies after hernia surgery at Kanhangad hospital; family alleges medical negligence",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthIndia",
+          "#AyushmanBharat",
+          "#MedicalScience"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20elderly%20woman%20dies%20after%20hernia%20surgery%20at%20kanhangad%20hospital%20family%20alleges%20medical%20negligence%20health%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=820127&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-culture-1795544445199",
+        "category": "Culture",
+        "audience": "India",
+        "title": "IFFI 2026 | Ashutosh Gowariker interview: ‘The more challenging the times, the more cinema needs to provoke thought’",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IncredibleIndia",
+          "#IndianHeritage",
+          "#Culture"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/entertainment/movies/or3ujx/article71739505.ece/alternates/LANDSCAPE_1200/Copy%20of%20G2%20Cover.jpg"
+      },
+      {
+        "id": "cogl-bot-india-arts-1795544445205",
+        "category": "Arts",
+        "audience": "India",
+        "title": "What do lemurs and opera singers share?",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianCinema",
+          "#Bollywood",
+          "#CreativeArts"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/vcdku7/article71738325.ece/alternates/LANDSCAPE_1200/iStock-2277337659.jpg"
+      },
+      {
+        "id": "cogl-bot-india-travel-1795544445211",
+        "category": "Travel",
+        "audience": "India",
+        "title": "Syed Mushtaq Ali Trophy: Hebbar guides Andhra to a thrilling win; Kerala coasts to a facile victory",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#ExploreIndia",
+          "#TravelIndia",
+          "#Tourism"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/xz3itk/article71739511.ece/alternates/LANDSCAPE_1200/SMAT%202026%20CHANDIGARH%2050.JPG"
+      },
+      {
+        "id": "cogl-bot-india-earth-1795544445217",
+        "category": "Earth",
+        "audience": "India",
+        "title": "A 44-year-old Bengali disco song is taking the internet by storm after landing in GTA VI",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#EarthIndia",
+          "#CleanEnergy",
+          "#WildlifeIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/ech0tc/article71737947.ece/alternates/LANDSCAPE_1200/rupa.jpeg"
+      }
+    ]
+  },
+  {
     "runAt": "2026-11-23T18:45:45.598Z",
     "durationMs": 4877,
     "articlesPublished": 20,

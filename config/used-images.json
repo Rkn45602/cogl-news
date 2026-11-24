@@ -1531,5 +1531,152 @@
     "articleId": "cogl-bot-global-arts-1795359271858",
     "topic": "gta 6 sales hit $3.8bn in a single day — verified wire dispatch the mammoth figure surpasses every v",
     "usedAt": "2026-11-23T18:45:45.606Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20menacing%20eyes%20pope%20francis%20s%20diary%20details%20three%20encounters%20with%20the%20devil%20news%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=205091&model=flux",
+    "catalogId": "ai-editorial-news",
+    "articleId": "cogl-bot-global-news-1795544444646",
+    "topic": "‘menacing eyes’: pope francis’s diary details three encounters with the devil news global news",
+    "usedAt": "2026-11-24T18:20:44.653Z"
+  },
+  {
+    "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/55f7/live/e38ff1a0-e71f-11f1-99b6-a35a62fa4264.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-global-politics-1795544444654",
+    "topic": "five takeaways from the failed climate talks cop31 politics global politics",
+    "usedAt": "2026-11-24T18:20:44.660Z"
+  },
+  {
+    "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/87ca/live/b659c4e0-e7fb-11f1-ab60-79086b6495b8.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-global-sport-1795544444661",
+    "topic": "world cup drove profits surge, says marston's sport global sport",
+    "usedAt": "2026-11-24T18:20:44.666Z"
+  },
+  {
+    "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/982f/live/ca95f8e0-e82b-11f1-88dc-fb4bdfcec8cb.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-global-business-1795544444670",
+    "topic": "nvidia shares slide as trump's role in jensen huang's comeback questioned by us politicians business",
+    "usedAt": "2026-11-24T18:20:44.675Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20from%20chinese%20factory%20town%20to%20the%20nvidia%20scandal%20the%20rise%20of%20alice%20huang%20technology%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=238885&model=flux",
+    "catalogId": "ai-editorial-technology",
+    "articleId": "cogl-bot-global-technology-1795544444676",
+    "topic": "from chinese factory town to the nvidia scandal: the rise of alice huang technology global technolog",
+    "usedAt": "2026-11-24T18:20:44.681Z"
+  },
+  {
+    "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/9451/live/7a525660-e7fb-11f1-99b6-a35a62fa4264.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-global-health-1795544444682",
+    "topic": "israeli air strike kills hamas internal security chief in gaza health global health",
+    "usedAt": "2026-11-24T18:20:44.687Z"
+  },
+  {
+    "url": "https://c.ndtvimg.com/2026-11/rkppb83s_shenzhou24-afp_625x300_24_November_26.jpg?im=FeatureCrop,algorithm=dnn,width=1280,height=720",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-global-culture-1795544444689",
+    "topic": "behind pakistan's big space moment, a chinese rocket that hasn't failed in 27 years culture global c",
+    "usedAt": "2026-11-24T18:20:44.695Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20what%20pff%20grades%20say%20about%2049ers%20plan%20in%20blowout%20win%20over%20vikings%20in%20mexico%20city%20arts%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=659258&model=flux",
+    "catalogId": "ai-editorial-arts",
+    "articleId": "cogl-bot-global-arts-1795544444697",
+    "topic": "what pff grades say about 49ers' plan in blowout win over vikings in mexico city arts global arts",
+    "usedAt": "2026-11-24T18:20:44.703Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20children%20s%20flight%20bookings%20nearly%20double%20in%20china%20as%20school%20breaks%20fuel%20winter%20travel%20travel%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=182975&model=flux",
+    "catalogId": "ai-editorial-travel",
+    "articleId": "cogl-bot-global-travel-1795544445140",
+    "topic": "children's flight bookings nearly double in china as school breaks fuel winter travel travel global ",
+    "usedAt": "2026-11-24T18:20:45.146Z"
+  },
+  {
+    "url": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/81f2/live/d95747e0-e811-11f1-99b6-a35a62fa4264.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-global-earth-1795544445147",
+    "topic": "storms targeting both us coasts threaten to snarl thanksgiving travel for millions earth global eart",
+    "usedAt": "2026-11-24T18:20:45.154Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20saurav%20das%20cockroach%20janta%20party%20leader%20says%20he%20was%20stopped%20from%20flying%20to%20uk%20for%20oxford%20event%20news%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=290346&model=flux",
+    "catalogId": "ai-editorial-news",
+    "articleId": "cogl-bot-india-news-1795544445155",
+    "topic": "saurav das: cockroach janta party leader says he was stopped from flying to uk for oxford event news",
+    "usedAt": "2026-11-24T18:20:45.160Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20uttar%20pradesh%20assembly%20elections%2026%20seats%20offered%20to%20congress%20says%20samajwadi%20party%20politics%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=768180&model=flux",
+    "catalogId": "ai-editorial-politics",
+    "articleId": "cogl-bot-india-politics-1795544445161",
+    "topic": "uttar pradesh assembly elections: 26 seats offered to congress, says samajwadi party politics india ",
+    "usedAt": "2026-11-24T18:20:45.167Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20gukesh%20vs%20sindarov%20live%20game%201%20ongoing%20as%20gukesh%20reduces%20gap%20on%20clock%20sport%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=981950&model=flux",
+    "catalogId": "ai-editorial-sport",
+    "articleId": "cogl-bot-india-sport-1795544445168",
+    "topic": "gukesh vs sindarov live: game 1 ongoing as gukesh reduces gap on clock sport india sport",
+    "usedAt": "2026-11-24T18:20:45.175Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/news/national/other-states/xy3c15/article36038276.ece/alternates/LANDSCAPE_1200/LNG-GAS-PIPELINE-PROJECT-KAMARAJAR-PORT-ENNORE-KOSASTHALAIYAR-RI",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-business-1795544445177",
+    "topic": "pngrb rewrites gas pipeline rules; proposes 14% returns to developers, shifts volume risk business i",
+    "usedAt": "2026-11-24T18:20:45.182Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/incoming/p1wc4s/article71739919.ece/alternates/LANDSCAPE_1200/AP11_24_2026_000009A.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-technology-1795544445184",
+    "topic": "u.s. president donald trump gains possibly millions from nvidia shares after jensen huang's return, ",
+    "usedAt": "2026-11-24T18:20:45.189Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20elderly%20woman%20dies%20after%20hernia%20surgery%20at%20kanhangad%20hospital%20family%20alleges%20medical%20negligence%20health%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=820127&model=flux",
+    "catalogId": "ai-editorial-health",
+    "articleId": "cogl-bot-india-health-1795544445191",
+    "topic": "elderly woman dies after hernia surgery at kanhangad hospital; family alleges medical negligence hea",
+    "usedAt": "2026-11-24T18:20:45.197Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/entertainment/movies/or3ujx/article71739505.ece/alternates/LANDSCAPE_1200/Copy%20of%20G2%20Cover.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-culture-1795544445199",
+    "topic": "iffi 2026 | ashutosh gowariker interview: ‘the more challenging the times, the more cinema needs to ",
+    "usedAt": "2026-11-24T18:20:45.203Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/incoming/vcdku7/article71738325.ece/alternates/LANDSCAPE_1200/iStock-2277337659.jpg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-arts-1795544445205",
+    "topic": "what do lemurs and opera singers share? arts india arts",
+    "usedAt": "2026-11-24T18:20:45.209Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/incoming/xz3itk/article71739511.ece/alternates/LANDSCAPE_1200/SMAT%202026%20CHANDIGARH%2050.JPG",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-travel-1795544445211",
+    "topic": "syed mushtaq ali trophy: hebbar guides andhra to a thrilling win; kerala coasts to a facile victory ",
+    "usedAt": "2026-11-24T18:20:45.216Z"
+  },
+  {
+    "url": "https://th-i.thgim.com/public/incoming/ech0tc/article71737947.ece/alternates/LANDSCAPE_1200/rupa.jpeg",
+    "catalogId": "researcher-internet-photo",
+    "articleId": "cogl-bot-india-earth-1795544445217",
+    "topic": "a 44-year-old bengali disco song is taking the internet by storm after landing in gta vi earth india",
+    "usedAt": "2026-11-24T18:20:45.222Z"
+  },
+  {
+    "url": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20Five%20takeaways%20from%20the%20failed%20climate%20talks%20COP31%20The%20COP31%20summit%20in%20Antalya%20was%20the%20longest-running%20climate%20talks%20in%20UN%20history%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=911369&model=flux",
+    "catalogId": "ai-editorial-politics",
+    "articleId": "cogl-bot-global-politics-1795459544924",
+    "topic": "five takeaways from the failed climate talks cop31 the cop31 summit in antalya was the longest-runni",
+    "usedAt": "2026-11-24T18:20:45.247Z"
   }
 ]
