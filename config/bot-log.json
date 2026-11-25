@@ -1,5 +1,369 @@
 [
   {
+    "runAt": "2026-11-25T17:38:23.842Z",
+    "durationMs": 4438,
+    "articlesPublished": 20,
+    "targetCount": 20,
+    "categoriesCovered": [
+      "News",
+      "Politics",
+      "Sport",
+      "Business",
+      "Technology",
+      "Health",
+      "Culture",
+      "Arts",
+      "Travel",
+      "Earth"
+    ],
+    "audiences": [
+      "Global (10 stories)",
+      "India (10 stories)"
+    ],
+    "stories": [
+      {
+        "id": "cogl-bot-global-news-1795628302840",
+        "category": "News",
+        "audience": "Global",
+        "title": "India Among Nations On Team Trump's Hit List For New US Tariffs: Report",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://c.ndtvimg.com/2026-11/al90ni34_donald-trump_625x300_10_November_26.jpeg?im=FeatureCrop,algorithm=dnn,width=1280,height=720"
+      },
+      {
+        "id": "cogl-bot-global-politics-1795628302848",
+        "category": "Politics",
+        "audience": "Global",
+        "title": "All hostages rescued after Colombian security forces storm supermarket, says president",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Politics",
+          "#GlobalAffairs",
+          "#Diplomacy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20all%20hostages%20rescued%20after%20colombian%20security%20forces%20storm%20supermarket%20says%20president%20politics%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=270977&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-sport-1795628302854",
+        "category": "Sport",
+        "audience": "Global",
+        "title": "Images of asteroid targeted to test Earth's defences reveal stadium-sized crater",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#SportsNews",
+          "#WorldSports",
+          "#Athletics"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/8562/live/1f8d5d00-e8ec-11f1-a094-5fdc692f3e33.jpg"
+      },
+      {
+        "id": "cogl-bot-global-business-1795628302888",
+        "category": "Business",
+        "audience": "Global",
+        "title": "US announces new tariffs of up to 20% on China, the EU, and 12 other nations",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#BusinessNews",
+          "#Economy",
+          "#Markets"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20us%20announces%20new%20tariffs%20of%20up%20to%2020%20on%20china%20the%20eu%20and%2012%20other%20nations%20business%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=108718&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-technology-1795628302894",
+        "category": "Technology",
+        "audience": "Global",
+        "title": "Hera spacecraft investigates damage at asteroid \"crash scene\"",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechNews",
+          "#AI",
+          "#Innovation"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20hera%20spacecraft%20investigates%20damage%20at%20asteroid%20crash%20scene%20technology%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=876914&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-health-1795628302900",
+        "category": "Health",
+        "audience": "Global",
+        "title": "2027 NFL mock draft 2.0: Jets get aggressive for a QB but it's not Arch Manning who is a top-3 pick",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthNews",
+          "#MedicalScience",
+          "#PublicHealth"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%202027%20nfl%20mock%20draft%202%200%20jets%20get%20aggressive%20for%20a%20qb%20but%20it%20s%20not%20arch%20manning%20who%20is%20a%20top-3%20pick%20health%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=801059&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-culture-1795628303332",
+        "category": "Culture",
+        "audience": "Global",
+        "title": "Chinese heritage traditions converge in a contemporary design, bringing centuries-old skills to the international stage",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Culture",
+          "#Heritage",
+          "#GlobalTraditions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20chinese%20heritage%20traditions%20converge%20in%20a%20contemporary%20design%20bringing%20centuries-old%20skills%20to%20the%20international%20stage%20culture%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=293706&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-arts-1795628303505",
+        "category": "Arts",
+        "audience": "Global",
+        "title": "Ezra Frech on his 'Dancing with the Stars' finale mishap: 'I kind of blacked out'",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ArtsAndCulture",
+          "#CreativeArts",
+          "#Exhibitions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20ezra%20frech%20on%20his%20dancing%20with%20the%20stars%20finale%20mishap%20i%20kind%20of%20blacked%20out%20arts%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=886416&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-travel-1795628303512",
+        "category": "Travel",
+        "audience": "Global",
+        "title": "Migrant arrivals in Spain's Canary Islands break single-day record",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TravelUpdate",
+          "#GlobalTravel",
+          "#Infrastructure"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20migrant%20arrivals%20in%20spain%20s%20canary%20islands%20break%20single-day%20record%20travel%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=738354&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-earth-1795628303617",
+        "category": "Earth",
+        "audience": "Global",
+        "title": "Colombian police storm supermarket to free 20 held hostage for 17 hours",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ClimateAction",
+          "#Sustainability",
+          "#EarthNews"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/997a/live/4f4b3940-e8c4-11f1-ac76-db9e97f93d67.jpg"
+      },
+      {
+        "id": "cogl-bot-india-news-1795628303625",
+        "category": "News",
+        "audience": "India",
+        "title": "Car mechanic, woman held with 5.72 kg drugs worth ₹5.72 crore, carried from Delhi to Bengaluru",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndiaHeadlines",
+          "#NationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/22ej4e/article71743950.ece/alternates/LANDSCAPE_1200/Four-held-illegGOTGMT16H.3.jpg.jpg"
+      },
+      {
+        "id": "cogl-bot-india-politics-1795628303632",
+        "category": "Politics",
+        "audience": "India",
+        "title": "Former members say EPG report was ‘highly positive’ for India-Nepal ties",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianPolitics",
+          "#Governance",
+          "#Policy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20former%20members%20say%20epg%20report%20was%20highly%20positive%20for%20india-nepal%20ties%20politics%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=754812&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-sport-1795628303639",
+        "category": "Sport",
+        "audience": "India",
+        "title": "IND vs NZ second Test: Eyeing WTC finals, India hopes to replicate heroics and sign off with Test victory",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TeamIndia",
+          "#IndianSports",
+          "#Cricket"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/sport/cricket/t2gqjq/article71741306.ece/alternates/LANDSCAPE_1200/IndianPlayers.jpg"
+      },
+      {
+        "id": "cogl-bot-india-business-1795628303644",
+        "category": "Business",
+        "audience": "India",
+        "title": "Trump’s tariff plan explained: Which countries could be hit and why?",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianEconomy",
+          "#Sensex",
+          "#Nifty"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/4ynssi/article71743802.ece/alternates/LANDSCAPE_1200/WhatsApp%20Image%202026-11-25%20at%205.31.07%20PM.jpeg"
+      },
+      {
+        "id": "cogl-bot-india-technology-1795628303650",
+        "category": "Technology",
+        "audience": "India",
+        "title": "Isro satellite spots intense activity in South as easterly waves trigger heavy rain",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechIndia",
+          "#ISRO",
+          "#DigitalIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20isro%20satellite%20spots%20intense%20activity%20in%20south%20as%20easterly%20waves%20trigger%20heavy%20rain%20technology%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=478036&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-health-1795628303657",
+        "category": "Health",
+        "audience": "India",
+        "title": "Israeli strike kills Hamas official, his wife and children",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthIndia",
+          "#AyushmanBharat",
+          "#MedicalScience"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/dnf7io/article71743913.ece/alternates/LANDSCAPE_1200/2026-11-25T092859Z_896265168_RC2WUOAXO1UO_RTRMADP_3_ISRAEL-PALESTINIANS-GAZA.JPG"
+      },
+      {
+        "id": "cogl-bot-india-culture-1795628303663",
+        "category": "Culture",
+        "audience": "India",
+        "title": "Thiruparankundram | Plea In Supreme Court Seeks Direction To Light Deepathoon Lamp Using Flame From...",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IncredibleIndia",
+          "#IndianHeritage",
+          "#Culture"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20thiruparankundram%20plea%20in%20supreme%20court%20seeks%20direction%20to%20light%20deepathoon%20lamp%20using%20flame%20from%20culture%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=293711&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-arts-1795628303816",
+        "category": "Arts",
+        "audience": "India",
+        "title": "'Koi Cinema Thodi Hai': Anant Singh Turns Daughter's Wedding Into Fair",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianCinema",
+          "#Bollywood",
+          "#CreativeArts"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://c.ndtvimg.com/2026-11/9c24u1rk_anant-singh_625x300_25_November_26.jpeg?im=FaceCrop,algorithm=dnn,width=1280,height=720"
+      },
+      {
+        "id": "cogl-bot-india-travel-1795628303823",
+        "category": "Travel",
+        "audience": "India",
+        "title": "Great Nicobar Island project: Final Calcutta High Court hearing deferred as Centre seeks to file affidavit, objections",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#ExploreIndia",
+          "#TravelIndia",
+          "#Tourism"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/news/national/nt351d/article71743965.ece/alternates/LANDSCAPE_1200/AFP__20260518__A6UR7EQ__v1__HighRes__IndiaEnvironmentAndamanSentinel.jpg"
+      },
+      {
+        "id": "cogl-bot-india-earth-1795628303828",
+        "category": "Earth",
+        "audience": "India",
+        "title": "Wildlife, forests, and culture in Gudalur: Sculptures, stories, and interactive workshops",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#EarthIndia",
+          "#CleanEnergy",
+          "#WildlifeIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/pahyz8/article71719489.ece/alternates/LANDSCAPE_1200/1000406014.jpg"
+      }
+    ]
+  },
+  {
     "runAt": "2026-11-24T18:20:45.233Z",
     "durationMs": 5476,
     "articlesPublished": 20,
