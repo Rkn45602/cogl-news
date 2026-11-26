@@ -1,5 +1,369 @@
 [
   {
+    "runAt": "2026-11-26T17:20:06.051Z",
+    "durationMs": 2266,
+    "articlesPublished": 20,
+    "targetCount": 20,
+    "categoriesCovered": [
+      "News",
+      "Politics",
+      "Sport",
+      "Business",
+      "Technology",
+      "Health",
+      "Culture",
+      "Arts",
+      "Travel",
+      "Earth"
+    ],
+    "audiences": [
+      "Global (10 stories)",
+      "India (10 stories)"
+    ],
+    "stories": [
+      {
+        "id": "cogl-bot-global-news-1795713605420",
+        "category": "News",
+        "audience": "Global",
+        "title": "Kim Jong Un Vows To Make More Nuclear Weapons After Ignoring Trump's Offer To Meet",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://c.ndtvimg.com/2026-11/1fb6d3b_kim-jong-un-afp_625x300_26_November_26.jpeg"
+      },
+      {
+        "id": "cogl-bot-global-politics-1795713605429",
+        "category": "Politics",
+        "audience": "Global",
+        "title": "Spain’s far right hasn’t governed since Franco. Immigration fears could change that",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Politics",
+          "#GlobalAffairs",
+          "#Diplomacy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20spain%20s%20far%20right%20hasn%20t%20governed%20since%20franco%20immigration%20fears%20could%20change%20that%20politics%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=787451&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-sport-1795713605438",
+        "category": "Sport",
+        "audience": "Global",
+        "title": "US Marlboro maker Altria explores Imperial Brands takeover in Big Tobacco mega deal",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#SportsNews",
+          "#WorldSports",
+          "#Athletics"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20us%20marlboro%20maker%20altria%20explores%20imperial%20brands%20takeover%20in%20big%20tobacco%20mega%20deal%20sport%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=355254&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-business-1795713605448",
+        "category": "Business",
+        "audience": "Global",
+        "title": "Norse Atlantic suspends all flights as it faces potential collapse",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#BusinessNews",
+          "#Economy",
+          "#Markets"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/df47/live/6f07a020-e98c-11f1-9d1c-4dcc8fcde666.jpg"
+      },
+      {
+        "id": "cogl-bot-global-technology-1795713605455",
+        "category": "Technology",
+        "audience": "Global",
+        "title": "Russia will launch a routine ISS supply mission tomorrow—apparently, it’s a big secret",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechNews",
+          "#AI",
+          "#Innovation"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20russia%20will%20launch%20a%20routine%20iss%20supply%20mission%20tomorrow%20apparently%20it%20s%20a%20big%20secret%20technology%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=326251&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-health-1795713605462",
+        "category": "Health",
+        "audience": "Global",
+        "title": "Our NFL playoff simulator shows who has the most to lose this Thanksgiving",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthNews",
+          "#MedicalScience",
+          "#PublicHealth"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20our%20nfl%20playoff%20simulator%20shows%20who%20has%20the%20most%20to%20lose%20this%20thanksgiving%20health%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=320877&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-culture-1795713605869",
+        "category": "Culture",
+        "audience": "Global",
+        "title": "UNESCO and Tanzania strengthen intergenerational transmission of cultural heritage among the Gogo community",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Culture",
+          "#Heritage",
+          "#GlobalTraditions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20unesco%20and%20tanzania%20strengthen%20intergenerational%20transmission%20of%20cultural%20heritage%20among%20the%20gogo%20community%20culture%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=370521&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-arts-1795713605939",
+        "category": "Arts",
+        "audience": "Global",
+        "title": "Dancing With the Stars’ Alan Bersten Speaks Out After Helping Ezra Frech When His Leg Fell Off",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ArtsAndCulture",
+          "#CreativeArts",
+          "#Exhibitions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20dancing%20with%20the%20stars%20alan%20bersten%20speaks%20out%20after%20helping%20ezra%20frech%20when%20his%20leg%20fell%20off%20arts%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=146878&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-travel-1795713605948",
+        "category": "Travel",
+        "audience": "Global",
+        "title": "Flydubai To Resume Flights To Israel On December 3",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TravelUpdate",
+          "#GlobalTravel",
+          "#Infrastructure"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://c.ndtvimg.com/2026-10/8aeb69g_flydubai_625x300_05_October_26.jpg"
+      },
+      {
+        "id": "cogl-bot-global-earth-1795713605955",
+        "category": "Earth",
+        "audience": "Global",
+        "title": "Rams shut down Packers in second half for a 26-13 win in NFL's first Thanksgiving Eve game",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ClimateAction",
+          "#Sustainability",
+          "#EarthNews"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20rams%20shut%20down%20packers%20in%20second%20half%20for%20a%2026-13%20win%20in%20nfl%20s%20first%20thanksgiving%20eve%20game%20earth%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=345982&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-news-1795713605965",
+        "category": "News",
+        "audience": "India",
+        "title": "Bengaluru: Forum launches indefinite protest against school adoption scheme",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndiaHeadlines",
+          "#NationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/ab2hdo/article71747992.ece/alternates/LANDSCAPE_1200/DSC_9461A.JPG"
+      },
+      {
+        "id": "cogl-bot-india-politics-1795713605973",
+        "category": "Politics",
+        "audience": "India",
+        "title": "\"Inherited Empty Treasury\": Arvind Kejriwal Defends Delay In Punjab Women Scheme",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianPolitics",
+          "#Governance",
+          "#Policy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://c.ndtvimg.com/2026-11/3h4pj09g_kejriwal-bhagwant-mann_625x300_26_November_26.jpg?im=FeatureCrop,algorithm=dnn,width=1280,height=720"
+      },
+      {
+        "id": "cogl-bot-india-sport-1795713605981",
+        "category": "Sport",
+        "audience": "India",
+        "title": "‘Privileged that Big Bash League opener will be hosted at a historic venue’",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TeamIndia",
+          "#IndianSports",
+          "#Cricket"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/wxc2m1/article71747833.ece/alternates/LANDSCAPE_1200/4871_26_11_2026_17_22_26_1_DSC_5928.JPG"
+      },
+      {
+        "id": "cogl-bot-india-business-1795713605989",
+        "category": "Business",
+        "audience": "India",
+        "title": "Yes Bank AT1 bond verdict: 60 lakh retail shareholders face ₹8,415-crore bill",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianEconomy",
+          "#Sensex",
+          "#Nifty"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/j91408/article71747526.ece/alternates/LANDSCAPE_1200/2026-10-15T135437Z_2040254598_RC2AQ9AOKU8Z_RTRMADP_3_YES-BANK-AT1.JPG"
+      },
+      {
+        "id": "cogl-bot-india-technology-1795713605996",
+        "category": "Technology",
+        "audience": "India",
+        "title": "Nvidia stops shipping AI servers to four Southeast Asian nations",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechIndia",
+          "#ISRO",
+          "#DigitalIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/l798ex/article71747925.ece/alternates/LANDSCAPE_1200/2026-11-26T052105Z_2029827810_RC2NFGAZ49Q2_RTRMADP_3_NVIDIA-SHIPMENTS.JPG"
+      },
+      {
+        "id": "cogl-bot-india-health-1795713606003",
+        "category": "Health",
+        "audience": "India",
+        "title": "Indian pharma company Hetero begins supply of generic twice-yearly HIV prevention injection in Africa",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthIndia",
+          "#AyushmanBharat",
+          "#MedicalScience"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/ape6qj/article71746467.ece/alternates/LANDSCAPE_1200/Lexapir%20Lenacapavir%20Injection%20%20Hetero.jpg"
+      },
+      {
+        "id": "cogl-bot-india-culture-1795713606011",
+        "category": "Culture",
+        "audience": "India",
+        "title": "The eighth edition of Abhivyakti City Arts Project to kick off in Ahmedabad",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IncredibleIndia",
+          "#IndianHeritage",
+          "#Culture"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/life-and-style/vv1kcj/article71745924.ece/alternates/LANDSCAPE_1200/Previous%20edition.JPG"
+      },
+      {
+        "id": "cogl-bot-india-arts-1795713606018",
+        "category": "Arts",
+        "audience": "India",
+        "title": "‘You Can See Everything’ movie review: Nathan Fielder’s meta-manipulative masterpiece is a folie à deux for the ages",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianCinema",
+          "#Bollywood",
+          "#CreativeArts"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/entertainment/movies/flefr5/article71747543.ece/alternates/LANDSCAPE_1200/Screenshot-2026-09-07-at-8.47.13---PM.png"
+      },
+      {
+        "id": "cogl-bot-india-travel-1795713606026",
+        "category": "Travel",
+        "audience": "India",
+        "title": "C-152 plane makes emergency landing at Hyderabad army cantonment: Sources | India News",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#ExploreIndia",
+          "#TravelIndia",
+          "#Tourism"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20c-152%20plane%20makes%20emergency%20landing%20at%20hyderabad%20army%20cantonment%20sources%20india%20news%20travel%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=916417&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-earth-1795713606034",
+        "category": "Earth",
+        "audience": "India",
+        "title": "India attracts $31 billion in climate equity funding, but capital remains concentrated in power, transport",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#EarthIndia",
+          "#CleanEnergy",
+          "#WildlifeIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/business/pjnvo2/article71747771.ece/alternates/LANDSCAPE_1200/IVCA.jpg"
+      }
+    ]
+  },
+  {
     "runAt": "2026-11-25T17:38:23.842Z",
     "durationMs": 4438,
     "articlesPublished": 20,
