@@ -1,5 +1,369 @@
 [
   {
+    "runAt": "2026-11-27T16:59:17.455Z",
+    "durationMs": 5219,
+    "articlesPublished": 20,
+    "targetCount": 20,
+    "categoriesCovered": [
+      "News",
+      "Politics",
+      "Sport",
+      "Business",
+      "Technology",
+      "Health",
+      "Culture",
+      "Arts",
+      "Travel",
+      "Earth"
+    ],
+    "audiences": [
+      "Global (10 stories)",
+      "India (10 stories)"
+    ],
+    "stories": [
+      {
+        "id": "cogl-bot-global-news-1795798756237",
+        "category": "News",
+        "audience": "Global",
+        "title": "EXCLUSIVE: US pushed Venezuela, Iraq to consider leaving OPEC, sources say",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20exclusive%20us%20pushed%20venezuela%20iraq%20to%20consider%20leaving%20opec%20sources%20say%20news%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=389689&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-politics-1795798756245",
+        "category": "Politics",
+        "audience": "Global",
+        "title": "Spain’s election could pull Madrid closer to Trump’s Washington",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Politics",
+          "#GlobalAffairs",
+          "#Diplomacy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20spain%20s%20election%20could%20pull%20madrid%20closer%20to%20trump%20s%20washington%20politics%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=687184&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-sport-1795798756253",
+        "category": "Sport",
+        "audience": "Global",
+        "title": "Matt Damon Narrates Ford Racing’s ‘Go Like Hell’ Thanksgiving Day Ad Directed by Zack Snyder",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#SportsNews",
+          "#WorldSports",
+          "#Athletics"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20matt%20damon%20narrates%20ford%20racing%20s%20go%20like%20hell%20thanksgiving%20day%20ad%20directed%20by%20zack%20snyder%20sport%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=177826&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-business-1795798756259",
+        "category": "Business",
+        "audience": "Global",
+        "title": "US Supports Iraqi Presiden't Efforts To Curb Oil Smuggling: Trump",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#BusinessNews",
+          "#Economy",
+          "#Markets"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://edata.ndtv.com/feeds/liveblog/7514908/638730839432088929.JPG?im=FeatureCrop,algorithm=dnn,width=1280,height=720"
+      },
+      {
+        "id": "cogl-bot-global-technology-1795798756265",
+        "category": "Technology",
+        "audience": "Global",
+        "title": "ESA's Hera Mission Reveals Stadium-Sized Crater on Dimorphos",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechNews",
+          "#AI",
+          "#Innovation"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20esa%20s%20hera%20mission%20reveals%20stadium-sized%20crater%20on%20dimorphos%20technology%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=847321&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-health-1795798756271",
+        "category": "Health",
+        "audience": "Global",
+        "title": "Canada's top court largely upholds Quebec ban on religious symbols for public servants",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthNews",
+          "#MedicalScience",
+          "#PublicHealth"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/b5e9/live/7ddd01c0-ea82-11f1-a739-457c2295eaba.jpg"
+      },
+      {
+        "id": "cogl-bot-global-culture-1795798756616",
+        "category": "Culture",
+        "audience": "Global",
+        "title": "Madhya Pradesh: A Diverse Portfolio of Heritage, Wildlife and Culture",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Culture",
+          "#Heritage",
+          "#GlobalTraditions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20madhya%20pradesh%20a%20diverse%20portfolio%20of%20heritage%20wildlife%20and%20culture%20culture%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=483812&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-arts-1795798756710",
+        "category": "Arts",
+        "audience": "Global",
+        "title": "Nicole Scherzinger and fiancé Thom Evans split after 7 years together as he shares heartbreaking statement",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ArtsAndCulture",
+          "#CreativeArts",
+          "#Exhibitions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20nicole%20scherzinger%20and%20fianc%20thom%20evans%20split%20after%207%20years%20together%20as%20he%20shares%20heartbreaking%20statement%20arts%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=581688&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-travel-1795798756979",
+        "category": "Travel",
+        "audience": "Global",
+        "title": "PATA and Sanya Advance International Collaboration on Sustainable Coastal Tourism",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TravelUpdate",
+          "#GlobalTravel",
+          "#Infrastructure"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20pata%20and%20sanya%20advance%20international%20collaboration%20on%20sustainable%20coastal%20tourism%20travel%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=511848&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-earth-1795798756986",
+        "category": "Earth",
+        "audience": "Global",
+        "title": "Major Thanksgiving storm brings flooding, flight delays across US",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ClimateAction",
+          "#Sustainability",
+          "#EarthNews"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/5163/live/6a7c75a0-ea2f-11f1-b33b-b39c81e690e4.jpg"
+      },
+      {
+        "id": "cogl-bot-india-news-1795798756992",
+        "category": "News",
+        "audience": "India",
+        "title": "Kallakurichi TVK MLA Arul Vignesh arrested on charges of harassing IAS officer",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndiaHeadlines",
+          "#NationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20kallakurichi%20tvk%20mla%20arul%20vignesh%20arrested%20on%20charges%20of%20harassing%20ias%20officer%20news%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=264506&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-politics-1795798756999",
+        "category": "Politics",
+        "audience": "India",
+        "title": "Chandrababu Naidu rushes to Delhi to meet NDA leaders",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianPolitics",
+          "#Governance",
+          "#Policy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20chandrababu%20naidu%20rushes%20to%20delhi%20to%20meet%20nda%20leaders%20politics%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=774971&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-sport-1795798757004",
+        "category": "Sport",
+        "audience": "India",
+        "title": "Bhavika Ahire, Uma Kashvi help India U-19 women beat England by 36 runs",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TeamIndia",
+          "#IndianSports",
+          "#Cricket"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20bhavika%20ahire%20uma%20kashvi%20help%20india%20u-19%20women%20beat%20england%20by%2036%20runs%20sport%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=797726&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-business-1795798757010",
+        "category": "Business",
+        "audience": "India",
+        "title": "RBI cuts daily CRR maintenance to 90%, to unlock over ₹40,000 crore",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianEconomy",
+          "#Sensex",
+          "#Nifty"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/a6vj15/article71751107.ece/alternates/LANDSCAPE_1200/2026-11-27T093609Z_221605581_RC2V80A69HA9_RTRMADP_3_INDIA-DEBT-BORROWINGS.JPG"
+      },
+      {
+        "id": "cogl-bot-india-technology-1795798757016",
+        "category": "Technology",
+        "audience": "India",
+        "title": "MGM Healthcare Malar launches AI-powered MRI facility in Chennai",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechIndia",
+          "#ISRO",
+          "#DigitalIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/sci-tech/health/rfzpb6/article71746379.ece/alternates/LANDSCAPE_1200/WhatsApp%20Image%202026-11-26%20at%2016.45.46.jpeg"
+      },
+      {
+        "id": "cogl-bot-india-health-1795798757022",
+        "category": "Health",
+        "audience": "India",
+        "title": "Hyderabad’s air pollution puts focus on hospitals; doctors call for city-level health database",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthIndia",
+          "#AyushmanBharat",
+          "#MedicalScience"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/1ch81k/article70103299.ece/alternates/LANDSCAPE_1200/IMG_Deepavali_Festival_2_1_ERDLCIS5.jpg"
+      },
+      {
+        "id": "cogl-bot-india-culture-1795798757028",
+        "category": "Culture",
+        "audience": "India",
+        "title": "Thiruparankundram Row | Supreme Court Orders Lamp Lighting At Deepathoon Tomorrow; Issues Contempt Notice ...",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IncredibleIndia",
+          "#IndianHeritage",
+          "#Culture"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20thiruparankundram%20row%20supreme%20court%20orders%20lamp%20lighting%20at%20deepathoon%20tomorrow%20issues%20contempt%20notice%20culture%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=708033&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-arts-1795798757034",
+        "category": "Arts",
+        "audience": "India",
+        "title": "‘Yeh Prem Mol Liya’ movie review: Ayushmann and Sharvari anchor a romance that is radical by half",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianCinema",
+          "#Bollywood",
+          "#CreativeArts"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/entertainment/movies/ulr6og/article71751436.ece/alternates/LANDSCAPE_1200/Yeh%20Prem%20Mol%20Liya.jpeg"
+      },
+      {
+        "id": "cogl-bot-india-travel-1795798757433",
+        "category": "Travel",
+        "audience": "India",
+        "title": "India Is Emerging As A Major Medical Tourism Hub: 6 Cities Foreign Patients Travel To",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#ExploreIndia",
+          "#TravelIndia",
+          "#Tourism"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20india%20is%20emerging%20as%20a%20major%20medical%20tourism%20hub%206%20cities%20foreign%20patients%20travel%20to%20travel%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=774097&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-earth-1795798757440",
+        "category": "Earth",
+        "audience": "India",
+        "title": "Telangana seeks VGF for setting up pumped storage power projects by Genco",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#EarthIndia",
+          "#CleanEnergy",
+          "#WildlifeIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/news/national/telangana/a965u5/article71751112.ece/alternates/LANDSCAPE_1200/WhatsApp%20Image%202026-11-27%20at%205.50.36%20PM.jpeg"
+      }
+    ]
+  },
+  {
     "runAt": "2026-11-26T17:20:06.051Z",
     "durationMs": 2266,
     "articlesPublished": 20,
