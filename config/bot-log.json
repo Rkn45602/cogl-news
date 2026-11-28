@@ -1,5 +1,369 @@
 [
   {
+    "runAt": "2026-11-28T15:50:30.688Z",
+    "durationMs": 4983,
+    "articlesPublished": 20,
+    "targetCount": 20,
+    "categoriesCovered": [
+      "News",
+      "Politics",
+      "Sport",
+      "Business",
+      "Technology",
+      "Health",
+      "Culture",
+      "Arts",
+      "Travel",
+      "Earth"
+    ],
+    "audiences": [
+      "Global (10 stories)",
+      "India (10 stories)"
+    ],
+    "stories": [
+      {
+        "id": "cogl-bot-global-news-1795881029398",
+        "category": "News",
+        "audience": "Global",
+        "title": "An explosion at a school in eastern Afghanistan kills 10, wounds 110",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#GlobalHeadlines",
+          "#InternationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20an%20explosion%20at%20a%20school%20in%20eastern%20afghanistan%20kills%2010%20wounds%20110%20news%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=717546&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-politics-1795881029407",
+        "category": "Politics",
+        "audience": "Global",
+        "title": "Australia's conservatives oust Labor, see off One Nation in Victoria state",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Politics",
+          "#GlobalAffairs",
+          "#Diplomacy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20australia%20s%20conservatives%20oust%20labor%20see%20off%20one%20nation%20in%20victoria%20state%20politics%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=995975&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-sport-1795881029417",
+        "category": "Sport",
+        "audience": "Global",
+        "title": "2026 SEC Championship Game: Texas gets one last shot at Georgia in contest's final edition",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#SportsNews",
+          "#WorldSports",
+          "#Athletics"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%202026%20sec%20championship%20game%20texas%20gets%20one%20last%20shot%20at%20georgia%20in%20contest%20s%20final%20edition%20sport%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=127662&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-business-1795881029424",
+        "category": "Business",
+        "audience": "Global",
+        "title": "Faisal Islam: Why Trump's new tariffs are less of a threat",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#BusinessNews",
+          "#Economy",
+          "#Markets"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/a44e/live/be7b3450-e9af-11f1-859a-37130cd3a1d7.jpg"
+      },
+      {
+        "id": "cogl-bot-global-technology-1795881029431",
+        "category": "Technology",
+        "audience": "Global",
+        "title": "‘GTA VI’ release has swept PlayStation 5 off the shelves worldwide",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechNews",
+          "#AI",
+          "#Innovation"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20gta%20vi%20release%20has%20swept%20playstation%205%20off%20the%20shelves%20worldwide%20technology%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=797634&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-health-1795881029440",
+        "category": "Health",
+        "audience": "Global",
+        "title": "Australian wrestler Bronson Reed dies aged 38, WWE says",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthNews",
+          "#MedicalScience",
+          "#PublicHealth"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/297c/live/0c5c0a20-eafd-11f1-83de-2b6b9d423090.jpg"
+      },
+      {
+        "id": "cogl-bot-global-culture-1795881029785",
+        "category": "Culture",
+        "audience": "Global",
+        "title": "Circle of Nations students celebrate Native heritage through stories, traditions and role models",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#Culture",
+          "#Heritage",
+          "#GlobalTraditions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20circle%20of%20nations%20students%20celebrate%20native%20heritage%20through%20stories%20traditions%20and%20role%20models%20culture%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=356860&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-arts-1795881029871",
+        "category": "Arts",
+        "audience": "Global",
+        "title": "Princess Catherine’s Cancer Documentary ‘Heal’: 3 Takeaways",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ArtsAndCulture",
+          "#CreativeArts",
+          "#Exhibitions"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20princess%20catherine%20s%20cancer%20documentary%20heal%203%20takeaways%20arts%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=884303&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-travel-1795881030201",
+        "category": "Travel",
+        "audience": "Global",
+        "title": "Reflections | Ancient Chinese travel trends and how creatives found inspiration away from home",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#TravelUpdate",
+          "#GlobalTravel",
+          "#Infrastructure"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20reflections%20ancient%20chinese%20travel%20trends%20and%20how%20creatives%20found%20inspiration%20away%20from%20home%20travel%20global%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=238303&model=flux"
+      },
+      {
+        "id": "cogl-bot-global-earth-1795881030208",
+        "category": "Earth",
+        "audience": "Global",
+        "title": "Capsized tanker carrying 7,000 tonnes of diesel to be towed away from Ibiza",
+        "hashtags": [
+          "#WorldNews",
+          "#BreakingNews",
+          "#COGLNews",
+          "#FactChecked",
+          "#ClimateAction",
+          "#Sustainability",
+          "#EarthNews"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/a324/live/235d3bb0-ea97-11f1-99a1-253766e7ad8b.jpg"
+      },
+      {
+        "id": "cogl-bot-india-news-1795881030217",
+        "category": "News",
+        "audience": "India",
+        "title": "Delimitation Bill LIVE: 'The number 850 represents murder of democracy,' says Rahul; DMK announces support for Centre's proposal",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndiaHeadlines",
+          "#NationalNews",
+          "#CurrentAffairs"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20delimitation%20bill%20live%20the%20number%20850%20represents%20murder%20of%20democracy%20says%20rahul%20dmk%20announces%20support%20for%20centre%20s%20proposal%20news%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=742756&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-politics-1795881030244",
+        "category": "Politics",
+        "audience": "India",
+        "title": "Mamata-led Trinamool Congress questions legality of rebel MPs voting on delimitation bill amid pending defection case",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianPolitics",
+          "#Governance",
+          "#Policy"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20mamata-led%20trinamool%20congress%20questions%20legality%20of%20rebel%20mps%20voting%20on%20delimitation%20bill%20amid%20pending%20defection%20case%20politics%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=171830&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-sport-1795881030251",
+        "category": "Sport",
+        "audience": "India",
+        "title": "ISL: Bagan, East Bengal set to renew rivalry",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TeamIndia",
+          "#IndianSports",
+          "#Cricket"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/5sctw9/article71755074.ece/alternates/LANDSCAPE_1200/PTI11_28_2026_000271B.jpg"
+      },
+      {
+        "id": "cogl-bot-india-business-1795881030259",
+        "category": "Business",
+        "audience": "India",
+        "title": "BPCL approves ₹1.27-lakh crore refinery and petrochemical project in Andhra Pradesh",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianEconomy",
+          "#Sensex",
+          "#Nifty"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/mb9y7k/article71755204.ece/alternates/LANDSCAPE_1200/bpcl%20office%20building.jpg"
+      },
+      {
+        "id": "cogl-bot-india-technology-1795881030267",
+        "category": "Technology",
+        "audience": "India",
+        "title": "Denmark's foreign minister visits Bengaluru to strengthen technology ties, attract Indian talent",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#TechIndia",
+          "#ISRO",
+          "#DigitalIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20denmark%20s%20foreign%20minister%20visits%20bengaluru%20to%20strengthen%20technology%20ties%20attract%20indian%20talent%20technology%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=617520&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-health-1795881030275",
+        "category": "Health",
+        "audience": "India",
+        "title": "Israeli strike kills two Doctors Without Borders staff in Gaza",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#HealthIndia",
+          "#AyushmanBharat",
+          "#MedicalScience"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/i3yq47/article71754316.ece/alternates/LANDSCAPE_1200/APTOPIX_Israel_Palestinians_Gaza_73746.jpg"
+      },
+      {
+        "id": "cogl-bot-india-culture-1795881030284",
+        "category": "Culture",
+        "audience": "India",
+        "title": "SC orders lamp to be lit at Thiruparankundram Deepathoon on Nov 28, suspends temple trustees",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IncredibleIndia",
+          "#IndianHeritage",
+          "#Culture"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20sc%20orders%20lamp%20to%20be%20lit%20at%20thiruparankundram%20deepathoon%20on%20nov%2028%20suspends%20temple%20trustees%20culture%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=258151&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-arts-1795881030291",
+        "category": "Arts",
+        "audience": "India",
+        "title": "A heavenly duet: When Tyagaraja meets Beethoven",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#IndianCinema",
+          "#Bollywood",
+          "#CreativeArts"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/mxlhrz/article71754036.ece/alternates/LANDSCAPE_1200/tyagaraja%20meets%20beethoven.jpg"
+      },
+      {
+        "id": "cogl-bot-india-travel-1795881030618",
+        "category": "Travel",
+        "audience": "India",
+        "title": "J&K Tourism Makes Strong Impression At IITM Pune-2026, Attracts Interest From National Travel Trade",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#ExploreIndia",
+          "#TravelIndia",
+          "#Tourism"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://image.pollinations.ai/prompt/editorial%20news%20photojournalism%20of%20j%20k%20tourism%20makes%20strong%20impression%20at%20iitm%20pune-2026%20attracts%20interest%20from%20national%20travel%20trade%20travel%20india%2C%20accredited%20wire%20press%20photograph%2C%204k%20resolution%2C%20authentic%20journalistic%20scene%2C%20realistic%20lighting%2C%20highly%20detailed%2C%20photorealistic?width=1200&height=675&nologo=true&seed=480278&model=flux"
+      },
+      {
+        "id": "cogl-bot-india-earth-1795881030633",
+        "category": "Earth",
+        "audience": "India",
+        "title": "Wild tusker Chakkakompan back in home turf hours after Forest Department calls off radio-collaring bid",
+        "hashtags": [
+          "#IndiaNews",
+          "#IndiaTrending",
+          "#COGLNews",
+          "#FactChecked",
+          "#EarthIndia",
+          "#CleanEnergy",
+          "#WildlifeIndia"
+        ],
+        "source": "Accredited Bureau",
+        "featuredImage": "https://th-i.thgim.com/public/incoming/o1d8e4/article71755264.ece/alternates/LANDSCAPE_1200/80759_28_11_2026_18_53_13_1_CHAKKAFAMILY.JPEG"
+      }
+    ]
+  },
+  {
     "runAt": "2026-11-27T16:59:17.455Z",
     "durationMs": 5219,
     "articlesPublished": 20,
